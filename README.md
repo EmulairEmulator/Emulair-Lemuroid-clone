@@ -43,7 +43,7 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - Sony PS1 by [PCSX-ReARMed](https://docs.libretro.com/library/pcsx_rearmed/)
 - Sony PSP by [ppsspp](https://docs.libretro.com/library/ppsspp/)
 
-## Existing Features
+## Imported Features
 - Manually save/load states
 - Automatically save/load states
 - Save files to Google Drive (only if downloaded from Google Play)
