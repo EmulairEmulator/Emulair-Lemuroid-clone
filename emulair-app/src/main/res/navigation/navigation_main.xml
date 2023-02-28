@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_main"
+    app:startDestination="@+id/main_home">
+
+    <!-- SECTION HOME -->
+    <fragment
+        android:id="@+id/main_home"
+        android:name="com.bigbratan.emulair.fragmentHome.HomeFragment"
+        android:label="@string/title_home">
+
+        <action
+            android:id="@+id/action_main_home_to_main_all_games"
+            app:destination="@id/main_all_games"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+
+        <action
+            android:id="@+id/action_main_home_to_main_favorite_games"
+            app:destination="@id/main_favorite_games"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+
+        <action
+            android:id="@+id/action_main_home_to_main_search"
+            app:destination="@id/main_search"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/main_all_games"
+        android:name="com.bigbratan.emulair.fragmentAllGames.AllGamesFragment"
+        android:label="@string/title_all_games" />
+
+    <fragment
+        android:id="@+id/main_favorite_games"
+        android:name="com.bigbratan.emulair.fragmentFavoriteGames.FavoriteGamesFragment"
+        android:label="@string/title_all_favorites" />
+
+    <fragment
+        android:id="@+id/main_search"
+        android:name="com.bigbratan.emulair.fragmentSearch.SearchFragment"
+        android:label="@string/title_search" />
+
+    <!-- SECTION SYSTEMS -->
+    <fragment
+        android:id="@+id/main_systems"
+        android:name="com.bigbratan.emulair.fragmentSystems.SystemsFragment"
+        android:label="@string/title_systems">
+
+        <action
+            android:id="@+id/action_main_systems_to_main_system_games"
+            app:destination="@id/main_system_games"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/main_system_games"
+        android:name="com.bigbratan.emulair.fragmentSystemGames.SystemGamesFragment"
+        android:label="@string/title_system_games">
+
+        <argument
+            android:name="system_ids"
+            app:argType="string[]"
+            app:nullable="false" />
+
+    </fragment>
+
+    <!-- SECTION SETTINGS -->
+    <fragment
+        android:id="@+id/main_settings"
+        android:name="com.bigbratan.emulair.fragmentSettings.SettingsFragment"
+        android:label="@string/title_settings" />
+
+    <fragment
+        android:id="@+id/main_gamepad"
+        android:name="com.bigbratan.emulair.fragmentSettings.GamePadFragment"
+        android:label="@string/title_gamepad" />
+
+    <fragment
+        android:id="@+id/main_bios"
+        android:name="com.bigbratan.emulair.fragmentSettings.BiosFragment"
+        android:label="@string/title_bios" />
+
+    <fragment
+        android:id="@+id/main_advanced"
+        android:name="com.bigbratan.emulair.fragmentSettings.AdvancedFragment"
+        android:label="@string/title_advanced" />
+
+    <fragment
+        android:id="@+id/main_save_sync"
+        android:name="com.bigbratan.emulair.fragmentSettings.SaveSyncFragment"
+        android:label="@string/title_save_sync" />
+
+    <fragment
+        android:id="@+id/main_cores_selection"
+        android:name="com.bigbratan.emulair.fragmentSettings.CoresSelectionFragment"
+        android:label="@string/title_change_cores" />
+
+    <!-- SECTION ACCOUNT -->
+    <fragment
+        android:id="@+id/main_account"
+        android:name="com.bigbratan.emulair.fragmentAccount.AccountFragment"
+        android:label="@string/title_account" />
+
+    <!-- SECTION INFO -->
+    <fragment
+        android:id="@+id/main_info"
+        android:name="com.bigbratan.emulair.fragmentInfo.InfoFragment"
+        android:label="@string/title_info" />
+
+</navigation>
