@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/grid_spacing"
+    android:layout_marginEnd="@dimen/grid_spacing"
+    android:backgroundTint="@color/material_card_color"
+    android:background="@drawable/shape_card_top"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="@drawable/ripple_card_top">
+
+    <include layout="@layout/layout_preference_main_list" />
+
+</LinearLayout>

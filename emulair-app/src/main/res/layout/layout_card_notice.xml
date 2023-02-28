@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_marginBottom="@dimen/grid_spacing"
+    android:backgroundTint="@color/material_card_color"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="@dimen/corner_radius"
+    app:cardElevation="0dp"
+    app:rippleColor="@android:color/transparent">
+
+    <!-- marginTop = game section margin top -->
+    <!-- marginBottom = epoxy carousel margin bottom -->
+    <!-- marginLeft / Right = epoxy carousel margin left / right -->
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:text="@string/home_notice_message"
+        android:textAppearance="?attr/textAppearanceSmallPopupMenu"
+        style="@style/Widget.Material3.MaterialTimePicker.Display.HelperText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</com.google.android.material.card.MaterialCardView>

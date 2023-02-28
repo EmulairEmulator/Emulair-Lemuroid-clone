@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+     <!-- <com.airbnb.epoxy.EpoxyRecyclerView -->
+     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" />
+
+    <include
+        android:id="@+id/empty_view"
+        layout="@layout/layout_message_no_systems"
+        android:visibility="gone" />
+
+</FrameLayout>

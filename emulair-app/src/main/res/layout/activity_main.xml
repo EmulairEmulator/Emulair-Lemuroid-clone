@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- android:id="@+id/external_container" -->
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:titleCentered="true"
+                app:titleTextAppearance="@style/TextAppearance.Material3.TitleMedium" />
+
+            <ImageButton
+                android:id="@+id/main_info"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignStart="@id/toolbar"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="4dp"
+                android:background="?attr/actionBarItemBackground"
+                android:contentDescription="@string/top_info"
+                app:srcCompat="@drawable/ic_top_info" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/toolbar"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="4dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/main_search"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/actionBarItemBackground"
+                    android:contentDescription="@string/top_search"
+                    app:srcCompat="@drawable/ic_top_search" />
+
+                <ImageButton
+                    android:id="@+id/main_account"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/actionBarItemBackground"
+                    android:contentDescription="@string/top_account"
+                    app:srcCompat="@drawable/ic_top_account" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/navigation_main" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        app:itemBackground="@color/md_theme_dark_background"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_nav_bottom" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
