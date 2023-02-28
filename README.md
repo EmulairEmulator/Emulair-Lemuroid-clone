@@ -2,7 +2,6 @@
 <img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
      alt="Get it on Google Play"
      height="80">
-
 <img src="https://raw.githubusercontent.com/flocke/andOTP/master/assets/badges/get-it-on-github.svg"
      alt="Get it on GitHub"
      height="80">
