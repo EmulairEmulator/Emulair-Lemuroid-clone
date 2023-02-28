@@ -35,8 +35,8 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - Sony PS1 by [PCSX-ReARMed](https://docs.libretro.com/library/pcsx_rearmed/)
 - Sony PSP by [ppsspp](https://docs.libretro.com/library/ppsspp/)
 
-## Features
+## Existing Features
 [COMING SOON]
 
-## User Stories
+## Our Features (User Stories)
 [COMING SOON]
