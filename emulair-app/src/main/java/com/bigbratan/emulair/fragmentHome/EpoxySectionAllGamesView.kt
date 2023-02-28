@@ -1,0 +1,41 @@
+package com.bigbratan.emulair.fragmentHome
+
+import android.view.View
+import android.widget.TextView
+import com.airbnb.epoxy.EpoxyAttribute
+import com.airbnb.epoxy.EpoxyHolder
+import com.airbnb.epoxy.EpoxyModelClass
+import com.airbnb.epoxy.EpoxyModelWithHolder
+import com.bigbratan.emulair.R
+
+@EpoxyModelClass(layout = R.layout.layout_section_games_alt)
+abstract class EpoxySectionAllGamesView : EpoxyModelWithHolder<EpoxySectionAllGamesView.Holder>() {
+
+    @EpoxyAttribute
+    var title: Int? = null
+
+    @EpoxyAttribute(EpoxyAttribute.Option.DoNotHash)
+    lateinit var home: HomeFragment
+
+    override fun bind(holder: Holder) {
+        title?.let {
+            holder.titleView.setText(it)
+        }
+
+        holder.actionView?.setOnClickListener { home.navigateToAllGames() }
+    }
+
+    override fun unbind(holder: Holder) {
+        holder.actionView?.setOnClickListener(null)
+    }
+
+    class Holder : EpoxyHolder() {
+        lateinit var titleView: TextView
+        var actionView: TextView? = null
+
+        override fun bindView(itemView: View) {
+            titleView = itemView.findViewById(R.id.text)
+            actionView = itemView.findViewById(R.id.action)
+        }
+    }
+}

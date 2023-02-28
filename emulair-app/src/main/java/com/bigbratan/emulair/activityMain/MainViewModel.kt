@@ -1,0 +1,17 @@
+package com.bigbratan.emulair.activityMain
+
+import android.content.Context
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import com.bigbratan.emulair.managerCoresLibrary.PendingOperationsMonitor
+
+class MainViewModel(appContext: Context) : ViewModel() {
+
+    class Factory(private val appContext: Context) : ViewModelProvider.Factory {
+        override fun <T : ViewModel> create(modelClass: Class<T>): T {
+            return MainViewModel(appContext) as T
+        }
+    }
+
+    val displayProgress = PendingOperationsMonitor(appContext).anyOperationInProgress()
+}
