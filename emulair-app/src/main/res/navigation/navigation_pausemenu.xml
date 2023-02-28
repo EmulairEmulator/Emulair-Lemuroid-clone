@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_pausemenu"
+    app:startDestination="@id/pausemenu">
+
+    <fragment
+        android:id="@+id/pausemenu"
+        android:name="com.bigbratan.emulair.fragmentPauseMenuActions.PauseMenuFragment"
+        android:label="@string/title_pause_menu"/>
+
+    <fragment
+        android:id="@+id/pausemenu_core_options"
+        android:name="com.bigbratan.emulair.fragmentPauseMenuActions.CoreOptionsFragment"
+        android:label="@string/title_core_options"/>
+
+    <fragment
+        android:id="@+id/pausemenu_save"
+        android:name="com.bigbratan.emulair.fragmentPauseMenuActions.StateSaveFragment"
+        android:label="@string/title_save"/>
+
+    <fragment
+        android:id="@+id/pausemenu_load"
+        android:name="com.bigbratan.emulair.fragmentPauseMenuActions.StateLoadFragment"
+        android:label="@string/title_load"/>
+
+</navigation>
