@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  strings-game-system.xml
+
+  Copyright (C) 2017 Retrograde Project
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<resources>
+    <string name="game_system_title_abbr_ntd_nes1">NES</string>
+    <string name="game_system_title_abbr_atr_2600">A26</string>
+    <string name="game_system_title_abbr_ntd_nes2_s">SNES</string>
+    <string name="game_system_title_abbr_seg_gns1">Genesis</string>
+    <string name="game_system_title_abbr_seg_gns2_cd">SCD</string>
+    <string name="game_system_title_abbr_seg_gg">GG</string>
+    <string name="game_system_title_abbr_ntd_gb1">GB</string>
+    <string name="game_system_title_abbr_ntd_gb2_c">GBC</string>
+    <string name="game_system_title_abbr_ntd_gb3_a">GBA</string>
+    <string name="game_system_title_abbr_ntd_64">N64</string>
+    <string name="game_system_title_abbr_sony_ps1">PSX</string>
+    <string name="game_system_title_abbr_ntd_ds1">NDS</string>
+    <string name="game_system_title_abbr_seg_ms">SMS</string>
+    <string name="game_system_title_abbr_sony_psp">PSP</string>
+    <string name="game_system_title_abbr_arcade_fbneo">FBNeo</string>
+    <string name="game_system_title_abbr_arcade_mame2003plus">MAME2003+</string>
+    <string name="game_system_title_abbr_atr_7800">A78</string>
+    <string name="game_system_title_abbr_atr_lynx">Lynx</string>
+    <string name="game_system_title_abbr_nec_pce">PCE</string>
+    <string name="game_system_title_abbr_snk_ngp1">NGP</string>
+    <string name="game_system_title_abbr_snk_ngp2_c">NGC</string>
+    <string name="game_system_title_abbr_ban_ws1">WS</string>
+    <string name="game_system_title_abbr_ban_ws2_c">WSC</string>
+    <string name="game_system_title_abbr_multisys_computers_dos">DOS</string>
+    <string name="game_system_title_abbr_multisys_cellphones_j2me">J2ME</string>
+    <string name="game_system_title_abbr_ntd_ds23">3DS</string>
+
+    <string name="game_system_title_arcade">Arcade</string>
+    <string name="game_system_title_arcade_fbneo">Arcade FB Neo</string>
+    <string name="game_system_title_arcade_mame2003plus">Arcade MAME 2003+</string>
+    <string name="game_system_title_atr_2600">Atari 2600</string>
+    <string name="game_system_title_atr_7800">Atari 7800</string>
+    <string name="game_system_title_atr_lynx">Atari Lynx</string>
+    <string name="game_system_title_ban_ws1">Bandai WonderSwan</string>
+    <string name="game_system_title_ban_ws2_c">Bandai WonderSwan Color</string>
+    <string name="game_system_title_multisys_computers_dos">Intel x86 PCs on DOS</string>
+    <string name="game_system_title_multisys_cellphones_j2me">Cellphones on J2ME</string>
+    <string name="game_system_title_nec_pce">NEC PC Engine</string>
+    <string name="game_system_title_ntd_64">Nintendo 64</string>
+    <string name="game_system_title_ntd_ds1">Nintendo DS</string>
+    <string name="game_system_title_ntd_ds23">Nintendo 3DS</string>
+    <string name="game_system_title_ntd_gb1">Nintendo GB</string>
+    <string name="game_system_title_ntd_gb2_c">Nintendo GBC</string>
+    <string name="game_system_title_ntd_gb3_a">Nintendo GBA</string>
+    <string name="game_system_title_ntd_nes1">Nintendo NES</string>
+    <string name="game_system_title_ntd_nes2_s">Nintendo SNES</string>
+    <string name="game_system_title_seg_gns1">Sega Genesis</string>
+    <string name="game_system_title_seg_gns2_cd">Sega CD</string>
+    <string name="game_system_title_seg_gns3_32x">Sega 32X</string>
+    <string name="game_system_title_seg_gg">Sega Game Gear</string>
+    <string name="game_system_title_seg_ms">Sega Master System</string>
+    <string name="game_system_title_snk_ngp1">SNK NG Pocket</string>
+    <string name="game_system_title_snk_ngp2_c">SNK NG Pocket Color</string>
+    <string name="game_system_title_sony_ps1">Sony PS1</string>
+    <string name="game_system_title_sony_ps2">Sony PS2</string>
+    <string name="game_system_title_sony_psp">Sony PSP</string>
+
+</resources>
