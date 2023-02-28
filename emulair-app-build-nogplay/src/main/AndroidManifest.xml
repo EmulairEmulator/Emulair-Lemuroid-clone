@@ -1,0 +1,4 @@
+<manifest package="com.bigbratan.emulair.ext"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingLeanbackLauncher">
+</manifest>
