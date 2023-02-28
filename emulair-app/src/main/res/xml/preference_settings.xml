@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:layout="@layout/layout_preference_universal_category_top"
+        android:title="@string/settings_category_roms"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:key="@string/pref_key_external_folder"
+            android:layout="@layout/layout_preference_main_simple_top"
+            android:title="@string/settings_roms_directory_title"
+            app:iconSpaceReserved="false"
+            app:summary="@string/settings_roms_directory_description"
+            app:useSimpleSummaryProvider="true" />
+
+        <Preference
+            android:key="@string/pref_key_rescan"
+            android:layout="@layout/layout_preference_main_simple_bottom"
+            android:persistent="false"
+            android:title="@string/settings_roms_rescan_title"
+            app:iconSpaceReserved="false" />
+
+        <Preference
+            android:key="@string/pref_key_stop_rescan"
+            android:layout="@layout/layout_preference_main_simple_bottom"
+            android:persistent="false"
+            android:title="@string/settings_roms_stop_title"
+            app:iconSpaceReserved="false"
+            app:isPreferenceVisible="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/layout_preference_universal_category_middle"
+        android:title="@string/settings_category_general"
+        app:iconSpaceReserved="false">
+
+        <com.bigbratan.emulair.ui.CustomListPreference
+            android:defaultValue="auto"
+            android:entries="@array/pref_key_shader_filter_display_names"
+            android:entryValues="@array/pref_key_shader_filter_values"
+            android:key="@string/pref_key_shader_filter"
+            android:layout="@layout/layout_preference_main_list_top"
+            android:title="@string/settings_general_display_filter_title"
+            app:iconSpaceReserved="false"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="@string/pref_key_autosave"
+            android:layout="@layout/layout_preference_main_switch_bottom"
+            android:summary="@string/settings_general_enable_autosave_onquit_description"
+            android:title="@string/settings_general_enable_autosave_onquit_title"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/layout_preference_universal_category_middle"
+        android:title="@string/settings_category_input"
+        app:iconSpaceReserved="false">
+
+        <com.bigbratan.emulair.ui.CustomListPreference
+            android:defaultValue="press"
+            android:entries="@array/pref_key_haptic_feedback_mode_display_names"
+            android:entryValues="@array/pref_key_haptic_feedback_mode_values"
+            android:key="@string/pref_key_haptic_feedback_mode"
+            android:layout="@layout/layout_preference_main_list_top"
+            android:title="@string/settings_input_vibration_title"
+            app:iconSpaceReserved="false"
+            app:useSimpleSummaryProvider="true" />
+
+        <Preference
+            android:key="@string/pref_key_open_gamepad_settings"
+            android:layout="@layout/layout_preference_main_simple_bottom"
+            android:persistent="false"
+            android:summary="@string/settings_input_gamepad_description"
+            android:title="@string/settings_input_gamepad_title"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/layout_preference_universal_category_middle"
+        android:title="@string/settings_category_misc"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:key="@string/pref_key_open_cores_selection"
+            android:layout="@layout/layout_preference_main_simple_top"
+            android:persistent="false"
+            android:title="@string/settings_misc_change_cores_title"
+            app:iconSpaceReserved="false"
+            app:summary="@string/settings_misc_change_cores_description" />
+
+        <Preference
+            android:key="@string/pref_key_display_bios_info"
+            android:layout="@layout/layout_preference_main_simple_middle"
+            android:persistent="false"
+            android:title="@string/settings_misc_bios_title"
+            app:iconSpaceReserved="false"
+            app:summary="@string/settings_misc_bios_description" />
+
+        <Preference
+            android:key="@string/pref_key_open_save_sync_settings"
+            android:layout="@layout/layout_preference_main_simple_middle"
+            android:summary="@string/settings_misc_save_sync_description"
+            android:title="@string/settings_misc_save_sync_title"
+            app:iconSpaceReserved="false" />
+
+        <Preference
+            android:key="@string/pref_key_advanced_settings"
+            android:layout="@layout/layout_preference_main_simple_bottom"
+            android:persistent="false"
+            android:summary="@string/settings_misc_advanced_description"
+            android:title="@string/settings_misc_advanced_title"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

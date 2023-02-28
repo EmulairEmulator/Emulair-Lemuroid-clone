@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <PreferenceCategory
+        android:layout="@layout/layout_preference_universal_category_top"
+        android:title="@string/settings_category_input"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="@string/pref_key_enable_rumble"
+            android:layout="@layout/layout_preference_main_switch_top"
+            android:summary="@string/advanced_input_global_rumble_description"
+            android:title="@string/advanced_input_global_rumble_title"
+            app:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:dependency="@string/pref_key_enable_rumble"
+            android:key="@string/pref_key_enable_device_rumble"
+            android:layout="@layout/layout_preference_main_switch_middle"
+            android:summary="@string/advanced_input_device_rumble_description"
+            android:title="@string/advanced_input_device_rumble_title"
+            app:iconSpaceReserved="false" />
+
+        <SeekBarPreference
+            android:defaultValue="6"
+            android:key="@string/pref_key_tilt_sensitivity_index"
+            android:layout="@layout/layout_preference_main_seekbar_bottom"
+            android:max="10"
+            android:title="@string/advanced_input_device_tilt_title"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/layout_preference_universal_category_middle"
+        android:title="@string/settings_category_general"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="@string/pref_key_low_latency_audio"
+            android:layout="@layout/layout_preference_main_switch_top"
+            android:summary="@string/advanced_general_low_latency_audio_description"
+            android:title="@string/advanced_general_low_latency_audio_title"
+            app:iconSpaceReserved="false" />
+
+        <com.bigbratan.emulair.ui.CustomListPreference
+            android:key="@string/pref_key_max_cache_size"
+            android:layout="@layout/layout_preference_main_list_middle"
+            android:title="@string/advanced_general_maximum_cache_usage_title"
+            app:iconSpaceReserved="false"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="@string/pref_key_allow_direct_game_load"
+            android:layout="@layout/layout_preference_main_switch_middle"
+            android:summary="@string/advanced_general_direct_game_load_description"
+            android:title="@string/advanced_general_direct_game_load_title"
+            app:iconSpaceReserved="false" />
+
+        <Preference
+            android:key="@string/pref_key_reset_settings"
+            android:layout="@layout/layout_preference_main_simple_bottom"
+            android:persistent="false"
+            android:title="@string/advanced_general_reset_title"
+            app:iconSpaceReserved="false"
+            app:summary="@string/advanced_general_reset_description" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

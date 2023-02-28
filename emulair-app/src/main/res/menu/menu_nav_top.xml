@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_options_sync"
+        android:icon="@drawable/ic_top_cloud_sync"
+        android:title="Save Sync"
+        app:showAsAction="ifRoom" />
+
+    <!--
+    <item
+        android:id="@+id/main_search"
+        android:icon="@drawable/ic_top_search"
+        android:title="@string/top_search"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/main_account"
+        android:icon="@drawable/ic_top_account"
+        android:title="@string/top_account"
+        app:showAsAction="always" />
+    -->
+
+</menu>
