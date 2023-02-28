@@ -36,7 +36,6 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - Nintendo SNES by [snes9x](https://docs.libretro.com/library/snes9x/)
 - Sega Genesis by [genesis_plus_gx](https://docs.libretro.com/library/genesis_plus_gx/)
 - Sega CD by [genesis_plus_gx](https://docs.libretro.com/library/genesis_plus_gx/)
-- Sega 32X by ???
 - Sega Game Gear by [genesis_plus_gx](https://docs.libretro.com/library/genesis_plus_gx/)
 - Sega Master System by [genesis_plus_gx](https://docs.libretro.com/library/genesis_plus_gx/)
 - SNK NG Pocket by [mednafen_ngp](https://docs.libretro.com/library/beetle_neopop/)
@@ -45,7 +44,16 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - Sony PSP by [ppsspp](https://docs.libretro.com/library/ppsspp/)
 
 ## Existing Features
-[COMING SOON]
+- Manually save/load states
+- Automatically save/load states
+- Save files to Google Drive
+- Simulate various screens, such as LCD or CRT
+- Remap some touch screen controls (such as joysticks or d-pads) to gyroscopic input, by double tapping / tripple tapping the buttons
+- Customizable touch controls (size and position)
+- ROMs scanning and indexing
+- Gamepad support
+- Zipped ROMs support
+- Local, offline multiplayer (up to 4 controllers, only in games that offer the option for multiple players)
 
 ## Added Features (User Stories)
 [COMING SOON]
