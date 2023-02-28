@@ -19,7 +19,7 @@ The primary goal of Emulair is to combine the ease of use and simple but accessi
 It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, in turn, is a rib of [Retrograde](https://github.com/retrograde/retrograde-android). It also uses [LibretroDroid](https://github.com/Swordfish90/LibretroDroid) under the hood to run [Libretro](https://github.com/libretro) cores.
 
 ## Systems
-- Arcade
+- Arcade by [fbneo](https://docs.libretro.com/library/fbneo/) and [mame2003+](https://docs.libretro.com/library/mame2003_plus/)
 - Atari 2600 by [stella](https://docs.libretro.com/library/stella/)
 - Atari 7800 by [prosystem](https://docs.libretro.com/library/prosystem/)
 - Atari Lynx by [handy](https://docs.libretro.com/library/handy/)
@@ -27,7 +27,7 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - Bandai WonderSwan Color by [beetle_cygne](https://docs.libretro.com/library/beetle_cygne/)
 - NEC PC Engine by [beetle_pce_fast](https://docs.libretro.com/library/beetle_pce_fast/)
 - Nintendo 64 [mupen64plus](https://docs.libretro.com/library/mupen64plus/)
-- Nintendo DS by [desmume](https://docs.libretro.com/library/desmume/) and [MelonDS](https://docs.libretro.com/library/melonds/)
+- Nintendo DS by [desmume](https://docs.libretro.com/library/desmume/) or [MelonDS](https://docs.libretro.com/library/melonds/)
 - Nintendo 3DS by [citra](https://docs.libretro.com/library/citra/)
 - Nintendo GB by [gambatte](https://docs.libretro.com/library/gambatte/)
 - Nintendo GBC by [gambatte](https://docs.libretro.com/library/gambatte/)
