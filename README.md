@@ -46,7 +46,7 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 ## Existing Features
 - Manually save/load states
 - Automatically save/load states
-- Save files to Google Drive
+- Save files to Google Drive (only if downloaded from Google Play)
 - Simulate various screens, such as LCD or CRT
 - Remap some touch screen controls (such as joysticks or d-pads) to gyroscopic input, by double tapping / tripple tapping the buttons
 - Customizable touch controls (size and position)
