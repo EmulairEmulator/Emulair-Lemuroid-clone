@@ -38,5 +38,5 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 ## Existing Features
 [COMING SOON]
 
-## Our Features (User Stories)
+## Added Features (User Stories)
 [COMING SOON]
