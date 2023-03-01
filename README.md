@@ -45,28 +45,38 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 
 ## Imported Features
 - Manually save/load states
-- Automatically save/load states
+- Automatically save/load states when correctly closing a game (by clicking "Quit" in the pause menu)
 - Save files to Google Drive (only if downloaded from Google Play)
+- Add games to a "Favourites" list
 - Simulate various screens, such as LCD or CRT
 - Remap some touch screen controls (such as joysticks or d-pads) to gyroscopic input, by double tapping / triple tapping the buttons
 - Customizable touch controls (size and position)
 - ROMs scanning and indexing
 - Gamepad support
-- Zipped ROMs support
+- .zip ROMs support
 - Local, offline multiplayer (up to 4 controllers, only in games that offer the option for multiple players)
 
 ## Added Features (User Stories)
 - More emulation cores (almost all cores found on Retroarch)
 - Exposed all settings for all cores
-- A user frienfly intro screen concisely explaining how to use the app
-- Button propmpts before every important action (such as saving/loading states)
+- Cheat codes support
+- A user friendly intro screen concisely explaining how to use the app
+- An info screen further explaining how the app works
+- A profile screen
+- Button prompts before every important action (such as saving/loading states)
 - Light Theme, AMOLED Theme, Material You Theme (previously there was only a Dark Theme)
 - Slide down in the "Games" fragment to rescan your directories and refresh your games list
 - Automatically rescan internal directories on app restart
 - Set what screen orientation games should be opened in (follow device / landscape / portrait)
 - Set on-screen buttons' transparency
 - Pause/resume emulation directly from the pause menu
-- [more coming soon]
+- Thumbnail cache
+- Different app layout for tablets and foldables
+- .7z ROMs support
+- Automatically save state every x seconds
+- More save file formats support
+- Updated Libretro games database
+- Add systems to a "Favourites" list
 
 ## Name Meaning
 "Emulair" is a triple entendre and the name is inspired by the Lawnchair launcher (not associated with Emulair). Firstly, "Emulair" sounds similar to the word "Emulator" (if you try hard enough). Secondly, "Emulair" means "lair of the emu bird", an animal commonly associated with emulators, given their similar names. Lastly, "Emulair" also means "lair for all your emulators", which is similar to "Vimm's Lair", a place for preserving video games.
