@@ -79,6 +79,8 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] More save file formats support
 - [ ] Updated Libretro games database
 - [ ] Add systems to a "Starred" list
+- [ ] Long press a game to access a details screen
+- [ ] More in-app animations
 
 ## Name Meaning
 "Emulair" is a triple entendre and the name is inspired by the Lawnchair launcher (not associated with Emulair). Firstly, "Emulair" sounds similar to the word "Emulator" (if you try hard enough). Secondly, "Emulair" means "lair of the emu bird", an animal commonly associated with emulators, given their similar names. Lastly, "Emulair" also means "lair for all your emulators", which is similar to "Vimm's Lair", a place for preserving video games.
