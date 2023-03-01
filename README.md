@@ -63,9 +63,11 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] A user friendly intro screen concisely explaining how to use the app
 - [ ] An info screen further explaining how the app works
 - [ ] A profile screen
+- [x] A "Jump back in" section on the "Games" page, along with "Recents", "Favorites" and "All Games"
+- [x] Complete visual app redesign with consistent sizing, spacing and corner radius
 - [ ] Button prompts before every important action (such as saving/loading states)
 - [ ] Light Theme, AMOLED Theme, Material You Theme (previously there was only a Dark Theme)
-- [ ] Slide down in the "Games" fragment to rescan your directories and refresh your games list
+- [ ] Slide down in the "Games" page to rescan your directories and refresh your games list
 - [ ] Automatically rescan internal directories on app restart
 - [ ] Set what screen orientation games should be opened in (follow device / landscape / portrait)
 - [ ] Set on-screen buttons' transparency
@@ -76,7 +78,7 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] Automatically save state every x seconds
 - [ ] More save file formats support
 - [ ] Updated Libretro games database
-- [ ] Add systems to a "Favourites" list
+- [ ] Add systems to a "Starred" list
 
 ## Name Meaning
 "Emulair" is a triple entendre and the name is inspired by the Lawnchair launcher (not associated with Emulair). Firstly, "Emulair" sounds similar to the word "Emulator" (if you try hard enough). Secondly, "Emulair" means "lair of the emu bird", an animal commonly associated with emulators, given their similar names. Lastly, "Emulair" also means "lair for all your emulators", which is similar to "Vimm's Lair", a place for preserving video games.
