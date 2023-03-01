@@ -43,7 +43,7 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - Sony PS1 by [PCSX-ReARMed](https://docs.libretro.com/library/pcsx_rearmed/)
 - Sony PSP by [ppsspp](https://docs.libretro.com/library/ppsspp/)
 
-## Imported Features
+## Imported Features (from Lemuroid)
 - Manually save/load states
 - Automatically save/load states when correctly closing a game (by clicking "Quit" in the pause menu)
 - Save files to Google Drive (only if downloaded from Google Play)
@@ -56,7 +56,7 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - .zip ROMs support
 - Local, offline multiplayer (up to 4 controllers, only in games that offer the option for multiple players)
 
-## Added Features (User Stories)
+## Added Features
 - [ ] More emulation cores (almost all cores found on Retroarch)
 - [ ] Exposed all settings for all cores
 - [ ] Cheat codes support
