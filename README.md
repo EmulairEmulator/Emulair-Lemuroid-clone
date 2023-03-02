@@ -56,6 +56,11 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - .zip ROMs support
 - Local, offline multiplayer (up to 4 controllers, only in games that offer the option for multiple players)
 
+## Added Features
+- [x] A "Jump back in" section on the "Games" page, along with "Recents", "Favorites" and "All Games"
+- [x] Complete visual app redesign with consistent sizing, spacing and corner radius
+- [x] Complete Material3 design conversion
+
 ## To-Be-Added Features
 - [ ] More emulation cores (almost all cores found on Retroarch)
 - [ ] Exposed all settings for all cores
@@ -63,9 +68,6 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] A user friendly intro screen concisely explaining how to use the app
 - [ ] An info screen further explaining how the app works
 - [ ] A profile screen
-- [x] A "Jump back in" section on the "Games" page, along with "Recents", "Favorites" and "All Games"
-- [x] Complete visual app redesign with consistent sizing, spacing and corner radius
-- [x] Complete Material3 design conversion
 - [ ] Button prompts before every important action (such as saving/loading states)
 - [ ] Light Theme, AMOLED Theme, Material You Theme (previously there was only a Dark Theme)
 - [ ] Slide down in the "Games" page to rescan your directories and refresh your games list
