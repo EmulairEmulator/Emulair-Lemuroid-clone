@@ -65,6 +65,7 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] A profile screen
 - [x] A "Jump back in" section on the "Games" page, along with "Recents", "Favorites" and "All Games"
 - [x] Complete visual app redesign with consistent sizing, spacing and corner radius
+- [x] Complete Material3 design conversion
 - [ ] Button prompts before every important action (such as saving/loading states)
 - [ ] Light Theme, AMOLED Theme, Material You Theme (previously there was only a Dark Theme)
 - [ ] Slide down in the "Games" page to rescan your directories and refresh your games list
