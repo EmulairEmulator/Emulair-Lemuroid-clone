@@ -58,8 +58,8 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 
 ## Added Features
 - [x] A "Jump back in" section on the "Games" page, along with "Recents", "Favorites" and "All Games"
-- [x] Complete visual app redesign with consistent sizing, spacing and corner radius
-- [x] Complete Material Design 3 conversion
+- [x] Complete visual redesign with consistent sizing, spacing and corner radius
+- [x] Complete conversion to Material Design 3 Components
 
 ## To-Be-Added Features
 - [ ] More emulation cores (almost all cores found on Retroarch)
