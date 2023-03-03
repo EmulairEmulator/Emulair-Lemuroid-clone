@@ -18,7 +18,7 @@ The primary goal of Emulair is to combine the ease of use and simple but accessi
 ## Origin
 It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, in turn, is a rib of [Retrograde](https://github.com/retrograde/retrograde-android). It also uses [LibretroDroid](https://github.com/Swordfish90/LibretroDroid) under the hood to run [Libretro](https://github.com/libretro) cores.
 
-## Systems
+## Systems (Libretro Cores)
 - Arcade by [FB Neo](https://docs.libretro.com/library/fbneo/) and [MAME 2003-Plus](https://docs.libretro.com/library/mame2003_plus/)
 - Atari 2600 by [Stella](https://docs.libretro.com/library/stella/)
 - Atari 7800 by [ProSystem](https://docs.libretro.com/library/prosystem/)
@@ -43,7 +43,7 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - Sony PS1 by [PCSX ReARMed](https://docs.libretro.com/library/pcsx_rearmed/)
 - Sony PSP by [PPSSPP](https://docs.libretro.com/library/ppsspp/)
 
-## Imported Features (from Lemuroid)
+## Existing Features (Lemuroid)
 - Manually save/load states
 - Automatically save/load states when correctly closing a game (by clicking "Quit" in the pause menu)
 - Save files to Google Drive (only if downloaded from Google Play)
@@ -59,7 +59,7 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 ## Added Features
 - [x] A "Jump back in" section on the "Games" page, along with "Recents", "Favorites" and "All Games"
 - [x] Complete visual app redesign with consistent sizing, spacing and corner radius
-- [x] Complete Material3 design conversion
+- [x] Complete Material Design 3 conversion
 
 ## To-Be-Added Features
 - [ ] More emulation cores (almost all cores found on Retroarch)
@@ -83,7 +83,7 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] Add systems to a "Starred" list
 - [ ] Long press a game to access a details screen
 - [ ] Beautiful animations
-- [ ] A "Close menu" button accessible from the pause menu, so users don't have to click their back button every time they want to close it
+- [ ] A "Close menu" button accessible from the pause menu, so users don't have to click their device's back button every time they want to close it
 
 ## Name Meaning
 "Emulair" is a triple entendre and the name is inspired by the Lawnchair launcher (not associated with Emulair). Firstly, "Emulair" sounds similar to the word "Emulator" (if you try hard enough). Secondly, "Emulair" means "lair of the emu bird", an animal commonly associated with emulators, given their similar names. Lastly, "Emulair" also means "lair for all your emulators", which is similar to "Vimm's Lair", a place for preserving video games.
