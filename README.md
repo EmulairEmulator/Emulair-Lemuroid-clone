@@ -74,7 +74,6 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] Automatically rescan internal directories on app restart
 - [ ] Set what screen orientation games should be opened in (follow device / landscape / portrait)
 - [ ] Set on-screen buttons' transparency
-- [ ] Pause/resume emulation directly from the pause menu
 - [ ] Thumbnail cache
 - [ ] Different app layout for tablets and foldables
 - [ ] .7z ROMs support
