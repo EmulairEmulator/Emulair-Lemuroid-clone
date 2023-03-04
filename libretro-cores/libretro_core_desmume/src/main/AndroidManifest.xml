@@ -1,6 +1,6 @@
 
 <manifest xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="com.swordfish.core.desmume"
+    package="com.bigbratan.emulair.libretro.core.desmume"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
