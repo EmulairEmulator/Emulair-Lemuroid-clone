@@ -94,3 +94,5 @@ Copyright (C) 2023 Radu-George Bratan
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+Before downloading the source code of this software to use it in a project (no matter if it's private or public), please make sure that you understand what the GNU General Public License v3.0 allows you, as well as requires you to do (for example, it allows you to make a profit off of this project, but it requires you to release the source code of your project under a specific license - either version 3 of the GNU GPL, or, at your option, any later version).
