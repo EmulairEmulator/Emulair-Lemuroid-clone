@@ -18,30 +18,29 @@ android {
     // Follow similar instructions in settings.gradle.kts for changes to actually take effect
     dynamicFeatures.addAll(
         setOf(
-            ":lemuroid_core_desmume",
-            ":lemuroid_core_dosbox_pure",
-            ":lemuroid_core_fbneo",
-            ":lemuroid_core_fceumm",
-            ":lemuroid_core_gambatte",
-            ":lemuroid_core_genesis_plus_gx",
-            ":lemuroid_core_handy",
-            ":lemuroid_core_mame2003_plus",
-            ":lemuroid_core_mednafen_ngp",
-            ":lemuroid_core_mednafen_pce_fast",
-            ":lemuroid_core_mednafen_wswan",
-            ":lemuroid_core_melonds",
-            ":lemuroid_core_mgba",
-            ":lemuroid_core_mupen64plus_next_gles3",
-            ":lemuroid_core_pcsx_rearmed",
-            ":lemuroid_core_ppsspp",
-            ":lemuroid_core_prosystem",
-            ":lemuroid_core_snes9x",
-            ":lemuroid_core_stella",
-            ":lemuroid_core_citra"
+            ":libretro_core_desmume",
+            ":libretro_core_dosbox_pure",
+            ":libretro_core_fbneo",
+            ":libretro_core_fceumm",
+            ":libretro_core_gambatte",
+            ":libretro_core_genesis_plus_gx",
+            ":libretro_core_handy",
+            ":libretro_core_mame2003_plus",
+            ":libretro_core_mednafen_ngp",
+            ":libretro_core_mednafen_pce_fast",
+            ":libretro_core_mednafen_wswan",
+            ":libretro_core_melonds",
+            ":libretro_core_mgba",
+            ":libretro_core_mupen64plus_next_gles3",
+            ":libretro_core_pcsx_rearmed",
+            ":libretro_core_ppsspp",
+            ":libretro_core_prosystem",
+            ":libretro_core_snes9x",
+            ":libretro_core_stella",
+            ":libretro_core_citra"
         )
     )
 
-    // Since some dependencies are closed source we make a completely free as in free speech variant.
     flavorDimensions("buildType", "coresType")
 
     productFlavors {
