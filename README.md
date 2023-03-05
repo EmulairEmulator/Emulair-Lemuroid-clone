@@ -44,6 +44,7 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - Sony PSP by [PPSSPP](https://docs.libretro.com/library/ppsspp/)
 
 ## Existing Features (Lemuroid)
+- Easily search up any installed video game
 - Manually save/load states
 - Automatically save/load states when correctly closing a game (by clicking "Quit" in the pause menu)
 - Save files to Google Drive (only if downloaded from Google Play)
