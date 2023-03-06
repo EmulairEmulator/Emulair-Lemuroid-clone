@@ -82,10 +82,11 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] More save file formats support
 - [ ] Updated Libretro games database
 - [ ] Add systems to a "Starred" list
+- [ ] Sync your save files across cloud services such as Google Drive, Dropbox and Microsoft OneDrive
 - [ ] Long press a game to access a details screen
 - [ ] Beautiful animations
+- [ ] A splash screen for Android 12+ devices
 - [ ] A "Close menu" button accessible from the pause menu, so users don't have to click their device's back button every time they want to close it
-- [ ] Splash screen
 
 ## Removed Features (Lemuroid)
 - Android TV support
