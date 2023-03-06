@@ -85,6 +85,7 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] Long press a game to access a details screen
 - [ ] Beautiful animations
 - [ ] A "Close menu" button accessible from the pause menu, so users don't have to click their device's back button every time they want to close it
+- [ ] Splash screen
 
 ## Name Meaning
 "Emulair" is a triple entendre and the name is inspired by the Lawnchair launcher (not associated with Emulair). Firstly, "Emulair" sounds similar to the word "Emulator" (if you try hard enough). Secondly, "Emulair" means "lair of the emu bird", an animal commonly associated with emulators, given their similar names. Lastly, "Emulair" also means "lair for all your emulators", which is similar to "Vimm's Lair", a place for preserving video games.
