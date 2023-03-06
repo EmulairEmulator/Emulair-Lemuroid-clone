@@ -47,7 +47,7 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - Easily search for any installed video game
 - Manually save/load states
 - Automatically save/load states when correctly closing a game (by clicking "Quit" in the pause menu)
-- Save files to Google Drive (only if downloaded from Google Play)
+- Save files to Google Drive (only if downloaded from Google Play; only in hidden folder)
 - Add games to a "Favourites" list
 - Simulate various screens, such as LCD or CRT
 - Remap some touch screen controls (such as joysticks or d-pads) to gyroscopic input, by double tapping / triple tapping the buttons
