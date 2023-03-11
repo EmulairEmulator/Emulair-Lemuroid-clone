@@ -43,7 +43,7 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - Sony PS1 by [PCSX ReARMed](https://docs.libretro.com/library/pcsx_rearmed/)
 - Sony PSP by [PPSSPP](https://docs.libretro.com/library/ppsspp/)
 
-## Existing Features (Lemuroid)
+## Existing Features (from Lemuroid)
 - Easily search for any installed video game
 - Manually save/load states
 - Automatically save/load states when correctly closing a game (by clicking "Quit" in the pause menu)
@@ -88,7 +88,7 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] A splash screen for Android 12+ devices
 - [ ] A "Close menu" button accessible from the pause menu, so users don't have to click their device's back button every time they want to unpause a game
 
-## Removed Features (Lemuroid)
+## Removed Features (from Lemuroid)
 - Android TV support
 - Turn games into shortcuts for your launcher
 
