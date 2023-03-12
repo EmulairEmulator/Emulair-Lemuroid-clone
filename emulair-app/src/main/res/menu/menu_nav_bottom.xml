@@ -11,10 +11,12 @@
         android:icon="@drawable/ic_bottom_systems"
         android:title="@string/bottom_systems" />
 
+    <!--
     <item
         android:id="@+id/navigation_netplay"
         android:icon="@drawable/ic_bottom_netplay"
         android:title="@string/bottom_netplay" />
+    -->
 
     <item
         android:id="@+id/main_settings"
