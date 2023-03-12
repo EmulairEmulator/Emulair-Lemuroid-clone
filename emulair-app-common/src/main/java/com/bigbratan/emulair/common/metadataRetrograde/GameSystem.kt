@@ -1134,8 +1134,8 @@ data class GameSystem(
             GameSystem(
                 SystemID.DOS,
                 "DOS",
-                R.string.game_system_title_multisys_computers_dos,
-                R.string.game_system_title_abbr_multisys_computers_dos,
+                R.string.game_system_title_microsoft_msdos_pc,
+                R.string.game_system_title_abbr_microsoft_msdos_pc,
                 listOf(
                     SystemCoreConfig(
                         CoreID.DOSBOX_PURE,

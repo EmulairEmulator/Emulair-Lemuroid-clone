@@ -118,8 +118,8 @@ enum class MetaSystemID(val titleResId: Int, val imageResId: Int, val systemIDs:
         listOf(SystemID.WSC)
     ),
     DOS(
-        R.string.game_system_title_multisys_computers_dos,
-        R.drawable.game_system_multisys_computers_dos_tandy_1000,
+        R.string.game_system_title_microsoft_msdos_pc,
+        R.drawable.game_system_microsoft_msdos_pc,
         listOf(SystemID.DOS)
     ),
     NINTENDO_3DS(

@@ -42,8 +42,8 @@
     <string name="game_system_title_abbr_snk_ngp2_c">NGC</string>
     <string name="game_system_title_abbr_ban_ws1">WS</string>
     <string name="game_system_title_abbr_ban_ws2_c">WSC</string>
-    <string name="game_system_title_abbr_multisys_computers_dos">DOS</string>
-    <string name="game_system_title_abbr_multisys_cellphones_j2me">J2ME</string>
+    <string name="game_system_title_abbr_microsoft_msdos_pc">DOS</string>
+    <string name="game_system_title_abbr_java_j2me_cellphone">J2ME</string>
     <string name="game_system_title_abbr_ntd_ds23">3DS</string>
 
     <string name="game_system_title_arcade">Arcade</string>
@@ -53,9 +53,9 @@
     <string name="game_system_title_atr_7800">Atari 7800</string>
     <string name="game_system_title_atr_lynx">Atari Lynx</string>
     <string name="game_system_title_ban_ws1">Bandai WonderSwan</string>
-    <string name="game_system_title_ban_ws2_c">Bandai WonderSwan Color</string>
-    <string name="game_system_title_multisys_computers_dos">Intel x86 PCs on DOS</string>
-    <string name="game_system_title_multisys_cellphones_j2me">Cellphones on J2ME</string>
+    <string name="game_system_title_ban_ws2_c">Bandai WS Color</string>
+    <string name="game_system_title_java_j2me_cellphone">J2ME Cellphones</string>
+    <string name="game_system_title_microsoft_msdos_pc">MS-DOS PCs</string>
     <string name="game_system_title_nec_pce">NEC PC Engine</string>
     <string name="game_system_title_ntd_64">Nintendo 64</string>
     <string name="game_system_title_ntd_ds1">Nintendo DS</string>
