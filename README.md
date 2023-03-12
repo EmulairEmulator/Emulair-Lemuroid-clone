@@ -47,7 +47,7 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - Easily search for any installed video game
 - Manually save/load states
 - Automatically save/load states when correctly closing a game (by clicking "Quit" in the pause menu)
-- Save files to Google Drive (only if downloaded from Google Play; only in hidden folder)
+- Save files to Google Drive (only if downloaded from Google Play; inaccessible directly from Drive)
 - Add games to a "Favourites" list
 - Simulate various screens, such as LCD or CRT
 - Remap some touch screen controls (such as joysticks or d-pads) to gyroscopic input, by double tapping/triple tapping the buttons
@@ -55,7 +55,7 @@ It originated from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - ROMs scanning and indexing
 - Gamepad support
 - .zip ROMs support
-- Local, offline multiplayer (up to 4 controllers, only in games that offer the option for multiple players)
+- Local, offline multiplayer (up to 4 controllers, only in games where you can select more than one player)
 
 ## Added Features
 - [x] A "Jump back in" section on the "Games" page, along with "Recents", "Favorites" and "All Games"
