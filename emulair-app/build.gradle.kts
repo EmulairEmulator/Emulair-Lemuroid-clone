@@ -44,7 +44,6 @@ android {
     flavorDimensions("buildType", "coresType")
 
     productFlavors {
-
         create("nogplay") {
             dimension = "buildType"
         }
@@ -161,7 +160,7 @@ dependencies {
     implementation("de.hdodenhof:circleimageview:3.1.0")
 
     // Uncomment this when using a local aar file.
-    //implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar", "*.aar"))))
+    // implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar", "*.aar"))))
 }
 
 fun usePlayDynamicFeatures(): Boolean {
