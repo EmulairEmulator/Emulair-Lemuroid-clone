@@ -41,7 +41,7 @@ android {
         )
     )
 
-    flavorDimensions("buildType", "coresType")
+    flavorDimensions.addAll(listOf("buildType", "coresType"))
 
     productFlavors {
         create("nogplay") {
