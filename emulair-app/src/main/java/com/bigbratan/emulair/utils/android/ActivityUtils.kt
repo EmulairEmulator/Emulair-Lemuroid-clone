@@ -9,7 +9,8 @@ fun Activity.displayErrorDialog(messageId: Int, actionLabelId: Int, action: () -
 }
 
 fun Activity.displayErrorDialog(message: String, actionLabel: String, action: () -> Unit) {
-    MaterialAlertDialogBuilder(this, R.style.AlertDialog)
+    // MaterialAlertDialogBuilder(this, R.style.AlertDialog)
+    MaterialAlertDialogBuilder(this)
         .setMessage(message)
         .setPositiveButton(actionLabel) { _, _ -> action() }
         .setCancelable(false)
