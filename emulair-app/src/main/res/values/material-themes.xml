@@ -33,6 +33,7 @@
         <item name="android:navigationBarColor">?attr/colorSurface</item>
         <item name="elevationOverlayColor">?attr/colorOnSurface</item>
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
     </style>
 
     <style name="Theme.EmulairMaterial.Invisible" parent="Theme.EmulairMaterial">
