@@ -6,6 +6,6 @@
     <application>
         <activity
             android:name="com.bigbratan.emulair.ext.managerSaveSync.ActivateGoogleDriveActivity"
-            android:theme="@style/InvisibleTheme"/>
+            android:theme="@style/Theme.EmulairMaterial.Invisible"/>
     </application>
 </manifest>
