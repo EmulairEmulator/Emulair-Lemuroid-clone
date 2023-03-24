@@ -70,7 +70,7 @@ class SearchFragment : Fragment() {
 
         val factory = SearchViewModel.Factory(retrogradeDb)
         searchViewModel = ViewModelProvider(this, factory)[SearchViewModel::class.java]
-        val gamesAdapter = SearchedGamesAdapter(R.layout.layout_card_game_horz1, gameInteractor, coverLoader)
+        val gamesAdapter = SearchedGamesAdapter(R.layout.layout_card_game_horz, gameInteractor, coverLoader)
         initializeMenuProvider()
 
         launchOnState(Lifecycle.State.RESUMED) {

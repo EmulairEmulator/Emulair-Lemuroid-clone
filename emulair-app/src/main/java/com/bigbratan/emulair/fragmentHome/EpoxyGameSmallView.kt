@@ -15,7 +15,7 @@ import com.bigbratan.emulair.managerCovers.CoverLoader
 import com.bigbratan.emulair.utils.home.GameUtils
 import com.bigbratan.emulair.common.metadataRetrograde.db.entity.Game
 
-@EpoxyModelClass(layout = R.layout.layout_card_game_vert1)
+@EpoxyModelClass(layout = R.layout.layout_card_game_vert)
 abstract class EpoxyGameSmallView : EpoxyModelWithHolder<EpoxyGameSmallView.Holder>() {
 
     @EpoxyAttribute

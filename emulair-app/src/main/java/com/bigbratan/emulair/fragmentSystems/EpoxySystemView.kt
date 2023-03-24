@@ -19,7 +19,7 @@ import com.bigbratan.emulair.utils.home.GameUtils
 import com.bigbratan.emulair.common.metadataRetrograde.db.entity.Game
 import com.bigbratan.emulair.utils.systems.SystemUtils
 
-@EpoxyModelClass(layout = R.layout.layout_card_game_horz2)
+@EpoxyModelClass(layout = R.layout.layout_card_system)
 abstract class EpoxySystemView : EpoxyModelWithHolder<EpoxySystemView.Holder>() {
 
     @EpoxyAttribute

@@ -40,7 +40,7 @@ class SystemsAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SystemViewHolder {
         return SystemViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.layout_card_game_horz2, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.layout_card_system, parent, false)
         )
     }
 

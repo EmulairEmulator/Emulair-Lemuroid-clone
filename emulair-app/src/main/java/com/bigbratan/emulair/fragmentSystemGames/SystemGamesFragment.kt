@@ -60,7 +60,7 @@ class SystemGamesFragment : Fragment() {
 
         val factory = SystemGamesViewModel.Factory(retrogradeDb)
         systemGamesViewModel = ViewModelProvider(this, factory)[SystemGamesViewModel::class.java]
-        gamesAdapter = SystemGamesAdapter(R.layout.layout_card_game_horz1, gameInteractor, coverLoader)
+        gamesAdapter = SystemGamesAdapter(R.layout.layout_card_game_horz, gameInteractor, coverLoader)
 
         recyclerView?.apply {
             adapter = gamesAdapter
