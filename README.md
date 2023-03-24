@@ -19,7 +19,7 @@ The primary goal of Emulair is to combine the ease of use and simple but accessi
 It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, in turn, is a rib of [Retrograde](https://github.com/retrograde/retrograde-android). It also uses [LibretroDroid](https://github.com/Swordfish90/LibretroDroid) under the hood to run [Libretro](https://github.com/libretro) cores. The 2D sprites for the systems are taken from [hakchi2](https://github.com/ClusterM/hakchi2) and [Faustbear](https://imgur.com/gallery/8RQ1QkA).
 
 ## Systems (Libretro Cores)
-- Arcade by [FB Neo](https://docs.libretro.com/library/fbneo/) and [MAME 2003-Plus](https://docs.libretro.com/library/mame2003_plus/)
+- Arcade by [FinalBurn Neo](https://docs.libretro.com/library/fbneo/) and [MAME 2003-Plus](https://docs.libretro.com/library/mame2003_plus/)
 - Atari 2600 by [Stella](https://docs.libretro.com/library/stella/)
 - Atari 7800 by [ProSystem](https://docs.libretro.com/library/prosystem/)
 - Atari Lynx by [Handy](https://docs.libretro.com/library/handy/)
@@ -61,6 +61,8 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [x] A "Jump back in" section on the "Games" page, along with "Recents", "Favorites" and "All Games"
 - [x] Complete visual redesign with consistent sizing, spacing and corner radius
 - [x] Complete conversion to Material Design 3 Components
+- [x] A themed app icon for Android 13+ devices
+- [x] Fixes for bugs that were carried over from Lemuroid
 
 ## To-Be-Added Features
 - [ ] More emulation cores (almost all cores found on Retroarch)
@@ -86,7 +88,6 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] Long press a game to access a details screen
 - [ ] Beautiful animations
 - [ ] A splash screen for Android 12+ devices
-- [ ] A themed app icon for Android 13+ devices
 - [ ] A "Close menu" button accessible from the pause menu, so users don't have to click their device's back button every time they want to unpause a game
 
 ## Removed Features (from Lemuroid)
