@@ -62,7 +62,7 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [x] Complete visual redesign with consistent sizing, spacing and corner radius
 - [x] Complete conversion to Material Design 3 Components
 - [x] A themed app icon for Android 13+ devices
-- [x] Bug fixes that were carried over from Lemuroid
+- [x] Fixes for bugs that were carried over from Lemuroid
 
 ## To-Be-Added Features
 - [ ] More emulation cores (almost all cores found on Retroarch)
