@@ -61,6 +61,8 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [x] A "Jump back in" section on the "Games" page, along with "Recents", "Favorites" and "All Games"
 - [x] Complete visual redesign with consistent sizing, spacing and corner radius
 - [x] Complete conversion to Material Design 3 Components
+- [x] A themed app icon for Android 13+ devices
+- [x] Bug fixes that were carried over from Lemuroid
 
 ## To-Be-Added Features
 - [ ] More emulation cores (almost all cores found on Retroarch)
@@ -86,7 +88,6 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] Long press a game to access a details screen
 - [ ] Beautiful animations
 - [ ] A splash screen for Android 12+ devices
-- [ ] A themed app icon for Android 13+ devices
 - [ ] A "Close menu" button accessible from the pause menu, so users don't have to click their device's back button every time they want to unpause a game
 
 ## Removed Features (from Lemuroid)
