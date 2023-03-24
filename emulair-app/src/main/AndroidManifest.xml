@@ -37,7 +37,7 @@
 
         <activity
             android:name=".activityGame.GameActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
             android:launchMode="singleInstance"
             android:process=":game"
             android:theme="@style/Theme.EmulairMaterial.Game" />
@@ -48,14 +48,18 @@
 
         <activity
             android:name=".activityPauseMenu.PauseMenuActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
             android:process=":game"
             android:theme="@style/Theme.EmulairMaterial.Menu" />
+
         <activity
             android:name=".fragmentSettings.GamePadBindingActivity"
             android:theme="@style/Theme.EmulairMaterial.Invisible" />
+
         <activity
             android:name=".managerSettings.StorageFrameworkPickerLauncher"
             android:theme="@style/Theme.EmulairMaterial.Invisible" />
+
         <activity
             android:name=".activityCrash.GameCrashActivity"
             android:theme="@style/Theme.EmulairMaterial.Game" />
