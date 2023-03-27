@@ -4,8 +4,10 @@ import com.bigbratan.emulair.common.R
 
 fun GameSystem.metaSystemID() = MetaSystemID.fromSystemID(id)
 
-/** Meta systems represents a collection of systems which appear the same to the user. It's currently
- *  only for Arcade (it places FBNeo and MAME2003 under the same name, "Arcade"). */
+/*
+Meta systems represents a collection of systems which appear the same to the user. It's currently
+only for Arcade (it places FBNeo and MAME2003 under the same name, "Arcade").
+*/
 enum class MetaSystemID(val titleResId: Int, val imageResId: Int, val systemIDs: List<SystemID>) {
     NES(
         R.string.game_system_title_ntd_nes1,
@@ -100,7 +102,7 @@ enum class MetaSystemID(val titleResId: Int, val imageResId: Int, val systemIDs:
     NGP(
         R.string.game_system_title_snk_ngp1,
         R.drawable.game_system_snk_ngp1,
-        listOf(SystemID.NGP, SystemID.NGC)
+        listOf(SystemID.NGP)
     ),
     NGC(
         R.string.game_system_title_snk_ngp2_c,
@@ -110,7 +112,7 @@ enum class MetaSystemID(val titleResId: Int, val imageResId: Int, val systemIDs:
     WS(
         R.string.game_system_title_ban_ws1,
         R.drawable.game_system_ban_ws1,
-        listOf(SystemID.WS, SystemID.WSC)
+        listOf(SystemID.WS)
     ),
     WSC(
         R.string.game_system_title_ban_ws2_c,
