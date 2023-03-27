@@ -77,7 +77,6 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] Automatically rescan internal directories on app restart
 - [ ] Set what screen orientation games should be opened in (follow device / landscape / portrait)
 - [ ] Set on-screen buttons' transparency
-- [ ] Thumbnail cache
 - [ ] Different app layout for tablets and foldables
 - [ ] .7z ROMs support
 - [ ] Automatically save state every x seconds
@@ -89,6 +88,7 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] Beautiful animations
 - [ ] A splash screen for Android 12+ devices
 - [ ] A "Close menu" button accessible from the pause menu, so users don't have to click their device's back button every time they want to unpause a game
+- [ ] [NEW] Choose if you want to automatically fallback on other emulators or not, in case a game doesn't work (this implies offering the option to switch between FinalBurn Neo and MAME 2003-Plus)
 
 ## Removed Features (from Lemuroid)
 - Android TV support
