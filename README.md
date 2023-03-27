@@ -77,7 +77,6 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] Automatically rescan internal directories on app restart
 - [ ] Set what screen orientation games should be opened in (follow device / landscape / portrait)
 - [ ] Set on-screen buttons' transparency
-- [ ] Thumbnail cache
 - [ ] Different app layout for tablets and foldables
 - [ ] .7z ROMs support
 - [ ] Automatically save state every x seconds
@@ -89,6 +88,7 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] Beautiful animations
 - [ ] A splash screen for Android 12+ devices
 - [ ] A "Close menu" button accessible from the pause menu, so users don't have to click their device's back button every time they want to unpause a game
+- [ ] [NEW] Choose if you want to automatically fallback on other emulators or not, in case a game doesn't work (this implies offering the option to switch between FinalBurn Neo and MAME 2003-Plus)
 
 ## Removed Features (from Lemuroid)
 - Android TV support
@@ -104,4 +104,4 @@ This program is free software: you can redistribute it and/or modify it under th
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-Before downloading the source code of this software to use it in a project (no matter if it's private or public), please make sure that you understand what the GNU General Public License v3.0 allows you, as well as requires you to do (for example, it allows you to make a profit off of this project, but it requires you to release the source code of your project under a specific license - either version 3 of the GNU GPL, or, at your option, any later version).
+Before downloading the source code of this software to use it in a project (no matter if it's private or public), please make sure that you understand what the GNU General Public License v3.0 allows you, as well as requires you to do.
