@@ -16,6 +16,7 @@ class EpoxyHomeController(
     private val gameInteractor: GameInteractor,
     private val settingsInteractor: SettingsInteractor,
     private val coverLoader: CoverLoader,
+    private val home: HomeFragment
 ) : AsyncEpoxyController() {
 
     private var uiState = HomeViewModel.UIState()
@@ -27,11 +28,11 @@ class EpoxyHomeController(
 
     override fun buildModels() {
         if (displayJump()) {
-            addCard("section_jump", R.string.section_jump, uiState.jumpGame)
+            addCardJumpBackInGame("section_jump", R.string.section_jump, uiState.jumpGame)
         }
 
         if (displayRecents()) {
-            addCarousel("section_recent", R.string.section_recent, uiState.recentGames)
+            addCarouselRecentGames("section_recent", R.string.section_recent, uiState.recentGames)
         }
 
         if (displayFavorites()) {
@@ -49,7 +50,7 @@ class EpoxyHomeController(
         */
 
         if (displayEmptyView()) {
-            addEmptyView()
+            addNoDirectoryView()
         }
     }
 
@@ -84,7 +85,7 @@ class EpoxyHomeController(
         return conditions.all { it }
     }
 
-    private fun addCarousel(id: String, titleId: Int, games: List<Game>) {
+    private fun addCarouselRecentGames(id: String, titleId: Int, games: List<Game>) {
         epoxySectionView {
             id("section_$id")
             title(titleId)
@@ -107,6 +108,7 @@ class EpoxyHomeController(
         epoxySectionAllGamesView {
             id("section_$id")
             title(titleId)
+            onClick { this@EpoxyHomeController.home.navigateToAllGames() }
         }
         carousel {
             id("carousel_$id")
@@ -126,6 +128,7 @@ class EpoxyHomeController(
         epoxySectionFavoriteGamesView {
             id("section_$id")
             title(titleId)
+            onClick { this@EpoxyHomeController.home.navigateToFavoriteGames() }
         }
         carousel {
             id("carousel_$id")
@@ -141,7 +144,7 @@ class EpoxyHomeController(
         }
     }
 
-    private fun addCard(id: String, titleId: Int, games: List<Game>) {
+    private fun addCardJumpBackInGame(id: String, titleId: Int, games: List<Game>) {
         epoxySectionView {
             id("section_$id")
             title(titleId)
@@ -165,7 +168,7 @@ class EpoxyHomeController(
     }
     */
 
-    private fun addEmptyView() {
+    private fun addNoDirectoryView() {
         epoxyNoDirectoryView {
             id("empty_home")
                 .title(R.string.home_empty_title)

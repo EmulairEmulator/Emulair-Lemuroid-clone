@@ -55,7 +55,7 @@ class HomeFragment : Fragment() {
 
         val factory = HomeViewModel.Factory(requireContext().applicationContext, retrogradeDb)
         val homeViewModel = ViewModelProvider(this, factory)[HomeViewModel::class.java]
-        val pagingController = EpoxyHomeController(gameInteractor, settingsInteractor, coverLoader)
+        val pagingController = EpoxyHomeController(gameInteractor, settingsInteractor, coverLoader, this)
 
         Carousel.setDefaultGlobalSnapHelperFactory(null)
 

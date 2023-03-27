@@ -15,14 +15,14 @@ abstract class EpoxySectionAllGamesView : EpoxyModelWithHolder<EpoxySectionAllGa
     var title: Int? = null
 
     @EpoxyAttribute(EpoxyAttribute.Option.DoNotHash)
-    lateinit var home: HomeFragment
+    var onClick: (() -> Unit)? = null
 
     override fun bind(holder: Holder) {
         title?.let {
             holder.titleView.setText(it)
         }
 
-        holder.actionView?.setOnClickListener { home.navigateToAllGames() }
+        holder.actionView?.setOnClickListener { onClick?.invoke() }
     }
 
     override fun unbind(holder: Holder) {
