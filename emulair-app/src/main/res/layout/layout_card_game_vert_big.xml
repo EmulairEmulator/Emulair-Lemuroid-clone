@@ -19,7 +19,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:backgroundTint="@color/material_card_color_transparent"
-        app:cardCornerRadius="24dp">
+        app:cardCornerRadius="24dp"
+        app:cardElevation="0dp">
 
         <ToggleButton
             android:id="@+id/favorite_toggle"
@@ -31,8 +32,7 @@
             android:foregroundGravity="center"
             android:gravity="center"
             android:textOff=""
-            android:textOn=""
-            app:tint="?attr/colorOnBackground" />
+            android:textOn="" />
 
     </com.google.android.material.card.MaterialCardView>
 
