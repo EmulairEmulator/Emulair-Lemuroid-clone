@@ -55,7 +55,7 @@ class AllGamesFragment : Fragment() {
 
         val factory = AllGamesViewModel.Factory(retrogradeDb)
         allGamesViewModel = ViewModelProvider(this, factory)[AllGamesViewModel::class.java]
-        val gamesAdapter = AllGamesAdapter(R.layout.layout_card_game_vert_big, gameInteractor, coverLoader)
+        val gamesAdapter = AllGamesAdapter(R.layout.layout_card_game_vert_medium, gameInteractor, coverLoader)
 
         launchOnState(Lifecycle.State.RESUMED) {
             allGamesViewModel.allGames

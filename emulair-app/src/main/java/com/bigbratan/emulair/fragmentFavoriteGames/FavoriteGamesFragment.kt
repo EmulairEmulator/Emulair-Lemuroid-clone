@@ -55,7 +55,7 @@ class FavoriteGamesFragment : Fragment() {
 
         val factory = FavoriteGamesViewModel.Factory(retrogradeDb)
         favoriteGamesViewModel = ViewModelProvider(this, factory)[FavoriteGamesViewModel::class.java]
-        val gamesAdapter = FavoriteGamesAdapter(R.layout.layout_card_game_vert_big, gameInteractor, coverLoader)
+        val gamesAdapter = FavoriteGamesAdapter(R.layout.layout_card_game_vert_medium, gameInteractor, coverLoader)
 
         launchOnState(Lifecycle.State.RESUMED) {
             favoriteGamesViewModel.favoriteGames
