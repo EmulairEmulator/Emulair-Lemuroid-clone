@@ -3,10 +3,8 @@ package com.bigbratan.emulair.common.managerController
 import android.app.Activity
 import android.content.pm.ActivityInfo
 import android.graphics.Rect
-import android.view.Gravity
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import android.view.WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
 import android.widget.Button
 import android.widget.PopupWindow
 import androidx.core.math.MathUtils
@@ -52,12 +50,16 @@ class TouchControllerCustomizer {
         var (scale, rotation, marginX, marginY) = settings
 
         val contentView = layoutInflater.inflate(R.layout.layout_screen_edit_touch_controls, null)
+
         editControlsWindow = PopupWindow(
             contentView,
             ViewGroup.LayoutParams.MATCH_PARENT,
             ViewGroup.LayoutParams.MATCH_PARENT,
             true
         )
+
+        editControlsWindow?.isClippingEnabled = false
+
         editControlsWindow?.contentView?.findViewById<Button>(R.id.edit_control_reset)
             ?.setOnClickListener {
                 scale = TouchControllerSettingsManager.DEFAULT_SCALE
@@ -69,6 +71,7 @@ class TouchControllerCustomizer {
                 events.value = Event.Rotation(rotation)
                 events.value = Event.Scale(scale)
             }
+
         editControlsWindow?.contentView?.findViewById<Button>(R.id.edit_control_done)
             ?.setOnClickListener {
                 events.value = Event.Save
@@ -135,7 +138,9 @@ class TouchControllerCustomizer {
         editControlsWindow?.contentView?.setOnTouchListener { _, event ->
             touchDetector.onTouchEvent(event)
         }
+
         editControlsWindow?.isFocusable = false
+
         editControlsWindow?.showAtLocation(view, Gravity.CENTER, 0, 0)
         return events
     }

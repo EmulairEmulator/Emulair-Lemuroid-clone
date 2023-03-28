@@ -26,13 +26,13 @@
         android:title="@string/pause_menu_restart"
         app:icon="@drawable/ic_menu_restart" />
 
-    <SwitchPreference
+    <SwitchPreferenceCompat
         android:key="pref_game_mute"
         android:layout="@layout/layout_preference_pausemenu_switch"
         android:title="@string/pause_menu_mute_audio"
         app:icon="@drawable/ic_menu_mute" />
 
-    <SwitchPreference
+    <SwitchPreferenceCompat
         android:key="pref_game_fast_forward"
         android:layout="@layout/layout_preference_pausemenu_switch"
         android:title="@string/pause_menu_fast_forward"

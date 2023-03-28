@@ -100,7 +100,7 @@
     <string name="pause_menu_load">Load State</string>
     <string name="pause_menu_state">State %1$s</string>
     <string name="pause_menu_quit">Quit</string>
-    <string name="pause_menu_quit_prompt">You will loose any unsaved progress (unless you turned on \"Save state on correct quit\").</string>
+    <string name="pause_menu_quit_prompt">You will lose any unsaved progress (unless you turned on \"Save state on correct quit\").</string>
     <string name="pause_menu_restart">Restart</string>
     <string name="pause_menu_restart_prompt">Your game will restart from the main menu. In-game saved progress and Emulair save states will be kept. Useful when a game doesn\'t natively allow you to return to the main menu.</string>
     <string name="pause_menu_mute_audio">Mute</string>

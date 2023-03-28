@@ -8,7 +8,7 @@ import android.graphics.drawable.BitmapDrawable
 import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceScreen
-import androidx.preference.SwitchPreference
+import androidx.preference.SwitchPreferenceCompat
 import com.bigbratan.emulair.R
 import com.bigbratan.emulair.activityPauseMenu.PauseMenuContract
 import com.bigbratan.emulair.common.utils.graphics.GraphicsUtils
@@ -23,7 +23,7 @@ import kotlin.math.roundToInt
 object PauseMenuPreferences {
 
     fun setupAudioOption(screen: PreferenceScreen, audioEnabled: Boolean) {
-        val preference = screen.findPreference<SwitchPreference>(MUTE)
+        val preference = screen.findPreference<SwitchPreferenceCompat>(MUTE)
         preference?.isChecked = !audioEnabled
     }
 
@@ -32,7 +32,7 @@ object PauseMenuPreferences {
         fastForwardEnabled: Boolean,
         fastForwardSupported: Boolean,
     ) {
-        val preference = screen.findPreference<SwitchPreference>(FAST_FORWARD)
+        val preference = screen.findPreference<SwitchPreferenceCompat>(FAST_FORWARD)
         preference?.isChecked = fastForwardEnabled
         preference?.isVisible = fastForwardSupported
     }
@@ -148,7 +148,7 @@ object PauseMenuPreferences {
             "pref_game_load_8" -> handleLoadAction(activity, 8)
             "pref_game_load_9" -> handleLoadAction(activity, 9)
             "pref_game_mute" -> {
-                val currentValue = (preference as SwitchPreference).isChecked
+                val currentValue = (preference as SwitchPreferenceCompat).isChecked
                 val resultIntent = Intent().apply {
                     putExtra(PauseMenuContract.RESULT_ENABLE_AUDIO, !currentValue)
                 }
@@ -156,7 +156,7 @@ object PauseMenuPreferences {
                 true
             }
             "pref_game_fast_forward" -> {
-                val currentValue = (preference as SwitchPreference).isChecked
+                val currentValue = (preference as SwitchPreferenceCompat).isChecked
                 val resultIntent = Intent().apply {
                     putExtra(PauseMenuContract.RESULT_ENABLE_FAST_FORWARD, currentValue)
                 }

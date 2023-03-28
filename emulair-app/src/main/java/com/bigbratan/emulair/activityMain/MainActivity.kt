@@ -63,8 +63,8 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
-        window.navigationBarColor = SurfaceColors.SURFACE_0.getColor(this)
-        window.statusBarColor = SurfaceColors.SURFACE_0.getColor(this)
+        // window.navigationBarColor = SurfaceColors.SURFACE_0.getColor(this)
+        // window.statusBarColor = SurfaceColors.SURFACE_0.getColor(this)
         setContentView(R.layout.activity_main)
         initializeActivity()
     }
