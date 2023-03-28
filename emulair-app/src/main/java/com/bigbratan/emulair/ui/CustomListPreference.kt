@@ -18,7 +18,8 @@ class CustomListPreference : ListPreference {
     constructor(context: Context?) : super(context)
 
     override fun onClick() {
-        val builder = MaterialAlertDialogBuilder(context, R.style.AlertDialog).setSingleChoiceItems(entries, getValueIndex()) { dialog, index ->
+        // val builder = MaterialAlertDialogBuilder(context, R.style.AlertDialog).setSingleChoiceItems(entries, getValueIndex()) { dialog, index ->
+        val builder = MaterialAlertDialogBuilder(context).setSingleChoiceItems(entries, getValueIndex()) { dialog, index ->
             if (callChangeListener(entryValues[index].toString())) {
                 setValueIndex(index)
             }

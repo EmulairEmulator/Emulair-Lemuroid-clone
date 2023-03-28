@@ -84,7 +84,8 @@ class PauseMenuFragment : PreferenceFragmentCompat() {
     }
 
     private fun handleRestartAction(activity: Activity?, context: Context) {
-        MaterialAlertDialogBuilder(context, R.style.AlertDialog)
+        // MaterialAlertDialogBuilder(context, R.style.AlertDialog)
+        MaterialAlertDialogBuilder(context)
             .setTitle(R.string.popup_title)
             .setMessage(R.string.pause_menu_restart_prompt)
             .setPositiveButton(R.string.button_ok) { _, _ ->
@@ -98,7 +99,8 @@ class PauseMenuFragment : PreferenceFragmentCompat() {
     }
 
     private fun handleQuitAction(activity: Activity?, context: Context) {
-        MaterialAlertDialogBuilder(context, R.style.AlertDialog)
+        // MaterialAlertDialogBuilder(context, R.style.AlertDialog)
+        MaterialAlertDialogBuilder(context)
             .setTitle(R.string.popup_title)
             .setMessage(R.string.pause_menu_quit_prompt)
             .setPositiveButton(R.string.button_ok) { _, _ ->

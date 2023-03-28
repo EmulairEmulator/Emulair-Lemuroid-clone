@@ -22,7 +22,8 @@ class GamePadBindingActivity : RetrogradeActivity() {
         inputBindingUpdater = InputBindingUpdater(inputDeviceManager, intent)
 
         if (savedInstanceState == null) {
-            MaterialAlertDialogBuilder(this, R.style.AlertDialog)
+            // MaterialAlertDialogBuilder(this, R.style.AlertDialog)
+            MaterialAlertDialogBuilder(this)
                 .setTitle(inputBindingUpdater.getTitle(applicationContext))
                 .setMessage(inputBindingUpdater.getMessage(applicationContext))
                 .setOnKeyListener { _, _, event -> handleKeyEvent(event) }
