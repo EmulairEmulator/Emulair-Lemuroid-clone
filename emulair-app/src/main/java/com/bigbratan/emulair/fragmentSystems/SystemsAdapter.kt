@@ -25,7 +25,9 @@ class SystemViewHolder(parent: View) : RecyclerView.ViewHolder(parent) {
 
     fun bind(systemUtils: SystemUtils, onSystemClick: (MetaSystemID) -> Unit) {
         textView?.text = itemView.context.resources.getString(systemUtils.metaSystemId.titleResId)
-        subtextView?.text = itemView.context.getString(
+        if (systemUtils.count == 1)
+            subtextView?.text = itemView.context.getString(R.string.systems_subtitle_alt)
+        else subtextView?.text = itemView.context.getString(
             R.string.systems_subtitle,
             systemUtils.count.toString()
         )

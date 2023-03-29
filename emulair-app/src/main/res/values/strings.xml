@@ -119,6 +119,7 @@
     <!-- SYSTEMS FRAGMENT -->
     <string name="systems_empty_view_message">No systems found</string>
     <string name="systems_subtitle">%1$s games</string>
+    <string name="systems_subtitle_alt">1 game</string>
 
     <!-- SETTINGS FRAGMENT - ROMs -->
     <string name="settings_category_roms">ROMs</string>
