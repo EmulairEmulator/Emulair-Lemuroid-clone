@@ -31,7 +31,8 @@
             android:layout="@layout/layout_preference_main_seekbar_bottom"
             android:max="10"
             android:title="@string/advanced_input_device_tilt_title"
-            app:iconSpaceReserved="false" />
+            app:iconSpaceReserved="false"
+            app:showSeekBarValue="true" />
 
     </PreferenceCategory>
 

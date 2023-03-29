@@ -55,6 +55,23 @@
                 android:paddingEnd="4dp"
                 android:paddingBottom="8dp" />
 
+            <!--
+            <com.google.android.material.slider.Slider
+                android:id="@+id/seekbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.Material3.Slider"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:background="@null"
+                android:clickable="false"
+                android:focusable="false"
+                android:paddingStart="4dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="4dp"
+                android:paddingBottom="8dp" />
+                -->
+
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/seekbar_value"
                 android:layout_width="@dimen/preference_seekbar_value_minWidth"
