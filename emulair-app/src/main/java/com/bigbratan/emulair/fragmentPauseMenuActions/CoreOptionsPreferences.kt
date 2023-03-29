@@ -7,7 +7,7 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceGroup
 import androidx.preference.PreferenceScreen
-import androidx.preference.SwitchPreference
+import androidx.preference.SwitchPreferenceCompat
 import com.bigbratan.emulair.R
 import com.bigbratan.emulair.managerInput.ControllerConfigsManager
 import com.bigbratan.emulair.common.managerController.ControllerConfig
@@ -84,7 +84,7 @@ object CoreOptionsPreferences {
         systemID: String,
     ): Preference {
         return if (it.getEntriesValues().toSet() == BOOLEAN_SET) {
-            buildSwitchPreference(context, it, systemID)
+            buildSwitchPreferenceCompat(context, it, systemID)
         } else {
             buildListPreference(context, it, systemID)
         }
@@ -108,12 +108,12 @@ object CoreOptionsPreferences {
         return preference
     }
 
-    private fun buildSwitchPreference(
+    private fun buildSwitchPreferenceCompat(
         context: Context,
         it: EmulairCoreOption,
         systemID: String,
-    ): SwitchPreference {
-        val preference = SwitchPreference(context)
+    ): SwitchPreferenceCompat {
+        val preference = SwitchPreferenceCompat(context)
         preference.key = CoreVariablesManager.computeSharedPreferenceKey(it.getKey(), systemID)
         preference.layoutResource = R.layout.layout_preference_pausemenu_switch_alt
         preference.title = it.getDisplayName(context)
