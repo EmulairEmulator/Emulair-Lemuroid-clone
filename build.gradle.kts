@@ -7,7 +7,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath(deps.plugins.android)
+        classpath("com.android.tools.build:gradle:7.4.2")
         classpath(deps.plugins.navigationSafeArgs)
     }
 }
@@ -79,7 +79,6 @@ subprojects {
             // BaseExtension is common parent for application, library and test modules
             extensions.configure(BaseExtension::class.java) {
                 compileSdkVersion(deps.android.compileSdkVersion)
-                buildToolsVersion(deps.android.buildToolsVersion)
                 defaultConfig {
                     minSdkVersion(deps.android.minSdkVersion)
                     targetSdkVersion(deps.android.targetSdkVersion)

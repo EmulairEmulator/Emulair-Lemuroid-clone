@@ -108,7 +108,7 @@ abstract class EmulairApplicationModule {
     @ContributesAndroidInjector(modules = [GamePadBindingActivity.Module::class])
     abstract fun gamePadBindingActivity(): GamePadBindingActivity
 
-    @Module
+    // @Module
     companion object {
         @Provides
         @PerApp

@@ -62,11 +62,13 @@ android {
             dimension = "coresType"
         }
     }
-
     packagingOptions {
-        doNotStrip("*/*/*_libretro_android.so")
-        exclude("META-INF/DEPENDENCIES")
-        exclude("META-INF/library_release.kotlin_module")
+        jniLibs {
+            keepDebugSymbols += setOf("*/*/*_libretro_android.so")
+        }
+        resources {
+            excludes += setOf("META-INF/DEPENDENCIES", "META-INF/library_release.kotlin_module")
+        }
     }
 
     signingConfigs {
@@ -102,6 +104,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    namespace = "com.bigbratan.emulair"
 }
 
 dependencies {

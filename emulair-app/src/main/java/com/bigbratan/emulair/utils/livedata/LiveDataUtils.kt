@@ -1,7 +1,7 @@
 package com.bigbratan.emulair.utils.livedata
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.Transformations
+// import androidx.lifecycle.Transformations
 
 fun <T, K, S> LiveData<T>.combineLatest(
     other: LiveData<K>,
@@ -15,5 +15,5 @@ fun <T> LiveData<T>.throttle(delayMs: Long): LiveData<T> {
 }
 
 fun <T, K> LiveData<T>.map(mapper: (T) -> K): LiveData<K> {
-    return Transformations.map(this, mapper)
+    return this.map(mapper)
 }

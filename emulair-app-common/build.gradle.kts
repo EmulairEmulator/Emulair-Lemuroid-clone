@@ -77,6 +77,7 @@ android {
             }
         }
     }
+    namespace = "com.bigbratan.emulair.common"
     kotlinOptions {
         this as KotlinJvmOptions
         jvmTarget = "1.8"
