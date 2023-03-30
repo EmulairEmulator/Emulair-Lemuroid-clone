@@ -8,6 +8,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    namespace = "com.bigbratan.emulair.ext"
 }
 
 dependencies {

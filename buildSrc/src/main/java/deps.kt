@@ -4,26 +4,25 @@ object deps {
         const val targetSdkVersion  = 33
         const val compileSdkVersion = 33
         const val minSdkVersion     = 24
-        const val buildToolsVersion = "30.0.2"
     }
 
     object versions {
-        const val dagger          = "2.19"
-        const val gms             = "17.0.0"
-        const val kotlin          = "1.6.21"
-        const val okHttp          = "4.9.1"
+        const val dagger          = "2.45"
+        const val gms             = "17.0.0" // not yet
+        const val kotlin          = "1.8.10"
+        const val okHttp          = "4.10.0"
         const val retrofit        = "2.9.0"
-        const val work            = "2.7.1"
-        const val navigation      = "2.3.5"
-        const val lifecycle       = "2.5.1"
-        const val leanback        = "1.1.0-rc01"
-        const val googleApiClient = "1.32.1"
+        const val work            = "2.8.1"
+        const val navigation      = "2.5.3"
+        const val lifecycle       = "2.6.1"
+        const val leanback        = "1.1.0-rc01" // not yet
+        const val googleApiClient = "2.2.0"
         const val paging          = "3.1.1"
-        const val room            = "2.4.2"
-        const val epoxy           = "4.6.3-vinay-compose"
-        const val serialization   = "1.2.2"
-        const val fragment        = "1.5.1"
-        const val activity        = "1.5.1"
+        const val room            = "2.5.1"
+        const val epoxy           = "4.6.3-vinay-compose" // not yet
+        const val serialization   = "1.5.0"
+        const val fragment        = "1.5.6"
+        const val activity        = "1.7.0"
         const val libretrodroid   = "0.9.0"
         const val radialgamepad   = "2.0.0"
     }
@@ -116,7 +115,7 @@ object deps {
         object gdrive {
             const val apiClient            = "com.google.api-client:google-api-client:${versions.googleApiClient}"
             const val apiClientAndroid     = "com.google.api-client:google-api-client-android:${versions.googleApiClient}"
-            const val apiServicesDrive     = "com.google.apis:google-api-services-drive:v3-rev20210725-${versions.googleApiClient}"
+            const val apiServicesDrive     = "com.google.apis:google-api-services-drive:v3-rev20230306-2.0.0"
         }
 
         const val kotlinxCoroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
@@ -137,7 +136,6 @@ object deps {
     }
 
     object plugins {
-        const val android = "com.android.tools.build:gradle:7.1.3"
         const val navigationSafeArgs = "androidx.navigation:navigation-safe-args-gradle-plugin:${versions.navigation}"
     }
 }
