@@ -102,7 +102,7 @@
     <string name="pause_menu_quit">Quit</string>
     <string name="pause_menu_quit_prompt">You will lose any unsaved progress (unless you turned on \"Save state on correct quit\").</string>
     <string name="pause_menu_restart">Restart</string>
-    <string name="pause_menu_restart_prompt">Your game will restart from the main menu. In-game saved progress and Emulair save states will be kept. Useful when a game doesn\'t natively allow you to return to the main menu.</string>
+    <string name="pause_menu_restart_prompt">Your game will restart from the main menu. Only save states and in-game saved progress will be kept. Useful when a game doesn\'t natively allow you to return to the main menu.</string>
     <string name="pause_menu_mute_audio">Mute</string>
     <string name="pause_menu_fast_forward">Fast-Forward</string>
     <string name="pause_menu_change_disk_button">Change Disk</string>
