@@ -11,7 +11,7 @@ object deps {
         const val kotlin          = "1.8.10"
         const val work            = "2.8.1"
         const val navigation      = "2.5.3"
-        const val lifecycle       = "2.6.1"
+        const val lifecycle       = "2.5.1"
         const val leanback        = "1.1.0-rc01" // not yet
         const val googleApiClient = "2.2.0"
         const val paging          = "3.1.1"
@@ -19,7 +19,7 @@ object deps {
         const val epoxy           = "4.6.3-vinay-compose" // not yet
         const val serialization   = "1.5.0"
         const val fragment        = "1.5.6"
-        const val activity        = "1.7.0"
+        const val activity        = "1.5.1"
     }
 
     object libs {
@@ -114,7 +114,8 @@ object deps {
         object gdrive {
             const val apiClient            = "com.google.api-client:google-api-client:${versions.googleApiClient}"
             const val apiClientAndroid     = "com.google.api-client:google-api-client-android:${versions.googleApiClient}"
-            const val apiServicesDrive     = "com.google.apis:google-api-services-drive:v3-rev20230306-2.0.0"
+            // const val apiServicesDrive     = "com.google.apis:google-api-services-drive:v3-rev20230306-2.0.0"
+            const val apiServicesDrive     = "com.google.apis:google-api-services-drive:v3-rev20210725-1.32.1"
         }
 
         const val kotlinxCoroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
