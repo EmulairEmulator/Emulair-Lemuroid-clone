@@ -27,7 +27,6 @@ dependencies {
     implementation(deps.libs.androidx.fragment.ktx)
     implementation(deps.libs.androidx.activity.activity)
     implementation(deps.libs.androidx.activity.activityKtx)
-    implementation(deps.libs.androidx.ktx.coreKtx)
     implementation(deps.libs.androidx.paging.common)
     implementation(deps.libs.androidx.paging.runtime)
     implementation(deps.libs.androidx.room.runtime)
