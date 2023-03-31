@@ -90,6 +90,7 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] A custom splash screen for Android 12+ devices
 - [ ] A "Close menu" button accessible from the pause menu, so users don't have to click their device's back button every time they want to unpause a game
 - [ ] [NEW] Choose if you want to automatically fall back on other emulators or not, in case a game doesn't work (this implies unlocking the option to switch between FinalBurn Neo and MAME 2003-Plus)
+- [ ] [NEW] Plenty QOL features, updates and fixes
 
 ## Removed Features (from Lemuroid)
 - Android TV support
