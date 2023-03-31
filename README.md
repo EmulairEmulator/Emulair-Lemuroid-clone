@@ -76,7 +76,7 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] Light Theme, AMOLED Theme, Material You Theme (previously there was only a Dark Theme)
 - [ ] Slide down in the "Games" page to rescan your directories and refresh your games list
 - [ ] Automatically rescan internal directories on app restart
-- [ ] Set what screen orientation games should be opened in (follow device / landscape / portrait)
+- [ ] Set what screen orientation games should be opened in (landscape / portrait / follow device)
 - [ ] Set on-screen buttons' transparency
 - [ ] Different app layout for tablets and foldables
 - [ ] .7z ROMs support
