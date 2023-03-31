@@ -13,7 +13,7 @@
 Emulair is an Android exclusive open-source front-end for Libretro cores, based on Lemuroid. For more information about the project (such as how the code functions, why the project exists, who worked on it, etc.), [check the Wiki page](https://github.com/RaduBratan/Emulair/wiki). To see our backlog, check our [Project page](https://github.com/users/RaduBratan/projects/2).
 
 ## Philosophy
-The primary goal of Emulair is to combine the ease of use and simple but accessible interface of Lemuroid with Retroarch's extensive customisability and features.
+The primary goal of Emulair is to combine the ease of use and simple but accessible interface of Lemuroid with RetroArch's extensive customisability and features.
 
 ## Origin
 It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, in turn, is a rib of [Retrograde](https://github.com/retrograde/retrograde-android). It also uses [LibretroDroid](https://github.com/Swordfish90/LibretroDroid) under the hood to run [Libretro](https://github.com/libretro) cores. The 2D sprites for the systems are taken from [hakchi2](https://github.com/ClusterM/hakchi2) and [Faustbear](https://imgur.com/gallery/8RQ1QkA).
@@ -50,10 +50,11 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - Save files to Google Drive (only if downloaded from Google Play; inaccessible directly from Drive)
 - Add games to a "Favourites" list
 - Simulate various screens, such as LCD or CRT
-- Remap some touch screen controls (such as joysticks or d-pads) to gyroscopic input, by double tapping/triple tapping the buttons
+- Remap some touch screen controls (such as joysticks or D-pads) to gyroscopic input, by double / triple tapping the buttons
 - Customizable touch controls (size and position)
 - ROMs scanning and indexing
-- Gamepad support
+- BIOSes scanning and indexing
+- Gamepad support (with button remapping included)
 - .zip ROMs support
 - Local, offline multiplayer (up to 4 controllers, only in games where you can select more than one player)
 
@@ -65,13 +66,13 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [x] Fixes for bugs that were carried over from Lemuroid
 
 ## To-Be-Added Features
-- [ ] More emulation cores (almost all cores found on Retroarch)
+- [ ] More emulation cores (almost all cores found on RetroArch)
 - [ ] Exposed all settings for all cores
 - [ ] Cheat codes support
 - [ ] A user friendly intro screen concisely explaining how to use the app
 - [ ] An info screen further explaining how the app works
 - [ ] A profile screen
-- [ ] Button prompts before every important action (such as saving/loading states)
+- [ ] Button prompts before every important action (such as saving / loading states)
 - [ ] Light Theme, AMOLED Theme, Material You Theme (previously there was only a Dark Theme)
 - [ ] Slide down in the "Games" page to rescan your directories and refresh your games list
 - [ ] Automatically rescan internal directories on app restart
@@ -83,12 +84,12 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] More save file formats support
 - [ ] Updated Libretro games database
 - [ ] Add systems to a "Starred" list
-- [ ] Sync your save files across cloud services such as Google Drive, Dropbox and Microsoft OneDrive
+- [ ] Sync your save files across cloud services such as Google Firebase, Dropbox and Microsoft OneDrive (on top of Google Drive)
 - [ ] Long press a game to access a details screen
 - [ ] Beautiful animations
-- [ ] A splash screen for Android 12+ devices
+- [ ] A custom splash screen for Android 12+ devices
 - [ ] A "Close menu" button accessible from the pause menu, so users don't have to click their device's back button every time they want to unpause a game
-- [ ] [NEW] Choose if you want to automatically fallback on other emulators or not, in case a game doesn't work (this implies offering the option to switch between FinalBurn Neo and MAME 2003-Plus)
+- [ ] [NEW] Choose if you want to automatically fall back on other emulators or not, in case a game doesn't work (this implies unlocking the option to switch between FinalBurn Neo and MAME 2003-Plus)
 
 ## Removed Features (from Lemuroid)
 - Android TV support
