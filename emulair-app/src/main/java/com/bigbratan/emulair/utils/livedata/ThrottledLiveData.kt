@@ -5,9 +5,7 @@ import android.os.Looper
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 
-/**
- * LiveData throttling value emissions so they don't happen more often than [delayMs].
- */
+// LiveData throttling value emissions so they don't happen more often than [delayMs]
 class ThrottledLiveData<T>(source: LiveData<T>, delayMs: Long) : MediatorLiveData<T>() {
     private val handler = Handler(Looper.getMainLooper())
     var delayMs = delayMs

@@ -47,8 +47,7 @@ project(":libretro_core_fceumm").projectDir = File("libretro-cores/libretro_core
 project(":libretro_core_genesis_plus_gx").projectDir = File("libretro-cores/libretro_core_genesis_plus_gx")
 project(":libretro_core_mame2003_plus").projectDir = File("libretro-cores/libretro_core_mame2003_plus")
 project(":libretro_core_mgba").projectDir = File("libretro-cores/libretro_core_mgba")
-project(":libretro_core_mupen64plus_next_gles3").projectDir =
-    File("libretro-cores/libretro_core_mupen64plus_next_gles3")
+project(":libretro_core_mupen64plus_next_gles3").projectDir = File("libretro-cores/libretro_core_mupen64plus_next_gles3")
 project(":libretro_core_pcsx_rearmed").projectDir = File("libretro-cores/libretro_core_pcsx_rearmed")
 project(":libretro_core_ppsspp").projectDir = File("libretro-cores/libretro_core_ppsspp")
 project(":libretro_core_snes9x").projectDir = File("libretro-cores/libretro_core_snes9x")

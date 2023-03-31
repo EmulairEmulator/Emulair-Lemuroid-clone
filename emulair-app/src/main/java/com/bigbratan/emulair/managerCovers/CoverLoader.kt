@@ -33,7 +33,7 @@ class CoverLoader(applicationContext: Context) {
     }
 
     fun cancelRequest(imageView: ImageView) {
-        // coil-kt automatically does that for us.
+        // coil-kt automatically does that for us
     }
 
     companion object {
@@ -55,7 +55,7 @@ class CoverLoader(applicationContext: Context) {
                 .take(3)
                 .joinToString("")
                 .ifBlank { game.title.first().toString() }
-                .capitalize()
+                .replaceFirstChar(Char::titlecase)
         }
 
         private fun computeColor(game: Game): Int {
