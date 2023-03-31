@@ -8,8 +8,6 @@ object deps {
 
     object versions {
         const val dagger          = "2.45"
-        // const val gms             = "18.1.0"
-        // const val playAuth        = "18.1.0"
         const val kotlin          = "1.8.10"
         const val work            = "2.8.1"
         const val navigation      = "2.5.3"
@@ -18,7 +16,7 @@ object deps {
         const val googleApiClient = "2.2.0"
         const val paging          = "3.1.1"
         const val room            = "2.5.1"
-        const val epoxy           = "4.6.3-vinay-compose"
+        const val epoxy           = "4.6.3-vinay-compose" // not yet
         const val serialization   = "1.5.0"
         const val fragment        = "1.5.6"
         const val activity        = "1.7.0"
@@ -46,8 +44,8 @@ object deps {
                 const val commonJava8 = "androidx.lifecycle:lifecycle-common-java8:${versions.lifecycle}"
                 const val processor = "androidx.lifecycle:lifecycle-compiler:${versions.lifecycle}"
                 const val runtime = "androidx.lifecycle:lifecycle-runtime-ktx:${versions.lifecycle}"
-                // const val reactiveStreams = "android.arch.lifecycle:reactivestreams:1.1.1"
-                const val reactiveStreams = "androidx.lifecycle:lifecycle-reactivestreams:${versions.lifecycle}"
+                const val reactiveStreams = "android.arch.lifecycle:reactivestreams:1.1.1"
+                // const val reactiveStreams = "androidx.lifecycle:lifecycle-reactivestreams:${versions.lifecycle}"
             }
             object preferences {
                 const val preferencesKtx = "androidx.preference:preference-ktx:1.1.1" // not yet
@@ -123,7 +121,7 @@ object deps {
         const val ktlint                   = "com.github.shyiko:ktlint:0.31.0"
         const val okio                     = "com.squareup.okio:okio:3.3.0"
         const val okHttp3                  = "com.squareup.okhttp3:okhttp:4.10.0"
-        const val coil                     = "io.coil-kt:coil:2.3.0"
+        const val coil                     = "io.coil-kt:coil:1.4.0"
         const val retrofit                 = "com.squareup.retrofit2:retrofit:2.9.0"
         const val flowPreferences          = "com.fredporciuncula:flow-preferences:1.9.0"
         const val timber                   = "com.jakewharton.timber:timber:5.0.1"
