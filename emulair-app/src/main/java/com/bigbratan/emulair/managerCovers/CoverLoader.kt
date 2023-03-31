@@ -3,6 +3,7 @@ package com.bigbratan.emulair.managerCovers
 import android.content.Context
 import android.widget.ImageView
 import coil.ImageLoader
+import coil.disk.DiskCache
 import coil.load
 import coil.util.CoilUtils
 import com.bigbratan.emulair.common.utils.drawable.TextDrawable
@@ -14,9 +15,21 @@ class CoverLoader(applicationContext: Context) {
 
     private val imageLoader = ImageLoader.Builder(applicationContext)
         .crossfade(true)
+        /*
         .okHttpClient {
             OkHttpClient.Builder()
                 .cache(CoilUtils.createDefaultCache(applicationContext))
+                .addNetworkInterceptor(ThrottleFailedThumbnailsInterceptor)
+                .build()
+        }
+        */
+        .diskCache {
+            DiskCache.Builder()
+                .directory(applicationContext.cacheDir.resolve("image_cache"))
+                .build()
+        }
+        .okHttpClient {
+            OkHttpClient.Builder()
                 .addNetworkInterceptor(ThrottleFailedThumbnailsInterceptor)
                 .build()
         }
@@ -55,7 +68,7 @@ class CoverLoader(applicationContext: Context) {
                 .take(3)
                 .joinToString("")
                 .ifBlank { game.title.first().toString() }
-                .capitalize()
+                .replaceFirstChar(Char::titlecase)
         }
 
         private fun computeColor(game: Game): Int {

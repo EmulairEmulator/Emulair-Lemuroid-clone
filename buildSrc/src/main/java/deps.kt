@@ -8,10 +8,9 @@ object deps {
 
     object versions {
         const val dagger          = "2.45"
-        const val gms             = "17.0.0" // not yet
+        // const val gms             = "18.1.0"
+        // const val playAuth        = "18.1.0"
         const val kotlin          = "1.8.10"
-        const val okHttp          = "4.10.0"
-        const val retrofit        = "2.9.0"
         const val work            = "2.8.1"
         const val navigation      = "2.5.3"
         const val lifecycle       = "2.6.1"
@@ -19,19 +18,17 @@ object deps {
         const val googleApiClient = "2.2.0"
         const val paging          = "3.1.1"
         const val room            = "2.5.1"
-        const val epoxy           = "4.6.3-vinay-compose" // not yet
+        const val epoxy           = "4.6.3-vinay-compose"
         const val serialization   = "1.5.0"
         const val fragment        = "1.5.6"
         const val activity        = "1.7.0"
-        const val libretrodroid   = "0.9.0"
-        const val radialgamepad   = "2.0.0"
     }
 
     object libs {
         object androidx {
             object appcompat {
-                const val appcompat = "androidx.appcompat:appcompat:1.4.2"
-                const val recyclerView = "androidx.recyclerview:recyclerview:1.2.1"
+                const val appcompat = "androidx.appcompat:appcompat:1.6.1"
+                const val recyclerView = "androidx.recyclerview:recyclerview:1.3.0"
                 const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.1.4"
             }
             object leanback {
@@ -41,18 +38,19 @@ object deps {
                 const val tvProvider = "androidx.tvprovider:tvprovider:1.0.0"
             }
             object ktx {
-                const val core = "androidx.core:core-ktx:1.8.0"
-                const val coreKtx = "androidx.core:core-ktx:1.8.0"
-                const val collection = "androidx.collection:collection-ktx:1.1.0"
+                const val core = "androidx.core:core:1.9.0"
+                const val coreKtx = "androidx.core:core-ktx:1.9.0"
+                const val collection = "androidx.collection:collection-ktx:1.3.0-dev01"
             }
             object lifecycle {
                 const val commonJava8 = "androidx.lifecycle:lifecycle-common-java8:${versions.lifecycle}"
                 const val processor = "androidx.lifecycle:lifecycle-compiler:${versions.lifecycle}"
                 const val runtime = "androidx.lifecycle:lifecycle-runtime-ktx:${versions.lifecycle}"
-                const val reactiveStreams = "android.arch.lifecycle:reactivestreams:1.1.1"
+                // const val reactiveStreams = "android.arch.lifecycle:reactivestreams:1.1.1"
+                const val reactiveStreams = "androidx.lifecycle:lifecycle-reactivestreams:${versions.lifecycle}"
             }
             object preferences {
-                const val preferencesKtx = "androidx.preference:preference-ktx:1.1.1"
+                const val preferencesKtx = "androidx.preference:preference-ktx:1.1.1" // not yet
             }
             object paging {
                 const val common = "androidx.paging:paging-common:${versions.paging}"
@@ -105,11 +103,14 @@ object deps {
             const val processor = "com.airbnb.android:epoxy-processor:${versions.epoxy}"
         }
         object play {
-            const val review = "com.google.android.play:review:2.0.0"
-            const val reviewKtx = "com.google.android.play:review-ktx:2.0.0"
-            const val featureDelivery = "com.google.android.play:feature-delivery:2.0.0"
-            const val featureDeliveryKtx = "com.google.android.play:feature-delivery-ktx:2.0.0"
-            const val playServices = "com.google.android.gms:play-services-auth:17.0.0"
+            const val review = "com.google.android.play:review:2.0.1"
+            const val reviewKtx = "com.google.android.play:review-ktx:2.0.1"
+            const val playServicesAuth = "com.google.android.gms:play-services-auth:20.4.0"
+            const val playServicesBase = "com.google.android.gms:play-services-base:18.2.0"
+            const val playServicesTasks = "com.google.android.gms:play-services-tasks:18.0.2"
+            const val playServicesAuthApiPhone = "com.google.android.gms:play-services-auth-api-phone:18.0.1"
+            const val featureDelivery = "com.google.android.play:feature-delivery:2.0.1"
+            const val featureDeliveryKtx = "com.google.android.play:feature-delivery-ktx:2.0.1"
             const val coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.4"
         }
         object gdrive {
@@ -119,20 +120,20 @@ object deps {
         }
 
         const val kotlinxCoroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
-        const val ktlint                   = "com.github.shyiko:ktlint:0.29.0"
-        const val okio                     = "com.squareup.okio:okio:2.10.0"
-        const val okHttp3                  = "com.squareup.okhttp3:okhttp:${versions.okHttp}"
-        const val coil                     = "io.coil-kt:coil:1.4.0"
-        const val retrofit                 = "com.squareup.retrofit2:retrofit:${versions.retrofit}"
-        const val flowPreferences          = "com.fredporciuncula:flow-preferences:1.8.0"
+        const val ktlint                   = "com.github.shyiko:ktlint:0.31.0"
+        const val okio                     = "com.squareup.okio:okio:3.3.0"
+        const val okHttp3                  = "com.squareup.okhttp3:okhttp:4.10.0"
+        const val coil                     = "io.coil-kt:coil:2.3.0"
+        const val retrofit                 = "com.squareup.retrofit2:retrofit:2.9.0"
+        const val flowPreferences          = "com.fredporciuncula:flow-preferences:1.9.0"
         const val timber                   = "com.jakewharton.timber:timber:5.0.1"
         const val material                 = "com.google.android.material:material:1.9.0-beta01"
         const val multitouchGestures       = "com.dinuscxj:multitouchgesturedetector:1.0.0"
-        const val guava                    = "com.google.guava:guava:30.1.1-android"
-        const val harmony                  = "com.frybits.harmony:harmony:1.1.9"
+        const val guava                    = "com.google.guava:guava:31.1-android"
+        const val harmony                  = "com.frybits.harmony:harmony:1.2.2"
         const val startup                  = "androidx.startup:startup-runtime:1.1.1"
-        const val radialgamepad            = "com.github.Swordfish90:RadialGamePad:${versions.radialgamepad}"
-        const val libretrodroid            = "com.github.Swordfish90:LibretroDroid:${versions.libretrodroid}"
+        const val radialgamepad            = "com.github.Swordfish90:RadialGamePad:2.0.0"
+        const val libretrodroid            = "com.github.Swordfish90:LibretroDroid:0.9.0"
     }
 
     object plugins {
