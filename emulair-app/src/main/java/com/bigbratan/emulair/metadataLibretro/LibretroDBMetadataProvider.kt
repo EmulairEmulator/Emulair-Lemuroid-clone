@@ -144,7 +144,7 @@ class LibretroDBMetadataProvider(private val ovgdbManager: LibretroDBManager) :
     private fun computeCoverUrl(system: GameSystem, name: String?): String? {
         var systemName = system.libretroFullName
 
-        // Specific mame version don't have any thumbnails in Libretro database
+        // Specific mame versions don't have any thumbnails in Libretro database
         if (system.id == SystemID.MAME2003PLUS) {
             systemName = "MAME"
         }
@@ -157,6 +157,6 @@ class LibretroDBMetadataProvider(private val ovgdbManager: LibretroDBManager) :
 
         val thumbGameName = name.replace("&", "_")
 
-        return "http://thumbnails.libretro.com/$systemName/$imageType/$thumbGameName.png"
+        return "https://thumbnails.libretro.com/$systemName/$imageType/$thumbGameName.png"
     }
 }
