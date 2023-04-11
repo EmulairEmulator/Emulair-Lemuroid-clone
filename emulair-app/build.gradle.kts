@@ -4,6 +4,7 @@ plugins {
     id("kotlin-kapt")
     id("androidx.navigation.safeargs.kotlin")
     id("kotlinx-serialization")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -106,6 +107,8 @@ android {
 
 dependencies {
     implementation(project(":emulair-app-common"))
+    implementation("com.google.firebase:firebase-storage-ktx:20.0.1")
+    implementation("com.google.firebase:firebase-database-ktx:20.0.4")
     "bundledCoresImplementation"(project(":bundled-cores"))
     "nogplayImplementation"(project(":emulair-app-build-nogplay"))
     "gplayImplementation"(project(":emulair-app-build-gplay"))

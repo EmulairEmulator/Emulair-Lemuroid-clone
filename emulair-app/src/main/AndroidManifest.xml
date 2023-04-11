@@ -64,6 +64,7 @@
             android:name=".activityCrash.GameCrashActivity"
             android:theme="@style/Theme.EmulairMaterial.Game" />
 
+
         <receiver android:name=".managerCoresLibrary.LibraryIndexBroadcastReceiver" />
         <receiver android:name=".managerCoresLibrary.CoreUpdateBroadcastReceiver" />
 

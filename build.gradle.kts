@@ -9,6 +9,7 @@ buildscript {
     dependencies {
         classpath(deps.plugins.android)
         classpath(deps.plugins.navigationSafeArgs)
+        classpath("com.google.gms:google-services:4.3.10")
     }
 }
 

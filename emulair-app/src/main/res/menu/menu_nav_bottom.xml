@@ -17,10 +17,16 @@
         android:icon="@drawable/ic_bottom_netplay"
         android:title="@string/bottom_netplay" />
     -->
+    <item
+        android:id="@+id/main_cloudstates"
+        android:icon="@drawable/ic_network_states"
+        android:title="Cloud States"
+    />
 
     <item
         android:id="@+id/main_settings"
         android:icon="@drawable/ic_bottom_settings"
         android:title="@string/bottom_settings" />
+
 
 </menu>

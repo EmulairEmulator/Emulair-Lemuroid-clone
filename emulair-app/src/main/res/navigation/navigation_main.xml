@@ -78,6 +78,12 @@
         android:label="@string/title_settings" />
 
     <fragment
+        android:id="@+id/main_cloudstates"
+        android:name="com.bigbratan.emulair.fragmentCloudStates.CloudStatesFragment"
+        android:label="Cloud States"/>
+
+
+    <fragment
         android:id="@+id/main_gamepad"
         android:name="com.bigbratan.emulair.fragmentSettings.GamePadFragment"
         android:label="@string/title_gamepad" />
@@ -113,5 +119,6 @@
         android:id="@+id/main_info"
         android:name="com.bigbratan.emulair.fragmentInfo.InfoFragment"
         android:label="@string/title_info" />
+
 
 </navigation>
