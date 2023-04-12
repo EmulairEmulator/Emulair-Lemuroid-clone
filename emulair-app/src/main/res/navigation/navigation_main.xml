@@ -82,7 +82,6 @@
         android:name="com.bigbratan.emulair.fragmentCloudStates.CloudStatesFragment"
         android:label="Cloud States"/>
 
-
     <fragment
         android:id="@+id/main_gamepad"
         android:name="com.bigbratan.emulair.fragmentSettings.GamePadFragment"

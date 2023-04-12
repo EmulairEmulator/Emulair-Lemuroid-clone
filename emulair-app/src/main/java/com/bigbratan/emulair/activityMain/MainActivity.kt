@@ -28,6 +28,7 @@ import com.bigbratan.emulair.common.metadataRetrograde.db.RetrogradeDatabase
 import com.bigbratan.emulair.common.utils.coroutines.safeLaunch
 import com.bigbratan.emulair.ext.managerReview.ReviewManager
 import com.bigbratan.emulair.fragmentAllGames.AllGamesFragment
+import com.bigbratan.emulair.fragmentCloudStates.CloudStatesFragment
 import com.bigbratan.emulair.fragmentFavoriteGames.FavoriteGamesFragment
 import com.bigbratan.emulair.fragmentHome.HomeFragment
 import com.bigbratan.emulair.fragmentSearch.SearchFragment
@@ -87,6 +88,7 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
         val bottomBarIds = setOf(
             R.id.main_home,
             R.id.main_systems,
+            R.id.main_cloudstates,
             R.id.main_settings
         )
         val appBarConfigurationBottom = AppBarConfiguration(bottomBarIds)
@@ -191,6 +193,10 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
         @PerFragment
         @ContributesAndroidInjector(modules = [SearchFragment.Module::class])
         abstract fun searchFragment(): SearchFragment
+
+        @PerFragment
+        @ContributesAndroidInjector(modules = [CloudStatesFragment.Module::class])
+        abstract fun cloudStatesFragment(): CloudStatesFragment
 
         @PerFragment
         @ContributesAndroidInjector(modules = [SystemsFragment.Module::class])

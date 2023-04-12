@@ -37,17 +37,18 @@ class EmulairApplication : DaggerApplication(), HasWorkerInjector {
 
         // Get a reference to the Firebase Storage instance
         val storage = FirebaseStorage.getInstance()
-//
-//// Create a reference to the file you want to download
-//        val storageRef = storage.getReference("States/1986_-_Pokemon_Emerald_(U)(TrashMan).gba.slot2[1].jpg")
-//
-//// Download the file bytes
-//        storageRef.getBytes(Long.MAX_VALUE).addOnSuccessListener { bytes ->
-//            Toast.makeText(this, "Downloaded" + bytes.size, Toast.LENGTH_SHORT).show()
-//        }.addOnFailureListener { exception ->
-//            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
-//        }
 
+        /*
+        // Create a reference to the file you want to download
+        val storageRef = storage.getReference("States/1986_-_Pokemon_Emerald_(U)(TrashMan).gba.slot2[1].jpg")
+
+        // Download the file bytes
+        storageRef.getBytes(Long.MAX_VALUE).addOnSuccessListener { bytes ->
+            Toast.makeText(this, "Downloaded" + bytes.size, Toast.LENGTH_SHORT).show()
+        }.addOnFailureListener { exception ->
+            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
+        }
+        */
 
         val initializeComponent = if (isMainProcess()) {
             MainProcessInitializer::class.java

@@ -15,10 +15,10 @@ class CloudStatesViewModel(application: EmulairApplication) : AndroidViewModel(a
         }
     }
 
-    private val storageRef = FirebaseStorage.getInstance().reference.child("Storage")
-    val _imageList = MutableLiveData<List<Bitmap>>()
+    private val storageRef = FirebaseStorage.getInstance().reference.child("Storage/States")
+    val mutableImageList = MutableLiveData<List<Bitmap>>()
     val imageList: LiveData<List<Bitmap>>
-        get() = _imageList
+        get() = mutableImageList
 
     fun fetchPhotos(): LiveData<List<Bitmap>> {
         storageRef.listAll().addOnSuccessListener { listResult ->
@@ -31,14 +31,9 @@ class CloudStatesViewModel(application: EmulairApplication) : AndroidViewModel(a
                     Toast.makeText(getApplication(), "Error on getting cloud data!", Toast.LENGTH_SHORT).show()
                 }
             }
-            _imageList.value = photos // Move this line outside of the loop
-        }.addOnFailureListener { exception ->
-            // Handle error
-        }
-        //Toast.makeText(getApplication(), ""+_imageList.toString(), Toast.LENGTH_SHORT).show()
-
+            mutableImageList.value = photos
+        }.addOnFailureListener { exception -> }
+        // Toast.makeText(getApplication(), ""+mutableImageList.toString(), Toast.LENGTH_SHORT).show()
         return imageList
     }
 }
-
-

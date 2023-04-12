@@ -107,11 +107,16 @@ android {
 
 dependencies {
     implementation(project(":emulair-app-common"))
-    implementation("com.google.firebase:firebase-storage-ktx:20.0.1")
-    implementation("com.google.firebase:firebase-database-ktx:20.0.4")
     "bundledCoresImplementation"(project(":bundled-cores"))
     "nogplayImplementation"(project(":emulair-app-build-nogplay"))
     "gplayImplementation"(project(":emulair-app-build-gplay"))
+
+    implementation("com.github.bumptech.glide:glide:4.11.0")
+    kapt("com.github.bumptech.glide:compiler:4.11.0")
+    implementation("com.google.firebase:firebase-storage-ktx:20.0.1")
+    implementation("com.google.firebase:firebase-database-ktx:20.0.4")
+    kapt("com.android.databinding:compiler:3.1.4")
+    implementation("de.hdodenhof:circleimageview:3.1.0")
 
     implementation(deps.libs.material)
     implementation(deps.libs.androidx.navigation.navigationFragment)
@@ -159,8 +164,6 @@ dependencies {
     kapt(deps.libs.dagger.android.processor)
     kapt(deps.libs.dagger.compiler)
     kapt(deps.libs.androidx.room.compiler)
-    kapt("com.android.databinding:compiler:3.1.4")
-    implementation("de.hdodenhof:circleimageview:3.1.0")
 
     // Uncomment this when using a local aar file.
     // implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar", "*.aar"))))

@@ -1,3 +1,4 @@
+/*
 package com.bigbratan.emulair.fragmentCloudStates
 
 import android.graphics.Bitmap
@@ -12,7 +13,7 @@ import com.bigbratan.emulair.R
 class CloudStatesAdapter(private val photos: List<Bitmap>): RecyclerView.Adapter<CloudStatesAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_cloudstate, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_image, parent, false)
         return ViewHolder(view)
     }
 
@@ -31,5 +32,4 @@ class CloudStatesAdapter(private val photos: List<Bitmap>): RecyclerView.Adapter
         }
     }
 }
-
-
+*/
