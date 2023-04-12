@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "588189100521",
+    "project_id": "emulairsaves",
+    "storage_bucket": "emulairsaves.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588189100521:android:f7af48227e9c1d6da08378",
+        "android_client_info": {
+          "package_name": "com.bigbratan.emulair.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "588189100521-7ls0rj51v2s9tb1su1hq63g39mblaap6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAusSQYzKC1pb6gDrUeWf5vKGIzMIqTjI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "588189100521-7ls0rj51v2s9tb1su1hq63g39mblaap6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
