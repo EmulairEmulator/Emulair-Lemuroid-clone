@@ -10,7 +10,7 @@
      height="80">
 
 ## Details
-Emulair is an Android exclusive open-source front-end for Libretro cores, based on Lemuroid. For more information about the project (such as how the code functions, why the project exists, who worked on it, etc.), [check the Wiki page](https://github.com/RaduBratan/Emulair/wiki). To see our backlog, check our [Project page](https://github.com/users/RaduBratan/projects/2).
+Emulair is an Android exclusive open-source front-end for Libretro cores, based on Lemuroid. For more information about the project (such as how the code functions, why the project exists, who worked on it, etc.), check the [Wiki page](https://github.com/RaduBratan/Emulair/wiki). To see our backlog, check the [Project page](https://github.com/users/RaduBratan/projects/2).
 
 ## Philosophy
 The primary goal of Emulair is to combine the ease of use and simple but accessible interface of Lemuroid with RetroArch's extensive customizability and features.
@@ -67,30 +67,34 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 
 ## Upcoming Features
 - [ ] More emulation cores (almost all cores found on RetroArch)
-- [ ] Exposed all settings for all cores
+- [ ] More exposed settings for all the cores
 - [ ] Cheat codes support
-- [ ] A user friendly intro screen concisely explaining how to use the app
-- [ ] An info screen further explaining how the app works
-- [ ] A profile screen
-- [ ] Button prompts before every important action (such as saving / loading states)
+- [ ] RetroAchievements support
+- [ ] .7z ROMs support
+- [ ] Syncing save files across cloud services such as Google Firebase, Dropbox and Microsoft OneDrive (on top of Google Drive)
+- [ ] A user-friendly intro screen concisely explaining how to use the app
+- [ ] An info screen containing frequently asked questions and other useful stuff
+- [ ] A profile screen used for easily connecting to various platforms (RetroAchievements, Google Drive, Google Firebase, Dropbox, Microsoft OneDrive) and syncing save files to the cloud (previously, the Google Drive connection screen and savedata syncing buttons were located in completely different places)
+- [ ] Button prompts before every important action, such as saving / loading states
 - [ ] Light Theme, AMOLED Theme, Material You Theme (previously there was only a Dark Theme)
 - [ ] Slide down in the "Games" page to rescan your directories and refresh your games list
 - [ ] Automatically rescan internal directories on app restart
 - [ ] Set what screen orientation games should be opened in (landscape / portrait / follow device)
 - [ ] Set on-screen buttons' transparency
 - [ ] Different app layout for tablets and foldables
-- [ ] .7z ROMs support
+- [ ] Different app layout for phones in landscape orientation
 - [ ] Automatically save state every x seconds
 - [ ] More save file formats support
-- [ ] Updated Libretro games database
+- [ ] An updated Libretro games database with more fields (e.g. release year, release month, etc.)
 - [ ] Add systems to a "Starred" list
-- [ ] Sync your save files across cloud services such as Google Firebase, Dropbox and Microsoft OneDrive (on top of Google Drive)
 - [ ] Long press a game to access a details screen
-- [ ] Beautiful animations
+- [ ] More animations
 - [ ] A custom splash screen for Android 12+ devices
 - [ ] A "Close menu" button accessible from the pause menu, so users don't have to click their device's back button every time they want to unpause a game
 - [ ] [NEW] Choose if you want to automatically fall back on other emulators or not, in case a game doesn't work (this implies unlocking the option to switch between FinalBurn Neo and MAME 2003-Plus)
 - [ ] [NEW] Plenty QOL features, updates and fixes
+
+Note: The above features won't be released in this exact order. Concerning the SDM project, not every feature on this list will be implemented (the minimum requirement is 10). Regarding the development after the university project is finished, some features may be changed or even removed.
 
 ## Removed Features (from Lemuroid)
 - Android TV support
