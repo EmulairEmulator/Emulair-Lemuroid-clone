@@ -124,5 +124,5 @@
     <!-- GAMEPAD POSITION -->
     <string name="touch_customize_button_reset">Reset</string>
     <string name="touch_customize_button_done">Done</string>
-    <string name="touch_customize_info">Drag and Pinch controls to change position and size</string>
+    <string name="touch_customize_info">Drag and pinch controls to change position and size</string>
 </resources>
