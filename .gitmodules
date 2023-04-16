@@ -1,4 +1,4 @@
-[submodule "lemuroid-cores"]
-	path = lemuroid-cores
-	url = https://github.com/Swordfish90/LemuroidCores
-	branch = master
+[submodule "libretro-cores"]
+	path = libretro-cores
+	url = https://github.com/RaduBratan/LibretroCores
+	branch = main
