@@ -184,9 +184,9 @@
     <string name="save_sync_synchronization_states_title">Sync states</string>
     <string name="save_sync_synchronization_states_description">More convenient, but heavier and less reliable. Choose which cores/systems you want to sync</string>
     <string name="save_sync_synchronization_auto_title">Auto sync</string>
-    <string name="save_sync_synchronization_auto_description">Automatically perform a sync before and after a game session when connected to Wifi</string>
+    <string name="save_sync_synchronization_auto_description">Automatically perform a sync before and after a game session when connected to Wi-Fi</string>
     <string name="save_sync_synchronization_refresh_title">Manual sync</string>
-    <string name="save_sync_synchronization_refresh_description">Perform a manual sync now.\n%1$s</string>
+    <string name="save_sync_synchronization_refresh_description">Perform a manual sync now\n%1$s</string>
 
     <!-- BIOS FRAGMENT -->
     <string name="bios_category_detected">Detected</string>
