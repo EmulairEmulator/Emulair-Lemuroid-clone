@@ -9,8 +9,8 @@ plugins {
 android {
     defaultConfig {
         applicationId = "com.bigbratan.emulair"
-        versionCode = 2
-        versionName = "0.0.2"
+        versionCode = 3
+        versionName = "0.0.3"
     }
 
     // To test out the error screens, wrap `dynamicFeatures.addAll(...)` under `if (usePlayDynamicFeatures()) {..}`

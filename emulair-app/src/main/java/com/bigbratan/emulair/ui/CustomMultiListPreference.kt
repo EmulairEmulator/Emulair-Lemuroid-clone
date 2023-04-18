@@ -18,20 +18,68 @@ class CustomMultiListPreference : MultiSelectListPreference {
 
     constructor(context: Context?) : super(context)
 
+    /*
     val checkedItems = BooleanArray(entryValues.size)
 
     override fun onClick() {
         // val builder = MaterialAlertDialogBuilder(context, R.style.AlertDialog).setMultiChoiceItems(
-        val builder = MaterialAlertDialogBuilder(context).setMultiChoiceItems(
-            entries,
-            checkedItems
-        ) { dialog, which, isChecked ->
-            checkedItems[which] = isChecked;
-        }
-            .setPositiveButton(R.string.button_ok) { dialog, _ -> dialog.dismiss() }
-            .setNegativeButton(R.string.button_cancel) { dialog, _ -> dialog.dismiss() }
+        val builder =
+            MaterialAlertDialogBuilder(context).setMultiChoiceItems(entries, checkedItems) { dialog, which, isChecked ->
+                checkedItems[which] = isChecked;
+            }
+                .setPositiveButton(R.string.button_ok) { dialog, _ -> dialog.dismiss() }
+                .setNegativeButton(R.string.button_cancel) { dialog, _ -> dialog.dismiss() }
 
         val dialog = builder.create()
         dialog.show()
+    }
+    */
+
+    override fun onClick() {
+        val entryValues = entryValues ?: return
+        val selectedItems = selectedItems
+
+        val builder =
+            MaterialAlertDialogBuilder(context).setMultiChoiceItems(
+                entries,
+                selectedItems
+            ) { _, which, isChecked ->
+                val value = entryValues[which].toString()
+                if (isChecked) {
+                    addSelectedItem(value)
+                } else {
+                    removeSelectedItem(value)
+                }
+            }
+                .setPositiveButton(R.string.button_ok) { _, _ -> saveSelectedItems() }
+                .setNegativeButton(R.string.button_cancel) { dialog, _ -> dialog.dismiss() }
+
+        val dialog = builder.create()
+        dialog.show()
+    }
+
+    override fun getSelectedItems(): BooleanArray {
+        val entryValues = entryValues ?: return BooleanArray(0)
+        val selectedItems = mutableListOf<Boolean>()
+        val selectedValues = values
+        for (element in entryValues) {
+            selectedItems.add(selectedValues.contains(element))
+        }
+        return selectedItems.toBooleanArray()
+    }
+
+    private fun addSelectedItem(value: String) {
+        val newValues = (values ?: emptyList()) + value
+        values = newValues.toSet()
+    }
+
+    private fun removeSelectedItem(value: String) {
+        val newValues = (values ?: emptyList()) - value
+        values = newValues.toSet()
+    }
+
+    private fun saveSelectedItems() {
+        val selectedValues = values.joinToString(",")
+        persistString(selectedValues)
     }
 }
