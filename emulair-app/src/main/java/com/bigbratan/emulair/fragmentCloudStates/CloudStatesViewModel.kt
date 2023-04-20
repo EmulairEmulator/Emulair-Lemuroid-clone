@@ -6,7 +6,10 @@ import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.*
 import com.bigbratan.emulair.EmulairApplication
+import com.bigbratan.emulair.common.managerSaves.StatesManager
 import com.google.firebase.storage.FirebaseStorage
+import java.io.File
+import javax.inject.Inject
 
 class CloudStatesViewModel(application: EmulairApplication) : AndroidViewModel(application) {
 
@@ -16,12 +19,43 @@ class CloudStatesViewModel(application: EmulairApplication) : AndroidViewModel(a
         }
     }
 
-    private val storageRef = FirebaseStorage.getInstance().reference.child("State Previews")
+    @Inject
+    lateinit var statesManager: StatesManager
+    private val storagePreviewsRef = FirebaseStorage.getInstance().reference.child("State Previews")
+    private val storageStatesRef = FirebaseStorage.getInstance().reference.child("States")
     var CloudStateList = MutableLiveData<List<CloudState>>()
         var statesList = mutableListOf<CloudState>()
 
+
+    fun fetchStateToDisk(nameOfPreview:String, image: Bitmap?){
+        //remove what comes after last dot
+        val nameOfState = nameOfPreview.substringBeforeLast(".")
+        storageStatesRef.child(nameOfState).getBytes(1024 * 1024).addOnSuccessListener { bytes ->
+            val folderNameStates = "states/mgba"
+            val folderNamePreviews = "state-previews"
+            val fileNameState = nameOfState
+            val fileNamePreview = nameOfPreview
+//            val File = File(getApplication<EmulairApplication>().getExternalFilesDir(folderNamePreviews), fileNamePreview)
+            val file = File(getApplication<EmulairApplication>().getExternalFilesDir(folderNameStates), fileNameState.replace("_vali2wd", ""))
+            try{
+                file.writeBytes(bytes)
+                Toast.makeText(getApplication(), "File saved to: "+file.absolutePath, Toast.LENGTH_SHORT).show()
+//                val outputStream = File.outputStream()
+//                image.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
+//                outputStream.flush()
+//                outputStream.close()
+            }
+            catch (e:Exception){
+                Log.d("myapp", "fetchStateToDisk: "+e.message)
+            }
+
+        }.addOnFailureListener { exception ->
+            Log.d("myapp", "onFailure: " + exception.message)
+        }
+    }
+
     fun fetchPhotos() {
-        storageRef.listAll().addOnSuccessListener { listResult ->
+        storagePreviewsRef.listAll().addOnSuccessListener { listResult ->
             val imageList = mutableListOf<Bitmap>()
             for (item in listResult.items) {
                 item.getBytes(1024 * 1024).addOnSuccessListener { bytes ->
@@ -35,4 +69,6 @@ class CloudStatesViewModel(application: EmulairApplication) : AndroidViewModel(a
         }.addOnFailureListener { exception -> }
          Toast.makeText(getApplication(), ""+CloudStateList.toString(), Toast.LENGTH_SHORT).show()
     }
+
+
 }

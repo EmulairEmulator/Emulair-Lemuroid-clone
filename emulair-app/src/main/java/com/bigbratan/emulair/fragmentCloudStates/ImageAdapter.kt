@@ -45,9 +45,21 @@ class ImageAdapter(private val imageList: List<Bitmap>?) : RecyclerView.Adapter<
 }
 */
 
+fun composeString(inputString: String): String {
+    val gameName = inputString.substring(0, 15)
+    val startIndex = inputString.indexOf('_') + 1
+    val endIndex = inputString.indexOf('.')
+    val substring = inputString.substring(startIndex, endIndex)
+
+
+
+    return gameName + " (...) " + substring
+}
+
 class ImageViewHolder(parent: View) : RecyclerView.ViewHolder(parent) {
     private var textView: TextView? = null
     var imageView: ImageView
+    private var originalTitle: String? = null
 
     init {
         textView = itemView.findViewById(R.id.text)
@@ -55,27 +67,38 @@ class ImageViewHolder(parent: View) : RecyclerView.ViewHolder(parent) {
         imageView.setOnClickListener{
             val position = adapterPosition
             if (position != RecyclerView.NO_POSITION) {
-                Toast.makeText(itemView.context, "You clicked on ${textView?.text}", Toast.LENGTH_SHORT).show()
+
+                Toast.makeText(itemView.context, "You clicked on ${originalTitle}", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
-    fun bind(photo: Bitmap?, text: String? = null)  {
+    fun bind(photo: Bitmap?, text: String?)  {
         if (photo != null) {
-            //use Glide to load the image
+            originalTitle = text
             Glide.with(itemView.context).load(photo).into(imageView)
-            textView?.text = text
-        } else {
+            val textToShow = composeString(text.toString())
+            textView?.text = textToShow
+
+
+        }
+    else {
             Glide.with(itemView.context).load(R.drawable.ic_launcher_background).into(imageView)
             textView?.text = ""
         }
     }
 }
 
+
+
 class ImageAdapter(
     /*private val context: Context,*/
-    private val cloudList: List<CloudState>?
+    private val cloudList: List<CloudState>?,
+
+
 ) : RecyclerView.Adapter<ImageViewHolder>() {
+
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageViewHolder {
         return ImageViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.layout_image, parent, false)

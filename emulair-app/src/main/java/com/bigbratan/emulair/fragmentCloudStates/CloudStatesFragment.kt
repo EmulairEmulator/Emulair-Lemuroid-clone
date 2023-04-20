@@ -80,9 +80,12 @@ class CloudStatesFragment : Fragment() {
         cloudStatesViewModel = ViewModelProvider(this, factory)[CloudStatesViewModel::class.java]
         cloudStatesViewModel.fetchPhotos()
         cloudStatesViewModel.CloudStateList.observe(viewLifecycleOwner) { imageList ->
-            cloudStatesAdapter = ImageAdapter(/*requireContext().applicationContext,*/ imageList)
+            cloudStatesAdapter = ImageAdapter(/*requireContext().applicationContext,*/ imageList )
+
             recyclerView?.adapter = cloudStatesAdapter
+
         }
+
 
         recyclerView?.apply {
             this.layoutManager = DynamicGridLayoutManager(context, 3)
@@ -90,6 +93,7 @@ class CloudStatesFragment : Fragment() {
             val spacingInPixels = resources.getDimensionPixelSize(R.dimen.grid_spacing)
             GridSpaceDecoration.setSingleGridSpaceDecoration(this, spacingInPixels)
         }
+        cloudStatesViewModel.fetchStateToDisk("1986 - Pokemon Emerald (U)(TrashMan)_vali2wd.gba.slot2.jpg",null)
     }
 
     @dagger.Module

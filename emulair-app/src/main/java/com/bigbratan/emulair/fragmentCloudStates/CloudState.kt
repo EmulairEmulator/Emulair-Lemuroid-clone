@@ -7,7 +7,4 @@ class CloudState(title: String, image: Bitmap
     var title: String = title
     var image: Bitmap = image
 
-
-
-
 }
