@@ -2,6 +2,7 @@ package com.bigbratan.emulair.fragmentCloudStates
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.*
 import com.bigbratan.emulair.EmulairApplication
@@ -15,7 +16,7 @@ class CloudStatesViewModel(application: EmulairApplication) : AndroidViewModel(a
         }
     }
 
-    private val storageRef = FirebaseStorage.getInstance().reference.child("Storage/States")
+    private val storageRef = FirebaseStorage.getInstance().reference.child("State Previews")
     val mutableImageList = MutableLiveData<List<Bitmap>>()
     val imageList: LiveData<List<Bitmap>>
         get() = mutableImageList
@@ -24,16 +25,18 @@ class CloudStatesViewModel(application: EmulairApplication) : AndroidViewModel(a
         storageRef.listAll().addOnSuccessListener { listResult ->
             val photos = mutableListOf<Bitmap>()
             for (item in listResult.items) {
-                val photo = item.getBytes(Long.MAX_VALUE).addOnSuccessListener { bytes ->
+                Log.d("myapp", "downlaoding image " + item.toString())
+                item.getBytes(1024 * 1024).addOnSuccessListener { bytes ->
                     val bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
                     photos.add(bitmap)
                 }.addOnFailureListener { exception ->
-                    Toast.makeText(getApplication(), "Error on getting cloud data!", Toast.LENGTH_SHORT).show()
+                    // Handle any errors
                 }
             }
+            Log.d("myapp", "assigning mutableimagelist " + photos.toString())
             mutableImageList.value = photos
         }.addOnFailureListener { exception -> }
-        // Toast.makeText(getApplication(), ""+mutableImageList.toString(), Toast.LENGTH_SHORT).show()
+         Toast.makeText(getApplication(), ""+mutableImageList.toString(), Toast.LENGTH_SHORT).show()
         return imageList
     }
 }

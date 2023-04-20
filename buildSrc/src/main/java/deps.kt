@@ -8,6 +8,7 @@ object deps {
     }
 
     object versions {
+        const val glide           = "4.12.0"
         const val dagger          = "2.19"
         const val gms             = "17.0.0"
         const val kotlin          = "1.6.21"
@@ -29,6 +30,9 @@ object deps {
     }
 
     object libs {
+        object firebase{
+            const val firebaseui = "com.firebaseui:firebase-ui-storage:4.3.2"
+        }
         object androidx {
             object appcompat {
                 const val appcompat = "androidx.appcompat:appcompat:1.4.2"

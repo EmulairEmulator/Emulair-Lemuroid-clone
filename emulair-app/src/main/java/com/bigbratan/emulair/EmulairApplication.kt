@@ -36,7 +36,7 @@ class EmulairApplication : DaggerApplication(), HasWorkerInjector {
         super.onCreate()
 
         // Get a reference to the Firebase Storage instance
-        val storage = FirebaseStorage.getInstance()
+//        val storage = FirebaseStorage.getInstance()
 
         /*
         // Create a reference to the file you want to download

@@ -117,6 +117,8 @@ dependencies {
     implementation("com.google.firebase:firebase-database-ktx:20.0.4")
     kapt("com.android.databinding:compiler:3.1.4")
     implementation("de.hdodenhof:circleimageview:3.1.0")
+    kapt("com.github.bumptech.glide:compiler:4.12.0")
+
 
     implementation(deps.libs.material)
     implementation(deps.libs.androidx.navigation.navigationFragment)
@@ -164,7 +166,7 @@ dependencies {
     kapt(deps.libs.dagger.android.processor)
     kapt(deps.libs.dagger.compiler)
     kapt(deps.libs.androidx.room.compiler)
-
+    implementation(deps.libs.firebase.firebaseui)
     // Uncomment this when using a local aar file.
     // implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar", "*.aar"))))
 }

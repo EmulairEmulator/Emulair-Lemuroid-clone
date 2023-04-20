@@ -2,6 +2,7 @@ plugins {
     id("com.android.library")
     id("kotlin-android")
     id("kotlin-kapt")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -25,6 +26,7 @@ dependencies {
     implementation(deps.libs.play.playServices)
     implementation(deps.libs.play.coroutine)
     implementation(deps.libs.androidx.lifecycle.commonJava8)
+    implementation("com.google.firebase:firebase-storage-ktx:20.0.1")
     kapt(deps.libs.androidx.lifecycle.processor)
     // implementation(deps.libs.androidx.leanback.leanback)
     implementation(deps.libs.androidx.appcompat.constraintLayout)
