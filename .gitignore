@@ -20,3 +20,4 @@ release.jks
 emulair-app/build
 emulair-app-build-gplay/build
 emulair-app-build-nogplay/build
+google-services.json
