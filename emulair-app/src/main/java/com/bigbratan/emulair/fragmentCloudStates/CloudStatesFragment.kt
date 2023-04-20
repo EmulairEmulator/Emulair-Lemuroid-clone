@@ -6,13 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.bigbratan.emulair.EmulairApplication
 import com.bigbratan.emulair.R
-import com.bigbratan.emulair.common.utils.coroutines.launchOnState
 import com.bigbratan.emulair.managerLayout.DynamicGridLayoutManager
 import com.bigbratan.emulair.managerLayout.GridSpaceDecoration
 import dagger.android.support.AndroidSupportInjection
@@ -82,7 +79,7 @@ class CloudStatesFragment : Fragment() {
         val factory = CloudStatesViewModel.Factory(requireActivity().application as EmulairApplication)
         cloudStatesViewModel = ViewModelProvider(this, factory)[CloudStatesViewModel::class.java]
         cloudStatesViewModel.fetchPhotos()
-        cloudStatesViewModel.mutableImageList.observe(viewLifecycleOwner) { imageList ->
+        cloudStatesViewModel.CloudStateList.observe(viewLifecycleOwner) { imageList ->
             cloudStatesAdapter = ImageAdapter(/*requireContext().applicationContext,*/ imageList)
             recyclerView?.adapter = cloudStatesAdapter
         }

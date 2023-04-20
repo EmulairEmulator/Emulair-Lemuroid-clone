@@ -17,26 +17,22 @@ class CloudStatesViewModel(application: EmulairApplication) : AndroidViewModel(a
     }
 
     private val storageRef = FirebaseStorage.getInstance().reference.child("State Previews")
-    val mutableImageList = MutableLiveData<List<Bitmap>>()
-    val imageList: LiveData<List<Bitmap>>
-        get() = mutableImageList
+    var CloudStateList = MutableLiveData<List<CloudState>>()
+        var statesList = mutableListOf<CloudState>()
 
-    fun fetchPhotos(): LiveData<List<Bitmap>> {
+    fun fetchPhotos() {
         storageRef.listAll().addOnSuccessListener { listResult ->
-            val photos = mutableListOf<Bitmap>()
+            val imageList = mutableListOf<Bitmap>()
             for (item in listResult.items) {
-                Log.d("myapp", "downlaoding image " + item.toString())
                 item.getBytes(1024 * 1024).addOnSuccessListener { bytes ->
                     val bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
-                    photos.add(bitmap)
+                    statesList.add(CloudState(item.name, bitmap))
                 }.addOnFailureListener { exception ->
-                    // Handle any errors
+                    Log.d("myapp", "onFailure: " + exception.message)
                 }
             }
-            Log.d("myapp", "assigning mutableimagelist " + photos.toString())
-            mutableImageList.value = photos
+            CloudStateList.value = statesList
         }.addOnFailureListener { exception -> }
-         Toast.makeText(getApplication(), ""+mutableImageList.toString(), Toast.LENGTH_SHORT).show()
-        return imageList
+         Toast.makeText(getApplication(), ""+CloudStateList.toString(), Toast.LENGTH_SHORT).show()
     }
 }

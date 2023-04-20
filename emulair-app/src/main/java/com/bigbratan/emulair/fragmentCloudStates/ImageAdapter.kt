@@ -1,12 +1,12 @@
 package com.bigbratan.emulair.fragmentCloudStates
 
-import android.content.Context
 import android.graphics.Bitmap
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bigbratan.emulair.R
 import com.bumptech.glide.Glide
@@ -52,14 +52,21 @@ class ImageViewHolder(parent: View) : RecyclerView.ViewHolder(parent) {
     init {
         textView = itemView.findViewById(R.id.text)
         imageView = itemView.findViewById(R.id.image)
+        imageView.setOnClickListener{
+            val position = adapterPosition
+            if (position != RecyclerView.NO_POSITION) {
+                Toast.makeText(itemView.context, "You clicked on ${textView?.text}", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
-    fun bind(photo: Bitmap?) {
+    fun bind(photo: Bitmap?, text: String? = null)  {
         if (photo != null) {
-            imageView?.setImageBitmap(photo)
-            textView?.text = "Random"
+            //use Glide to load the image
+            Glide.with(itemView.context).load(photo).into(imageView)
+            textView?.text = text
         } else {
-            imageView?.setImageBitmap(null)
+            Glide.with(itemView.context).load(R.drawable.ic_launcher_background).into(imageView)
             textView?.text = ""
         }
     }
@@ -67,7 +74,7 @@ class ImageViewHolder(parent: View) : RecyclerView.ViewHolder(parent) {
 
 class ImageAdapter(
     /*private val context: Context,*/
-    private val imageList: List<Bitmap>?
+    private val cloudList: List<CloudState>?
 ) : RecyclerView.Adapter<ImageViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageViewHolder {
         return ImageViewHolder(
@@ -76,10 +83,10 @@ class ImageAdapter(
     }
 
     override fun getItemCount(): Int {
-        return imageList?.size ?: 0
+        return cloudList?.size ?: 0
     }
 
     override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
-         holder.bind(imageList?.get(position))
+         holder.bind(cloudList?.get(position)?.image, cloudList?.get(position)?.title)
     }
 }
