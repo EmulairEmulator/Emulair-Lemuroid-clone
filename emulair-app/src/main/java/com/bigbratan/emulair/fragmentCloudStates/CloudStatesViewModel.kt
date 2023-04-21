@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.lifecycle.*
 import com.bigbratan.emulair.EmulairApplication
 import com.bigbratan.emulair.common.managerSaves.StatesManager
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.storage.FirebaseStorage
 import java.io.File
 import javax.inject.Inject
@@ -39,7 +40,10 @@ class CloudStatesViewModel(application: EmulairApplication) : AndroidViewModel(a
             val file = File(getApplication<EmulairApplication>().getExternalFilesDir(folderNameStates), fileNameState.replace("_vali2wd", ""))
             try{
                 file.writeBytes(bytes)
-                Toast.makeText(getApplication(), "File saved to: "+file.absolutePath, Toast.LENGTH_SHORT).show()
+                //TODO: show snackbar to confirm download
+
+                //TODO: also write preview file to disk
+                //TODO: deal with folder to which the save is written (gba is /mgba)
 //                val outputStream = File.outputStream()
 //                image.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
 //                outputStream.flush()
@@ -56,16 +60,22 @@ class CloudStatesViewModel(application: EmulairApplication) : AndroidViewModel(a
 
     fun fetchPhotos() {
         storagePreviewsRef.listAll().addOnSuccessListener { listResult ->
+
             val imageList = mutableListOf<Bitmap>()
             for (item in listResult.items) {
                 item.getBytes(1024 * 1024).addOnSuccessListener { bytes ->
                     val bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
+
                     statesList.add(CloudState(item.name, bitmap))
+
+
+                    CloudStateList.value = statesList
+
                 }.addOnFailureListener { exception ->
-                    Log.d("myapp", "onFailure: " + exception.message)
+
                 }
             }
-            CloudStateList.value = statesList
+
         }.addOnFailureListener { exception -> }
          Toast.makeText(getApplication(), ""+CloudStateList.toString(), Toast.LENGTH_SHORT).show()
     }

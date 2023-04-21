@@ -2,6 +2,7 @@ package com.bigbratan.emulair.fragmentCloudStates
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -81,10 +82,11 @@ class CloudStatesFragment : Fragment(), SelectListener {
         cloudStatesViewModel = ViewModelProvider(this, factory)[CloudStatesViewModel::class.java]
         cloudStatesViewModel.fetchPhotos()
         cloudStatesViewModel.CloudStateList.observe(viewLifecycleOwner) { imageList ->
+           Log.d("myapp", "adapter start set:")
             cloudStatesAdapter = ImageAdapter(/*requireContext().applicationContext,*/ imageList, this )
 
             recyclerView?.adapter = cloudStatesAdapter
-
+            Log.d("myapp", "adapter end set: ")
         }
 
 

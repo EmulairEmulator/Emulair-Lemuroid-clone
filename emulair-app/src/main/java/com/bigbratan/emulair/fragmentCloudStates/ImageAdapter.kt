@@ -1,6 +1,7 @@
 package com.bigbratan.emulair.fragmentCloudStates
 
 import android.graphics.Bitmap
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -75,7 +76,9 @@ class ImageViewHolder(parent: View, private val selectListener: SelectListener?)
     fun bind(photo: Bitmap?, text: String?)  {
         if (photo != null) {
             originalTitle = text
+
             Glide.with(itemView.context).load(photo).into(imageView)
+
             val textToShow = composeString(text.toString())
             textView?.text = textToShow
         } else {
