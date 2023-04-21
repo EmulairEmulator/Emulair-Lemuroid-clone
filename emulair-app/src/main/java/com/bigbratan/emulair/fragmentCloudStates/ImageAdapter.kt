@@ -56,7 +56,7 @@ fun composeString(inputString: String): String {
     return gameName + " (...) " + substring
 }
 
-class ImageViewHolder(parent: View) : RecyclerView.ViewHolder(parent) {
+class ImageViewHolder(parent: View, private val selectListener: SelectListener?) : RecyclerView.ViewHolder(parent) {
     private var textView: TextView? = null
     var imageView: ImageView
     private var originalTitle: String? = null
@@ -67,8 +67,7 @@ class ImageViewHolder(parent: View) : RecyclerView.ViewHolder(parent) {
         imageView.setOnClickListener{
             val position = adapterPosition
             if (position != RecyclerView.NO_POSITION) {
-
-                Toast.makeText(itemView.context, "You clicked on ${originalTitle}", Toast.LENGTH_SHORT).show()
+                selectListener?.onItemClicked(position)
             }
         }
     }
@@ -79,10 +78,7 @@ class ImageViewHolder(parent: View) : RecyclerView.ViewHolder(parent) {
             Glide.with(itemView.context).load(photo).into(imageView)
             val textToShow = composeString(text.toString())
             textView?.text = textToShow
-
-
-        }
-    else {
+        } else {
             Glide.with(itemView.context).load(R.drawable.ic_launcher_background).into(imageView)
             textView?.text = ""
         }
@@ -91,19 +87,22 @@ class ImageViewHolder(parent: View) : RecyclerView.ViewHolder(parent) {
 
 
 
+
 class ImageAdapter(
     /*private val context: Context,*/
     private val cloudList: List<CloudState>?,
-
+    private val selectListener: SelectListener?
 
 ) : RecyclerView.Adapter<ImageViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageViewHolder {
         return ImageViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.layout_image, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.layout_image, parent, false),
+            selectListener
         )
     }
+
 
     override fun getItemCount(): Int {
         return cloudList?.size ?: 0

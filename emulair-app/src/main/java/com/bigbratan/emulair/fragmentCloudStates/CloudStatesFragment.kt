@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
@@ -47,7 +48,7 @@ import javax.inject.Inject
     // Rest of your code...
 }*/
 
-class CloudStatesFragment : Fragment() {
+class CloudStatesFragment : Fragment(), SelectListener {
     @Inject
     lateinit var application: EmulairApplication
 
@@ -80,7 +81,7 @@ class CloudStatesFragment : Fragment() {
         cloudStatesViewModel = ViewModelProvider(this, factory)[CloudStatesViewModel::class.java]
         cloudStatesViewModel.fetchPhotos()
         cloudStatesViewModel.CloudStateList.observe(viewLifecycleOwner) { imageList ->
-            cloudStatesAdapter = ImageAdapter(/*requireContext().applicationContext,*/ imageList )
+            cloudStatesAdapter = ImageAdapter(/*requireContext().applicationContext,*/ imageList, this )
 
             recyclerView?.adapter = cloudStatesAdapter
 
@@ -93,9 +94,17 @@ class CloudStatesFragment : Fragment() {
             val spacingInPixels = resources.getDimensionPixelSize(R.dimen.grid_spacing)
             GridSpaceDecoration.setSingleGridSpaceDecoration(this, spacingInPixels)
         }
-        cloudStatesViewModel.fetchStateToDisk("1986 - Pokemon Emerald (U)(TrashMan)_vali2wd.gba.slot2.jpg",null)
+
     }
 
     @dagger.Module
     class Module
+
+    override fun onItemClicked(position: Int) {
+        val clickedItem = cloudStatesViewModel.CloudStateList.value?.get(position)
+        if (clickedItem != null) {
+            cloudStatesViewModel.fetchStateToDisk(clickedItem.title,clickedItem.image)
+        }
+
+    }
 }
