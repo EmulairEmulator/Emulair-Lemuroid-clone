@@ -58,6 +58,21 @@ class CloudStatesViewModel(application: EmulairApplication) : AndroidViewModel(a
         }
     }
 
+    // You'll need to import com.google.firebase.storage.ktx.component1 and
+    // com.google.firebase.storage.ktx.component2
+//    fun listAllPaginated(pageToken: String?){
+//        val listPageTask = if (pageToken != null) {
+//            storagePreviewsRef.list(100, pageToken)
+//        } else {
+//            storagePreviewsRef.list(100)
+//        }
+//
+//        listPageTask
+//            .addOnSuccessListener { (items, prefixes, pageToken) ->
+//
+//            }
+//
+//    }
     fun fetchPhotos() {
         storagePreviewsRef.listAll().addOnSuccessListener { listResult ->
 
