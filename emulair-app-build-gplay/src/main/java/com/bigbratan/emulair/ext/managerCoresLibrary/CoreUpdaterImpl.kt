@@ -68,7 +68,7 @@ class CoreUpdaterImpl(
         return installSession
     }
 
-    private fun computePlayModuleName(it: CoreID) = "lemuroid_core_${it.coreName}"
+    private fun computePlayModuleName(it: CoreID) = "libretro_core_${it.coreName}"
 
     private suspend fun waitForCompletion(sessionId: Int, installManager: SplitInstallManager) {
         installManager.requestProgressFlow()

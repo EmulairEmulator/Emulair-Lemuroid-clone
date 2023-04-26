@@ -20,18 +20,18 @@
 
 <resources>
     <!-- NOTIFICATIONS -->
-    <string name="installing_core_notification_title">Updating Cores from Play</string>
-    <string name="installing_core_notification_message">Check the Google Play Store app to see the current status</string>
+    <string name="installing_core_notification_title">Updating cores from Google Play</string>
+    <string name="installing_core_notification_message">Check the Google Play app to see the current status</string>
 
     <!-- GAME ACTIVITY -->
-    <string name="game_loading_download_core">Downloading Core…</string>
+    <string name="game_loading_download_core">Downloading core…</string>
     <string name="game_loader_error_load_core">The Libretro core was not loaded. Try the following:\n
         \n\u2022 Enable internet connection and rescan your games
-        \n\u2022 Make sure Google Play Store is installed and running
-        \n\u2022 Wait for pending operations in Google Play Store app to complete</string>
+        \n\u2022 Make sure Google Play is installed and running
+        \n\u2022 Wait for other pending operations in Google Play to complete</string>
 
     <!-- SAVE SYNC FRAGMENT - GOOGLE DRIVE -->
-    <string name="save_sync_gdrive_sign_in_failed">Google Sign In failed: %s (%s)</string>
+    <string name="save_sync_gdrive_sign_in_failed">Google sign in failed: %s (%s)</string>
     <string name="save_sync_gdrive_sign_in_success">Logged in to Google as %s</string>
     <string name="save_sync_gdrive_sign_out_success">Logged out from Google</string>
     <string name="save_sync_gdrive_missing_play_services">Google Drive requires Google Play Services which are not supported on your device</string>

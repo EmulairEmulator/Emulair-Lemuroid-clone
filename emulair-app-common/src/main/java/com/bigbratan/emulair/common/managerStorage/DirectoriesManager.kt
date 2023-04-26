@@ -22,7 +22,7 @@ class DirectoriesManager(private val appContext: Context) {
         mkdirs()
     }
 
-    fun getStatesPreviewDirectory(): File = File(appContext.getExternalFilesDir(null), "state-previews").apply {
+    fun getStatesPreviewDirectory(): File = File(appContext.getExternalFilesDir(null), "state previews").apply {
         mkdirs()
     }
 
@@ -30,7 +30,7 @@ class DirectoriesManager(private val appContext: Context) {
         mkdirs()
     }
 
-    fun getInternalRomsDirectory(): File = File(appContext.getExternalFilesDir(null), "roms").apply {
+    fun getInternalRomsDirectory(): File = File(appContext.getExternalFilesDir(null), "ROMs").apply {
         mkdirs()
     }
 }

@@ -79,10 +79,10 @@
     <string name="game_toast_incompatible_state">This save state is not compatible with the current core version. Please load the latest in-game save or use a previous Emulair version.</string>
     <string name="game_loader_error_gl_incompatible">This Core requires an OpenGL ES version which is not supported by your device.</string>
     <string name="game_loader_error_generic">Something bad happened. Try the following:\n
-        \n\u2022 Disable auto-save and re-run the game
+        \n\u2022 Disable "Save state on correct quit" and re-run the game
         \n\u2022 Go into Android settings and clear the app cache
         \n\u2022 Go into Emulair settings and perform a Factory Reset
-        \n\nIf none of the above works, it might be possible that this Game/Core is not supported by this device.
+        \n\n If none of the above works, it might be possible that this game/core is not supported by this device.
     </string>
     <string name="game_loader_error_load_game">Something bad happened while loading your game. Make sure the ROM is supported by Emulair and rescan your games.</string>
     <string name="game_loader_error_save">Something bad happened with your save file. If the issue persists, try disabling auto-save.</string>
@@ -165,8 +165,8 @@
     <!-- SETTINGS FRAGMENT - MISCELLANEOUS -->
     <string name="settings_category_misc">Miscellaneous</string>
     <string name="settings_misc_save_sync_title">Cloud saves</string>
-    <string name="settings_misc_save_sync_description">Back up and Sync your saves on the cloud</string>
-    <string name="settings_misc_change_cores_title">Change Cores</string>
+    <string name="settings_misc_save_sync_description">Back up and sync your saves on the cloud</string>
+    <string name="settings_misc_change_cores_title">Change cores</string>
     <string name="settings_misc_change_cores_description">Select which core is associated to a system</string>
     <string name="settings_misc_bios_title">BIOS</string>
     <string name="settings_misc_bios_description">Display detected and supported BIOS files</string>
@@ -183,10 +183,10 @@
     <string name="save_sync_synchronization_saves_description">%1$s on device</string>
     <string name="save_sync_synchronization_states_title">Sync states</string>
     <string name="save_sync_synchronization_states_description">More convenient, but heavier and less reliable. Choose which cores/systems you want to sync</string>
-    <string name="save_sync_synchronization_auto_title">Auto-Sync</string>
-    <string name="save_sync_synchronization_auto_description">Automatically perform a Sync before and after a game session when connected to Wifi</string>
-    <string name="save_sync_synchronization_refresh_title">Manual Sync</string>
-    <string name="save_sync_synchronization_refresh_description">Perform a manual Sync now.\n%1$s</string>
+    <string name="save_sync_synchronization_auto_title">Auto sync</string>
+    <string name="save_sync_synchronization_auto_description">Automatically perform a sync before and after a game session when connected to Wi-Fi</string>
+    <string name="save_sync_synchronization_refresh_title">Manual sync</string>
+    <string name="save_sync_synchronization_refresh_description">Perform a manual sync now\n%1$s</string>
 
     <!-- BIOS FRAGMENT -->
     <string name="bios_category_detected">Detected</string>
@@ -211,10 +211,10 @@
 
     <!-- CRASH ACTIVITY -->
     <string name="crash_message">It looks like the Libretro core has experienced an unexpected issue. If it\'s persistent please try the following:\n
-        \n\u2022 Disable auto-save and re-run the game
+        \n\u2022 Disable "Save state on correct quit" and re-run the game
         \n\u2022 Go into Android settings and clear the app cache
         \n\u2022 Go into Emulair settings and perform a Factory Reset
-        \n\n If none of the above works, it might be possible that this Game/Core is not supported by this device.</string>
+        \n\n If none of the above works, it might be possible that this game/core is not supported by this device.</string>
     <string name="title_activity_settings_alt">SettingsActivityAlt</string>
 
 </resources>

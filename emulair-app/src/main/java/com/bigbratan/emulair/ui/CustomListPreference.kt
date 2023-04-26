@@ -19,13 +19,14 @@ class CustomListPreference : ListPreference {
 
     override fun onClick() {
         // val builder = MaterialAlertDialogBuilder(context, R.style.AlertDialog).setSingleChoiceItems(entries, getValueIndex()) { dialog, index ->
-        val builder = MaterialAlertDialogBuilder(context).setSingleChoiceItems(entries, getValueIndex()) { dialog, index ->
-            if (callChangeListener(entryValues[index].toString())) {
-                setValueIndex(index)
+        val builder =
+            MaterialAlertDialogBuilder(context).setSingleChoiceItems(entries, getValueIndex()) { dialog, index ->
+                if (callChangeListener(entryValues[index].toString())) {
+                    setValueIndex(index)
+                }
+                dialog.dismiss()
             }
-            dialog.dismiss()
-        }
-            .setNegativeButton(R.string.button_cancel) { dialog, _ -> dialog.dismiss() }.setTitle(title)
+                .setNegativeButton(R.string.button_cancel) { dialog, _ -> dialog.dismiss() }.setTitle(title)
 
         val dialog = builder.create()
         dialog.show()

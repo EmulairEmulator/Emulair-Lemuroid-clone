@@ -40,7 +40,7 @@ delivery_install = "<dist:install-time/>"
 
 manifest_content = """
 <manifest xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="com.swordfish.core.%s"
+    package="com.bigbratan.emulair.libretro.core.%s"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
@@ -65,8 +65,8 @@ plugins {
 
 android {
     defaultConfig {
-        missingDimensionStrategy("opensource", "play")
-        missingDimensionStrategy("cores", "dynamic")
+        missingDimensionStrategy("buildType", "gplay")
+        missingDimensionStrategy("coresType", "downloadedCores")
     }
     packagingOptions {
         doNotStrip("*/*/*_libretro_android.so")
@@ -74,7 +74,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":emiu-app"))
+    implementation(project(":emulair-app"))
     implementation(kotlin(deps.libs.kotlin.stdlib))
 }
 """
@@ -89,7 +89,7 @@ for core_name in cores:
     #! rm -r $core_folder
     core = core_name + "_libretro_android.so.zip"
     so_name = core.replace(".zip", "")
-    core_folder = "lemuroid_core_" + core_name
+    core_folder = "libretro_core_" + core_name
 
     install_time = delivery_on_demand
 

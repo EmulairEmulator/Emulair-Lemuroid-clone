@@ -89,7 +89,7 @@ class CoreUpdaterImpl(
         }
 
         val uri = baseUri.buildUpon()
-            .appendEncodedPath("raw/$CORES_VERSION/lemuroid_core_${coreID.coreName}/src/main/jniLibs/")
+            .appendEncodedPath("raw/$CORES_VERSION/libretro_core_${coreID.coreName}/src/main/jniLibs/")
             .appendPath(Build.SUPPORTED_ABIS.first())
             .appendPath(libFileName)
             .build()

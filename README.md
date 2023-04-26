@@ -10,7 +10,7 @@
      height="80">
 
 ## Details
-Emulair is an Android exclusive open-source front-end for Libretro cores, based on Lemuroid. For more information about the project (such as how the code functions, why the project exists, who worked on it, etc.), check the [Wiki page](https://github.com/RaduBratan/Emulair/wiki). To see our backlog, check the [Project page](https://github.com/users/RaduBratan/projects/2).
+Emulair is an Android exclusive open-source front-end for Libretro cores, based on Lemuroid. For more information about the project (such as how the code functions, why the project exists, who worked on it, etc.), check the [Wiki page](https://github.com/RaduBratan/Emulair/wiki). To see our backlog, check the [Projects page](https://github.com/users/RaduBratan/projects/2).
 
 ## Philosophy
 The primary goal of Emulair is to combine the ease of use and simple but accessible interface of Lemuroid with RetroArch's extensive customizability and features.
@@ -94,7 +94,7 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] [NEW] Choose if you want to automatically fall back on other emulators or not, in case a game doesn't work (this implies unlocking the option to switch between FinalBurn Neo and MAME 2003-Plus)
 - [ ] [NEW] Plenty QOL features, updates and fixes
 
-Note: The above features won't be released in this exact order. Concerning the SDM project, not every feature on this list will be implemented (the minimum requirement is 10). Concerning the development after the university project is finished, some features may be changed or even removed.
+Note: The above features won't be released in this exact order. Concerning the SDM project, not every feature on this list will be implemented (the minimum requirement is 10). Regarding the development after the university project is finished, some features may be changed or even removed.
 
 ## Removed Features (from Lemuroid)
 - Android TV support
