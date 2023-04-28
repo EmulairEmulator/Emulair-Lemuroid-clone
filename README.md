@@ -50,7 +50,7 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - Save files to Google Drive (only if downloaded from Google Play; inaccessible directly from Drive)
 - Add games to a "Favourites" list
 - Simulate various screens, such as LCD or CRT
-- Remap some touch screen controls (such as joysticks or D-pads) to gyroscopic input, by double / triple tapping the buttons
+- Remap some touch screen controls (such as joysticks or D-pads) to gyroscopic input, by double/triple tapping the buttons
 - Customizable touch controls (size and position)
 - ROMs scanning and indexing
 - BIOSes scanning and indexing
@@ -71,15 +71,15 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] Cheat codes support
 - [ ] RetroAchievements support
 - [ ] .7z ROMs support
-- [ ] Syncing save files across cloud services such as Google Firebase, Dropbox and Microsoft OneDrive (on top of Google Drive)
+- [ ] Syncing save files on Google Firebase and/or Supabase (I will decide which one I will choose after testing them both)
 - [ ] A user-friendly intro screen concisely explaining how to use the app
 - [ ] An info screen containing frequently asked questions and other useful stuff
-- [ ] A profile screen used for easily connecting to various platforms (RetroAchievements, Google Drive, Google Firebase, Dropbox, Microsoft OneDrive) and syncing save files to the cloud (previously, the Google Drive connection screen and savedata syncing buttons were located in completely different places)
-- [ ] Button prompts before every important action, such as saving / loading states
+- [ ] A profile screen used for easily connecting to RetroAchievements and syncing save files to the cloud
+- [ ] Button prompts before every important action, such as saving/loading states
 - [ ] Light Theme, AMOLED Theme, Material You Theme (previously there was only a Dark Theme)
 - [ ] Slide down in the "Games" page to rescan your directories and refresh your games list
 - [ ] Automatically rescan internal directories on app restart
-- [ ] Set what screen orientation games should be opened in (landscape / portrait / follow device)
+- [ ] Set what screen orientation games should be opened in (landscape/portrait/follow device)
 - [ ] Set on-screen buttons' transparency
 - [ ] Different app layout for tablets and foldables
 - [ ] Different app layout for phones in landscape orientation
@@ -93,15 +93,19 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] A "Close menu" button accessible from the pause menu, so users don't have to click their device's back button every time they want to unpause a game
 - [ ] [NEW] Choose if you want to automatically fall back on other emulators or not, in case a game doesn't work (this implies unlocking the option to switch between FinalBurn Neo and MAME 2003-Plus)
 - [ ] [NEW] Plenty QOL features, updates and fixes
+- [ ] [NEW] Easily access and manage all your files from an app-specific folder inside storage/emulated/0
 
-Note: The above features won't be released in this exact order. Concerning the SDM project, not every feature on this list will be implemented (the minimum requirement is 10). Regarding the development after the university project is finished, some features may be changed or even removed.
+Note: The above features won't be released in this exact order. Concerning the SDM project, not every feature on this list will be implemented (the minimum requirement is 10). Regarding the development after the university project is finished, some features may be changed or even removed. If you don't know what "SDM" means or what Emulair has to do with any kind of university, check the [Wiki page](https://github.com/RaduBratan/Emulair/wiki/5.-More-about-Emulair) for more info on why the project exists.
 
 ## Removed Features (from Lemuroid)
 - Android TV support
 - Turn games into shortcuts for your launcher
+- Sync saves on Google Drive
+
+Note: Some features will be brought back later.
 
 ## Name Meaning
-"Emulair" is a triple entendre and the name is inspired by the Lawnchair launcher (not associated with Emulair). Firstly, "Emulair" sounds similar to the word "Emulator" (if you try hard enough). Secondly, "Emulair" means "lair of the emu bird", an animal commonly associated with emulators, given their similar names. Lastly, "Emulair" also means "lair for all your emulators", which is similar to "Vimm's Lair", a place for preserving video games.
+"Emulair" is a triple entendre and the name is inspired by the Lawnchair launcher (not associated with Emulair). Firstly, "Emulair" kind of sounds like the word "Emulator" (if you try hard enough). Secondly, "Emulair" means "lair of the emu bird", an animal whose name is similar to the abbreviation of the word "emulator". Lastly, "Emulair" also means "lair for all your emulators", which is similar in name to "Vimm's Lair", a place for preserving video games.
 
 ## Legal
 Copyright (C) 2023 Radu-George Bratan
