@@ -61,7 +61,7 @@ class HomeFragment : Fragment() {
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.home_recyclerview)
         val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-        val spacingInPixels = resources.getDimensionPixelSize(R.dimen.grid_spacing)
+        val spacingInPixels = resources.getDimensionPixelSize(R.dimen.grid_spacing) / 2
         GridSpaceDecorationAlt.setSingleGridSpaceDecoration(recyclerView, spacingInPixels)
 
         recyclerView.layoutManager = layoutManager

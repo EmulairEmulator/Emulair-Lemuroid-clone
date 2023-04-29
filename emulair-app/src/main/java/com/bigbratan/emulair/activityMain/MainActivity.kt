@@ -95,6 +95,7 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
 
         val buttonInfo: ImageButton = findViewById(R.id.main_info)
         val buttonSearch: ImageButton = findViewById(R.id.main_search)
+        val buttonAccount: ImageButton = findViewById(R.id.main_account)
         buttonSearch.setOnClickListener {
             navController.navigateUp()
             navController.navigate(R.id.main_search)
@@ -116,6 +117,9 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
             buttonSearch.visibility =
                 if (destination.id == R.id.main_home) View.VISIBLE
                 else View.GONE
+            buttonAccount.visibility =
+                if (destination.id == R.id.main_search) View.GONE
+                else View.VISIBLE
         }
 
         val factory = MainViewModel.Factory(applicationContext)

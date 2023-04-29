@@ -4,7 +4,10 @@
     android:id="@+id/text"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:paddingBottom="12dp"
+    android:paddingStart="@dimen/grid_spacing"
+    android:paddingTop="@dimen/grid_half_spacing"
+    android:paddingEnd="@dimen/grid_spacing"
+    android:paddingBottom="@dimen/grid_half_spacing"
     android:textSize="20sp"
     android:textStyle="bold"
-    tools:text="Favorites" />
+    tools:text="Jump Back In" />

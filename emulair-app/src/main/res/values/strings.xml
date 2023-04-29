@@ -62,7 +62,7 @@
     <string name="section_recent">Recents</string>
     <string name="section_favorites">Favorites</string>
     <!-- <string name="section_discover">Discover</string> -->
-    <string name="section_all_games">All Games</string>
+    <string name="section_all_games">All games</string>
     <string name="section_action_see_all">see all</string>
 
     <!-- HOME FRAGMENT - GAME LONGPRESS -->

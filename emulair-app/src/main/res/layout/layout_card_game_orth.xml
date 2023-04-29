@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="200dp"
+    android:layout_marginStart="@dimen/grid_spacing"
+    android:layout_marginEnd="@dimen/grid_spacing"
+    android:layout_marginBottom="@dimen/grid_half_spacing"
     android:clickable="true"
     android:focusable="true"
-    app:cardCornerRadius="@dimen/corner_radius"
-    android:layout_marginBottom="@dimen/grid_spacing">
-
-    <!-- marginTop = epoxy carousel margin top -->
-    <!-- marginBottom = epoxy carousel margin bottom -->
-    <!-- marginLeft / Right = epoxy carousel margin left / right -->
+    app:cardCornerRadius="@dimen/corner_radius">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -31,11 +29,11 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:background="@drawable/background_card_scrim"
             app:layout_constraintBottom_toBottomOf="@+id/image"
             app:layout_constraintEnd_toEndOf="@+id/image"
             app:layout_constraintStart_toStartOf="@+id/image"
-            app:layout_constraintTop_toTopOf="@+id/image"
-            android:background="@drawable/background_card_scrim">
+            app:layout_constraintTop_toTopOf="@+id/image">
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/text"
@@ -46,10 +44,10 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:ellipsize="end"
-                android:textStyle="bold"
                 android:lines="1"
                 android:textAppearance="?attr/textAppearanceSubtitle1"
                 android:textSize="20sp"
+                android:textStyle="bold"
                 tools:text="Game Name" />
 
             <com.google.android.material.textview.MaterialTextView

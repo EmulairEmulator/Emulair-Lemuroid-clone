@@ -92,8 +92,8 @@ class EpoxyHomeController(
         }
         carousel {
             id("carousel_$id")
-            padding(Carousel.Padding.dp(0, 0, 0, 24, 12))
-            //padding(Carousel.Padding.dp(24, 8, 24, 24, 12))
+            // padding(Carousel.Padding.dp(0, 0, 0, 24, 12))
+            padding(Carousel.Padding.dp(24, 0, 24, 12, 12))
             withModelsFrom(games) { item ->
                 EpoxyGameSmallView_()
                     .id(item.id)
@@ -105,15 +105,15 @@ class EpoxyHomeController(
     }
 
     private fun addCarouselAllGames(id: String, titleId: Int, games: List<Game>) {
-        epoxySectionAllGamesView {
+        epoxyClickableSectionView {
             id("section_$id")
             title(titleId)
             onClick { this@EpoxyHomeController.home.navigateToAllGames() }
         }
         carousel {
             id("carousel_$id")
-            padding(Carousel.Padding.dp(0, 0, 0, 24, 12))
-            //padding(Carousel.Padding.dp(24, 8, 24, 24, 12))
+            // padding(Carousel.Padding.dp(0, 0, 0, 24, 12))
+            padding(Carousel.Padding.dp(24, 0, 24, 12, 12))
             withModelsFrom(games) { item ->
                 EpoxyGameSmallView_()
                     .id(item.id)
@@ -125,15 +125,16 @@ class EpoxyHomeController(
     }
 
     private fun addCarouselFavoriteGames(id: String, titleId: Int, games: List<Game>) {
-        epoxySectionFavoriteGamesView {
+        epoxyClickableSectionView {
             id("section_$id")
             title(titleId)
             onClick { this@EpoxyHomeController.home.navigateToFavoriteGames() }
         }
         carousel {
             id("carousel_$id")
-            padding(Carousel.Padding.dp(0, 0, 0, 24, 12))
-            //padding(Carousel.Padding.dp(24, 8, 24, 24, 12))
+            // padding(Carousel.Padding.dp(0, 0, 0, 24, 12))
+            padding(Carousel.Padding.dp(24, 0, 24, 12, 12))
+            // padding(Carousel.Padding.dp(24, 8, 24, 24, 12))
             withModelsFrom(games) { item ->
                 EpoxyGameSmallView_()
                     .id(item.id)

@@ -125,7 +125,7 @@
 
     <include
         android:id="@+id/settings_loading"
-        layout="@layout/layout_animatedview_pausemenu"
+        layout="@layout/layout_animation_pausemenu"
         android:layout_width="@dimen/loading_circle_outer"
         android:layout_height="@dimen/loading_circle_outer"
         app:layout_constraintBottom_toBottomOf="@id/gamecontainer"

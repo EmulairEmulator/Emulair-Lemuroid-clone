@@ -27,7 +27,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.debounce
 import javax.inject.Inject
 
-
 class SearchFragment : Fragment() {
 
     @Inject
@@ -43,9 +42,9 @@ class SearchFragment : Fragment() {
 
     private val searchDebounce = MutableStateFlow("")
 
-    protected var recyclerView: RecyclerView? = null
+    private var recyclerView: RecyclerView? = null
 
-    protected var emptyView: View? = null
+    private var emptyView: View? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -96,7 +95,7 @@ class SearchFragment : Fragment() {
         }
     }
 
-    fun View.setMargin(left: Int? = null, top: Int? = null, right: Int? = null, bottom: Int? = null) {
+    /*fun View.setMargin(left: Int? = null, top: Int? = null, right: Int? = null, bottom: Int? = null) {
         val params = (layoutParams as? ViewGroup.MarginLayoutParams)
         params?.setMargins(
             left ?: params.leftMargin,
@@ -104,11 +103,10 @@ class SearchFragment : Fragment() {
             right ?: params.rightMargin,
             bottom ?: params.bottomMargin)
         layoutParams = params
-    }
-
+    }*/
 
     private fun initializeMenuProvider() {
-        val menuHost: MenuHost = requireActivity() as MenuHost
+        val menuHost: MenuHost = requireActivity()
         val menuProvider = object : MenuProvider {
             override fun onPrepareMenu(menu: Menu) {}
 
@@ -120,7 +118,6 @@ class SearchFragment : Fragment() {
 
             override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
                 menuInflater.inflate(R.menu.menu_search, menu)
-
                 val searchItem = menu.findItem(R.id.action_search)
                 setupSearchMenuItem(searchItem)
             }
@@ -131,7 +128,7 @@ class SearchFragment : Fragment() {
     private fun setupSearchMenuItem(searchItem: MenuItem) {
         val onExpandListener = object : MenuItem.OnActionExpandListener {
             override fun onMenuItemActionCollapse(item: MenuItem): Boolean {
-                activity?.onBackPressed()
+                activity?.onBackPressedDispatcher?.onBackPressed()
                 return true
             }
 
@@ -142,7 +139,7 @@ class SearchFragment : Fragment() {
         searchItem.expandActionView()
 
         val searchView = searchItem.actionView as SearchView
-        fun View.setMargin(left: Int? = null, top: Int? = null, right: Int? = null, bottom: Int? = null) {
+        /*fun View.setMargin(left: Int? = null, top: Int? = null, right: Int? = null, bottom: Int? = null) {
             val params = (layoutParams as? ViewGroup.MarginLayoutParams)
             params?.setMargins(
                 left ?: params.leftMargin,
@@ -153,7 +150,7 @@ class SearchFragment : Fragment() {
         }
         val dpRatio = requireContext().resources.displayMetrics.density
         val dpAsPixels = (60 * dpRatio).toInt()
-        searchView.setMargin(0, 0, dpAsPixels, 0)
+        searchView.setMargin(0, 0, dpAsPixels, 0)*/
         searchView.maxWidth = Integer.MAX_VALUE
 
         val onQueryTextListener = object : SearchView.OnQueryTextListener {
@@ -171,8 +168,8 @@ class SearchFragment : Fragment() {
         searchView.setQuery(searchViewModel.queryString.value, false)
     }
 
-    fun updateEmptyViewVisibility(loadState: CombinedLoadStates, itemCount: Int) {
-        val emptyViewConditions = lazySequenceOf<Boolean>(
+    private fun updateEmptyViewVisibility(loadState: CombinedLoadStates, itemCount: Int) {
+        val emptyViewConditions = lazySequenceOf(
             { loadState.source.refresh is LoadState.NotLoading },
             { loadState.append.endOfPaginationReached },
             { itemCount == 0 }
