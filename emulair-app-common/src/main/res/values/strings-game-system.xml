@@ -21,6 +21,8 @@
 <resources>
     <string name="game_system_title_abbr_ntd_nes1">NES</string>
     <string name="game_system_title_abbr_atr_2600">A26</string>
+    <string name="game_system_title_abbr_atr_5200">A52</string>
+    <string name="game_system_title_abbr_atr_7800">A78</string>
     <string name="game_system_title_abbr_ntd_nes2_s">SNES</string>
     <string name="game_system_title_abbr_seg_gns1">Genesis</string>
     <string name="game_system_title_abbr_seg_gns2_cd">SCD</string>
@@ -35,7 +37,6 @@
     <string name="game_system_title_abbr_sony_psp">PSP</string>
     <string name="game_system_title_abbr_arcade_fbneo">FBNeo</string>
     <string name="game_system_title_abbr_arcade_mame2003plus">MAME2003+</string>
-    <string name="game_system_title_abbr_atr_7800">A78</string>
     <string name="game_system_title_abbr_atr_lynx">Lynx</string>
     <string name="game_system_title_abbr_nec_pce">PCE</string>
     <string name="game_system_title_abbr_snk_ngp1">NGP</string>
@@ -50,9 +51,10 @@
     <string name="game_system_title_arcade_fbneo">Arcade FB Neo</string>
     <string name="game_system_title_arcade_mame2003plus">Arcade MAME 2003+</string>
     <string name="game_system_title_atr_2600">Atari 2600</string>
+    <string name="game_system_title_atr_5200">Atari 5200</string>
     <string name="game_system_title_atr_7800">Atari 7800</string>
     <string name="game_system_title_atr_lynx">Atari Lynx</string>
-    <string name="game_system_title_ban_ws1">Bandai WonderSwan</string>
+    <string name="game_system_title_ban_ws1">Bandai WS</string>
     <string name="game_system_title_ban_ws2_c">Bandai WS Color</string>
     <string name="game_system_title_java_j2me_cellphone">J2ME Cellphones</string>
     <string name="game_system_title_microsoft_msdos_pc">MS-DOS PCs</string>
@@ -61,8 +63,8 @@
     <string name="game_system_title_ntd_ds1">Nintendo DS</string>
     <string name="game_system_title_ntd_ds23">Nintendo 3DS</string>
     <string name="game_system_title_ntd_gb1">Nintendo GB</string>
-    <string name="game_system_title_ntd_gb2_c">Nintendo GBC</string>
-    <string name="game_system_title_ntd_gb3_a">Nintendo GBA</string>
+    <string name="game_system_title_ntd_gb2_c">Nintendo GB Color</string>
+    <string name="game_system_title_ntd_gb3_a">Nintendo GB Advance</string>
     <string name="game_system_title_ntd_nes1">Nintendo NES</string>
     <string name="game_system_title_ntd_nes2_s">Nintendo SNES</string>
     <string name="game_system_title_seg_gns1">Sega Genesis</string>
@@ -70,8 +72,8 @@
     <string name="game_system_title_seg_gns3_32x">Sega 32X</string>
     <string name="game_system_title_seg_gg">Sega Game Gear</string>
     <string name="game_system_title_seg_ms">Sega Master System</string>
-    <string name="game_system_title_snk_ngp1">SNK NG Pocket</string>
-    <string name="game_system_title_snk_ngp2_c">SNK NG Pocket Color</string>
+    <string name="game_system_title_snk_ngp1">SNK NGP</string>
+    <string name="game_system_title_snk_ngp2_c">SNK NGP Color</string>
     <string name="game_system_title_sony_ps1">Sony PS1</string>
     <string name="game_system_title_sony_ps2">Sony PS2</string>
     <string name="game_system_title_sony_psp">Sony PSP</string>
