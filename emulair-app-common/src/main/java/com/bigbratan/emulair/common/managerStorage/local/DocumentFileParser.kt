@@ -83,10 +83,12 @@ object DocumentFileParser {
         )
     }
 
-    /* Finds a zip entry which we assume is a game. Lemuroid only supports single archive games,
-       so we are looking for an entry which occupies a large percentage of the archive space.
-       This is very fast heuristic to compute and avoids reading the whole stream in most
-       scenarios.*/
+    /*
+    Finds a ZIP entry which we assume is a game. Emulair only supports single archive games,
+    so we are looking for an entry which occupies a large percentage of the archive space.
+    This is a very fast heuristic way to compute and avoids reading the whole stream in most
+    scenarios.
+    */
     fun findGameEntry(openedInputStream: ZipInputStream, fileSize: Long = -1): ZipEntry? {
         for (i in 0..MAX_CHECKED_ENTRIES) {
             val entry = openedInputStream.nextEntry ?: break
