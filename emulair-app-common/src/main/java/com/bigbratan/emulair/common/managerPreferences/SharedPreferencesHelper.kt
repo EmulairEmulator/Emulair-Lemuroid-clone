@@ -17,8 +17,10 @@ object SharedPreferencesHelper {
         return SharedPreferencesDataStore(getSharedPreferences(context))
     }
 
-    /** Default shared preferences does not work with multi-process. It's currently used only for
-     *  stored directory which are only read in the main process.*/
+    /*
+    Default shared preferences does not work with multi-process. It's currently used only for
+    stored directory which are only read in the main process.
+    */
     @Deprecated("Uses standard preference manager. This is not supported in multi-processes.")
     fun getLegacySharedPreferences(context: Context): SharedPreferences {
         return PreferenceManager.getDefaultSharedPreferences(context)
