@@ -13,7 +13,7 @@
 Emulair is an Android exclusive open-source front-end for Libretro cores, based on Lemuroid. For more information about the project (such as how the code functions, why the project exists, who worked on it, etc.), check the [Wiki page](https://github.com/RaduBratan/Emulair/wiki). To see our backlog, check the [Projects page](https://github.com/users/RaduBratan/projects/2).
 
 ## Philosophy
-The primary goal of Emulair is to combine the ease of use and simple but accessible interface of Lemuroid with RetroArch's extensive customizability and features.
+The primary goal of Emulair is to combine the ease of use and simple but accessible interface of Lemuroid with RetroArch's extensive customizability and features, while also adding support for standalone emulators.
 
 ## Origin
 It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, in turn, is a rib of [Retrograde](https://github.com/retrograde/retrograde-android). It also uses [LibretroDroid](https://github.com/Swordfish90/LibretroDroid) under the hood to run [Libretro](https://github.com/libretro) cores. The 2D sprites for the systems are taken from [hakchi2](https://github.com/ClusterM/hakchi2) and [Faustbear](https://imgur.com/gallery/8RQ1QkA).
@@ -42,6 +42,9 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - SNK NG Pocket Color by [Beetle NeoPop](https://docs.libretro.com/library/beetle_neopop/)
 - Sony PS1 by [PCSX ReARMed](https://docs.libretro.com/library/pcsx_rearmed/)
 - Sony PSP by [PPSSPP](https://docs.libretro.com/library/ppsspp/)
+
+## Systems (standalone apps)
+This feature hasn't been implemented yet.
 
 ## Existing Features (from Lemuroid)
 - Easily search for any installed video game
