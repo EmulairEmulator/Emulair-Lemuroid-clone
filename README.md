@@ -9,6 +9,8 @@
      alt="Get it on GitHub"
      height="80">
 
+# Comentariu
+
 ## Details
 Emulair is an Android exclusive open-source front-end for Libretro cores, based on Lemuroid. For more information about the project (such as how the code functions, why the project exists, who worked on it, etc.), check the [Wiki page](https://github.com/RaduBratan/Emulair/wiki). To see our backlog, check the [Projects page](https://github.com/users/RaduBratan/projects/2).
 
