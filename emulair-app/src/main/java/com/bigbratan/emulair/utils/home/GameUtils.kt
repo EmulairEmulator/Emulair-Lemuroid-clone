@@ -1,8 +1,8 @@
 package com.bigbratan.emulair.utils.home
 
 import android.content.Context
-import com.bigbratan.emulair.common.metadataRetrograde.GameSystem
-import com.bigbratan.emulair.common.metadataRetrograde.db.entity.Game
+import com.bigbratan.emulair.common.metadata.retrograde.GameSystem
+import com.bigbratan.emulair.common.metadata.retrograde.db.entity.Game
 
 class GameUtils {
 

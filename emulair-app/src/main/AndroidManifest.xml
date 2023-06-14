@@ -27,7 +27,7 @@
         android:theme="@style/Theme.EmulairMaterial" >
 
         <activity
-            android:name=".activityMain.MainActivity"
+            android:name=".activities.main.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,36 +36,36 @@
         </activity>
 
         <activity
-            android:name=".activityGame.GameActivity"
+            android:name=".activities.game.GameActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
             android:launchMode="singleInstance"
             android:process=":game"
             android:theme="@style/Theme.EmulairMaterial.Game" />
 
         <service
-            android:name=".activityGame.GameService"
+            android:name=".activities.game.GameService"
             android:process=":game" />
 
         <activity
-            android:name=".activityPauseMenu.PauseMenuActivity"
+            android:name=".activities.pauseMenu.PauseMenuActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
             android:process=":game"
             android:theme="@style/Theme.EmulairMaterial.Menu" />
 
         <activity
-            android:name=".fragmentSettings.GamePadBindingActivity"
+            android:name=".fragments.settings.GamePadBindingActivity"
             android:theme="@style/Theme.EmulairMaterial.Invisible" />
 
         <activity
-            android:name=".managerSettings.StorageFrameworkPickerLauncher"
+            android:name=".managers.settings.StorageFrameworkPickerLauncher"
             android:theme="@style/Theme.EmulairMaterial.Invisible" />
 
         <activity
-            android:name=".activityCrash.GameCrashActivity"
+            android:name=".activities.crash.GameCrashActivity"
             android:theme="@style/Theme.EmulairMaterial.Game" />
 
-        <receiver android:name=".managerCoresLibrary.LibraryIndexBroadcastReceiver" />
-        <receiver android:name=".managerCoresLibrary.CoreUpdateBroadcastReceiver" />
+        <receiver android:name=".managers.coresLibrary.LibraryIndexBroadcastReceiver" />
+        <receiver android:name=".managers.coresLibrary.CoreUpdateBroadcastReceiver" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

@@ -6,22 +6,22 @@
 
     <fragment
         android:id="@+id/pausemenu"
-        android:name="com.bigbratan.emulair.fragmentPauseMenuActions.PauseMenuFragment"
+        android:name="com.bigbratan.emulair.fragments.pauseMenuActions.PauseMenuFragment"
         android:label="@string/title_pause_menu"/>
 
     <fragment
         android:id="@+id/pausemenu_core_options"
-        android:name="com.bigbratan.emulair.fragmentPauseMenuActions.CoreOptionsFragment"
+        android:name="com.bigbratan.emulair.fragments.pauseMenuActions.CoreOptionsFragment"
         android:label="@string/title_core_options"/>
 
     <fragment
         android:id="@+id/pausemenu_save"
-        android:name="com.bigbratan.emulair.fragmentPauseMenuActions.StateSaveFragment"
+        android:name="com.bigbratan.emulair.fragments.pauseMenuActions.StateSaveFragment"
         android:label="@string/title_save"/>
 
     <fragment
         android:id="@+id/pausemenu_load"
-        android:name="com.bigbratan.emulair.fragmentPauseMenuActions.StateLoadFragment"
+        android:name="com.bigbratan.emulair.fragments.pauseMenuActions.StateLoadFragment"
         android:label="@string/title_load"/>
 
 </navigation>

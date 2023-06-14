@@ -5,11 +5,11 @@ import android.content.Context
 import androidx.startup.AppInitializer
 import androidx.work.ListenableWorker
 import com.google.android.material.color.DynamicColors
-import com.bigbratan.emulair.managerStartup.GameProcessInitializer
-import com.bigbratan.emulair.managerStartup.MainProcessInitializer
+import com.bigbratan.emulair.managers.startup.GameProcessInitializer
+import com.bigbratan.emulair.managers.startup.MainProcessInitializer
 import com.bigbratan.emulair.utils.android.isMainProcess
-import com.bigbratan.emulair.ext.managerContext.ContextHandler
-import com.bigbratan.emulair.common.managerInjection.HasWorkerInjector
+import com.bigbratan.emulair.ext.managers.context.ContextHandler
+import com.bigbratan.emulair.common.managers.injection.HasWorkerInjector
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.DaggerApplication

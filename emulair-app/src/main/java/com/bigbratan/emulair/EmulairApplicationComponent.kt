@@ -19,12 +19,12 @@
 
 package com.bigbratan.emulair
 
-import com.bigbratan.emulair.managerCoresLibrary.CoreUpdateWork
-import com.bigbratan.emulair.managerCoresLibrary.LibraryIndexWork
-import com.bigbratan.emulair.managerSaveSync.SaveSyncWork
-import com.bigbratan.emulair.managerStorage.cache.CacheCleanerWork
-import com.bigbratan.emulair.common.managerInjection.AndroidWorkerInjectionModule
-import com.bigbratan.emulair.common.managerInjection.PerApp
+import com.bigbratan.emulair.managers.coresLibrary.CoreUpdateWork
+import com.bigbratan.emulair.managers.coresLibrary.LibraryIndexWork
+import com.bigbratan.emulair.managers.saveSync.SaveSyncWork
+import com.bigbratan.emulair.managers.storage.cache.CacheCleanerWork
+import com.bigbratan.emulair.common.managers.injection.AndroidWorkerInjectionModule
+import com.bigbratan.emulair.common.managers.injection.PerApp
 import dagger.Component
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
