@@ -31,12 +31,6 @@ class SettingsManager(private val context: Context, sharedPreferences: Lazy<Shar
 
     suspend fun tiltSensitivity() = floatPreference(R.string.pref_key_tilt_sensitivity_index, 10, 0.6f)
 
-    suspend fun autoSaveSync() = booleanPreference(R.string.pref_key_save_sync_auto, false)
-
-    suspend fun syncSaves() = booleanPreference(R.string.pref_key_save_sync_enable, true)
-
-    suspend fun syncStatesCores() = stringSetPreference(R.string.pref_key_save_sync_cores, setOf())
-
     suspend fun enableRumble() = booleanPreference(R.string.pref_key_enable_rumble, false)
 
     suspend fun enableDeviceRumble() = booleanPreference(R.string.pref_key_enable_device_rumble, false)

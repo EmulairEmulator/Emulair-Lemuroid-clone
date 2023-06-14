@@ -48,7 +48,7 @@ class CoreUpdaterImpl(
         private const val CORES_VERSION = "1.14"
     }
 
-    private val baseUri = Uri.parse("https://github.com/Swordfish90/LemuroidCores/")
+    private val baseUri = Uri.parse("https://github.com/RaduBratan/LibretroCores/")
 
     private val api = retrofit.create(CoreUpdater.CoreManagerApi::class.java)
 

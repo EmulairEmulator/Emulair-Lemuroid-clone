@@ -133,26 +133,6 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
         }
     }
 
-    override fun onPrepareOptionsMenu(menu: Menu): Boolean {
-        val isSyncSupported = saveSyncManager.isSupported()
-        val isSyncConfigured = saveSyncManager.isConfigured()
-        menu.findItem(R.id.menu_options_sync)?.isVisible = isSyncSupported && isSyncConfigured
-
-        /*
-        val navController = findNavController(R.id.nav_host_fragment)
-        navController.addOnDestinationChangedListener { _, destination, _ ->
-            menu.findItem(R.id.main_search)?.isVisible = destination.id == R.id.main_home
-        }
-        */
-
-        return super.onPrepareOptionsMenu(menu)
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_nav_top, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
-
     override fun onSupportNavigateUp() = findNavController(R.id.nav_host_fragment).navigateUp()
 
     @dagger.Module

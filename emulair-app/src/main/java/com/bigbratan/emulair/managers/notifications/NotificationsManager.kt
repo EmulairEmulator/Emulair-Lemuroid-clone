@@ -100,19 +100,6 @@ class NotificationsManager(private val applicationContext: Context) {
         return builder.build()
     }
 
-    fun saveSyncNotification(): Notification {
-        createDefaultNotificationChannel()
-
-        val builder = NotificationCompat.Builder(applicationContext, DEFAULT_CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_notifs_app_icon)
-            .setContentTitle(applicationContext.getString(R.string.save_sync_notification_title))
-            .setContentText(applicationContext.getString(R.string.save_sync_notification_message))
-            .setProgress(100, 0, true)
-            .setPriority(NotificationCompat.PRIORITY_LOW)
-
-        return builder.build()
-    }
-
     private fun createDefaultNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val name = applicationContext.getString(R.string.notification_channel_name)
