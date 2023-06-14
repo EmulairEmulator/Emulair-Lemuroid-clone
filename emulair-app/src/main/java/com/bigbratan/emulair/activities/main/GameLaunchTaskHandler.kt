@@ -6,7 +6,6 @@ import android.content.Intent
 import com.bigbratan.emulair.R
 import com.bigbratan.emulair.activities.game.BaseGameActivity
 import com.bigbratan.emulair.activities.crash.GameCrashActivity
-import com.bigbratan.emulair.managers.saveSync.SaveSyncWork
 import com.bigbratan.emulair.managers.storage.cache.CacheCleanerWork
 import com.bigbratan.emulair.ext.managers.review.ReviewManager
 import com.bigbratan.emulair.common.metadata.retrograde.db.RetrogradeDatabase
@@ -45,14 +44,11 @@ class GameLaunchTaskHandler(
     }
 
     private fun cancelBackgroundWork(context: Context) {
-        SaveSyncWork.cancelAutoWork(context)
-        SaveSyncWork.cancelManualWork(context)
         CacheCleanerWork.cancelCleanCacheLRU(context)
     }
 
     private fun rescheduleBackgroundWork(context: Context) {
         // Let's slightly delay the sync. Maybe the user wants to play another game.
-        SaveSyncWork.enqueueAutoWork(context, 5)
         CacheCleanerWork.enqueueCleanCacheLRU(context)
     }
 

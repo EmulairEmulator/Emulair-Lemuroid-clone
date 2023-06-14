@@ -15,7 +15,6 @@ import androidx.preference.PreferenceFragmentCompat
 import com.bigbratan.emulair.R
 import com.bigbratan.emulair.managers.coresLibrary.LibraryIndexScheduler
 import com.bigbratan.emulair.common.managers.preferences.SharedPreferencesHelper
-import com.bigbratan.emulair.common.managers.saveSync.SaveSyncManager
 import com.bigbratan.emulair.common.managers.storage.DirectoriesManager
 import com.bigbratan.emulair.common.utils.coroutines.launchOnState
 import com.bigbratan.emulair.managers.settings.SettingsInteractor
@@ -31,9 +30,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
     @Inject
     lateinit var directoriesManager: DirectoriesManager
-
-    @Inject
-    lateinit var saveSyncManager: SaveSyncManager
 
     override fun setDivider(divider: Drawable?) {
         super.setDivider(ColorDrawable(Color.TRANSPARENT))
@@ -57,10 +53,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
         preferenceManager.preferenceDataStore =
             SharedPreferencesHelper.getSharedPreferencesDataStore(requireContext())
         setPreferencesFromResource(R.xml.preference_settings, rootKey)
-
-        findPreference<Preference>(getString(R.string.pref_key_open_save_sync_settings))?.apply {
-            isVisible = saveSyncManager.isSupported()
-        }
     }
 
     override fun onResume() {
@@ -114,7 +106,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
             getString(R.string.pref_key_stop_rescan) -> stopRescanLibrary()
             getString(R.string.pref_key_external_folder) -> handleChangeExternalFolder()
             getString(R.string.pref_key_open_gamepad_settings) -> handleOpenGamePadSettings()
-            getString(R.string.pref_key_open_save_sync_settings) -> handleDisplaySaveSync()
             getString(R.string.pref_key_open_cores_selection) -> handleDisplayCorePage()
             getString(R.string.pref_key_display_bios_info) -> handleDisplayBiosInfo()
             getString(R.string.pref_key_advanced_settings) -> handleAdvancedSettings()
@@ -133,10 +124,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
     private fun handleDisplayCorePage() {
         findNavController().navigate(R.id.main_cores_selection)
-    }
-
-    private fun handleDisplaySaveSync() {
-        findNavController().navigate(R.id.main_save_sync)
     }
 
     private fun handleOpenGamePadSettings() {

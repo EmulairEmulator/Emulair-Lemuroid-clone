@@ -5,7 +5,6 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuItem
 import android.view.View
 import android.widget.ImageButton
 import android.widget.ProgressBar
@@ -21,7 +20,6 @@ import com.bigbratan.emulair.activities.game.GameLauncher
 import com.bigbratan.emulair.common.activities.retrograde.RetrogradeAppCompatActivity
 import com.bigbratan.emulair.common.managers.injection.PerActivity
 import com.bigbratan.emulair.common.managers.injection.PerFragment
-import com.bigbratan.emulair.common.managers.saveSync.SaveSyncManager
 import com.bigbratan.emulair.common.managers.storage.DirectoriesManager
 import com.bigbratan.emulair.common.metadata.retrograde.db.RetrogradeDatabase
 import com.bigbratan.emulair.common.utils.coroutines.safeLaunch
@@ -35,7 +33,6 @@ import com.bigbratan.emulair.fragments.systemGames.SystemGamesFragment
 import com.bigbratan.emulair.fragments.systems.SystemsFragment
 import com.bigbratan.emulair.managers.interaction.GameInteractor
 import com.bigbratan.emulair.managers.input.InputDeviceManager
-import com.bigbratan.emulair.managers.saveSync.SaveSyncWork
 import com.bigbratan.emulair.managers.settings.SettingsInteractor
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.Provides
@@ -50,9 +47,6 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
 
     @Inject
     lateinit var gameLaunchTaskHandler: GameLaunchTaskHandler
-
-    @Inject
-    lateinit var saveSyncManager: SaveSyncManager
 
     private val reviewManager = ReviewManager()
 
@@ -108,7 +102,6 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
                     destination.id == R.id.main_cores_selection ||
                     destination.id == R.id.main_account ||
                     destination.id == R.id.main_gamepad ||
-                    destination.id == R.id.main_save_sync ||
                     destination.id == R.id.main_system_games
                 ) View.GONE
                 else View.VISIBLE
@@ -160,23 +153,6 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
         return super.onCreateOptionsMenu(menu)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // val navController = findNavController(R.id.nav_host_fragment)
-        return when (item.itemId) {
-            R.id.menu_options_sync -> {
-                SaveSyncWork.enqueueManualWork(this)
-                true
-            }
-            /*
-            R.id.main_search -> {
-                item.onNavDestinationSelected(navController)
-                true
-            }
-            */
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
-
     override fun onSupportNavigateUp() = findNavController(R.id.nav_host_fragment).navigateUp()
 
     @dagger.Module
@@ -221,10 +197,6 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
         @PerFragment
         @ContributesAndroidInjector(modules = [AdvancedFragment.Module::class])
         abstract fun advancedFragment(): AdvancedFragment
-
-        @PerFragment
-        @ContributesAndroidInjector(modules = [SaveSyncFragment.Module::class])
-        abstract fun saveSyncFragment(): SaveSyncFragment
 
         @PerFragment
         @ContributesAndroidInjector(modules = [CoresSelectionFragment.Module::class])

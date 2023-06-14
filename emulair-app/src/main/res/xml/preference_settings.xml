@@ -104,13 +104,6 @@
             app:summary="@string/settings_misc_bios_description" />
 
         <Preference
-            android:key="@string/pref_key_open_save_sync_settings"
-            android:layout="@layout/layout_preference_main_simple_middle"
-            android:summary="@string/settings_misc_save_sync_description"
-            android:title="@string/settings_misc_save_sync_title"
-            app:iconSpaceReserved="false" />
-
-        <Preference
             android:key="@string/pref_key_advanced_settings"
             android:layout="@layout/layout_preference_main_simple_bottom"
             android:persistent="false"

@@ -93,11 +93,6 @@
         android:label="@string/title_advanced" />
 
     <fragment
-        android:id="@+id/main_save_sync"
-        android:name="com.bigbratan.emulair.fragments.settings.SaveSyncFragment"
-        android:label="@string/title_save_sync" />
-
-    <fragment
         android:id="@+id/main_cores_selection"
         android:name="com.bigbratan.emulair.fragments.settings.CoresSelectionFragment"
         android:label="@string/title_change_cores" />

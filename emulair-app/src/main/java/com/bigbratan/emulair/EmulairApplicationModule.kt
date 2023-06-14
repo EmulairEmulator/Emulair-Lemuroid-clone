@@ -38,7 +38,6 @@ import com.bigbratan.emulair.fragments.settings.CoresSelectionPreferences
 import com.bigbratan.emulair.managers.settings.StorageFrameworkPickerLauncher
 import com.bigbratan.emulair.ext.managers.coresLibrary.CoreUpdaterImpl
 import com.bigbratan.emulair.ext.managers.review.ReviewManager
-import com.bigbratan.emulair.ext.managers.saveSync.SaveSyncManagerImpl
 import com.bigbratan.emulair.common.managers.bios.BiosManager
 import com.bigbratan.emulair.common.managers.coresLibrary.CoreUpdater
 import com.bigbratan.emulair.common.managers.coresLibrary.CoreVariablesManager
@@ -56,7 +55,6 @@ import com.bigbratan.emulair.common.managers.saves.SavesCoherencyEngine
 import com.bigbratan.emulair.common.managers.saves.SavesManager
 import com.bigbratan.emulair.common.managers.saves.StatesManager
 import com.bigbratan.emulair.common.managers.saves.StatesPreviewManager
-import com.bigbratan.emulair.common.managers.saveSync.SaveSyncManager
 import com.bigbratan.emulair.common.managers.storage.DirectoriesManager
 import com.bigbratan.emulair.common.managers.storage.StorageProvider
 import com.bigbratan.emulair.common.managers.storage.StorageProviderRegistry
@@ -84,9 +82,6 @@ abstract class EmulairApplicationModule {
 
     @Binds
     abstract fun context(app: EmulairApplication): Context
-
-    @Binds
-    abstract fun saveSyncManager(saveSyncManagerImpl: SaveSyncManagerImpl): SaveSyncManager
 
     @PerActivity
     @ContributesAndroidInjector(modules = [MainActivity.Module::class])
@@ -294,14 +289,6 @@ abstract class EmulairApplicationModule {
         @JvmStatic
         fun savesCoherencyEngine(savesManager: SavesManager, statesManager: StatesManager) =
             SavesCoherencyEngine(savesManager, statesManager)
-
-        @Provides
-        @PerApp
-        @JvmStatic
-        fun saveSyncManagerImpl(
-            context: Context,
-            directoriesManager: DirectoriesManager
-        ) = SaveSyncManagerImpl(context, directoriesManager)
 
         @Provides
         @PerApp
