@@ -105,7 +105,7 @@
     <!-- SECTION ACCOUNT -->
     <fragment
         android:id="@+id/main_account"
-        android:name="com.bigbratan.emulair.fragmentAccount.AccountFragment"
+        android:name="com.bigbratan.emulair.fragments.account.AccountFragment"
         android:label="@string/title_account" />
 
     <!-- SECTION INFO -->

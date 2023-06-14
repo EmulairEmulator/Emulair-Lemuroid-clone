@@ -8,7 +8,7 @@ import com.google.android.material.color.DynamicColors
 import com.bigbratan.emulair.managerStartup.GameProcessInitializer
 import com.bigbratan.emulair.managerStartup.MainProcessInitializer
 import com.bigbratan.emulair.utils.android.isMainProcess
-import com.bigbratan.emulair.ext.managerContext.ContextHandler
+import com.bigbratan.emulair.ext.managers.context.ContextHandler
 import com.bigbratan.emulair.common.managerInjection.HasWorkerInjector
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
