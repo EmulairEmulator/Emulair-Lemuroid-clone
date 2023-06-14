@@ -2,9 +2,9 @@ package com.bigbratan.emulair.common.metadata.retrograde
 
 import android.net.Uri
 import com.bigbratan.emulair.common.utils.files.readLines
-import com.bigbratan.emulair.common.managerStorage.BaseStorageFile
-import com.bigbratan.emulair.common.managerStorage.GroupedStorageFiles
-import com.bigbratan.emulair.common.managerStorage.StorageProvider
+import com.bigbratan.emulair.common.managers.storage.BaseStorageFile
+import com.bigbratan.emulair.common.managers.storage.GroupedStorageFiles
+import com.bigbratan.emulair.common.managers.storage.StorageProvider
 
 object StorageFilesMerger {
 

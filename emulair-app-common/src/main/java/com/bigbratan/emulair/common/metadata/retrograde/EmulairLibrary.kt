@@ -20,15 +20,16 @@
 package com.bigbratan.emulair.common.metadata.retrograde
 
 import com.bigbratan.emulair.common.utils.coroutines.batchWithSizeAndTime
+import com.bigbratan.emulair.common.managers.bios.BiosManager
 import com.bigbratan.emulair.common.metadata.retrograde.db.RetrogradeDatabase
 import com.bigbratan.emulair.common.metadata.retrograde.db.entity.DataFile
 import com.bigbratan.emulair.common.metadata.retrograde.db.entity.Game
-import com.bigbratan.emulair.common.managerStorage.BaseStorageFile
-import com.bigbratan.emulair.common.managerStorage.GroupedStorageFiles
-import com.bigbratan.emulair.common.managerStorage.RomFiles
-import com.bigbratan.emulair.common.managerStorage.StorageFile
-import com.bigbratan.emulair.common.managerStorage.StorageProvider
-import com.bigbratan.emulair.common.managerStorage.StorageProviderRegistry
+import com.bigbratan.emulair.common.managers.storage.BaseStorageFile
+import com.bigbratan.emulair.common.managers.storage.GroupedStorageFiles
+import com.bigbratan.emulair.common.managers.storage.RomFiles
+import com.bigbratan.emulair.common.managers.storage.StorageFile
+import com.bigbratan.emulair.common.managers.storage.StorageProvider
+import com.bigbratan.emulair.common.managers.storage.StorageProviderRegistry
 import dagger.Lazy
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.Flow
@@ -45,7 +46,7 @@ class EmulairLibrary(
     private val retrogradedb: RetrogradeDatabase,
     private val storageProviderRegistry: Lazy<StorageProviderRegistry>,
     private val gameMetadataProvider: Lazy<GameMetadataProvider>,
-    private val biosManager: _root_ide_package_.com.bigbratan.emulair.common.managers.bios.BiosManager
+    private val biosManager: BiosManager
 ) {
 
     suspend fun indexLibrary() {

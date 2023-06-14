@@ -10,11 +10,11 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.bigbratan.emulair.*
-import com.bigbratan.emulair.managerCovers.CoverLoader
+import com.bigbratan.emulair.managers.covers.CoverLoader
 import com.bigbratan.emulair.common.metadata.retrograde.db.RetrogradeDatabase
-import com.bigbratan.emulair.managerInteraction.GameInteractor
-import com.bigbratan.emulair.managerLayout.DynamicGridLayoutManager
-import com.bigbratan.emulair.managerLayout.GridSpaceDecoration
+import com.bigbratan.emulair.managers.interaction.GameInteractor
+import com.bigbratan.emulair.managers.layout.DynamicGridLayoutManager
+import com.bigbratan.emulair.managers.layout.GridSpaceDecoration
 import com.bigbratan.emulair.common.utils.coroutines.launchOnState
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject

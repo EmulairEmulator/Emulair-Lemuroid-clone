@@ -12,8 +12,8 @@ import com.bigbratan.emulair.common.utils.coroutines.launchOnState
 import com.bigbratan.emulair.common.utils.preferences.DummyDataStore
 import com.bigbratan.emulair.common.metadata.retrograde.SystemCoreConfig
 import com.bigbratan.emulair.common.metadata.retrograde.db.entity.Game
-import com.bigbratan.emulair.common.managerSaves.StatesManager
-import com.bigbratan.emulair.common.managerSaves.StatesPreviewManager
+import com.bigbratan.emulair.common.managers.saves.StatesManager
+import com.bigbratan.emulair.common.managers.saves.StatesPreviewManager
 import dagger.android.support.AndroidSupportInjection
 import java.security.InvalidParameterException
 import javax.inject.Inject

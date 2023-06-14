@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.fredporciuncula.flow.preferences.FlowSharedPreferences
 import com.bigbratan.emulair.R
-import com.bigbratan.emulair.managerCoresLibrary.PendingOperationsMonitor
+import com.bigbratan.emulair.managers.coresLibrary.PendingOperationsMonitor
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.flowOn

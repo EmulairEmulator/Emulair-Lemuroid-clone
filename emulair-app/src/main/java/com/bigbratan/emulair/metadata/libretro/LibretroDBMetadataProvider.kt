@@ -5,7 +5,7 @@ import com.bigbratan.emulair.common.metadata.retrograde.GameSystem
 import com.bigbratan.emulair.common.metadata.retrograde.SystemID
 import com.bigbratan.emulair.common.metadata.retrograde.GameMetadata
 import com.bigbratan.emulair.common.metadata.retrograde.GameMetadataProvider
-import com.bigbratan.emulair.common.managerStorage.StorageFile
+import com.bigbratan.emulair.common.managers.storage.StorageFile
 import com.bigbratan.emulair.metadata.libretro.db.LibretroDBManager
 import com.bigbratan.emulair.metadata.libretro.db.LibretroDatabase
 import com.bigbratan.emulair.metadata.libretro.db.entity.LibretroRom

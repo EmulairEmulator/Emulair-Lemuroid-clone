@@ -15,8 +15,8 @@ import com.bigbratan.emulair.common.utils.graphics.GraphicsUtils
 import com.bigbratan.emulair.common.metadata.retrograde.CoreID
 import com.bigbratan.emulair.common.metadata.retrograde.SystemCoreConfig
 import com.bigbratan.emulair.common.metadata.retrograde.db.entity.Game
-import com.bigbratan.emulair.common.managerSaves.SaveInfo
-import com.bigbratan.emulair.common.managerSaves.StatesPreviewManager
+import com.bigbratan.emulair.common.managers.saves.SaveInfo
+import com.bigbratan.emulair.common.managers.saves.StatesPreviewManager
 import java.text.SimpleDateFormat
 import kotlin.math.roundToInt
 

@@ -5,7 +5,7 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceScreen
 import com.bigbratan.emulair.R
-import com.bigbratan.emulair.common.managerBios.BiosManager
+import com.bigbratan.emulair.common.managers.bios.BiosManager
 
 class BiosPreferences(private val biosManager: BiosManager) {
 

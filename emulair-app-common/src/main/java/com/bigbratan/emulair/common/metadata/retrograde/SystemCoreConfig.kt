@@ -1,7 +1,7 @@
 package com.bigbratan.emulair.common.metadata.retrograde
 
-import com.bigbratan.emulair.common.managerController.ControllerConfig
-import com.bigbratan.emulair.common.managerCoresLibrary.CoreVariable
+import com.bigbratan.emulair.common.managers.controller.ControllerConfig
+import com.bigbratan.emulair.common.managers.coresLibrary.CoreVariable
 import java.io.Serializable
 
 data class SystemCoreConfig(

@@ -14,12 +14,12 @@ import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
-import com.bigbratan.emulair.managerSettings.SettingsManager
-import com.bigbratan.emulair.managerNotifications.NotificationsManager
-import com.bigbratan.emulair.common.managerInjection.AndroidWorkerInjection
-import com.bigbratan.emulair.common.managerInjection.WorkerKey
+import com.bigbratan.emulair.managers.settings.SettingsManager
+import com.bigbratan.emulair.managers.notifications.NotificationsManager
+import com.bigbratan.emulair.common.managers.injection.AndroidWorkerInjection
+import com.bigbratan.emulair.common.managers.injection.WorkerKey
 import com.bigbratan.emulair.common.metadata.retrograde.findByName
-import com.bigbratan.emulair.common.managerSaveSync.SaveSyncManager
+import com.bigbratan.emulair.common.managers.saveSync.SaveSyncManager
 import dagger.Binds
 import dagger.android.AndroidInjector
 import dagger.multibindings.IntoMap

@@ -5,11 +5,11 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.bigbratan.emulair.R
 import com.bigbratan.emulair.common.activities.retrograde.RetrogradeAppCompatActivity
-import com.bigbratan.emulair.common.managerInjection.PerFragment
-import com.bigbratan.emulair.fragmentPauseMenuActions.CoreOptionsFragment
-import com.bigbratan.emulair.fragmentPauseMenuActions.PauseMenuFragment
-import com.bigbratan.emulair.fragmentPauseMenuActions.StateLoadFragment
-import com.bigbratan.emulair.fragmentPauseMenuActions.StateSaveFragment
+import com.bigbratan.emulair.common.managers.injection.PerFragment
+import com.bigbratan.emulair.fragments.pauseMenuActions.CoreOptionsFragment
+import com.bigbratan.emulair.fragments.pauseMenuActions.PauseMenuFragment
+import com.bigbratan.emulair.fragments.pauseMenuActions.StateLoadFragment
+import com.bigbratan.emulair.fragments.pauseMenuActions.StateSaveFragment
 import dagger.android.ContributesAndroidInjector
 
 class PauseMenuActivity : RetrogradeAppCompatActivity() {

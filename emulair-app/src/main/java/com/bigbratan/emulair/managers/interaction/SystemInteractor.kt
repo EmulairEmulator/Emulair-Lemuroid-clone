@@ -1,5 +1,5 @@
 /*
-package com.bigbratan.emulair.managerInteraction
+package com.bigbratan.emulair.managers.interaction
 
 import com.bigbratan.emulair.R
 import com.bigbratan.emulair.common.metadataRetrograde.MetaSystemID

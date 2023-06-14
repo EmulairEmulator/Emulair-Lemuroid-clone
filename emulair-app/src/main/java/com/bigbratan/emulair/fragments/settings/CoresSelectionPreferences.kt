@@ -6,8 +6,8 @@ import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceScreen
 import com.bigbratan.emulair.R
-import com.bigbratan.emulair.managerCoresLibrary.LibraryIndexScheduler
-import com.bigbratan.emulair.common.managerCoresLibrary.CoresSelection
+import com.bigbratan.emulair.managers.coresLibrary.LibraryIndexScheduler
+import com.bigbratan.emulair.common.managers.coresLibrary.CoresSelection
 import com.bigbratan.emulair.common.metadata.retrograde.GameSystem
 
 class CoresSelectionPreferences {

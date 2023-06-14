@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
-import com.bigbratan.emulair.managerSaveSync.SaveSyncWork
+import com.bigbratan.emulair.managers.saveSync.SaveSyncWork
 import com.bigbratan.emulair.utils.livedata.combineLatest
 import com.bigbratan.emulair.utils.livedata.map
 import com.bigbratan.emulair.utils.livedata.throttle

@@ -8,7 +8,7 @@ import android.content.ServiceConnection
 import android.os.Binder
 import android.os.IBinder
 import androidx.core.app.NotificationManagerCompat
-import com.bigbratan.emulair.managerNotifications.NotificationsManager
+import com.bigbratan.emulair.managers.notifications.NotificationsManager
 import com.bigbratan.emulair.common.metadata.retrograde.db.entity.Game
 
 class GameService : Service() {

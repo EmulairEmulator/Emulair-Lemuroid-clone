@@ -19,7 +19,7 @@
 
 package com.bigbratan.emulair.common.metadata.retrograde
 
-import com.bigbratan.emulair.common.managerStorage.StorageFile
+import com.bigbratan.emulair.common.managers.storage.StorageFile
 
 interface GameMetadataProvider {
 

@@ -1,7 +1,7 @@
 package com.bigbratan.emulair.managers.input
 
 import android.content.SharedPreferences
-import com.bigbratan.emulair.common.managerController.ControllerConfig
+import com.bigbratan.emulair.common.managers.controller.ControllerConfig
 import com.bigbratan.emulair.common.metadata.retrograde.CoreID
 import com.bigbratan.emulair.common.metadata.retrograde.SystemCoreConfig
 import com.bigbratan.emulair.common.metadata.retrograde.SystemID

@@ -11,12 +11,12 @@ import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceScreen
 import androidx.preference.SwitchPreference
 import com.bigbratan.emulair.R
-import com.bigbratan.emulair.managerInput.InputBindingUpdater
-import com.bigbratan.emulair.managerInput.InputDeviceManager
-import com.bigbratan.emulair.managerInput.PauseMenuShortcut
+import com.bigbratan.emulair.managers.input.InputBindingUpdater
+import com.bigbratan.emulair.managers.input.InputDeviceManager
+import com.bigbratan.emulair.managers.input.PauseMenuShortcut
 import com.bigbratan.emulair.utils.input.InputKey
 import com.bigbratan.emulair.utils.input.RetroKey
-import com.bigbratan.emulair.managerInput.emulairDevice.getEmulairInputDevice
+import com.bigbratan.emulair.managers.input.emulairDevice.getEmulairInputDevice
 import java.util.Locale
 
 class GamePadPreferences(

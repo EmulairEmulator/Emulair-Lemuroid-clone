@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asFlow
 import androidx.lifecycle.viewModelScope
 import com.bigbratan.emulair.common.metadata.retrograde.db.RetrogradeDatabase
-import com.bigbratan.emulair.managerCoresLibrary.PendingOperationsMonitor
+import com.bigbratan.emulair.managers.coresLibrary.PendingOperationsMonitor
 import com.bigbratan.emulair.common.metadata.retrograde.db.entity.Game
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.Dispatchers

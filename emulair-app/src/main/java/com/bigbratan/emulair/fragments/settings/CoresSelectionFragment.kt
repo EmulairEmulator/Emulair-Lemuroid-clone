@@ -4,7 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import androidx.preference.PreferenceFragmentCompat
 import com.bigbratan.emulair.R
-import com.bigbratan.emulair.common.managerPreferences.SharedPreferencesHelper
+import com.bigbratan.emulair.common.managers.preferences.SharedPreferencesHelper
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 

@@ -10,9 +10,9 @@ import com.bigbratan.emulair.common.utils.kotlin.SharedPreferencesDelegates
 import com.bigbratan.emulair.common.utils.kotlin.calculateMd5
 import com.bigbratan.emulair.ext.R
 import com.bigbratan.emulair.common.metadata.retrograde.CoreID
-import com.bigbratan.emulair.common.managerPreferences.SharedPreferencesHelper
-import com.bigbratan.emulair.common.managerSaveSync.SaveSyncManager
-import com.bigbratan.emulair.common.managerStorage.DirectoriesManager
+import com.bigbratan.emulair.common.managers.preferences.SharedPreferencesHelper
+import com.bigbratan.emulair.common.managers.saveSync.SaveSyncManager
+import com.bigbratan.emulair.common.managers.storage.DirectoriesManager
 import java.io.File
 import java.text.SimpleDateFormat
 import kotlinx.coroutines.Dispatchers

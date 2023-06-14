@@ -9,10 +9,10 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
-import com.bigbratan.emulair.managerSettings.SettingsManager
-import com.bigbratan.emulair.common.managerInjection.AndroidWorkerInjection
-import com.bigbratan.emulair.common.managerInjection.WorkerKey
-import com.bigbratan.emulair.common.managerStorage.cache.CacheCleaner
+import com.bigbratan.emulair.managers.settings.SettingsManager
+import com.bigbratan.emulair.common.managers.injection.AndroidWorkerInjection
+import com.bigbratan.emulair.common.managers.injection.WorkerKey
+import com.bigbratan.emulair.common.managers.storage.cache.CacheCleaner
 import dagger.Binds
 import dagger.android.AndroidInjector
 import dagger.multibindings.IntoMap

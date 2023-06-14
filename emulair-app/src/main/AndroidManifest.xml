@@ -53,18 +53,18 @@
             android:theme="@style/Theme.EmulairMaterial.Menu" />
 
         <activity
-            android:name=".fragmentSettings.GamePadBindingActivity"
+            android:name=".fragments.settings.GamePadBindingActivity"
             android:theme="@style/Theme.EmulairMaterial.Invisible" />
 
         <activity
-            android:name=".managerSettings.StorageFrameworkPickerLauncher"
+            android:name=".managers.settings.StorageFrameworkPickerLauncher"
             android:theme="@style/Theme.EmulairMaterial.Invisible" />
 
         <activity
             android:name=".activities.crash.GameCrashActivity"
             android:theme="@style/Theme.EmulairMaterial.Game" />
 
-        <receiver android:name=".managerCoresLibrary.LibraryIndexBroadcastReceiver" />
+        <receiver android:name=".managers.coresLibrary.LibraryIndexBroadcastReceiver" />
         <receiver android:name=".managers.coresLibrary.CoreUpdateBroadcastReceiver" />
 
         <provider

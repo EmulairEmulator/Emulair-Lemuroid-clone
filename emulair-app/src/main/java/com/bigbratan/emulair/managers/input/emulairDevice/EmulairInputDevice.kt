@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.InputDevice
 import com.bigbratan.emulair.utils.input.InputKey
 import com.bigbratan.emulair.utils.input.RetroKey
-import com.bigbratan.emulair.managerInput.PauseMenuShortcut
+import com.bigbratan.emulair.managers.input.PauseMenuShortcut
 
 interface EmulairInputDevice {
 

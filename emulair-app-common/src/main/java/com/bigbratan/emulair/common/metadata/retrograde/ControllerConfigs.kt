@@ -1,8 +1,8 @@
 package com.bigbratan.emulair.common.metadata.retrograde
 
 import com.bigbratan.emulair.common.R
-import com.bigbratan.emulair.common.managerController.ControllerConfig
-import com.bigbratan.emulair.common.managerController.TouchControllerID
+import com.bigbratan.emulair.common.managers.controller.ControllerConfig
+import com.bigbratan.emulair.common.managers.controller.TouchControllerID
 
 object ControllerConfigs {
 

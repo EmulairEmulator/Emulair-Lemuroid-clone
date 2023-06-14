@@ -5,7 +5,7 @@ import android.content.Intent
 import android.view.InputDevice
 import android.view.KeyEvent
 import com.bigbratan.emulair.R
-import com.bigbratan.emulair.fragmentSettings.GamePadPreferences
+import com.bigbratan.emulair.fragments.settings.GamePadPreferences
 import com.bigbratan.emulair.utils.input.InputKey
 import com.bigbratan.emulair.utils.input.RetroKey
 import kotlinx.coroutines.DelicateCoroutinesApi

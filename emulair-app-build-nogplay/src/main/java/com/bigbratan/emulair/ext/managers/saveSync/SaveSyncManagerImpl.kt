@@ -3,8 +3,8 @@ package com.bigbratan.emulair.ext.managers.saveSync
 import android.app.Activity
 import android.content.Context
 import com.bigbratan.emulair.common.metadata.retrograde.CoreID
-import com.bigbratan.emulair.common.managerSaveSync.SaveSyncManager
-import com.bigbratan.emulair.common.managerStorage.DirectoriesManager
+import com.bigbratan.emulair.common.managers.saveSync.SaveSyncManager
+import com.bigbratan.emulair.common.managers.storage.DirectoriesManager
 
 class SaveSyncManagerImpl(
     private val appContext: Context,

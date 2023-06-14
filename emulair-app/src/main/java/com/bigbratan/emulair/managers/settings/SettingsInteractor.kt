@@ -1,10 +1,10 @@
 package com.bigbratan.emulair.managers.settings
 
 import android.content.Context
-import com.bigbratan.emulair.managerCoresLibrary.LibraryIndexScheduler
-import com.bigbratan.emulair.managerStorage.cache.CacheCleanerWork
-import com.bigbratan.emulair.common.managerPreferences.SharedPreferencesHelper
-import com.bigbratan.emulair.common.managerStorage.DirectoriesManager
+import com.bigbratan.emulair.managers.coresLibrary.LibraryIndexScheduler
+import com.bigbratan.emulair.managers.storage.cache.CacheCleanerWork
+import com.bigbratan.emulair.common.managers.preferences.SharedPreferencesHelper
+import com.bigbratan.emulair.common.managers.storage.DirectoriesManager
 
 class SettingsInteractor(
     private val context: Context,

@@ -7,11 +7,11 @@ import androidx.lifecycle.Lifecycle
 import androidx.preference.PreferenceFragmentCompat
 import com.bigbratan.emulair.R
 import com.bigbratan.emulair.activities.pauseMenu.PauseMenuContract
-import com.bigbratan.emulair.managerInput.InputDeviceManager
+import com.bigbratan.emulair.managers.input.InputDeviceManager
 import com.bigbratan.emulair.common.utils.coroutines.launchOnState
 import com.bigbratan.emulair.common.metadata.retrograde.SystemCoreConfig
 import com.bigbratan.emulair.common.metadata.retrograde.db.entity.Game
-import com.bigbratan.emulair.common.managerPreferences.SharedPreferencesHelper
+import com.bigbratan.emulair.common.managers.preferences.SharedPreferencesHelper
 import dagger.android.support.AndroidSupportInjection
 import java.security.InvalidParameterException
 import javax.inject.Inject

@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.fredporciuncula.flow.preferences.FlowSharedPreferences
 import com.bigbratan.emulair.R
-import com.bigbratan.emulair.common.managerStorage.cache.CacheCleaner
+import com.bigbratan.emulair.common.managers.storage.cache.CacheCleaner
 import dagger.Lazy
 import kotlin.math.roundToInt
 import kotlinx.coroutines.Dispatchers

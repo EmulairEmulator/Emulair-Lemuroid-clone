@@ -1,5 +1,5 @@
 /*
-package com.bigbratan.emulair.fragmentSystems
+package com.bigbratan.emulair.fragments.systems
 
 import android.view.View
 import android.widget.ImageView
@@ -12,9 +12,9 @@ import com.airbnb.epoxy.EpoxyModelClass
 import com.airbnb.epoxy.EpoxyModelWithHolder
 import com.bigbratan.emulair.R
 import com.bigbratan.emulair.common.metadataRetrograde.MetaSystemID
-import com.bigbratan.emulair.managerInteraction.GameContextMenuListener
-import com.bigbratan.emulair.managerInteraction.GameInteractor
-import com.bigbratan.emulair.managerCovers.CoverLoader
+import com.bigbratan.emulair.managers.interaction.GameContextMenuListener
+import com.bigbratan.emulair.managers.interaction.GameInteractor
+import com.bigbratan.emulair.managers.covers.CoverLoader
 import com.bigbratan.emulair.utils.home.GameUtils
 import com.bigbratan.emulair.common.metadataRetrograde.db.entity.Game
 import com.bigbratan.emulair.utils.systems.SystemUtils

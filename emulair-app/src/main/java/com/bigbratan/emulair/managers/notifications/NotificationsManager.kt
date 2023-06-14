@@ -11,7 +11,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import com.bigbratan.emulair.R
 import com.bigbratan.emulair.activities.game.GameActivity
-import com.bigbratan.emulair.managerCoresLibrary.LibraryIndexBroadcastReceiver
+import com.bigbratan.emulair.managers.coresLibrary.LibraryIndexBroadcastReceiver
 import com.bigbratan.emulair.common.metadata.retrograde.db.entity.Game
 
 class NotificationsManager(private val applicationContext: Context) {

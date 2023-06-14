@@ -7,8 +7,8 @@ import android.system.Os
 import android.text.format.Formatter
 import com.bigbratan.emulair.common.utils.kotlin.gigaBytes
 import com.bigbratan.emulair.common.utils.kotlin.megaBytes
-import com.bigbratan.emulair.common.managerStorage.local.LocalStorageProvider
-import com.bigbratan.emulair.common.managerStorage.local.StorageAccessFrameworkProvider
+import com.bigbratan.emulair.common.managers.storage.local.LocalStorageProvider
+import com.bigbratan.emulair.common.managers.storage.local.StorageAccessFrameworkProvider
 import java.io.File
 import kotlin.math.abs
 import kotlin.math.roundToLong

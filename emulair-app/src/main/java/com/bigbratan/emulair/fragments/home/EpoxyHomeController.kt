@@ -4,11 +4,11 @@ import com.airbnb.epoxy.AsyncEpoxyController
 import com.airbnb.epoxy.Carousel
 import com.airbnb.epoxy.carousel
 import com.bigbratan.emulair.R
-import com.bigbratan.emulair.managerInteraction.GameInteractor
+import com.bigbratan.emulair.managers.interaction.GameInteractor
 import com.bigbratan.emulair.utils.home.withModelsFrom
 import com.bigbratan.emulair.BuildConfig
-import com.bigbratan.emulair.managerCovers.CoverLoader
-import com.bigbratan.emulair.managerSettings.SettingsInteractor
+import com.bigbratan.emulair.managers.covers.CoverLoader
+import com.bigbratan.emulair.managers.settings.SettingsInteractor
 import com.bigbratan.emulair.common.utils.kotlin.lazySequenceOf
 import com.bigbratan.emulair.common.metadata.retrograde.db.entity.Game
 

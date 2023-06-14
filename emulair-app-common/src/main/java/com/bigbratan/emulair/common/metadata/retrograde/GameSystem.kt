@@ -21,7 +21,7 @@ package com.bigbratan.emulair.common.metadata.retrograde
 
 import androidx.annotation.StringRes
 import com.bigbratan.emulair.common.R
-import com.bigbratan.emulair.common.managerCoresLibrary.CoreVariable
+import com.bigbratan.emulair.common.managers.coresLibrary.CoreVariable
 import java.util.Locale
 
 data class GameSystem(

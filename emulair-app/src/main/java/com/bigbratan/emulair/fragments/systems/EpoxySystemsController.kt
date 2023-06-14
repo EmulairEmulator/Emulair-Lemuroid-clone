@@ -1,5 +1,5 @@
 /*
-package com.bigbratan.emulair.fragmentSystems
+package com.bigbratan.emulair.fragments.systems
 
 import com.airbnb.epoxy.AsyncEpoxyController
 import com.bigbratan.emulair.R

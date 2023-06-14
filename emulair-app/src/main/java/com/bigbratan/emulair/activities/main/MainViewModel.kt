@@ -3,7 +3,7 @@ package com.bigbratan.emulair.activities.main
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.bigbratan.emulair.managerCoresLibrary.PendingOperationsMonitor
+import com.bigbratan.emulair.managers.coresLibrary.PendingOperationsMonitor
 
 class MainViewModel(appContext: Context) : ViewModel() {
 

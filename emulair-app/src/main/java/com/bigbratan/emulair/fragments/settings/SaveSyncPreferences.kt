@@ -6,10 +6,10 @@ import android.content.Intent
 import androidx.preference.*
 import com.bigbratan.emulair.ui.CustomMultiListPreference
 import com.bigbratan.emulair.R
-import com.bigbratan.emulair.managerSaveSync.SaveSyncWork
+import com.bigbratan.emulair.managers.saveSync.SaveSyncWork
 import com.bigbratan.emulair.common.metadata.retrograde.CoreID
 import com.bigbratan.emulair.common.metadata.retrograde.GameSystem
-import com.bigbratan.emulair.common.managerSaveSync.SaveSyncManager
+import com.bigbratan.emulair.common.managers.saveSync.SaveSyncManager
 
 class SaveSyncPreferences(private val saveSyncManager: SaveSyncManager) {
 

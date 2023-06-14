@@ -6,11 +6,11 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import com.bigbratan.emulair.R
-import com.bigbratan.emulair.managerCoresLibrary.LibraryIndexScheduler
+import com.bigbratan.emulair.managers.coresLibrary.LibraryIndexScheduler
 import com.bigbratan.emulair.utils.android.displayErrorDialog
 import com.bigbratan.emulair.common.activities.retrograde.RetrogradeActivity
-import com.bigbratan.emulair.common.managerPreferences.SharedPreferencesHelper
-import com.bigbratan.emulair.common.managerStorage.DirectoriesManager
+import com.bigbratan.emulair.common.managers.preferences.SharedPreferencesHelper
+import com.bigbratan.emulair.common.managers.storage.DirectoriesManager
 import javax.inject.Inject
 
 class StorageFrameworkPickerLauncher : RetrogradeActivity() {

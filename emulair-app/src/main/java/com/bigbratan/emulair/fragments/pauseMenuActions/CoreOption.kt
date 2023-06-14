@@ -1,6 +1,6 @@
 package com.bigbratan.emulair.fragments.pauseMenuActions
 
-import com.bigbratan.emulair.common.managerCoresLibrary.CoreVariable
+import com.bigbratan.emulair.common.managers.coresLibrary.CoreVariable
 import com.swordfish.libretrodroid.Variable
 import java.io.Serializable
 

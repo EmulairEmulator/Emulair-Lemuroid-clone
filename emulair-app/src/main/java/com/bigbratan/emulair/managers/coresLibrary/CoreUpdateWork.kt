@@ -5,11 +5,11 @@ import androidx.work.CoroutineWorker
 import androidx.work.ForegroundInfo
 import androidx.work.ListenableWorker
 import androidx.work.WorkerParameters
-import com.bigbratan.emulair.managerNotifications.NotificationsManager
-import com.bigbratan.emulair.common.managerCoresLibrary.CoreUpdater
-import com.bigbratan.emulair.common.managerCoresLibrary.CoresSelection
-import com.bigbratan.emulair.common.managerInjection.AndroidWorkerInjection
-import com.bigbratan.emulair.common.managerInjection.WorkerKey
+import com.bigbratan.emulair.managers.notifications.NotificationsManager
+import com.bigbratan.emulair.common.managers.coresLibrary.CoreUpdater
+import com.bigbratan.emulair.common.managers.coresLibrary.CoresSelection
+import com.bigbratan.emulair.common.managers.injection.AndroidWorkerInjection
+import com.bigbratan.emulair.common.managers.injection.WorkerKey
 import com.bigbratan.emulair.common.metadata.retrograde.GameSystem
 import com.bigbratan.emulair.common.metadata.retrograde.db.RetrogradeDatabase
 import dagger.Binds

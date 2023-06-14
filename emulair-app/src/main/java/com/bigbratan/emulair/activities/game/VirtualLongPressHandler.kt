@@ -12,7 +12,7 @@ import com.bigbratan.emulair.R
 import com.bigbratan.emulair.common.utils.graphics.GraphicsUtils
 import com.bigbratan.emulair.common.utils.view.animateProgress
 import com.bigbratan.emulair.common.utils.view.animateVisibleOrGone
-import com.bigbratan.emulair.common.managerController.EmulairTouchOverlayThemes
+import com.bigbratan.emulair.common.managers.controller.EmulairTouchOverlayThemes
 import kotlin.math.roundToInt
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay

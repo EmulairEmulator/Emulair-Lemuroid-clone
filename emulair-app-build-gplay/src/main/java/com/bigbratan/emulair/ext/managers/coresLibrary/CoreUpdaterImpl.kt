@@ -11,10 +11,10 @@ import com.google.android.play.core.ktx.sessionId
 import com.google.android.play.core.splitinstall.SplitInstallManager
 import com.google.android.play.core.splitinstall.SplitInstallManagerFactory
 import com.bigbratan.emulair.common.utils.coroutines.retry
-import com.bigbratan.emulair.common.managerCoresLibrary.CoreUpdater
+import com.bigbratan.emulair.common.managers.coresLibrary.CoreUpdater
 import com.bigbratan.emulair.common.metadata.retrograde.CoreID
-import com.bigbratan.emulair.common.managerPreferences.SharedPreferencesHelper
-import com.bigbratan.emulair.common.managerStorage.DirectoriesManager
+import com.bigbratan.emulair.common.managers.preferences.SharedPreferencesHelper
+import com.bigbratan.emulair.common.managers.storage.DirectoriesManager
 import kotlin.time.Duration.Companion.seconds
 import kotlinx.coroutines.flow.asFlow
 import kotlinx.coroutines.flow.catch

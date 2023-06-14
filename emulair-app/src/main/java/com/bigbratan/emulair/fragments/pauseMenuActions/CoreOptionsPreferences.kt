@@ -9,9 +9,9 @@ import androidx.preference.PreferenceGroup
 import androidx.preference.PreferenceScreen
 import androidx.preference.SwitchPreferenceCompat
 import com.bigbratan.emulair.R
-import com.bigbratan.emulair.managerInput.ControllerConfigsManager
-import com.bigbratan.emulair.common.managerController.ControllerConfig
-import com.bigbratan.emulair.common.managerCoresLibrary.CoreVariablesManager
+import com.bigbratan.emulair.managers.input.ControllerConfigsManager
+import com.bigbratan.emulair.common.managers.controller.ControllerConfig
+import com.bigbratan.emulair.common.managers.coresLibrary.CoreVariablesManager
 import com.bigbratan.emulair.common.metadata.retrograde.CoreID
 
 object CoreOptionsPreferences {

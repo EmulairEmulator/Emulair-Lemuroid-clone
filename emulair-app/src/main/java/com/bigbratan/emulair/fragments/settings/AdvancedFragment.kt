@@ -8,8 +8,8 @@ import android.os.Bundle
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.bigbratan.emulair.R
-import com.bigbratan.emulair.common.managerPreferences.SharedPreferencesHelper
-import com.bigbratan.emulair.managerSettings.SettingsInteractor
+import com.bigbratan.emulair.common.managers.preferences.SharedPreferencesHelper
+import com.bigbratan.emulair.managers.settings.SettingsInteractor
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject

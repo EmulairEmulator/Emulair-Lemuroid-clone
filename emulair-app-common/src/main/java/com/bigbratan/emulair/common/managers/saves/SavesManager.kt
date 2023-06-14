@@ -2,7 +2,7 @@ package com.bigbratan.emulair.common.managers.saves
 
 import com.bigbratan.emulair.common.utils.kotlin.runCatchingWithRetry
 import com.bigbratan.emulair.common.metadata.retrograde.db.entity.Game
-import com.bigbratan.emulair.common.managerStorage.DirectoriesManager
+import com.bigbratan.emulair.common.managers.storage.DirectoriesManager
 import java.io.File
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

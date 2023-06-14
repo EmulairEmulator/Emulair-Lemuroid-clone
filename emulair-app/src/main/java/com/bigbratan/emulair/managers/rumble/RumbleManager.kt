@@ -5,8 +5,8 @@ import android.os.Build
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.view.InputDevice
-import com.bigbratan.emulair.managerSettings.SettingsManager
-import com.bigbratan.emulair.managerInput.InputDeviceManager
+import com.bigbratan.emulair.managers.settings.SettingsManager
+import com.bigbratan.emulair.managers.input.InputDeviceManager
 import com.bigbratan.emulair.common.utils.coroutines.safeCollect
 import com.bigbratan.emulair.common.metadata.retrograde.SystemCoreConfig
 import com.swordfish.libretrodroid.RumbleEvent

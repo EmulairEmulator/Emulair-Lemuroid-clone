@@ -3,8 +3,8 @@ package com.bigbratan.emulair.managers.startup
 import android.content.Context
 import androidx.startup.Initializer
 import androidx.work.WorkManagerInitializer
-import com.bigbratan.emulair.managerCoresLibrary.LibraryIndexScheduler
-import com.bigbratan.emulair.managerSaveSync.SaveSyncWork
+import com.bigbratan.emulair.managers.coresLibrary.LibraryIndexScheduler
+import com.bigbratan.emulair.managers.saveSync.SaveSyncWork
 import timber.log.Timber
 
 class MainProcessInitializer : Initializer<Unit> {

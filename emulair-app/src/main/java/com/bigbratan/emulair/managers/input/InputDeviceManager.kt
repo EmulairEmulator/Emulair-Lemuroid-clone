@@ -6,7 +6,7 @@ import android.hardware.input.InputManager
 import android.view.InputDevice
 import android.view.KeyEvent
 import com.fredporciuncula.flow.preferences.FlowSharedPreferences
-import com.bigbratan.emulair.managerInput.emulairDevice.getEmulairInputDevice
+import com.bigbratan.emulair.managers.input.emulairDevice.getEmulairInputDevice
 import com.bigbratan.emulair.utils.input.InputKey
 import com.bigbratan.emulair.utils.input.RetroKey
 import com.bigbratan.emulair.utils.input.retroKeysOf

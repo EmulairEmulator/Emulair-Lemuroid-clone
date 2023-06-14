@@ -12,10 +12,10 @@ import androidx.lifecycle.lifecycleScope
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.bigbratan.emulair.R
-import com.bigbratan.emulair.managerInput.InputDeviceManager
+import com.bigbratan.emulair.managers.input.InputDeviceManager
 import com.bigbratan.emulair.common.utils.coroutines.launchOnState
 import com.bigbratan.emulair.common.utils.kotlin.NTuple2
-import com.bigbratan.emulair.common.managerPreferences.SharedPreferencesHelper
+import com.bigbratan.emulair.common.managers.preferences.SharedPreferencesHelper
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 import kotlinx.coroutines.flow.combine

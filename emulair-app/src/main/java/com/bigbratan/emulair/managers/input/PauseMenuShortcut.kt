@@ -1,7 +1,7 @@
 package com.bigbratan.emulair.managers.input
 
 import android.view.InputDevice
-import com.bigbratan.emulair.managerInput.emulairDevice.getEmulairInputDevice
+import com.bigbratan.emulair.managers.input.emulairDevice.getEmulairInputDevice
 
 data class PauseMenuShortcut(val name: String, val keys: Set<Int>) {
 

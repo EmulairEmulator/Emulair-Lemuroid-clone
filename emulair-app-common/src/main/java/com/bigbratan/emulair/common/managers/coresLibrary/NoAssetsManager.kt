@@ -2,7 +2,7 @@ package com.bigbratan.emulair.common.managers.coresLibrary
 
 import android.content.SharedPreferences
 import com.bigbratan.emulair.common.metadata.retrograde.CoreID
-import com.bigbratan.emulair.common.managerStorage.DirectoriesManager
+import com.bigbratan.emulair.common.managers.storage.DirectoriesManager
 
 class NoAssetsManager : CoreID.AssetsManager {
 

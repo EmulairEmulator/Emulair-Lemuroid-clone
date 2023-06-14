@@ -7,7 +7,7 @@
     <!-- SECTION HOME -->
     <fragment
         android:id="@+id/main_home"
-        android:name="com.bigbratan.emulair.fragmentHome.HomeFragment"
+        android:name="com.bigbratan.emulair.fragments.home.HomeFragment"
         android:label="@string/title_home">
 
         <action
@@ -32,23 +32,23 @@
 
     <fragment
         android:id="@+id/main_all_games"
-        android:name="com.bigbratan.emulair.fragmentAllGames.AllGamesFragment"
+        android:name="com.bigbratan.emulair.fragments.allGames.AllGamesFragment"
         android:label="@string/title_all_games" />
 
     <fragment
         android:id="@+id/main_favorite_games"
-        android:name="com.bigbratan.emulair.fragmentFavoriteGames.FavoriteGamesFragment"
+        android:name="com.bigbratan.emulair.fragments.favoriteGames.FavoriteGamesFragment"
         android:label="@string/title_all_favorites" />
 
     <fragment
         android:id="@+id/main_search"
-        android:name="com.bigbratan.emulair.fragmentSearch.SearchFragment"
+        android:name="com.bigbratan.emulair.fragments.search.SearchFragment"
         android:label="@string/title_search" />
 
     <!-- SECTION SYSTEMS -->
     <fragment
         android:id="@+id/main_systems"
-        android:name="com.bigbratan.emulair.fragmentSystems.SystemsFragment"
+        android:name="com.bigbratan.emulair.fragments.systems.SystemsFragment"
         android:label="@string/title_systems">
 
         <action
@@ -61,7 +61,7 @@
 
     <fragment
         android:id="@+id/main_system_games"
-        android:name="com.bigbratan.emulair.fragmentSystemGames.SystemGamesFragment"
+        android:name="com.bigbratan.emulair.fragments.systemGames.SystemGamesFragment"
         android:label="@string/title_system_games">
 
         <argument
@@ -74,32 +74,32 @@
     <!-- SECTION SETTINGS -->
     <fragment
         android:id="@+id/main_settings"
-        android:name="com.bigbratan.emulair.fragmentSettings.SettingsFragment"
+        android:name="com.bigbratan.emulair.fragments.settings.SettingsFragment"
         android:label="@string/title_settings" />
 
     <fragment
         android:id="@+id/main_gamepad"
-        android:name="com.bigbratan.emulair.fragmentSettings.GamePadFragment"
+        android:name="com.bigbratan.emulair.fragments.settings.GamePadFragment"
         android:label="@string/title_gamepad" />
 
     <fragment
         android:id="@+id/main_bios"
-        android:name="com.bigbratan.emulair.fragmentSettings.BiosFragment"
+        android:name="com.bigbratan.emulair.fragments.settings.BiosFragment"
         android:label="@string/title_bios" />
 
     <fragment
         android:id="@+id/main_advanced"
-        android:name="com.bigbratan.emulair.fragmentSettings.AdvancedFragment"
+        android:name="com.bigbratan.emulair.fragments.settings.AdvancedFragment"
         android:label="@string/title_advanced" />
 
     <fragment
         android:id="@+id/main_save_sync"
-        android:name="com.bigbratan.emulair.fragmentSettings.SaveSyncFragment"
+        android:name="com.bigbratan.emulair.fragments.settings.SaveSyncFragment"
         android:label="@string/title_save_sync" />
 
     <fragment
         android:id="@+id/main_cores_selection"
-        android:name="com.bigbratan.emulair.fragmentSettings.CoresSelectionFragment"
+        android:name="com.bigbratan.emulair.fragments.settings.CoresSelectionFragment"
         android:label="@string/title_change_cores" />
 
     <!-- SECTION ACCOUNT -->
@@ -111,7 +111,7 @@
     <!-- SECTION INFO -->
     <fragment
         android:id="@+id/main_info"
-        android:name="com.bigbratan.emulair.fragmentInfo.InfoFragment"
+        android:name="com.bigbratan.emulair.fragments.info.InfoFragment"
         android:label="@string/title_info" />
 
 </navigation>

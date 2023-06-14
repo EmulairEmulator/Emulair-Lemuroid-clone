@@ -5,7 +5,7 @@ import android.text.format.Formatter
 import androidx.preference.ListPreference
 import androidx.preference.PreferenceScreen
 import com.bigbratan.emulair.R
-import com.bigbratan.emulair.common.managerStorage.cache.CacheCleaner
+import com.bigbratan.emulair.common.managers.storage.cache.CacheCleaner
 
 object AdvancedPreferences {
 

@@ -3,7 +3,7 @@ package com.bigbratan.emulair.managers.input.emulairDevice
 import android.content.Context
 import com.bigbratan.emulair.utils.input.InputKey
 import com.bigbratan.emulair.utils.input.RetroKey
-import com.bigbratan.emulair.managerInput.PauseMenuShortcut
+import com.bigbratan.emulair.managers.input.PauseMenuShortcut
 
 object EmulairInputDeviceUnknown : EmulairInputDevice {
     override fun getDefaultBindings(): Map<InputKey, RetroKey> = emptyMap()

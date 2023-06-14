@@ -25,10 +25,10 @@ import android.net.Uri
 import android.os.Build
 import com.bigbratan.emulair.common.utils.files.safeDelete
 import com.bigbratan.emulair.common.utils.kotlin.writeToFile
-import com.bigbratan.emulair.common.managerCoresLibrary.CoreUpdater
+import com.bigbratan.emulair.common.managers.coresLibrary.CoreUpdater
 import com.bigbratan.emulair.common.metadata.retrograde.CoreID
-import com.bigbratan.emulair.common.managerPreferences.SharedPreferencesHelper
-import com.bigbratan.emulair.common.managerStorage.DirectoriesManager
+import com.bigbratan.emulair.common.managers.preferences.SharedPreferencesHelper
+import com.bigbratan.emulair.common.managers.storage.DirectoriesManager
 import java.io.File
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.asFlow

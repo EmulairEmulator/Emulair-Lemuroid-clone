@@ -5,7 +5,7 @@ import android.graphics.BitmapFactory
 import android.media.ThumbnailUtils
 import com.bigbratan.emulair.common.metadata.retrograde.CoreID
 import com.bigbratan.emulair.common.metadata.retrograde.db.entity.Game
-import com.bigbratan.emulair.common.managerStorage.DirectoriesManager
+import com.bigbratan.emulair.common.managers.storage.DirectoriesManager
 import java.io.File
 import java.io.FileOutputStream
 import kotlinx.coroutines.Dispatchers

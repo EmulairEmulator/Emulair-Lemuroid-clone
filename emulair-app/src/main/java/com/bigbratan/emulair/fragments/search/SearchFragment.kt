@@ -17,10 +17,10 @@ import com.bigbratan.emulair.R
 import com.bigbratan.emulair.common.metadata.retrograde.db.RetrogradeDatabase
 import com.bigbratan.emulair.common.utils.coroutines.launchOnState
 import com.bigbratan.emulair.common.utils.kotlin.lazySequenceOf
-import com.bigbratan.emulair.managerCovers.CoverLoader
-import com.bigbratan.emulair.managerInteraction.GameInteractor
-import com.bigbratan.emulair.managerLayout.DynamicGridLayoutManager
-import com.bigbratan.emulair.managerLayout.GridSpaceDecoration
+import com.bigbratan.emulair.managers.covers.CoverLoader
+import com.bigbratan.emulair.managers.interaction.GameInteractor
+import com.bigbratan.emulair.managers.layout.DynamicGridLayoutManager
+import com.bigbratan.emulair.managers.layout.GridSpaceDecoration
 import dagger.android.support.AndroidSupportInjection
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.MutableStateFlow

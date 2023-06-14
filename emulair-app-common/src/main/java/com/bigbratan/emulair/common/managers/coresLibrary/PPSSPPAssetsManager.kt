@@ -3,7 +3,7 @@ package com.bigbratan.emulair.common.managers.coresLibrary
 import android.content.SharedPreferences
 import android.net.Uri
 import com.bigbratan.emulair.common.metadata.retrograde.CoreID
-import com.bigbratan.emulair.common.managerStorage.DirectoriesManager
+import com.bigbratan.emulair.common.managers.storage.DirectoriesManager
 import java.io.File
 import java.util.zip.ZipInputStream
 import kotlinx.coroutines.Dispatchers

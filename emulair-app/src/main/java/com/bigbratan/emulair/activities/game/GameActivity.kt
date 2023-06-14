@@ -34,8 +34,8 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import com.bigbratan.emulair.R
 import com.bigbratan.emulair.activities.pauseMenu.PauseMenuActivity
-import com.bigbratan.emulair.common.managerController.*
-import com.bigbratan.emulair.common.managerTilt.TiltSensor
+import com.bigbratan.emulair.common.managers.controller.*
+import com.bigbratan.emulair.common.managers.tilt.TiltSensor
 import com.bigbratan.emulair.common.utils.coroutines.batchWithTime
 import com.bigbratan.emulair.common.utils.coroutines.launchOnState
 import com.bigbratan.emulair.common.utils.coroutines.safeCollect
@@ -45,10 +45,10 @@ import com.bigbratan.emulair.common.utils.kotlin.NTuple3
 import com.bigbratan.emulair.common.utils.kotlin.allTrue
 import com.bigbratan.emulair.common.utils.math.linearInterpolation
 import com.bigbratan.emulair.activities.pauseMenu.PauseMenuContract
-import com.bigbratan.emulair.managerTilt.CrossTiltTracker
-import com.bigbratan.emulair.managerTilt.StickTiltTracker
-import com.bigbratan.emulair.managerTilt.TiltTracker
-import com.bigbratan.emulair.managerTilt.TwoButtonsTiltTracker
+import com.bigbratan.emulair.managers.tilt.CrossTiltTracker
+import com.bigbratan.emulair.managers.tilt.StickTiltTracker
+import com.bigbratan.emulair.managers.tilt.TiltTracker
+import com.bigbratan.emulair.managers.tilt.TwoButtonsTiltTracker
 import com.swordfish.libretrodroid.GLRetroView
 import com.swordfish.radialgamepad.library.RadialGamePad
 import com.swordfish.radialgamepad.library.config.RadialGamePadTheme

@@ -3,9 +3,9 @@ package com.bigbratan.emulair.common.managers.storage.local
 import android.content.Context
 import com.bigbratan.emulair.common.utils.kotlin.calculateCrc32
 import com.bigbratan.emulair.common.utils.kotlin.toStringCRC32
-import com.bigbratan.emulair.common.managerStorage.BaseStorageFile
-import com.bigbratan.emulair.common.managerStorage.StorageFile
-import com.bigbratan.emulair.common.managerStorage.scanner.SerialScanner
+import com.bigbratan.emulair.common.managers.storage.BaseStorageFile
+import com.bigbratan.emulair.common.managers.storage.StorageFile
+import com.bigbratan.emulair.common.managers.storage.scanner.SerialScanner
 import java.util.zip.ZipEntry
 import java.util.zip.ZipInputStream
 import timber.log.Timber

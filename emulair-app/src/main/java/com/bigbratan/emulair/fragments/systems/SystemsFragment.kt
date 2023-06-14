@@ -12,8 +12,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bigbratan.emulair.R
-import com.bigbratan.emulair.managerLayout.DynamicGridLayoutManager
-import com.bigbratan.emulair.managerLayout.GridSpaceDecoration
+import com.bigbratan.emulair.managers.layout.DynamicGridLayoutManager
+import com.bigbratan.emulair.managers.layout.GridSpaceDecoration
 import com.bigbratan.emulair.common.utils.coroutines.launchOnState
 import com.bigbratan.emulair.common.metadata.retrograde.MetaSystemID
 import com.bigbratan.emulair.common.metadata.retrograde.db.RetrogradeDatabase

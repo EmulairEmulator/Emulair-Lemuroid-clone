@@ -21,20 +21,21 @@ package com.bigbratan.emulair.common.activities.game
 
 import android.content.Context
 import android.os.Build
-import com.bigbratan.emulair.common.managerCoresLibrary.CoreVariable
-import com.bigbratan.emulair.common.managerCoresLibrary.CoreVariablesManager
+import com.bigbratan.emulair.common.managers.bios.BiosManager
+import com.bigbratan.emulair.common.managers.coresLibrary.CoreVariable
+import com.bigbratan.emulair.common.managers.coresLibrary.CoreVariablesManager
 import com.bigbratan.emulair.common.metadata.retrograde.CoreID
 import com.bigbratan.emulair.common.metadata.retrograde.GameSystem
 import com.bigbratan.emulair.common.metadata.retrograde.EmulairLibrary
 import com.bigbratan.emulair.common.metadata.retrograde.SystemCoreConfig
 import com.bigbratan.emulair.common.metadata.retrograde.db.RetrogradeDatabase
 import com.bigbratan.emulair.common.metadata.retrograde.db.entity.Game
-import com.bigbratan.emulair.common.managerSaves.SaveState
-import com.bigbratan.emulair.common.managerSaves.SavesCoherencyEngine
-import com.bigbratan.emulair.common.managerSaves.SavesManager
-import com.bigbratan.emulair.common.managerSaves.StatesManager
-import com.bigbratan.emulair.common.managerStorage.DirectoriesManager
-import com.bigbratan.emulair.common.managerStorage.RomFiles
+import com.bigbratan.emulair.common.managers.saves.SaveState
+import com.bigbratan.emulair.common.managers.saves.SavesCoherencyEngine
+import com.bigbratan.emulair.common.managers.saves.SavesManager
+import com.bigbratan.emulair.common.managers.saves.StatesManager
+import com.bigbratan.emulair.common.managers.storage.DirectoriesManager
+import com.bigbratan.emulair.common.managers.storage.RomFiles
 import java.io.File
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -48,7 +49,7 @@ class GameLoader(
     private val retrogradeDatabase: RetrogradeDatabase,
     private val savesCoherencyEngine: SavesCoherencyEngine,
     private val directoriesManager: DirectoriesManager,
-    private val biosManager: _root_ide_package_.com.bigbratan.emulair.common.managers.bios.BiosManager
+    private val biosManager: BiosManager
 ) {
     sealed class LoadingState {
         object LoadingCore : LoadingState()

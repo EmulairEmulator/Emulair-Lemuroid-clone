@@ -1,10 +1,10 @@
 package com.bigbratan.emulair.common.metadata.retrograde
 
 import android.content.SharedPreferences
-import com.bigbratan.emulair.common.managerCoresLibrary.CoreUpdater
-import com.bigbratan.emulair.common.managerCoresLibrary.NoAssetsManager
-import com.bigbratan.emulair.common.managerCoresLibrary.PPSSPPAssetsManager
-import com.bigbratan.emulair.common.managerStorage.DirectoriesManager
+import com.bigbratan.emulair.common.managers.coresLibrary.CoreUpdater
+import com.bigbratan.emulair.common.managers.coresLibrary.NoAssetsManager
+import com.bigbratan.emulair.common.managers.coresLibrary.PPSSPPAssetsManager
+import com.bigbratan.emulair.common.managers.storage.DirectoriesManager
 
 enum class CoreID(
     val coreName: String,

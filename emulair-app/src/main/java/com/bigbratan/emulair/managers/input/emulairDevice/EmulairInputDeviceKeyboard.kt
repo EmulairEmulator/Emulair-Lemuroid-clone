@@ -3,12 +3,12 @@ package com.bigbratan.emulair.managers.input.emulairDevice
 import android.content.Context
 import android.view.InputDevice
 import android.view.KeyEvent
-import com.bigbratan.emulair.managerInput.InputDeviceManager
+import com.bigbratan.emulair.managers.input.InputDeviceManager
 import com.bigbratan.emulair.utils.input.RetroKey
 import com.bigbratan.emulair.utils.input.bindingsOf
 import com.bigbratan.emulair.utils.input.inputKeysOf
 import com.bigbratan.emulair.utils.input.supportsAllKeys
-import com.bigbratan.emulair.managerInput.PauseMenuShortcut
+import com.bigbratan.emulair.managers.input.PauseMenuShortcut
 
 class EmulairInputDeviceKeyboard(private val device: InputDevice) : EmulairInputDevice {
 
