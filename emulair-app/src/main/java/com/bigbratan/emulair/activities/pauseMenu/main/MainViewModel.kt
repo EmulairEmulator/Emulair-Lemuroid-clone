@@ -1,4 +1,4 @@
-package com.bigbratan.emulair.activities.main
+package com.bigbratan.emulair.activities.pauseMenu.main
 
 import android.content.Context
 import androidx.lifecycle.ViewModel

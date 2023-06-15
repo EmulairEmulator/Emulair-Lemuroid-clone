@@ -25,12 +25,12 @@ import androidx.room.Room
 import com.bigbratan.emulair.activities.game.GameActivity
 import com.bigbratan.emulair.activities.pauseMenu.PauseMenuActivity
 import com.bigbratan.emulair.fragments.settings.GamePadBindingActivity
-import com.bigbratan.emulair.activities.main.MainActivity
+import com.bigbratan.emulair.activities.pauseMenu.main.MainActivity
 import com.bigbratan.emulair.managers.settings.SettingsManager
 import com.bigbratan.emulair.managers.covers.CoverLoader
 import com.bigbratan.emulair.activities.game.GameLauncher
 import com.bigbratan.emulair.managers.input.InputDeviceManager
-import com.bigbratan.emulair.activities.main.GameLaunchTaskHandler
+import com.bigbratan.emulair.activities.pauseMenu.main.GameLaunchTaskHandler
 import com.bigbratan.emulair.managers.rumble.RumbleManager
 import com.bigbratan.emulair.fragments.settings.BiosPreferences
 import com.bigbratan.emulair.managers.input.ControllerConfigsManager

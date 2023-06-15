@@ -1,4 +1,4 @@
-package com.bigbratan.emulair.activities.main
+package com.bigbratan.emulair.activities.pauseMenu.main
 
 // import android.widget.Toolbar
 import android.app.Activity
@@ -138,7 +138,7 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
                 }
             }
         }
-    }
+    }z
 
     override fun onPrepareOptionsMenu(menu: Menu): Boolean {
         val isSyncSupported = saveSyncManager.isSupported()

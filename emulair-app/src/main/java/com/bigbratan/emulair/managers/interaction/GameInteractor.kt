@@ -2,7 +2,7 @@ package com.bigbratan.emulair.managers.interaction
 
 import com.bigbratan.emulair.R
 import com.bigbratan.emulair.activities.game.GameLauncher
-import com.bigbratan.emulair.activities.main.BusyActivity
+import com.bigbratan.emulair.activities.pauseMenu.main.BusyActivity
 import com.bigbratan.emulair.utils.displayToast
 import com.bigbratan.emulair.common.metadata.retrograde.db.RetrogradeDatabase
 import com.bigbratan.emulair.common.metadata.retrograde.db.entity.Game

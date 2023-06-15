@@ -105,7 +105,23 @@ android {
 }
 
 dependencies {
+
+    //Testing dependencies
+    androidTestImplementation("androidx.test.espresso:espresso-core:$espressoVersion")
+    // Core library
+    androidTestImplementation("androidx.test:core:$androidXTestVersion")
+
+    // AndroidJUnitRunner and JUnit Rules
+    androidTestImplementation("androidx.test:runner:$testRunnerVersion")
+    androidTestImplementation("androidx.test:rules:$testRulesVersion")
+
+    // Assertions
+    androidTestImplementation("androidx.test.ext:junit:$testJunitVersion")
+    androidTestImplementation("androidx.test.ext:truth:$truthVersion")
+
+
     implementation(project(":emulair-app-common"))
+    androidTestImplementation("org.testng:testng:6.9.6")
     "bundledCoresImplementation"(project(":bundled-cores"))
     "nogplayImplementation"(project(":emulair-app-build-nogplay"))
     "gplayImplementation"(project(":emulair-app-build-gplay"))

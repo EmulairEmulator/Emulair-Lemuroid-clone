@@ -27,7 +27,7 @@
         android:theme="@style/Theme.EmulairMaterial" >
 
         <activity
-            android:name=".activities.main.MainActivity"
+            android:name=".activities.pauseMenu.main.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

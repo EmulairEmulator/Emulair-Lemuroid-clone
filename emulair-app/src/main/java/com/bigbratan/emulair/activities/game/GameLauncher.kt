@@ -1,7 +1,7 @@
 package com.bigbratan.emulair.activities.game
 
 import android.app.Activity
-import com.bigbratan.emulair.activities.main.GameLaunchTaskHandler
+import com.bigbratan.emulair.activities.pauseMenu.main.GameLaunchTaskHandler
 import com.bigbratan.emulair.common.managers.coresLibrary.CoresSelection
 import com.bigbratan.emulair.common.metadata.retrograde.GameSystem
 import com.bigbratan.emulair.common.metadata.retrograde.db.entity.Game
