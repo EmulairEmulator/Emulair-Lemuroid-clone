@@ -94,9 +94,9 @@ This feature hasn't been implemented yet.
 - [ ] More animations
 - [ ] A custom splash screen for Android 12+ devices
 - [ ] A "Close menu" button accessible from the pause menu, so users don't have to click their device's back button every time they want to unpause a game
-- [ ] [NEW] Choose if you want to automatically fall back on other emulators or not, in case a game doesn't work (this implies unlocking the option to switch between FinalBurn Neo and MAME 2003-Plus)
-- [ ] [NEW] Plenty QOL features, updates and fixes
-- [ ] [NEW] Easily access and manage all your files from an app-specific folder inside storage/emulated/0
+- [ ] Choose if you want to automatically fall back on other emulators or not, in case a game doesn't work (this implies unlocking the option to switch between FinalBurn Neo and MAME 2003-Plus)
+- [ ] Plenty QOL features, updates and fixes
+- [ ] Easily access and manage all your files from an app-specific folder inside storage/emulated/0
 
 Note: The above features won't be released in this exact order. Concerning the SDM project, not every feature on this list will be implemented (the minimum requirement is 10). Regarding the development after the university project is finished, some features may be changed or even removed. If you don't know what "SDM" means or what Emulair has to do with any kind of university, check the [Wiki page](https://github.com/RaduBratan/Emulair/wiki/5.-More-about-Emulair) for more info on why the project exists.
 
