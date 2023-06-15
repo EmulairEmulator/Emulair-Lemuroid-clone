@@ -29,6 +29,7 @@ import com.bigbratan.emulair.activities.main.MainActivity
 import com.bigbratan.emulair.managers.settings.SettingsManager
 import com.bigbratan.emulair.managers.covers.CoverLoader
 import com.bigbratan.emulair.activities.game.GameLauncher
+import com.bigbratan.emulair.activities.intro.IntroActivity
 import com.bigbratan.emulair.managers.input.InputDeviceManager
 import com.bigbratan.emulair.activities.main.GameLaunchTaskHandler
 import com.bigbratan.emulair.managers.rumble.RumbleManager
@@ -95,6 +96,10 @@ abstract class EmulairApplicationModule {
     @PerActivity
     @ContributesAndroidInjector
     abstract fun gameActivity(): GameActivity
+
+    @PerActivity
+    @ContributesAndroidInjector
+    abstract fun introActivity(): IntroActivity
 
     @PerActivity
     @ContributesAndroidInjector(modules = [PauseMenuActivity.Module::class])

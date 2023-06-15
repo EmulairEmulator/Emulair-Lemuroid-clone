@@ -9,6 +9,11 @@ buildscript {
     dependencies {
         classpath(deps.plugins.android)
         classpath(deps.plugins.navigationSafeArgs)
+
+        // Other dependencies
+
+
+
     }
 }
 

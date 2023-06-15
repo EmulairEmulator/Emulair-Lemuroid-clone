@@ -26,9 +26,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EmulairMaterial" >
 
+
+
         <activity
             android:name=".activities.main.MainActivity"
             android:exported="true" >
+
+        </activity>
+
+        <activity
+            android:exported="true"
+            android:name=".activites.intro.IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -51,6 +59,8 @@
             android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
             android:process=":game"
             android:theme="@style/Theme.EmulairMaterial.Menu" />
+
+
 
         <activity
             android:name=".fragments.settings.GamePadBindingActivity"

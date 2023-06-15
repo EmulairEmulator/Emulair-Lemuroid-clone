@@ -110,6 +110,7 @@ dependencies {
     "nogplayImplementation"(project(":emulair-app-build-nogplay"))
     "gplayImplementation"(project(":emulair-app-build-gplay"))
 
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
     implementation(deps.libs.material)
     implementation(deps.libs.androidx.navigation.navigationFragment)
     implementation(deps.libs.androidx.navigation.navigationUi)
