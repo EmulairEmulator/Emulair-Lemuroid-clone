@@ -33,6 +33,7 @@ import com.bigbratan.emulair.fragments.search.SearchFragment
 import com.bigbratan.emulair.fragments.settings.*
 import com.bigbratan.emulair.fragments.systemGames.SystemGamesFragment
 import com.bigbratan.emulair.fragments.systems.SystemsFragment
+import com.bigbratan.emulair.managers.coresLibrary.LibraryIndexScheduler
 import com.bigbratan.emulair.managers.interaction.GameInteractor
 import com.bigbratan.emulair.managers.input.InputDeviceManager
 import com.bigbratan.emulair.managers.saveSync.SaveSyncWork
@@ -42,8 +43,10 @@ import dagger.Provides
 import dagger.android.ContributesAndroidInjector
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
+
 import java.util.*
 import javax.inject.Inject
+
 
 @OptIn(DelicateCoroutinesApi::class)
 class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
@@ -126,7 +129,13 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
         mainViewModel?.displayProgress?.observe(this) { isRunning ->
             findViewById<ProgressBar>(R.id.progress).isVisible = isRunning
         }
+
+
+        LibraryIndexScheduler.scheduleLibrarySync(
+            getApplicationContext()
+        )
     }
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
