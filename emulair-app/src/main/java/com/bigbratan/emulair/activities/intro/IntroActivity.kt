@@ -1,11 +1,9 @@
-package com.labawsrh.aws.introscreen
+package com.bigbratan.emulair.activities.intro
 
-import android.R
+import com.bigbratan.emulair.R
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.view.Window
-import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Button
@@ -14,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.bigbratan.emulair.activities.main.MainActivity
 import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayout.BaseOnTabSelectedListener
 
 class IntroActivity : AppCompatActivity() {
     private var screenPager: ViewPager? = null
@@ -25,37 +22,25 @@ class IntroActivity : AppCompatActivity() {
     var btnGetStarted: Button? = null
     var btnAnim: Animation? = null
     var tvSkip: TextView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // make the activity on full screen
-        requestWindowFeature(Window.FEATURE_NO_TITLE)
-        window.setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN
-        )
-
-
-        // when this activity is about to be launch we need to check if its openened before or not
         if (restorePrefData()) {
             val mainActivity = Intent(applicationContext, MainActivity::class.java)
             startActivity(mainActivity)
             finish()
         }
         setContentView(R.layout.activity_intro)
-
-        // hide the action bar
         supportActionBar!!.hide()
 
-        // ini views
-        btnNext = findViewById<Button>(R.id.btn_next)
-        btnGetStarted = findViewById<Button>(R.id.btn_get_started)
-        tabIndicator = findViewById<TabLayout>(R.id.tab_indicator)
+        btnNext = findViewById(R.id.btn_next)
+        btnGetStarted = findViewById(R.id.btn_get_started)
+        tabIndicator = findViewById(R.id.tab_indicator)
         btnAnim = AnimationUtils.loadAnimation(applicationContext, R.anim.button_animation)
-        tvSkip = findViewById<TextView>(R.id.tv_skip)
+        tvSkip = findViewById(R.id.tv_skip)
 
-        // fill list screen
-        val mList: MutableList<ScreenItem> = ArrayList<ScreenItem>()
+        val mList: MutableList<ScreenItem> = ArrayList()
         mList.add(
             ScreenItem(
                 "Fresh Food",
@@ -78,60 +63,42 @@ class IntroActivity : AppCompatActivity() {
             )
         )
 
-        // setup viewpager
-        screenPager = findViewById<ViewPager>(R.id.screen_viewpager)
+        screenPager = findViewById(R.id.screen_viewpager)
         introViewPagerAdapter = IntroViewPagerAdapter(this, mList)
-        screenPager.setAdapter(introViewPagerAdapter)
-
-        // setup tablayout with viewpager
-        tabIndicator.setupWithViewPager(screenPager)
-
-        // next button click Listner
-        btnNext.setOnClickListener(View.OnClickListener {
-            position = screenPager.getCurrentItem()
+        screenPager?.adapter = introViewPagerAdapter
+        tabIndicator?.setupWithViewPager(screenPager)
+        btnNext?.setOnClickListener {
+            position = screenPager?.currentItem!!
             if (position < mList.size) {
                 position++
-                screenPager.setCurrentItem(position)
+                screenPager?.currentItem = position
             }
-            if (position == mList.size - 1) { // when we rech to the last screen
-
-                // TODO : show the GETSTARTED Button and hide the indicator and the next button
+            if (position == mList.size - 1) {
                 loaddLastScreen()
             }
-        })
-
-        // tablayout add change listener
-        tabIndicator.addOnTabSelectedListener(object : BaseOnTabSelectedListener<Any?> {
+        }
+        tabIndicator?.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 if (tab!!.position == mList.size - 1) {
                     loaddLastScreen()
                 }
             }
-
             override fun onTabUnselected(tab: TabLayout.Tab?) {}
             override fun onTabReselected(tab: TabLayout.Tab?) {}
         })
-
-
-        // Get Started button click listener
-        btnGetStarted.setOnClickListener(View.OnClickListener { //open main activity
+        btnGetStarted?.setOnClickListener {
             val mainActivity = Intent(applicationContext, MainActivity::class.java)
             startActivity(mainActivity)
-            // also we need to save a boolean value to storage so next time when the user run the app
-            // we could know that he is already checked the intro screen activity
-            // i'm going to use shared preferences to that process
             savePrefsData()
             finish()
-        })
-
-        // skip button click listener
-        tvSkip.setOnClickListener(View.OnClickListener { screenPager.setCurrentItem(mList.size) })
+        }
+        tvSkip?.setOnClickListener { screenPager?.currentItem = mList.size }
     }
 
     private fun restorePrefData(): Boolean {
         val pref =
             applicationContext.getSharedPreferences("myPrefs", MODE_PRIVATE)
-        return pref.getBoolean("isIntroOpnend", false)
+        return pref.getBoolean("isIntroOpened", false)
     }
 
     private fun savePrefsData() {
@@ -141,14 +108,11 @@ class IntroActivity : AppCompatActivity() {
         editor.commit()
     }
 
-    // show the GETSTARTED Button and hide the indicator and the next button
     private fun loaddLastScreen() {
         btnNext!!.visibility = View.INVISIBLE
         btnGetStarted!!.visibility = View.VISIBLE
         tvSkip!!.visibility = View.INVISIBLE
         tabIndicator!!.visibility = View.INVISIBLE
-        // TODO : ADD an animation the getstarted button
-        // setup animation
         btnGetStarted!!.animation = btnAnim
     }
 }

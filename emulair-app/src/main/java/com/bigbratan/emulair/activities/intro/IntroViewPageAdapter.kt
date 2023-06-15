@@ -1,6 +1,6 @@
-package com.labawsrh.aws.introscreen
+package com.bigbratan.emulair.activities.intro
 
-import android.R
+import com.bigbratan.emulair.R
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.viewpager.widget.PagerAdapter
+import com.labawsrh.aws.introscreen.ScreenItem
 
 class IntroViewPagerAdapter(var mContext: Context, mListScreen: List<ScreenItem>) :
     PagerAdapter() {
@@ -20,8 +21,6 @@ class IntroViewPagerAdapter(var mContext: Context, mListScreen: List<ScreenItem>
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val inflater = mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val layoutScreen: View = inflater.inflate(R.layout.layout_screen, null)
-
-
         container.addView(layoutScreen)
         return layoutScreen
     }
@@ -34,7 +33,7 @@ class IntroViewPagerAdapter(var mContext: Context, mListScreen: List<ScreenItem>
         return view === o
     }
 
-    override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
-        container.removeView(`object` as View)
+    override fun destroyItem(container: ViewGroup, position: Int, object: Any) {
+        container.removeView(object as View)
     }
 }
