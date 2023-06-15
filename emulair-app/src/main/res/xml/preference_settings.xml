@@ -45,7 +45,7 @@
             android:defaultValue="material_you_theme"
             app:iconSpaceReserved="false"
             app:useSimpleSummaryProvider="true"
-            android:layout="@layout/layout_preference_main_list_top" />
+            android:layout="@layout/layout_preference_main_list_middle" />
 
         <com.bigbratan.emulair.ui.CustomListPreference
             android:defaultValue="auto"
@@ -129,12 +129,5 @@
             app:iconSpaceReserved="false" />
 
     </PreferenceCategory>
-
-    <SwitchPreferenceCompat
-        android:key="@string/pref_key_autorotate"
-        android:title="@string/settings_title_autorotate"
-        android:summary="@string/settings_description_autorotate"
-        app:iconSpaceReserved="false"
-        android:defaultValue="false"/>
 
 </PreferenceScreen>
