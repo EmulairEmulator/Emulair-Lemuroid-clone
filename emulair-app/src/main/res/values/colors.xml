@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="grey">#09ffffff</color>
+    <!-- Light Theme -->
+    <color name="light_theme_primary">#2196F3</color>
+    <color name="light_theme_onPrimary">#FFFFFF</color>
+    <color name="light_theme_secondary">#4CAF50</color>
+    <color name="light_theme_onSecondary">#FFFFFF</color>
+    <color name="light_theme_tertiary">#FFEB3B</color>
+    <color name="light_theme_onTertiary">#000000</color>
+    <color name="light_theme_error">#F44336</color>
+    <color name="light_theme_onError">#FFFFFF</color>
+    <color name="light_theme_background">#F5F5F5</color>
+    <color name="light_theme_onBackground">#000000</color>
+    <color name="light_theme_surface">#FFFFFF</color>
+    <color name="light_theme_onSurface">#000000</color>
+    <color name="light_theme_outline">#9E9E9E</color>
+
+    <!-- Dark Theme -->
+    <color name="dark_theme_primary">#1565C0</color>
+    <color name="dark_theme_onPrimary">#FFFFFF</color>
+    <color name="dark_theme_secondary">#2E7D32</color>
+    <color name="dark_theme_onSecondary">#FFFFFF</color>
+    <color name="dark_theme_tertiary">#F9A825</color>
+    <color name="dark_theme_onTertiary">#000000</color>
+    <color name="dark_theme_error">#F44336</color>
+    <color name="dark_theme_onError">#FFFFFF</color>
+    <color name="dark_theme_background">#424242</color>
+    <color name="dark_theme_onBackground">#FFFFFF</color>
+    <color name="dark_theme_surface">#424242</color>
+    <color name="dark_theme_onSurface">#FFFFFF</color>
+    <color name="dark_theme_outline">#BDBDBD</color>
+
+    <!-- AMOLED Theme -->
+    <color name="amoled_theme_primary">#000000</color>
+    <color name="amoled_theme_onPrimary">#FFFFFF</color>
+    <color name="amoled_theme_secondary">#212121</color>
+    <color name="amoled_theme_onSecondary">#FFFFFF</color>
+    <color name="amoled_theme_tertiary">#F9A825</color>
+    <color name="amoled_theme_onTertiary">#000000</color>
+    <color name="amoled_theme_error">#F44336</color>
+    <color name="amoled_theme_onError">#FFFFFF</color>
+    <color name="amoled_theme_background">#000000</color>
+    <color name="amoled_theme_onBackground">#FFFFFF</color>
+    <color name="amoled_theme_surface">#212121</color>
+    <color name="amoled_theme_onSurface">#FFFFFF</color>
+    <color name="amoled_theme_outline">#BDBDBD</color>
+
 </resources>

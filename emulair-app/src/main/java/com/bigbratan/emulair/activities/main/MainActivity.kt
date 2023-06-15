@@ -1,8 +1,8 @@
 package com.bigbratan.emulair.activities.main
 
-// import android.widget.Toolbar
 import android.app.Activity
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -11,10 +11,12 @@ import android.widget.ImageButton
 import android.widget.ProgressBar
 import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import androidx.preference.PreferenceManager
 import com.bigbratan.emulair.R
 import com.bigbratan.emulair.activities.game.BaseGameActivity
 import com.bigbratan.emulair.activities.game.GameLauncher
@@ -37,13 +39,16 @@ import com.bigbratan.emulair.managers.interaction.GameInteractor
 import com.bigbratan.emulair.managers.input.InputDeviceManager
 import com.bigbratan.emulair.managers.saveSync.SaveSyncWork
 import com.bigbratan.emulair.managers.settings.SettingsInteractor
+import com.bigbratan.emulair.managers.settings.SettingsManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.Provides
 import dagger.android.ContributesAndroidInjector
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import java.util.*
 import javax.inject.Inject
+import dagger.Lazy
 
 @OptIn(DelicateCoroutinesApi::class)
 class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
@@ -58,12 +63,31 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
 
     private var mainViewModel: MainViewModel? = null
 
+    private val sharedPreferences: SharedPreferences by lazy {
+        PreferenceManager.getDefaultSharedPreferences(this)
+    }
+    private val settingsManager by lazy {
+        SettingsManager(this, object : Lazy<SharedPreferences> {
+            override fun get(): SharedPreferences = sharedPreferences
+        })
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         // window.navigationBarColor = SurfaceColors.SURFACE_0.getColor(this)
         // window.statusBarColor = SurfaceColors.SURFACE_0.getColor(this)
         setContentView(R.layout.activity_main)
+        lifecycleScope.launch {
+            val themeFlow = settingsManager.appTheme()
+            val theme = themeFlow.first().toString()
+            when (theme) {
+                "light_theme" -> setTheme(R.style.Theme_EmulairMaterialLight)
+                "dark_theme" -> setTheme(R.style.Theme_EmulairMaterialDark)
+                "amoled_theme" -> setTheme(R.style.Theme_EmulairMaterialAMOLED)
+                "material_you_theme" -> setTheme(R.style.Theme_EmulairMaterialYou)
+            }
+        }
         initializeActivity()
     }
 
@@ -176,6 +200,17 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+
+    /*public fun applyTheme(themePreference: String?) {
+        when (themePreference) {
+            "light_theme" -> setTheme(R.style.Theme_EmulairMaterialLight)
+            "dark_theme" -> setTheme(R.style.Theme_EmulairMaterialDark)
+            "material_you_theme" -> setTheme(R.style.Theme_EmulairMaterialYou)
+            "amoled_theme" -> setTheme(R.style.Theme_EmulairMaterialAMOLED)
+        }
+    }*/
+
 
     override fun onSupportNavigateUp() = findNavController(R.id.nav_host_fragment).navigateUp()
 

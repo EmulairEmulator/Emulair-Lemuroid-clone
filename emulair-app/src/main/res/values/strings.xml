@@ -130,6 +130,7 @@
 
     <!-- SETTINGS FRAGMENT - GENERAL -->
     <string name="settings_category_general">General</string>
+    <string name="settings_general_display_theme_title">Choose theme</string>
     <string name="settings_general_display_filter_title">Display filter</string>
     <string name="settings_general_display_filter_auto_option">Auto</string>
     <string name="settings_general_display_filter_sharp_option">Sharp</string>
