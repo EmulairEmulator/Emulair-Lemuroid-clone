@@ -56,7 +56,7 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:background="?attr/actionBarItemBackground"
-                    android:contentDescription="@string/top_account"
+                    android:contentDescription="@string/top_profile"
                     app:srcCompat="@drawable/ic_top_account" />
 
             </LinearLayout>

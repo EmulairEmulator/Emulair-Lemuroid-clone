@@ -94,6 +94,10 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
         val buttonInfo: ImageButton = findViewById(R.id.main_info)
         val buttonSearch: ImageButton = findViewById(R.id.main_search)
         val buttonAccount: ImageButton = findViewById(R.id.main_account)
+        buttonAccount.setOnClickListener {
+            val intent = Intent(this@MainActivity, ProfileActivity::class.java)
+            startActivity(intent)
+        }
         buttonSearch.setOnClickListener {
             navController.navigateUp()
             navController.navigate(R.id.main_search)

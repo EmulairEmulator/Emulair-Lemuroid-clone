@@ -19,6 +19,7 @@
 
 package com.bigbratan.emulair
 
+import com.bigbratan.emulair.activities.profile.ProfileActivity
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.room.Room
@@ -95,6 +96,10 @@ abstract class EmulairApplicationModule {
     @PerActivity
     @ContributesAndroidInjector
     abstract fun gameActivity(): GameActivity
+
+    @PerActivity
+    @ContributesAndroidInjector
+    abstract fun profileActivity(): ProfileActivity
 
     @PerActivity
     @ContributesAndroidInjector(modules = [PauseMenuActivity.Module::class])
