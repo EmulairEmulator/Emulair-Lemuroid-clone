@@ -18,6 +18,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.bigbratan.emulair.R
 import com.bigbratan.emulair.activities.game.BaseGameActivity
 import com.bigbratan.emulair.activities.game.GameLauncher
+import com.bigbratan.emulair.activities.info.InfoActivity
 import com.bigbratan.emulair.common.activities.retrograde.RetrogradeAppCompatActivity
 import com.bigbratan.emulair.common.managers.injection.PerActivity
 import com.bigbratan.emulair.common.managers.injection.PerFragment
@@ -92,6 +93,11 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
         bottomNavView.setupWithNavController(navController)
 
         val buttonInfo: ImageButton = findViewById(R.id.main_info)
+        buttonInfo.setOnClickListener {
+            val intent = Intent(this@MainActivity, InfoActivity::class.java)
+            startActivity(intent)
+        }
+
         val buttonSearch: ImageButton = findViewById(R.id.main_search)
         val buttonAccount: ImageButton = findViewById(R.id.main_account)
         buttonSearch.setOnClickListener {
