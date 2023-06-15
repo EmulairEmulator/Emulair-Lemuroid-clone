@@ -1,5 +1,9 @@
 <resources>
 
+    <!-- SCREEN ORIENTATION -->
+    <string name="settings_title_autorotate">Screen Autorotation</string>
+    <string name="settings_description_autorotate">Follow Device-Orientation regardless of Orientationlock.</string>
+
     <!-- UNIVERSAL -->
     <string name="button_ok">OK</string>
     <string name="button_cancel">Cancel</string>

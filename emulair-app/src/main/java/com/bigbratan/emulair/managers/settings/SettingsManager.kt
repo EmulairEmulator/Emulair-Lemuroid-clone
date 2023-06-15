@@ -38,6 +38,8 @@ class SettingsManager(private val context: Context, sharedPreferences: Lazy<Shar
             context.resources.getStringArray(R.array.pref_key_theme_values).first()
     )
 
+    suspend fun screenAutorotate() = booleanPreference(R.string.pref_key_autorotate,false)
+
     /*suspend fun appTheme(): String {
         val themeValue = stringPreference(
                 R.string.pref_key_theme,

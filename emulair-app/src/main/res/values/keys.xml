@@ -25,6 +25,8 @@
     <string name="pref_key_save_sync_configure" translatable="false">save_sync_configure</string>
     <string name="pref_key_save_sync_cores" translatable="false">save_sync_cores</string>
 
+    <string name="pref_key_autorotate" translatable="false">autorotate</string>
+
     <string name="pref_key_shader_filter" translatable="false">shader_filter</string>
 
     <string-array name="pref_key_theme_names" translatable="false">

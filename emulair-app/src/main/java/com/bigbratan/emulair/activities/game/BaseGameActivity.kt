@@ -94,6 +94,7 @@ import kotlinx.coroutines.flow.scan
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import timber.log.Timber
+import android.content.pm.ActivityInfo
 
 @OptIn(FlowPreview::class, DelicateCoroutinesApi::class)
 abstract class BaseGameActivity : ImmersiveActivity() {
@@ -168,6 +169,9 @@ abstract class BaseGameActivity : ImmersiveActivity() {
 
         lifecycleScope.launch {
             loadGame()
+            if(settingsManager.screenAutorotate()) {
+                requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR
+            }
         }
 
         initialiseFlows()
