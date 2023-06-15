@@ -2,12 +2,9 @@ package com.bigbratan.emulair.managers.settings
 
 import android.content.Context
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatDelegate
-import androidx.preference.PreferenceManager
 import com.fredporciuncula.flow.preferences.FlowSharedPreferences
 import com.bigbratan.emulair.R
 import com.bigbratan.emulair.common.managers.storage.cache.CacheCleaner
-import com.bigbratan.emulair.common.utils.preferences.DummyDataStore.putString
 import dagger.Lazy
 import kotlin.math.roundToInt
 import kotlinx.coroutines.Dispatchers
