@@ -65,8 +65,17 @@ This feature hasn't been implemented yet.
 - [x] A "Jump back in" section on the "Games" page, along with "Recents", "Favorites" and "All Games"
 - [x] Complete visual redesign with consistent sizing, spacing and corner radius
 - [x] Complete conversion to Material Design 3 Components
+- [x] An info screen containing frequently asked questions and other useful stuff
+- [x] A profile screen used for easily connecting to RetroAchievements and syncing save files to the cloud
+- [x] Light Theme, AMOLED Theme, Material You Theme (previously there was only a Dark Theme)
+- [x] Set what screen orientation games should be opened in (landscape/portrait/follow device)
+- [x] Slide down in the "Games" page to rescan your directories and refresh your games list
+- [x] Automatically rescan internal directories on app restart
+- [x] Sync save files with Google Firebase
+- [x] Button prompts before (almost) every important action
 - [x] A themed app icon for Android 13+ devices
 - [x] Fixes for bugs that were carried over from Lemuroid
+- [x] Plenty QOL features, updates and fixes
 
 ## Upcoming Features
 - [ ] More emulation cores (almost all cores found on RetroArch)
@@ -74,15 +83,7 @@ This feature hasn't been implemented yet.
 - [ ] Cheat codes support
 - [ ] RetroAchievements support
 - [ ] .7z ROMs support
-- [ ] Syncing save files on Google Firebase and/or Supabase (I will decide which one I will choose after testing them both)
 - [ ] A user-friendly intro screen concisely explaining how to use the app
-- [ ] An info screen containing frequently asked questions and other useful stuff
-- [ ] A profile screen used for easily connecting to RetroAchievements and syncing save files to the cloud
-- [ ] Button prompts before every important action, such as saving/loading states
-- [ ] Light Theme, AMOLED Theme, Material You Theme (previously there was only a Dark Theme)
-- [ ] Slide down in the "Games" page to rescan your directories and refresh your games list
-- [ ] Automatically rescan internal directories on app restart
-- [ ] Set what screen orientation games should be opened in (landscape/portrait/follow device)
 - [ ] Set on-screen buttons' transparency
 - [ ] Different app layout for tablets and foldables
 - [ ] Different app layout for phones in landscape orientation
@@ -95,7 +96,6 @@ This feature hasn't been implemented yet.
 - [ ] A custom splash screen for Android 12+ devices
 - [ ] A "Close menu" button accessible from the pause menu, so users don't have to click their device's back button every time they want to unpause a game
 - [ ] Choose if you want to automatically fall back on other emulators or not, in case a game doesn't work (this implies unlocking the option to switch between FinalBurn Neo and MAME 2003-Plus)
-- [ ] Plenty QOL features, updates and fixes
 - [ ] Easily access and manage all your files from an app-specific folder inside storage/emulated/0
 
 Note: The above features won't be released in this exact order. Concerning the SDM project, not every feature on this list will be implemented (the minimum requirement is 10). Regarding the development after the university project is finished, some features may be changed or even removed. If you don't know what "SDM" means or what Emulair has to do with any kind of university, check the [Wiki page](https://github.com/RaduBratan/Emulair/wiki/5.-More-about-Emulair) for more info on why the project exists.
