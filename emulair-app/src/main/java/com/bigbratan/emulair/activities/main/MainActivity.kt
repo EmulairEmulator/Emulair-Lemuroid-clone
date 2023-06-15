@@ -1,6 +1,5 @@
 package com.bigbratan.emulair.activities.main
 
-// import android.widget.Toolbar
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
