@@ -38,11 +38,21 @@
         app:iconSpaceReserved="false">
 
         <com.bigbratan.emulair.ui.CustomListPreference
+            android:key="@string/pref_key_theme"
+            android:title="@string/settings_general_display_theme_title"
+            android:entries="@array/pref_key_theme_names"
+            android:entryValues="@array/pref_key_theme_values"
+            android:defaultValue="material_you_theme"
+            app:iconSpaceReserved="false"
+            app:useSimpleSummaryProvider="true"
+            android:layout="@layout/layout_preference_main_list_top" />
+
+        <com.bigbratan.emulair.ui.CustomListPreference
             android:defaultValue="auto"
             android:entries="@array/pref_key_shader_filter_display_names"
             android:entryValues="@array/pref_key_shader_filter_values"
             android:key="@string/pref_key_shader_filter"
-            android:layout="@layout/layout_preference_main_list_top"
+            android:layout="@layout/layout_preference_main_list_middle"
             android:title="@string/settings_general_display_filter_title"
             app:iconSpaceReserved="false"
             app:useSimpleSummaryProvider="true" />

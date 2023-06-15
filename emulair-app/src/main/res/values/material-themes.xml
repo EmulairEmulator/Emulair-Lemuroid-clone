@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Theme.EmulairMaterial" parent="Theme.Material3.Dark.NoActionBar">
+    <style name="Theme.EmulairMaterialYou" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/md_theme_dark_primary</item>
         <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
         <item name="colorPrimaryContainer">@color/md_theme_dark_primaryContainer</item>
@@ -36,7 +36,7 @@
         <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
     </style>
 
-    <style name="Theme.EmulairMaterial.Menu" parent="Theme.EmulairMaterial">
+    <style name="Theme.EmulairMaterial.Menu" parent="Theme.EmulairMaterialYou">
         <item name="android:statusBarColor">@android:color/black</item>
         <item name="android:navigationBarColor">@android:color/black</item>
         <item name="android:windowBackground">@color/pause_menu_background_color</item>
@@ -45,13 +45,13 @@
         <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
-    <style name="Theme.EmulairMaterial.Game" parent="Theme.EmulairMaterial">
+    <style name="Theme.EmulairMaterial.Game" parent="Theme.EmulairMaterialYou">
         <item name="android:navigationBarColor">@android:color/black</item>
         <item name="android:statusBarColor">@android:color/black</item>
         <item name="android:windowBackground">@android:color/black</item>
     </style>
 
-    <style name="Theme.EmulairMaterial.Invisible" parent="Theme.EmulairMaterial">
+    <style name="Theme.EmulairMaterial.Invisible" parent="Theme.EmulairMaterialYou">
         <item name="android:background">#00000000</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
@@ -60,6 +60,82 @@
         <item name="android:windowAnimationStyle">@android:style/Animation</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#09ffffff</color>
+
+    <!-- Light Theme -->
+    <style name="Theme.EmulairMaterialLight" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/light_theme_primary</item>
+        <item name="colorOnPrimary">@color/light_theme_onPrimary</item>
+        <item name="colorSecondary">@color/light_theme_secondary</item>
+        <item name="colorOnSecondary">@color/light_theme_onSecondary</item>
+        <item name="colorTertiary">@color/light_theme_tertiary</item>
+        <item name="colorOnTertiary">@color/light_theme_onTertiary</item>
+        <item name="colorError">@color/light_theme_error</item>
+        <item name="colorOnError">@color/light_theme_onError</item>
+        <item name="android:colorBackground">@color/light_theme_background</item>
+        <item name="colorOnBackground">@color/light_theme_onBackground</item>
+        <item name="colorSurface">@color/light_theme_surface</item>
+        <item name="colorOnSurface">@color/light_theme_onSurface</item>
+        <item name="colorOutline">@color/light_theme_outline</item>
+        <!-- -->
+        <item name="materialCardViewStyle">?attr/materialCardViewElevatedStyle</item>
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+        <item name="elevationOverlayColor">?attr/colorOnSurface</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+    </style>
+
+    <!-- AMOLED Theme -->
+    <style name="Theme.EmulairMaterialAMOLED" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/amoled_theme_primary</item>
+        <item name="colorOnPrimary">@color/amoled_theme_onPrimary</item>
+        <item name="colorSecondary">@color/amoled_theme_secondary</item>
+        <item name="colorOnSecondary">@color/amoled_theme_onSecondary</item>
+        <item name="colorTertiary">@color/amoled_theme_tertiary</item>
+        <item name="colorOnTertiary">@color/amoled_theme_onTertiary</item>
+        <item name="colorError">@color/amoled_theme_error</item>
+        <item name="colorOnError">@color/amoled_theme_onError</item>
+        <item name="android:colorBackground">@color/amoled_theme_background</item>
+        <item name="colorOnBackground">@color/amoled_theme_onBackground</item>
+        <item name="colorSurface">@color/amoled_theme_surface</item>
+        <item name="colorOnSurface">@color/amoled_theme_onSurface</item>
+        <item name="colorOutline">@color/amoled_theme_outline</item>
+        <!-- -->
+        <item name="materialCardViewStyle">?attr/materialCardViewElevatedStyle</item>
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+        <item name="elevationOverlayColor">?attr/colorOnSurface</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+    </style>
+
+    <!-- Dark Theme -->
+    <style name="Theme.EmulairMaterialDark" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/dark_theme_primary</item>
+        <item name="colorOnPrimary">@color/dark_theme_onPrimary</item>
+        <item name="colorSecondary">@color/dark_theme_secondary</item>
+        <item name="colorOnSecondary">@color/dark_theme_onSecondary</item>
+        <item name="colorTertiary">@color/dark_theme_tertiary</item>
+        <item name="colorOnTertiary">@color/dark_theme_onTertiary</item>
+        <item name="colorError">@color/dark_theme_error</item>
+        <item name="colorOnError">@color/dark_theme_onError</item>
+        <item name="android:colorBackground">@color/dark_theme_background</item>
+        <item name="colorOnBackground">@color/dark_theme_onBackground</item>
+        <item name="colorSurface">@color/dark_theme_surface</item>
+        <item name="colorOnSurface">@color/dark_theme_onSurface</item>
+        <item name="colorOutline">@color/dark_theme_outline</item>
+        <!-- -->
+        <item name="materialCardViewStyle">?attr/materialCardViewElevatedStyle</item>
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+        <item name="elevationOverlayColor">?attr/colorOnSurface</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
     </style>
 
     <!--
