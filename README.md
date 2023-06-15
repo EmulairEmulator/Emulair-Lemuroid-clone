@@ -69,8 +69,7 @@ This feature hasn't been implemented yet.
 - [x] A profile screen used for easily connecting to RetroAchievements and syncing save files to the cloud
 - [x] Light Theme, AMOLED Theme, Material You Theme (previously there was only a Dark Theme)
 - [x] Set what screen orientation games should be opened in (landscape/portrait/follow device)
-- [x] Slide down in the "Games" page to rescan your directories and refresh your games list
-- [x] Automatically rescan internal directories on app restart
+- [x] Automatically rescan internal directories on app restart and resume
 - [x] Sync save files with Google Firebase
 - [x] Button prompts before (almost) every important action
 - [x] A themed app icon for Android 13+ devices
