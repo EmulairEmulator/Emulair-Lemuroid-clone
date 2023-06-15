@@ -1,7 +1,6 @@
 package com.bigbratan.emulair.fragments.settings
 
 import android.content.Context
-import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
@@ -14,7 +13,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.bigbratan.emulair.R
-import com.bigbratan.emulair.activities.main.MainActivity
 import com.bigbratan.emulair.managers.coresLibrary.LibraryIndexScheduler
 import com.bigbratan.emulair.common.managers.preferences.SharedPreferencesHelper
 import com.bigbratan.emulair.common.managers.saveSync.SaveSyncManager
@@ -174,20 +172,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
     private fun stopRescanLibrary() {
         context?.let { LibraryIndexScheduler.cancelLibrarySync(it) }
     }
-
-
-    /*override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String) {
-        if (key == "theme_preference") {
-            val themePreference = sharedPreferences.getString(key, "light_theme")
-            (activity as? MainActivity)?.applyTheme(themePreference)
-            activity?.recreate()
-        }
-    }*/
-
-
-
-
-
 
     @dagger.Module
     class Module

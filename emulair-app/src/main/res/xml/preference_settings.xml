@@ -37,15 +37,13 @@
         android:title="@string/settings_category_general"
         app:iconSpaceReserved="false">
 
-        <com.bigbratan.emulair.ui.CustomListPreference
-            android:key="@string/pref_key_theme"
-            android:title="@string/settings_general_display_theme_title"
-            android:entries="@array/pref_key_theme_names"
-            android:entryValues="@array/pref_key_theme_values"
-            android:defaultValue="material_you_theme"
-            app:iconSpaceReserved="false"
-            app:useSimpleSummaryProvider="true"
-            android:layout="@layout/layout_preference_main_list_middle" />
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="@string/pref_key_autorotate"
+            android:layout="@layout/layout_preference_main_switch_top"
+            android:summary="@string/settings_general_autorotate_description"
+            android:title="@string/settings_general_autorotate_title"
+            app:iconSpaceReserved="false" />
 
         <com.bigbratan.emulair.ui.CustomListPreference
             android:defaultValue="auto"

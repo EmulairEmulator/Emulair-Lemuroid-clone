@@ -1,9 +1,4 @@
 <resources>
-
-    <!-- SCREEN ORIENTATION -->
-    <string name="settings_title_autorotate">Screen Autorotation</string>
-    <string name="settings_description_autorotate">Follow Device-Orientation regardless of Orientationlock.</string>
-
     <!-- UNIVERSAL -->
     <string name="button_ok">OK</string>
     <string name="button_cancel">Cancel</string>
@@ -134,7 +129,8 @@
 
     <!-- SETTINGS FRAGMENT - GENERAL -->
     <string name="settings_category_general">General</string>
-    <string name="settings_general_display_theme_title">Choose theme</string>
+    <string name="settings_general_autorotate_title">Screen Autorotation</string>
+    <string name="settings_general_autorotate_description">Follow device orientation regardless of orientation lock</string>
     <string name="settings_general_display_filter_title">Display filter</string>
     <string name="settings_general_display_filter_auto_option">Auto</string>
     <string name="settings_general_display_filter_sharp_option">Sharp</string>

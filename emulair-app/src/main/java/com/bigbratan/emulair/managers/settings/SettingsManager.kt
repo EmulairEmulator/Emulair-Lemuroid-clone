@@ -15,10 +15,9 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
 
-class SettingsManager(private val context: Context, sharedPreferences: Lazy<SharedPreferences>)  {
+class SettingsManager(private val context: Context, sharedPreferences: Lazy<SharedPreferences>) {
 
     private val sharedPreferences by lazy { FlowSharedPreferences(sharedPreferences.get()) }
-
 
     private fun getString(resId: Int) = context.getString(resId)
 
@@ -33,39 +32,7 @@ class SettingsManager(private val context: Context, sharedPreferences: Lazy<Shar
         context.resources.getStringArray(R.array.pref_key_shader_filter_values).first()
     )
 
-    suspend fun appTheme() = stringPreference(
-            R.string.pref_key_theme,
-            context.resources.getStringArray(R.array.pref_key_theme_values).first()
-    )
-
     suspend fun screenAutorotate() = booleanPreference(R.string.pref_key_autorotate,false)
-
-    /*suspend fun appTheme(): String {
-        val themeValue = stringPreference(
-                R.string.pref_key_theme,
-                context.resources.getStringArray(R.array.pref_key_theme_values).first()
-        )
-
-        setAppTheme(themeValue)
-
-        return themeValue
-    }
-
-    private fun setAppTheme(themeValue: String) {
-        val themeMode = when (themeValue) {
-            "light" -> AppCompatDelegate.MODE_NIGHT_NO
-            "dark" -> AppCompatDelegate.MODE_NIGHT_YES
-            "amoled" -> AppCompatDelegate.MODE_NIGHT_YES
-            "material_you" -> AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
-            else -> AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
-        }
-
-        AppCompatDelegate.setDefaultNightMode(themeMode)
-
-        *//*sharedPreferences.edit { preferences ->
-            preferences.putString(context.getString(R.string.pref_key_theme), themeValue)
-        }*//*
-    }*/
 
     suspend fun tiltSensitivity() = floatPreference(R.string.pref_key_tilt_sensitivity_index, 10, 0.6f)
 
