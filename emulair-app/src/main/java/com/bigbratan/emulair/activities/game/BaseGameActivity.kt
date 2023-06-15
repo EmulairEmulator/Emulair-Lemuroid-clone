@@ -173,7 +173,6 @@ abstract class BaseGameActivity : ImmersiveActivity() {
                 requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR
             }
         }
-        }
 
         initialiseFlows()
     }
