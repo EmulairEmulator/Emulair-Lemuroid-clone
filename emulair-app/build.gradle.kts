@@ -109,7 +109,7 @@ dependencies {
     "bundledCoresImplementation"(project(":bundled-cores"))
     "nogplayImplementation"(project(":emulair-app-build-nogplay"))
     "gplayImplementation"(project(":emulair-app-build-gplay"))
-
+    implementation("androidx.constraintlayout:constraintlayout:2.1.0")
     implementation("androidx.datastore:datastore-preferences:1.0.0")
     implementation(deps.libs.material)
     implementation(deps.libs.androidx.navigation.navigationFragment)
