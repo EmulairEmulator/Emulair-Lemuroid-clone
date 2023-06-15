@@ -130,7 +130,7 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
             findViewById<ProgressBar>(R.id.progress).isVisible = isRunning
         }
 
-
+        //rescan folders
         LibraryIndexScheduler.scheduleLibrarySync(
             getApplicationContext()
         )
@@ -147,6 +147,15 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
                 }
             }
         }
+    }
+
+
+    override fun onResume(){    
+        super.onResume()
+        //rescan folders
+        LibraryIndexScheduler.scheduleLibrarySync(
+            getApplicationContext()
+        )
     }
 
     override fun onPrepareOptionsMenu(menu: Menu): Boolean {
