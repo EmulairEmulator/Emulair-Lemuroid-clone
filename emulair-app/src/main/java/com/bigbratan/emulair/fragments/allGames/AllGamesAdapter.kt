@@ -58,9 +58,9 @@ class AllGamesAdapter(
     private val baseLayout: Int,
     private val gameInteractor: GameInteractor,
     private val coverLoader: CoverLoader
-) : PagingDataAdapter<Game, com.bigbratan.emulair.fragments.allGames.AllGameViewHolder>(Game.DIFF_CALLBACK) {
+) : PagingDataAdapter<Game, AllGameViewHolder>(Game.DIFF_CALLBACK) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): com.bigbratan.emulair.fragments.allGames.AllGameViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AllGameViewHolder {
         return com.bigbratan.emulair.fragments.allGames.AllGameViewHolder(
             LayoutInflater.from(
                 parent.context
@@ -68,11 +68,11 @@ class AllGamesAdapter(
         )
     }
 
-    override fun onBindViewHolder(holder: com.bigbratan.emulair.fragments.allGames.AllGameViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: AllGameViewHolder, position: Int) {
         getItem(position)?.let { holder.bind(it, gameInteractor, coverLoader) }
     }
 
-    override fun onViewRecycled(holder: com.bigbratan.emulair.fragments.allGames.AllGameViewHolder) {
+    override fun onViewRecycled(holder: AllGameViewHolder) {
         holder.unbind(coverLoader)
     }
 }
