@@ -18,6 +18,7 @@
     <string name="pref_key_enable_device_rumble" translatable="false">enable_device_rumble</string>
     <string name="pref_key_max_cache_size" translatable="false">max_cache_size_bytes</string>
     <string name="pref_key_allow_direct_game_load" translatable="false">allow_direct_game_load</string>
+    <string name="pref_key_theme" translatable="false">theme</string>
 
     <string name="pref_key_save_sync_auto" translatable="false">save_sync_auto</string>
     <string name="pref_key_save_sync_enable" translatable="false">save_sync_enable</string>
@@ -27,6 +28,20 @@
     <string name="pref_key_autorotate" translatable="false">autorotate</string>
 
     <string name="pref_key_shader_filter" translatable="false">shader_filter</string>
+
+    <string-array name="pref_key_theme_names" translatable="false">
+        <item>Light Theme</item>
+        <item>Dark Theme</item>
+        <item>AMOLED Theme</item>
+        <item>Material You Theme</item>
+    </string-array>
+
+    <string-array name="pref_key_theme_values" translatable="false">
+        <item>light_theme</item>
+        <item>dark_theme</item>
+        <item>amoled_theme</item>
+        <item>material_you_theme</item>
+    </string-array>
 
     <string-array translatable="false" name="pref_key_haptic_feedback_mode_values">
         <item>none</item>

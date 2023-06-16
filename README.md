@@ -68,7 +68,7 @@ This feature hasn't been implemented yet.
 - [x] An info screen containing frequently asked questions and other useful stuff
 - [x] A profile screen used for easily connecting to RetroAchievements and syncing save files to the cloud
 - [x] Light Theme, AMOLED Theme, Material You Theme (previously there was only a Dark Theme)
-- [x] Set what screen orientation games should be opened in (landscape/portrait/follow device)
+- [x] Bypass screen lock to rotate the screen whenever you want
 - [x] Automatically rescan internal directories on app restart and resume
 - [x] Sync save files with Google Firebase
 - [x] Button prompts before (almost) every important action
