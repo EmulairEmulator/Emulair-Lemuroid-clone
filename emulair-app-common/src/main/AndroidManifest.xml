@@ -19,6 +19,6 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<manifest package="com.bigbratan.emulair.common"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:ignore="MissingLeanbackLauncher,ImpliedTouchscreenHardware,MissingLeanbackSupport"/>
+<manifest xmlns:tools="http://schemas.android.com/tools"
+    package="com.bigbratan.emulair.common"
+    tools:ignore="MissingLeanbackLauncher,ImpliedTouchscreenHardware,MissingLeanbackSupport" />
