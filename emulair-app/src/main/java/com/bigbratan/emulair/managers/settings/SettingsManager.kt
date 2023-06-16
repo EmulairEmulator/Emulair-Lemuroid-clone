@@ -29,6 +29,8 @@ class SettingsManager(private val context: Context, sharedPreferences: Lazy<Shar
         context.resources.getStringArray(R.array.pref_key_shader_filter_values).first()
     )
 
+    suspend fun screenAutorotate() = booleanPreference(R.string.pref_key_autorotate,false)
+
     suspend fun tiltSensitivity() = floatPreference(R.string.pref_key_tilt_sensitivity_index, 10, 0.6f)
 
     suspend fun autoSaveSync() = booleanPreference(R.string.pref_key_save_sync_auto, false)

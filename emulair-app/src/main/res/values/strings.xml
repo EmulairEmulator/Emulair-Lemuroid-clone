@@ -50,6 +50,7 @@
     <string name="search_empty_view_message">No recent searches found</string>
 
     <!-- ACCOUNT ACTIVITY -->
+    <string name="account_empty_view_message">Account not yet implemented</string>
 
     <!-- HOME FRAGMENT - VIEWS -->
     <string name="home_empty_title">Select ROMs directory</string>
@@ -130,6 +131,8 @@
 
     <!-- SETTINGS FRAGMENT - GENERAL -->
     <string name="settings_category_general">General</string>
+    <string name="settings_general_autorotate_title">Screen Autorotation</string>
+    <string name="settings_general_autorotate_description">Follow device orientation regardless of orientation lock</string>
     <string name="settings_general_display_filter_title">Display filter</string>
     <string name="settings_general_display_filter_auto_option">Auto</string>
     <string name="settings_general_display_filter_sharp_option">Sharp</string>

@@ -2,6 +2,7 @@ package com.bigbratan.emulair.activities.main
 
 // import android.widget.Toolbar
 import android.app.Activity
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -9,6 +10,8 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ImageButton
 import android.widget.ProgressBar
+import androidx.core.app.ActivityCompat
+import androidx.core.app.ActivityOptionsCompat
 import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
@@ -16,6 +19,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.bigbratan.emulair.R
+import com.bigbratan.emulair.activities.account.AccountActivity
 import com.bigbratan.emulair.activities.game.BaseGameActivity
 import com.bigbratan.emulair.activities.game.GameLauncher
 import com.bigbratan.emulair.activities.info.InfoActivity
@@ -34,6 +38,7 @@ import com.bigbratan.emulair.fragments.search.SearchFragment
 import com.bigbratan.emulair.fragments.settings.*
 import com.bigbratan.emulair.fragments.systemGames.SystemGamesFragment
 import com.bigbratan.emulair.fragments.systems.SystemsFragment
+import com.bigbratan.emulair.managers.coresLibrary.LibraryIndexScheduler
 import com.bigbratan.emulair.managers.interaction.GameInteractor
 import com.bigbratan.emulair.managers.input.InputDeviceManager
 import com.bigbratan.emulair.managers.saveSync.SaveSyncWork
@@ -43,8 +48,10 @@ import dagger.Provides
 import dagger.android.ContributesAndroidInjector
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
+
 import java.util.*
 import javax.inject.Inject
+
 
 @OptIn(DelicateCoroutinesApi::class)
 class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
@@ -93,13 +100,27 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
         bottomNavView.setupWithNavController(navController)
 
         val buttonInfo: ImageButton = findViewById(R.id.main_info)
-        buttonInfo.setOnClickListener {
-            val intent = Intent(this@MainActivity, InfoActivity::class.java)
-            startActivity(intent)
-        }
-
         val buttonSearch: ImageButton = findViewById(R.id.main_search)
         val buttonAccount: ImageButton = findViewById(R.id.main_account)
+
+        buttonInfo.setOnClickListener {
+            val intent = Intent(this@MainActivity, InfoActivity::class.java)
+            /*intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            val options = ActivityOptions.makeCustomAnimation(this, R.anim.slide_in_left, 0)
+            intent.putExtra("noTransition", true)
+            startActivity(intent, options.toBundle())*/
+            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(this)
+            ActivityCompat.startActivity(this, intent, options.toBundle())
+        }
+        buttonAccount.setOnClickListener {
+            val intent = Intent(this@MainActivity, AccountActivity::class.java)
+            /*intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            val options = ActivityOptions.makeCustomAnimation(this, R.anim.slide_in_right, 0)
+            intent.putExtra("noTransition", true)
+            startActivity(intent, options.toBundle())*/
+            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(this)
+            ActivityCompat.startActivity(this, intent, options.toBundle())
+        }
         buttonSearch.setOnClickListener {
             navController.navigateUp()
             navController.navigate(R.id.main_search)
@@ -132,7 +153,12 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
         mainViewModel?.displayProgress?.observe(this) { isRunning ->
             findViewById<ProgressBar>(R.id.progress).isVisible = isRunning
         }
+
+        LibraryIndexScheduler.scheduleLibrarySync(
+            applicationContext
+        )
     }
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -144,6 +170,13 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
                 }
             }
         }
+    }
+
+    override fun onResume(){    
+        super.onResume()
+        LibraryIndexScheduler.scheduleLibrarySync(
+            applicationContext
+        )
     }
 
     override fun onPrepareOptionsMenu(menu: Menu): Boolean {

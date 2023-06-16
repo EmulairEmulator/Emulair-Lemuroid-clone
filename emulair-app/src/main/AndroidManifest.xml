@@ -41,6 +41,11 @@
             android:theme="@style/Theme.EmulairMaterial" />
 
         <activity
+            android:name=".activities.account.AccountActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
+            android:theme="@style/Theme.EmulairMaterial" />
+
+        <activity
             android:name=".activities.game.GameActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
             android:launchMode="singleInstance"

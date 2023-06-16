@@ -2,6 +2,14 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <SwitchPreferenceCompat
+        android:defaultValue="false"
+        android:key="@string/pref_key_autorotate"
+        android:layout="@layout/layout_preference_main_switch_top"
+        android:summary="@string/settings_general_autorotate_description"
+        android:title="@string/settings_general_autorotate_title"
+        app:iconSpaceReserved="false" />
+
     <PreferenceCategory
         android:layout="@layout/layout_preference_universal_category_top"
         android:title="@string/settings_category_roms"
@@ -42,7 +50,7 @@
             android:entries="@array/pref_key_shader_filter_display_names"
             android:entryValues="@array/pref_key_shader_filter_values"
             android:key="@string/pref_key_shader_filter"
-            android:layout="@layout/layout_preference_main_list_top"
+            android:layout="@layout/layout_preference_main_list_middle"
             android:title="@string/settings_general_display_filter_title"
             app:iconSpaceReserved="false"
             app:useSimpleSummaryProvider="true" />
