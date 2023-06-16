@@ -37,9 +37,8 @@
 
         <activity
             android:name=".activities.info.InfoActivity"
-            android:label="@string/top_info"
             android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
-            android:theme="@style/Theme.EmulairMaterial.Game" />
+            android:theme="@style/Theme.EmulairMaterial" />
 
         <activity
             android:name=".activities.game.GameActivity"
