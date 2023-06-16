@@ -23,9 +23,6 @@ import com.fredporciuncula.flow.preferences.FlowSharedPreferences
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
-import android.content.SharedPreferences
-import com.bigbratan.emulair.activities.main.MainActivity
-
 
 class SettingsFragment : PreferenceFragmentCompat() {
 

@@ -76,9 +76,7 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
         PreferenceManager.getDefaultSharedPreferences(this)
     }
     private val settingsManager by lazy {
-        SettingsManager(this, object : Lazy<SharedPreferences> {
-            override fun get(): SharedPreferences = sharedPreferences
-        })
+        SettingsManager(this) { sharedPreferences }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -87,16 +85,6 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
         // window.navigationBarColor = SurfaceColors.SURFACE_0.getColor(this)
         // window.statusBarColor = SurfaceColors.SURFACE_0.getColor(this)
         setContentView(R.layout.activity_main)
-        lifecycleScope.launch {
-            val themeFlow = settingsManager.appTheme()
-            val theme = themeFlow.first().toString()
-            when (theme) {
-                "light_theme" -> setTheme(R.style.Theme_EmulairMaterialLight)
-                "dark_theme" -> setTheme(R.style.Theme_EmulairMaterialDark)
-                "amoled_theme" -> setTheme(R.style.Theme_EmulairMaterialAMOLED)
-                "material_you_theme" -> setTheme(R.style.Theme_EmulairMaterialYou)
-            }
-        }
         initializeActivity()
     }
 
@@ -110,6 +98,13 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
 
         GlobalScope.safeLaunch {
             reviewManager.initialize(applicationContext)
+            val themeFlow = settingsManager.appTheme()
+            when (themeFlow.first().toString()) {
+                "light_theme" -> setTheme(R.style.Theme_EmulairMaterialLight)
+                "dark_theme" -> setTheme(R.style.Theme_EmulairMaterialDark)
+                "amoled_theme" -> setTheme(R.style.Theme_EmulairMaterialAMOLED)
+                "material_you_theme" -> setTheme(R.style.Theme_EmulairMaterialYou)
+            }
         }
 
         val bottomNavView: BottomNavigationView = findViewById(R.id.bottom_nav_view)

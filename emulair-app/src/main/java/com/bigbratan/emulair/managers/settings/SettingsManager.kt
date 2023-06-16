@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceManager
 import com.bigbratan.emulair.common.utils.preferences.DummyDataStore.putString
 
-class SettingsManager(private val context: Context, sharedPreferences: Lazy<SharedPreferences>)  {
+class SettingsManager(private val context: Context, sharedPreferences: Lazy<SharedPreferences>) {
 
     private val sharedPreferences by lazy { FlowSharedPreferences(sharedPreferences.get()) }
 
