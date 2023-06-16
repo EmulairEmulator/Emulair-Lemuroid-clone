@@ -110,14 +110,6 @@ dependencies {
     "nogplayImplementation"(project(":emulair-app-build-nogplay"))
     "gplayImplementation"(project(":emulair-app-build-gplay"))
 
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    androidTestImplementation("androidx.test:core:1.5.0")
-    androidTestImplementation("androidx.test:runner:1.5.2")
-    androidTestImplementation("androidx.test:rules:1.5.0")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.ext:truth:1.5.0")
-    androidTestImplementation("org.testng:testng:7.4.0")
-
     implementation(deps.libs.material)
     implementation(deps.libs.androidx.navigation.navigationFragment)
     implementation(deps.libs.androidx.navigation.navigationUi)
