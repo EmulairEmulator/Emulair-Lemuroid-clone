@@ -36,8 +36,7 @@
         </activity>
 
         <activity
-            android:name=".activities.profile.ProfileActivity"
-            android:label="@string/top_profile"
+            android:name=".activities.account.AccountActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
             android:theme="@style/Theme.EmulairMaterial"  />
 

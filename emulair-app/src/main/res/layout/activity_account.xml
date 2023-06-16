@@ -5,11 +5,11 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <TextView
-        android:id="@+id/profileTextView"
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/accountTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Profile Activity"
-        android:textSize="24sp" />
+        android:text="@string/account_empty_view_message"
+        android:textSize="16sp" />
 
 </LinearLayout>

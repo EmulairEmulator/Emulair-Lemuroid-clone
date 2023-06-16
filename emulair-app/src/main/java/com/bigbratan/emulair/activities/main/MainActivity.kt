@@ -16,6 +16,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.bigbratan.emulair.R
+import com.bigbratan.emulair.activities.account.AccountActivity
 import com.bigbratan.emulair.activities.game.BaseGameActivity
 import com.bigbratan.emulair.activities.game.GameLauncher
 import com.bigbratan.emulair.common.activities.retrograde.RetrogradeAppCompatActivity
@@ -97,8 +98,9 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
         val buttonInfo: ImageButton = findViewById(R.id.main_info)
         val buttonSearch: ImageButton = findViewById(R.id.main_search)
         val buttonAccount: ImageButton = findViewById(R.id.main_account)
+
         buttonAccount.setOnClickListener {
-            val intent = Intent(this@MainActivity, ProfileActivity::class.java)
+            val intent = Intent(this@MainActivity, AccountActivity::class.java)
             startActivity(intent)
         }
         buttonSearch.setOnClickListener {

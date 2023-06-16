@@ -25,7 +25,7 @@
     <string name="bottom_settings">Settings</string>
     <string name="top_info">Info</string>
     <string name="top_search">Search</string>
-    <string name="top_profile">Profile</string>
+    <string name="top_account">Account</string>
 
     <!-- MAIN ACTIVITY - FRAGMENTS' TITLES -->
     <string name="title_home">Games</string>
@@ -50,6 +50,7 @@
     <string name="search_empty_view_message">No recent searches found</string>
 
     <!-- ACCOUNT ACTIVITY -->
+    <string name="account_empty_view_message">Account not yet implemented</string>
 
     <!-- HOME FRAGMENT - VIEWS -->
     <string name="home_empty_title">Select ROMs directory</string>
