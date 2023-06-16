@@ -20,7 +20,7 @@
 
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Theme.EmulairMaterial.Invisible" parent="Theme.Material3.Dark.NoActionBar">
+    <style name="Theme.EmulairMaterialYou.Invisible" parent="Theme.Material3.Dark.NoActionBar">
         <item name="android:background">#00000000</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
