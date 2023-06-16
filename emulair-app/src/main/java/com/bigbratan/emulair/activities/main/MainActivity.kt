@@ -2,6 +2,7 @@ package com.bigbratan.emulair.activities.main
 
 // import android.widget.Toolbar
 import android.app.Activity
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -9,6 +10,8 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ImageButton
 import android.widget.ProgressBar
+import androidx.core.app.ActivityCompat
+import androidx.core.app.ActivityOptionsCompat
 import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
@@ -19,6 +22,7 @@ import com.bigbratan.emulair.R
 import com.bigbratan.emulair.activities.account.AccountActivity
 import com.bigbratan.emulair.activities.game.BaseGameActivity
 import com.bigbratan.emulair.activities.game.GameLauncher
+import com.bigbratan.emulair.activities.info.InfoActivity
 import com.bigbratan.emulair.common.activities.retrograde.RetrogradeAppCompatActivity
 import com.bigbratan.emulair.common.managers.injection.PerActivity
 import com.bigbratan.emulair.common.managers.injection.PerFragment
@@ -99,9 +103,23 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
         val buttonSearch: ImageButton = findViewById(R.id.main_search)
         val buttonAccount: ImageButton = findViewById(R.id.main_account)
 
+        buttonInfo.setOnClickListener {
+            val intent = Intent(this@MainActivity, InfoActivity::class.java)
+            /*intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            val options = ActivityOptions.makeCustomAnimation(this, R.anim.slide_in_left, 0)
+            intent.putExtra("noTransition", true)
+            startActivity(intent, options.toBundle())*/
+            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(this)
+            ActivityCompat.startActivity(this, intent, options.toBundle())
+        }
         buttonAccount.setOnClickListener {
             val intent = Intent(this@MainActivity, AccountActivity::class.java)
-            startActivity(intent)
+            /*intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            val options = ActivityOptions.makeCustomAnimation(this, R.anim.slide_in_right, 0)
+            intent.putExtra("noTransition", true)
+            startActivity(intent, options.toBundle())*/
+            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(this)
+            ActivityCompat.startActivity(this, intent, options.toBundle())
         }
         buttonSearch.setOnClickListener {
             navController.navigateUp()
@@ -136,9 +154,8 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
             findViewById<ProgressBar>(R.id.progress).isVisible = isRunning
         }
 
-        //rescan folders
         LibraryIndexScheduler.scheduleLibrarySync(
-            getApplicationContext()
+            applicationContext
         )
     }
 
@@ -155,12 +172,10 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
         }
     }
 
-
     override fun onResume(){    
         super.onResume()
-        //rescan folders
         LibraryIndexScheduler.scheduleLibrarySync(
-            getApplicationContext()
+            applicationContext
         )
     }
 

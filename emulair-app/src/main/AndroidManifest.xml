@@ -36,9 +36,14 @@
         </activity>
 
         <activity
+            android:name=".activities.info.InfoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
+            android:theme="@style/Theme.EmulairMaterial" />
+
+        <activity
             android:name=".activities.account.AccountActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
-            android:theme="@style/Theme.EmulairMaterial"  />
+            android:theme="@style/Theme.EmulairMaterial" />
 
         <activity
             android:name=".activities.game.GameActivity"
