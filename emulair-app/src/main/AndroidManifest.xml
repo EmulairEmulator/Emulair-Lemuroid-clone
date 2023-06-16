@@ -50,7 +50,7 @@
             android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
             android:launchMode="singleInstance"
             android:process=":game"
-            android:theme="@style/Theme.EmulairMaterial.Game" />
+            android:theme="@style/Theme.EmulairMaterialYou.Game" />
 
         <service
             android:name=".activities.game.GameService"
@@ -60,19 +60,19 @@
             android:name=".activities.pauseMenu.PauseMenuActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
             android:process=":game"
-            android:theme="@style/Theme.EmulairMaterial.Menu" />
+            android:theme="@style/Theme.EmulairMaterialYou.Menu" />
 
         <activity
             android:name=".fragments.settings.GamePadBindingActivity"
-            android:theme="@style/Theme.EmulairMaterial.Invisible" />
+            android:theme="@style/Theme.EmulairMaterialYou.Invisible" />
 
         <activity
             android:name=".managers.settings.StorageFrameworkPickerLauncher"
-            android:theme="@style/Theme.EmulairMaterial.Invisible" />
+            android:theme="@style/Theme.EmulairMaterialYou.Invisible" />
 
         <activity
             android:name=".activities.crash.GameCrashActivity"
-            android:theme="@style/Theme.EmulairMaterial.Game" />
+            android:theme="@style/Theme.EmulairMaterialYou.Game" />
 
         <receiver android:name=".managers.coresLibrary.LibraryIndexBroadcastReceiver" />
         <receiver android:name=".managers.coresLibrary.CoreUpdateBroadcastReceiver" />

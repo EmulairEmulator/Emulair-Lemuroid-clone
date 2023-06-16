@@ -31,15 +31,12 @@ class SettingsManager(private val context: Context, sharedPreferences: Lazy<Shar
         R.string.pref_key_shader_filter,
         context.resources.getStringArray(R.array.pref_key_shader_filter_values).first()
     )
-
-<<<<<<< HEAD
     suspend fun appTheme() = stringPreference(
-            R.string.pref_key_theme,
-            context.resources.getStringArray(R.array.pref_key_theme_values).first()
+        R.string.pref_key_theme,
+        context.resources.getStringArray(R.array.pref_key_theme_values).first()
     )
-=======
+
     suspend fun screenAutorotate() = booleanPreference(R.string.pref_key_autorotate,false)
->>>>>>> d2058d97d85541ed49e28d38ab14745717665a6d
 
     suspend fun tiltSensitivity() = floatPreference(R.string.pref_key_tilt_sensitivity_index, 10, 0.6f)
 

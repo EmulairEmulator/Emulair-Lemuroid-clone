@@ -131,12 +131,9 @@
 
     <!-- SETTINGS FRAGMENT - GENERAL -->
     <string name="settings_category_general">General</string>
-<<<<<<< HEAD
-    <string name="settings_general_display_theme_title">Choose theme</string>
-=======
+    <string name="settings_general_app_theme_title">App theme</string>
     <string name="settings_general_autorotate_title">Screen autorotation</string>
     <string name="settings_general_autorotate_description">Follow device orientation regardless of orientation lock</string>
->>>>>>> d2058d97d85541ed49e28d38ab14745717665a6d
     <string name="settings_general_display_filter_title">Display filter</string>
     <string name="settings_general_display_filter_auto_option">Auto</string>
     <string name="settings_general_display_filter_sharp_option">Sharp</string>
