@@ -99,7 +99,7 @@ abstract class EmulairApplicationModule {
 
     @PerActivity
     @ContributesAndroidInjector
-    abstract fun profileActivity(): AccountActivity
+    abstract fun accountActivity(): AccountActivity
 
     @PerActivity
     @ContributesAndroidInjector(modules = [PauseMenuActivity.Module::class])
