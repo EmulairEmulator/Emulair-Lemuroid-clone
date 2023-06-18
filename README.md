@@ -111,14 +111,14 @@ This feature hasn't been implemented yet.
 - [ ] Change filter on a per game or per system basis (not just global)
 - [ ] Rebind controls on a per game or per system basis (not just global)
 
-**Note: The above features won't be released in this exact order. Some features may be changed or even removed from this list.
+**Note: The above features won't be released in this exact order. Some features may be changed or even removed from this list.**
 
 ## Removed Features (from Lemuroid)
 - Android TV support
 - Turn games into shortcuts for your launcher
 - Sync saves on Google Drive
 
-**Note: Some features will be brought back later.
+**Note: Some features will be brought back later.**
 
 ## Name Meaning
 "Emulair" is a triple entendre and the name is inspired by the Lawnchair launcher (not associated with Emulair). Firstly, "Emulair" kind of sounds like the word "Emulator" (if you try hard enough). Secondly, "Emulair" means "lair of the emu bird", an animal whose name is similar to the abbreviation of the word "emulator". Lastly, "Emulair" also means "lair for all your emulators", which is similar in name to "Vimm's Lair", a place for preserving video games.
