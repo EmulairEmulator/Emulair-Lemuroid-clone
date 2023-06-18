@@ -59,43 +59,50 @@ This feature hasn't been implemented yet.
 - BIOSes scanning and indexing
 - Gamepad support (with button remapping included)
 - .zip ROMs support
-- Local, offline multiplayer (up to 4 controllers, only in games where you can select more than one player)
+- Local, offline multiplayer support (up to 4 controllers, only in games where you can select more than one player)
 
 ## Added Features
-- [x] A "Jump back in" section on the "Games" page, along with "Recents", "Favorites" and "All Games"
 - [x] Complete visual redesign with consistent sizing, spacing and corner radius
 - [x] Complete conversion to Material Design 3 Components
+- [x] A user friendly and easier to navigate app structure
 - [x] An info screen containing frequently asked questions and other useful stuff
 - [x] A profile screen used for easily connecting to RetroAchievements and syncing save files to the cloud
+- [x] A themed app icon for Android 13+ devices
+- [x] A "Jump back in" section on the "Games" page, along with "Recents", "Favorites" and "All Games"
+- [x] Separate screens with vertical lists for "All Games" and "Favorites" (i.e. they're not just horizontal carousels anymore)
+- [x] Button prompts before (almost) every important action
 - [x] Light Theme, AMOLED Theme, Material You Theme (previously there was only a Dark Theme)
+- [x] New in-app icons
+- [x] New sprites for systems
 - [x] Bypass screen lock to rotate the screen whenever you want
 - [x] Automatically rescan internal directories on app restart and resume
 - [x] Sync save files with Google Firebase
-- [x] Button prompts before (almost) every important action
-- [x] A themed app icon for Android 13+ devices
 - [x] Fixes for bugs that were carried over from Lemuroid
 - [x] Plenty QOL features, updates and fixes
 
 ## Upcoming Features
 - [ ] More emulation cores (almost all cores found on RetroArch)
 - [ ] More exposed settings for all the cores
+- [ ] More state slots
+- [ ] More save file formats support
+- [ ] More animations and effects
 - [ ] Cheat codes support
 - [ ] RetroAchievements support
 - [ ] .7z ROMs support
-- [ ] A user-friendly intro screen concisely explaining how to use the app
-- [ ] Set on-screen buttons' transparency
+- [ ] File saving to storage/emulated/0
+- [ ] Automatic state saving every x seconds
+- [ ] Custom touchscreen gamepad transparency
+- [ ] Custom volume, fast forward speed and vibration strength
 - [ ] Different app layout for tablets and foldables
 - [ ] Different app layout for phones in landscape orientation
-- [ ] Automatically save state every x seconds
-- [ ] More save file formats support
 - [ ] An updated Libretro games database with more fields (e.g. release year, release month, etc.)
-- [ ] Add systems to a "Starred" list
-- [ ] Long press a game to access a details screen
-- [ ] More animations
+- [ ] A user-friendly intro screen concisely explaining how to use the app
+- [ ] A "Starred Systems" list
+- [ ] A details screen accessible by long-pressing a game or a system
 - [ ] A custom splash screen for Android 12+ devices
 - [ ] A "Close menu" button accessible from the pause menu, so users don't have to click their device's back button every time they want to unpause a game
 - [ ] Choose if you want to automatically fall back on other emulators or not, in case a game doesn't work (this implies unlocking the option to switch between FinalBurn Neo and MAME 2003-Plus)
-- [ ] Easily access and manage all your files from an app-specific folder inside storage/emulated/0
+- [ ] Change filter on a per system basis
 
 Note: The above features won't be released in this exact order. Concerning the SDM project, not every feature on this list will be implemented (the minimum requirement is 10). Regarding the development after the university project is finished, some features may be changed or even removed. If you don't know what "SDM" means or what Emulair has to do with any kind of university, check the [Wiki page](https://github.com/RaduBratan/Emulair/wiki/5.-More-about-Emulair) for more info on why the project exists.
 
