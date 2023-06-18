@@ -66,7 +66,7 @@ This feature hasn't been implemented yet.
 - [x] Complete conversion to Material Design 3 Components
 - [x] An easier to navigate app structure
 - [x] An info screen containing frequently asked questions and other useful stuff
-- [x] A profile screen used for easily connecting to RetroAchievements and syncing save files to the cloud
+- [x] A profile screen used for easily connecting to RetroAchievements
 - [x] A themed app icon for Android 13+ devices
 - [x] A "Jump back in" section on the "Games" page, along with "Recents", "Favorites" and "All Games"
 - [x] Separate screens with vertical lists for "All Games" and "Favorites" (i.e. they're not just horizontal carousels anymore)
@@ -76,7 +76,7 @@ This feature hasn't been implemented yet.
 - [x] New sprites for systems
 - [x] Bypass screen lock to rotate the screen whenever you want
 - [x] Automatically rescan internal directories on app restart and resume
-- [x] Sync save files with Google Firebase
+- [x] Sync save files with Google Firebase (added in separate branch)
 - [x] Fixes for bugs that were carried over from Lemuroid
 - [x] Plenty QOL features, updates and fixes
 
