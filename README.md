@@ -86,9 +86,14 @@ This feature hasn't been implemented yet.
 - [ ] More state slots
 - [ ] More save file formats support
 - [ ] More animations and effects
+- [ ] Better ROM scraping and name detection
+- [ ] Better NDS/3DS touchscreen controls (they can now overlap the screens)
 - [ ] Cheat codes support
 - [ ] RetroAchievements support
 - [ ] .7z ROMs support
+- [ ] Save/load state undoing/redoing support
+- [ ] Search filters support
+- [ ] Full phone sensors support (i.e. emulators can now take advantage of tilt sensors, cameras, microphones, etc.)
 - [ ] File saving to storage/emulated/0
 - [ ] Automatic state saving every x seconds
 - [ ] Custom touchscreen gamepad transparency
@@ -101,17 +106,19 @@ This feature hasn't been implemented yet.
 - [ ] A details screen accessible by long-pressing a game or a system
 - [ ] A custom splash screen for Android 12+ devices
 - [ ] A "Close menu" button accessible from the pause menu, so users don't have to click their device's back button every time they want to unpause a game
+- [ ] Set core on a per game basis
 - [ ] Choose if you want to automatically fall back on other emulators or not, in case a game doesn't work (this implies unlocking the option to switch between FinalBurn Neo and MAME 2003-Plus)
-- [ ] Change filter on a per system basis
+- [ ] Change filter on a per game or per system basis (not just global)
+- [ ] Rebind controls on a per game or per system basis (not just global)
 
-Note: The above features won't be released in this exact order. Concerning the SDM project, not every feature on this list will be implemented (the minimum requirement is 10). Regarding the development after the university project is finished, some features may be changed or even removed. If you don't know what "SDM" means or what Emulair has to do with any kind of university, check the [Wiki page](https://github.com/RaduBratan/Emulair/wiki/5.-More-about-Emulair) for more info on why the project exists.
+**Note: The above features won't be released in this exact order. Some features may be changed or even removed from this list.
 
 ## Removed Features (from Lemuroid)
 - Android TV support
 - Turn games into shortcuts for your launcher
 - Sync saves on Google Drive
 
-Note: Some features will be brought back later.
+**Note: Some features will be brought back later.
 
 ## Name Meaning
 "Emulair" is a triple entendre and the name is inspired by the Lawnchair launcher (not associated with Emulair). Firstly, "Emulair" kind of sounds like the word "Emulator" (if you try hard enough). Secondly, "Emulair" means "lair of the emu bird", an animal whose name is similar to the abbreviation of the word "emulator". Lastly, "Emulair" also means "lair for all your emulators", which is similar in name to "Vimm's Lair", a place for preserving video games.
@@ -123,4 +130,4 @@ This program is free software: you can redistribute it and/or modify it under th
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-Before downloading the source code of this software to use it in a project (no matter if it's private or public), please make sure that you understand what the GNU General Public License v3.0 allows you, as well as requires you to do.
+Before downloading the source code of this software to use it in a project (no matter if it's private or public), please make sure that you understand what the GNU General Public License v3.0 allows you, forbids you as well as requires you to do.
