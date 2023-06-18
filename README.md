@@ -64,7 +64,7 @@ This feature hasn't been implemented yet.
 ## Added Features
 - [x] Complete visual redesign with consistent sizing, spacing and corner radius
 - [x] Complete conversion to Material Design 3 Components
-- [x] A user friendly and easier to navigate app structure
+- [x] An easier to navigate app structure
 - [x] An info screen containing frequently asked questions and other useful stuff
 - [x] A profile screen used for easily connecting to RetroAchievements and syncing save files to the cloud
 - [x] A themed app icon for Android 13+ devices
