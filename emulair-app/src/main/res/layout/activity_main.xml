@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <!-- android:id="@+id/external_container" -->
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="0dp"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="true"
+        android:theme="@style/Theme.EmulairMaterialYou">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -86,10 +85,11 @@
         android:id="@+id/bottom_nav_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/Theme.EmulairMaterialYou"
         app:elevation="0dp"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/menu_nav_bottom" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
 
-<!-- app:itemBackground="@color/md_theme_dark_background" -->
+    <!-- app:itemBackground="@color/md_theme_dark_background" -->

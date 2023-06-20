@@ -17,9 +17,8 @@
         <item name="colorErrorContainer">@color/md_theme_dark_errorContainer</item>
         <item name="colorOnError">@color/md_theme_dark_onError</item>
         <item name="colorOnErrorContainer">@color/md_theme_dark_onErrorContainer</item>
-        <item name="android:colorBackground">@color/md_theme_dark_background</item> <!-- SUPER DUPER IMPORTANT!!! -->
         <item name="colorOnBackground">@color/md_theme_dark_onBackground</item>
-        <item name="colorSurface">@color/md_theme_dark_surface</item> <!-- SUPER DUPER IMPORTANT!!! -->
+        <item name="colorSurface">@color/md_theme_dark_surface</item>
         <item name="colorOnSurface">@color/md_theme_dark_onSurface</item>
         <item name="colorSurfaceVariant">@color/md_theme_dark_surfaceVariant</item>
         <item name="colorOnSurfaceVariant">@color/md_theme_dark_onSurfaceVariant</item>
@@ -28,13 +27,41 @@
         <item name="colorSurfaceInverse">@color/md_theme_dark_inverseSurface</item>
         <item name="colorPrimaryInverse">@color/md_theme_dark_primaryInverse</item>
         <!-- -->
-        <item name="materialCardViewStyle">?attr/materialCardViewElevatedStyle</item>
-        <item name="android:statusBarColor">?attr/colorSurface</item>
-        <item name="android:navigationBarColor">?attr/colorSurface</item>
-        <item name="elevationOverlayColor">?attr/colorOnSurface</item>
+        <item name="android:windowBackground">@color/md_theme_dark_background</item>
+        <item name="android:colorBackground">@color/md_theme_dark_background</item>
+        <item name="appBarLayoutStyle">@style/Theme.EmulairMaterialYou.AppBar</item>
+        <item name="bottomNavigationStyle">@style/Theme.EmulairMaterialYou.BottomNav</item>
+        <item name="materialCardViewStyle">@style/Theme.EmulairMaterialYou.CardView</item>
+        <item name="materialButtonStyle">@style/Theme.EmulairMaterialYou.Button</item>
+        <item name="android:statusBarColor">@color/md_theme_dark_background</item>
+        <item name="android:navigationBarColor">@color/md_theme_dark_background</item>
+        <item name="elevationOverlayColor">@color/md_theme_dark_onSurface</item>
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
         <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
     </style>
+
+    <!-- -->
+
+    <style name="Theme.EmulairMaterialYou.CardView" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">@color/md_theme_dark_surface</item>
+    </style>
+
+    <style name="Theme.EmulairMaterialYou.AppBar" parent="Widget.Material3.Toolbar">
+        <item name="backgroundColor">@color/md_theme_dark_background</item>
+    </style>
+
+    <style name="Theme.EmulairMaterialYou.BottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@color/md_theme_dark_background</item>
+    </style>
+
+    <style name="Theme.EmulairMaterialYou.Button" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/md_theme_dark_secondary</item>
+    </style>
+
+    <style name="AlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+    </style>
+
+    <!-- -->
 
     <style name="Theme.EmulairMaterialYou.Menu" parent="Theme.EmulairMaterialYou">
         <item name="android:statusBarColor">@android:color/black</item>
@@ -133,15 +160,5 @@
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
         <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
     </style>
-
-    <!--
-    <style name="AlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
-        <item name="shapeAppearanceOverlay">@style/AlertDialogOverlay</item>
-    </style>
-
-    <style name="AlertDialogOverlay" parent="">
-        <item name="cornerSize">@dimen/corner_radius</item>
-    </style>
-    -->
 
 </resources>

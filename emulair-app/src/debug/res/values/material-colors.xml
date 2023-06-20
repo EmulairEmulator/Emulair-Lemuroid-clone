@@ -2,7 +2,6 @@
     <color name="main_color">#f44336</color>
     <color name="main_color_light">#ef9a9a</color>
 
-    <!-- Generated using material color builder -->
     <color name="md_theme_light_primary">#BC1714</color>
     <color name="md_theme_light_onPrimary">#FFFFFF</color>
     <color name="md_theme_light_primaryContainer">#FFDAD3</color>
@@ -50,7 +49,8 @@
     <color name="md_theme_dark_onErrorContainer">#FFDAD4</color>
     <color name="md_theme_dark_background">#202125</color> <!-- SUPER DUPER IMPORTANT!!! (was: #211A19) -->
     <color name="md_theme_dark_onBackground">#EDE0DE</color>
-    <color name="md_theme_dark_surface">#202125</color> <!-- SUPER DUPER IMPORTANT!!! (was: #211A19) -->
+    <!-- <color name="md_theme_dark_surface">#202125</color> --> <!-- SUPER DUPER IMPORTANT!!! (was: #211A19) -->
+    <color name="md_theme_dark_surface">#2A292E</color>
     <color name="md_theme_dark_onSurface">#EDE0DE</color>
     <color name="md_theme_dark_surfaceVariant">#534341</color>
     <color name="md_theme_dark_onSurfaceVariant">#D8C2BF</color>

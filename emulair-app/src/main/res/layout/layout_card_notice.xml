@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="200dp"
     android:layout_marginBottom="@dimen/grid_spacing"
-    android:backgroundTint="@color/material_card_color"
     android:clickable="true"
     android:focusable="true"
     app:cardCornerRadius="@dimen/corner_radius"
