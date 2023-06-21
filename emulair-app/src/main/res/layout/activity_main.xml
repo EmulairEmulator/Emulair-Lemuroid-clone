@@ -9,8 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="0dp"
-        android:fitsSystemWindows="true"
-        android:theme="@style/Theme.EmulairMaterialYou">
+        android:fitsSystemWindows="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -85,7 +84,6 @@
         android:id="@+id/bottom_nav_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.EmulairMaterialYou"
         app:elevation="0dp"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/menu_nav_bottom" />

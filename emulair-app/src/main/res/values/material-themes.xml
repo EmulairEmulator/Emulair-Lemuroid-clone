@@ -13,6 +13,7 @@
         <item name="colorOnTertiary">@color/md_theme_dark_onTertiary</item>
         <item name="colorTertiaryContainer">@color/md_theme_dark_tertiaryContainer</item>
         <item name="colorOnTertiaryContainer">@color/md_theme_dark_onTertiaryContainer</item>
+        <item name="colorAccent">@color/md_theme_dark_secondary</item>
         <item name="colorError">@color/md_theme_dark_error</item>
         <item name="colorErrorContainer">@color/md_theme_dark_errorContainer</item>
         <item name="colorOnError">@color/md_theme_dark_onError</item>
@@ -32,7 +33,7 @@
         <item name="appBarLayoutStyle">@style/Theme.EmulairMaterialYou.AppBar</item>
         <item name="bottomNavigationStyle">@style/Theme.EmulairMaterialYou.BottomNav</item>
         <item name="materialCardViewStyle">@style/Theme.EmulairMaterialYou.CardView</item>
-        <item name="materialButtonStyle">@style/Theme.EmulairMaterialYou.Button</item>
+        <item name="materialSwitchStyle">@style/Theme.EmulairMaterialYou.Switch</item>
         <item name="android:statusBarColor">@color/md_theme_dark_background</item>
         <item name="android:navigationBarColor">@color/md_theme_dark_background</item>
         <item name="elevationOverlayColor">@color/md_theme_dark_onSurface</item>
@@ -42,23 +43,50 @@
 
     <!-- -->
 
+    <!-- card -->
     <style name="Theme.EmulairMaterialYou.CardView" parent="Widget.Material3.CardView.Filled">
         <item name="cardBackgroundColor">@color/md_theme_dark_surface</item>
     </style>
 
+    <!-- toolbar -->
     <style name="Theme.EmulairMaterialYou.AppBar" parent="Widget.Material3.Toolbar">
         <item name="backgroundColor">@color/md_theme_dark_background</item>
     </style>
 
+    <!-- bottom nav view -->
     <style name="Theme.EmulairMaterialYou.BottomNav" parent="Widget.Material3.BottomNavigationView">
         <item name="android:background">@color/md_theme_dark_background</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.EmulairMaterialYou.BottomNav</item>
+        <item name="itemActiveIndicatorStyle">@style/Theme.EmulairMaterialYou.BottomNav.ActiveIndicator</item>
     </style>
 
-    <style name="Theme.EmulairMaterialYou.Button" parent="Widget.Material3.Button.TextButton.Dialog">
-        <item name="android:textColor">@color/md_theme_dark_secondary</item>
+    <style name="ThemeOverlay.EmulairMaterialYou.BottomNav" parent="">
+        <!-- icon & text inactive: -->
+        <item name="colorOnSurfaceVariant">@color/md_theme_dark_onSurfaceVariant</item>
+        <!-- icon active: -->
+        <item name="colorOnSecondaryContainer">@color/md_theme_dark_onSecondaryContainer</item>
+        <!-- text active: -->
+        <item name="colorSurface">@color/md_theme_dark_surface</item>
     </style>
 
-    <style name="AlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+    <style name="Theme.EmulairMaterialYou.BottomNav.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/md_theme_dark_surfaceVariant</item>
+    </style>
+
+    <!-- switch -->
+    <style name="Theme.EmulairMaterialYou.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.EmulairMaterialYou.Switch</item>
+    </style>
+
+    <style name="ThemeOverlay.EmulairMaterialYou.Switch" parent="">
+        <!-- track inactive: -->
+        <item name="colorOutline">@color/md_theme_dark_outline</item>
+        <!-- track active: -->
+        <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
+        <!-- thumb inactive: -->
+        <item name="colorSurfaceVariant">@color/md_theme_dark_surfaceVariant</item>
+        <!-- thumb active: -->
+        <item name="colorPrimary">@color/md_theme_dark_secondary</item>
     </style>
 
     <!-- -->
