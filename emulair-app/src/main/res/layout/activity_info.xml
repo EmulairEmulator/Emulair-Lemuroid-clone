@@ -20,8 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:title="@string/top_info"
-                app:titleCentered="true"
-                app:titleTextAppearance="@style/TextAppearance.Material3.TitleMedium" />
+                app:titleCentered="true" />
 
             <ImageButton
                 android:id="@+id/back"
