@@ -31,14 +31,18 @@
         <item name="android:windowBackground">@color/md_theme_dark_background</item>
         <item name="android:colorBackground">@color/md_theme_dark_background</item>
         <item name="appBarLayoutStyle">@style/Theme.EmulairMaterialYou.AppBar</item>
+        <item name="toolbarStyle">@style/Theme.EmulairMaterialYou.Toolbar</item>
         <item name="bottomNavigationStyle">@style/Theme.EmulairMaterialYou.BottomNav</item>
         <item name="materialCardViewStyle">@style/Theme.EmulairMaterialYou.CardView</item>
         <item name="materialSwitchStyle">@style/Theme.EmulairMaterialYou.Switch</item>
         <item name="android:statusBarColor">@color/md_theme_dark_background</item>
         <item name="android:navigationBarColor">@color/md_theme_dark_background</item>
-        <item name="elevationOverlayColor">@color/md_theme_dark_onSurface</item>
+        <!-- <item name="elevationOverlayColor">@color/md_theme_dark_onSurface</item> -->
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="android:textColor">@color/md_theme_dark_onSurface</item>
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
-        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges
+        </item>
     </style>
 
     <!-- -->
@@ -48,9 +52,19 @@
         <item name="cardBackgroundColor">@color/md_theme_dark_surface</item>
     </style>
 
+    <!-- app bar -->
+    <style name="Theme.EmulairMaterialYou.AppBar" parent="Widget.Material3.AppBarLayout">
+        <item name="android:background">@color/md_theme_dark_background</item>
+    </style>
+
     <!-- toolbar -->
-    <style name="Theme.EmulairMaterialYou.AppBar" parent="Widget.Material3.Toolbar">
-        <item name="backgroundColor">@color/md_theme_dark_background</item>
+    <style name="Theme.EmulairMaterialYou.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="titleTextAppearance">@style/TextAppearance.EmulairMaterialYou.Toolbar.TitleLarge</item>
+    </style>
+
+    <style name="TextAppearance.EmulairMaterialYou.Toolbar.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">@color/md_theme_dark_onSurface</item>
+        <item name="android:textSize">16sp</item>
     </style>
 
     <!-- bottom nav view -->
@@ -138,7 +152,8 @@
         <item name="android:navigationBarColor">?attr/colorSurface</item>
         <item name="elevationOverlayColor">?attr/colorOnSurface</item>
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
-        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges
+        </item>
     </style>
 
     <!-- AMOLED Theme -->
@@ -162,7 +177,8 @@
         <item name="android:navigationBarColor">?attr/colorSurface</item>
         <item name="elevationOverlayColor">?attr/colorOnSurface</item>
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
-        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges
+        </item>
     </style>
 
     <!-- Dark Theme -->
@@ -186,7 +202,8 @@
         <item name="android:navigationBarColor">?attr/colorSurface</item>
         <item name="elevationOverlayColor">?attr/colorOnSurface</item>
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
-        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges
+        </item>
     </style>
 
 </resources>
