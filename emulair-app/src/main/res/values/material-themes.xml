@@ -63,11 +63,17 @@
     <!-- toolbar -->
     <style name="Theme.EmulairMaterialYou.Toolbar" parent="Widget.Material3.Toolbar">
         <item name="titleTextAppearance">@style/TextAppearance.EmulairMaterialYou.Toolbar.TitleLarge</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.EmulairMaterialYou.Toolbar</item>
     </style>
 
     <style name="TextAppearance.EmulairMaterialYou.Toolbar.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
         <item name="android:textColor">@color/md_theme_dark_onSurface</item>
         <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ThemeOverlay.EmulairMaterialYou.Toolbar" parent="">
+        <!-- icons and other things: -->
+        <item name="colorControlNormal">@color/md_theme_dark_onSurface</item>
     </style>
 
     <!-- bottom nav view -->
