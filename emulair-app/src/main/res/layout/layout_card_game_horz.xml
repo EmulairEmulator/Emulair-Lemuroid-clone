@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="72dp"
     android:background="@drawable/shape_card_block"
-    android:foreground="@drawable/ripple_card_block"
     android:clickable="true"
-    android:focusable="true">
+    android:focusable="true"
+    android:foreground="@drawable/ripple_card_block">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/imagecard"
@@ -72,7 +72,6 @@
         android:textOn=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="?attr/colorOnBackground" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

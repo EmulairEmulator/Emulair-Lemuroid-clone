@@ -2,7 +2,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.EmulairMaterialYou.Invisible">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -12,7 +13,6 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/edit_control_reset"
-            style="@style/Widget.MaterialComponents.FloatingActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="8dp"
@@ -21,7 +21,6 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/edit_control_done"
-            style="@style/Widget.MaterialComponents.FloatingActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"

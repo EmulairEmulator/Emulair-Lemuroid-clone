@@ -38,22 +38,17 @@
         <item name="linearProgressIndicatorStyle">@style/Theme.EmulairMaterialYou.LinearProgressIndicator</item>
         <item name="materialButtonStyle">@style/Theme.EmulairMaterialYou.Button</item>
         <item name="imageButtonStyle">@style/Theme.EmulairMaterialYou.ImageButton</item>
+        <!-- <item name="">@style/Theme.EmulairMaterialYou.ToggleButton</item> -->
         <item name="materialAlertDialogTheme">@style/ThemeOverlay.EmulairMaterialYou.Dialog</item>
         <item name="android:statusBarColor">@color/md_theme_dark_background</item>
         <item name="android:navigationBarColor">@color/md_theme_dark_background</item>
         <item name="elevationOverlayEnabled">false</item>
         <item name="android:textColor">@color/md_theme_dark_onSurface</item>
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
-        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges
-        </item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
     </style>
 
     <!-- -->
-
-    <!-- card -->
-    <style name="Theme.EmulairMaterialYou.CardView" parent="Widget.Material3.CardView.Filled">
-        <item name="cardBackgroundColor">@color/md_theme_dark_surface</item>
-    </style>
 
     <!-- app bar -->
     <style name="Theme.EmulairMaterialYou.AppBar" parent="Widget.Material3.AppBarLayout">
@@ -96,6 +91,11 @@
         <item name="android:color">@color/md_theme_dark_surfaceVariant</item>
     </style>
 
+    <!-- card -->
+    <style name="Theme.EmulairMaterialYou.CardView" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">@color/md_theme_dark_surface</item>
+    </style>
+
     <!-- switch -->
     <style name="Theme.EmulairMaterialYou.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
         <item name="materialThemeOverlay">@style/ThemeOverlay.EmulairMaterialYou.Switch</item>
@@ -134,6 +134,10 @@
     <!-- image button -->
     <style name="Theme.EmulairMaterialYou.ImageButton" parent="Widget.AppCompat.ImageButton">
         <item name="android:tint">@color/md_theme_dark_onSurface</item>
+    </style>
+
+    <!-- toggle button -->
+    <style name="Theme.EmulairMaterialYou.ToggleButton" parent="">
     </style>
 
     <!-- dialog -->
