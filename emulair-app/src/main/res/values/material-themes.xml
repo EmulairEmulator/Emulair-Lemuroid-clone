@@ -38,7 +38,7 @@
         <item name="linearProgressIndicatorStyle">@style/Theme.EmulairMaterialYou.LinearProgressIndicator</item>
         <item name="materialButtonStyle">@style/Theme.EmulairMaterialYou.Button</item>
         <item name="imageButtonStyle">@style/Theme.EmulairMaterialYou.ImageButton</item>
-        <!-- <item name="">@style/Theme.EmulairMaterialYou.ToggleButton</item> -->
+        <item name="checkboxStyle">@style/Theme.EmulairMaterialYou.CheckBox</item>
         <item name="materialAlertDialogTheme">@style/ThemeOverlay.EmulairMaterialYou.Dialog</item>
         <item name="android:statusBarColor">@color/md_theme_dark_background</item>
         <item name="android:navigationBarColor">@color/md_theme_dark_background</item>
@@ -136,8 +136,9 @@
         <item name="android:tint">@color/md_theme_dark_onSurface</item>
     </style>
 
-    <!-- toggle button -->
-    <style name="Theme.EmulairMaterialYou.ToggleButton" parent="">
+    <!-- checkbox -->
+    <style name="Theme.EmulairMaterialYou.CheckBox" parent="Widget.Material3.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/md_theme_dark_onSurface</item>
     </style>
 
     <!-- dialog -->

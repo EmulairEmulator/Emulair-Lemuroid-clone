@@ -17,21 +17,19 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:backgroundTint="@color/material_card_color_transparent"
+        android:backgroundTint="@color/md_theme_dark_onSecondaryAlt"
         app:cardCornerRadius="24dp"
         app:cardElevation="0dp">
 
-        <ToggleButton
+        <com.google.android.material.checkbox.MaterialCheckBox
             android:id="@+id/favorite_toggle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
             android:layout_marginTop="1dp"
-            android:background="@drawable/selector_button_favorite"
+            android:button="@drawable/selector_button_favorite"
             android:foregroundGravity="center"
-            android:gravity="center"
-            android:textOff=""
-            android:textOn="" />
+            android:gravity="center" />
 
     </com.google.android.material.card.MaterialCardView>
 

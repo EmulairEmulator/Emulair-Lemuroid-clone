@@ -37,6 +37,7 @@
     <color name="md_theme_dark_onPrimaryContainer">#FFDAD3</color>
     <color name="md_theme_dark_secondary">#E7BCB6</color>
     <color name="md_theme_dark_onSecondary">#442A26</color>
+    <color name="md_theme_dark_onSecondaryAlt">#CC442A26</color>
     <color name="md_theme_dark_secondaryContainer">#5D3F3B</color>
     <color name="md_theme_dark_onSecondaryContainer">#FFDAD4</color>
     <color name="md_theme_dark_tertiary">#DFC38C</color>
