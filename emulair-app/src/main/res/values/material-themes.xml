@@ -122,15 +122,13 @@
     </style>
 
     <!-- button -->
-    <style name="Theme.EmulairMaterialYou.Button" parent="Widget.Material3.Button">
-        <item name="materialThemeOverlay">@style/ThemeOverlay.EmulairMaterialYou.Button</item>
-    </style>
-
-    <style name="ThemeOverlay.EmulairMaterialYou.Button" parent="">
+    <style name="Theme.EmulairMaterialYou.Button" parent="Widget.Material3.Button.TonalButton">
         <!-- background: -->
-        <item name="colorPrimary">@color/md_theme_dark_primary</item>
-        <!-- text and icon: -->
-        <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
+        <item name="backgroundTint">@color/md_theme_dark_secondaryContainer</item>
+        <!-- text: -->
+        <item name="android:textColor">@color/md_theme_dark_onSecondaryContainer</item>
+        <!-- icon: -->
+        <item name="iconTint">@color/md_theme_dark_onSecondaryContainer</item>
     </style>
 
     <!-- image button -->
