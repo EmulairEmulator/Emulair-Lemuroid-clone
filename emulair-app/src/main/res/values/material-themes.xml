@@ -35,9 +35,12 @@
         <item name="bottomNavigationStyle">@style/Theme.EmulairMaterialYou.BottomNav</item>
         <item name="materialCardViewStyle">@style/Theme.EmulairMaterialYou.CardView</item>
         <item name="materialSwitchStyle">@style/Theme.EmulairMaterialYou.Switch</item>
+        <item name="linearProgressIndicatorStyle">@style/Theme.EmulairMaterialYou.LinearProgressIndicator</item>
+        <item name="materialButtonStyle">@style/Theme.EmulairMaterialYou.Button</item>
+        <item name="imageButtonStyle">@style/Theme.EmulairMaterialYou.ImageButton</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.EmulairMaterialYou.Dialog</item>
         <item name="android:statusBarColor">@color/md_theme_dark_background</item>
         <item name="android:navigationBarColor">@color/md_theme_dark_background</item>
-        <!-- <item name="elevationOverlayColor">@color/md_theme_dark_onSurface</item> -->
         <item name="elevationOverlayEnabled">false</item>
         <item name="android:textColor">@color/md_theme_dark_onSurface</item>
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
@@ -103,6 +106,48 @@
         <item name="colorPrimary">@color/md_theme_dark_secondary</item>
     </style>
 
+    <!-- linear progress indicator -->
+    <style name="Theme.EmulairMaterialYou.LinearProgressIndicator" parent="Widget.Material3.LinearProgressIndicator">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.EmulairMaterialYou.LinearProgressIndicator</item>
+    </style>
+
+    <style name="ThemeOverlay.EmulairMaterialYou.LinearProgressIndicator" parent="">
+        <item name="colorPrimary">@color/md_theme_dark_primary</item>
+    </style>
+
+    <!-- button -->
+    <style name="Theme.EmulairMaterialYou.Button" parent="Widget.Material3.Button">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.EmulairMaterialYou.Button</item>
+    </style>
+
+    <style name="ThemeOverlay.EmulairMaterialYou.Button" parent="">
+        <!-- background: -->
+        <item name="colorPrimary">@color/md_theme_dark_primary</item>
+        <!-- text and icon: -->
+        <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
+    </style>
+
+    <!-- image button -->
+    <style name="Theme.EmulairMaterialYou.ImageButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:tint">@color/md_theme_dark_onSurface</item>
+    </style>
+
+    <!-- dialog -->
+    <style name="ThemeOverlay.EmulairMaterialYou.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <!-- buttons: -->
+        <item name="colorPrimary">@color/md_theme_dark_primary</item>
+        <!-- list buttons: -->
+        <item name="colorControlNormal">@color/md_theme_dark_onSurface</item>
+        <!-- icon: -->
+        <item name="colorSecondary">@color/md_theme_dark_secondary</item>
+        <!-- container: -->
+        <item name="colorSurface">@color/md_theme_dark_surface</item>
+        <!-- title text: -->
+        <item name="colorOnSurface">@color/md_theme_dark_onSurface</item>
+        <!-- body text and items: -->
+        <item name="colorOnSurfaceVariant">@color/md_theme_dark_onSurfaceVariant</item>
+    </style>
+
     <!-- -->
 
     <style name="Theme.EmulairMaterialYou.Menu" parent="Theme.EmulairMaterialYou">
@@ -132,7 +177,7 @@
     </style>
 
     <!-- Light Theme -->
-    <style name="Theme.EmulairMaterialLight" parent="Theme.Material3.Light.NoActionBar">
+    <!--<style name="Theme.EmulairMaterialLight" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/light_theme_primary</item>
         <item name="colorOnPrimary">@color/light_theme_onPrimary</item>
         <item name="colorSecondary">@color/light_theme_secondary</item>
@@ -146,7 +191,7 @@
         <item name="colorSurface">@color/light_theme_surface</item>
         <item name="colorOnSurface">@color/light_theme_onSurface</item>
         <item name="colorOutline">@color/light_theme_outline</item>
-        <!-- -->
+        &lt;!&ndash; &ndash;&gt;
         <item name="materialCardViewStyle">?attr/materialCardViewElevatedStyle</item>
         <item name="android:statusBarColor">?attr/colorSurface</item>
         <item name="android:navigationBarColor">?attr/colorSurface</item>
@@ -154,10 +199,10 @@
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
         <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges
         </item>
-    </style>
+    </style>-->
 
     <!-- AMOLED Theme -->
-    <style name="Theme.EmulairMaterialAMOLED" parent="Theme.Material3.Dark.NoActionBar">
+    <!--<style name="Theme.EmulairMaterialAMOLED" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/amoled_theme_primary</item>
         <item name="colorOnPrimary">@color/amoled_theme_onPrimary</item>
         <item name="colorSecondary">@color/amoled_theme_secondary</item>
@@ -171,7 +216,7 @@
         <item name="colorSurface">@color/amoled_theme_surface</item>
         <item name="colorOnSurface">@color/amoled_theme_onSurface</item>
         <item name="colorOutline">@color/amoled_theme_outline</item>
-        <!-- -->
+        &lt;!&ndash; &ndash;&gt;
         <item name="materialCardViewStyle">?attr/materialCardViewElevatedStyle</item>
         <item name="android:statusBarColor">?attr/colorSurface</item>
         <item name="android:navigationBarColor">?attr/colorSurface</item>
@@ -179,10 +224,10 @@
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
         <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges
         </item>
-    </style>
+    </style>-->
 
     <!-- Dark Theme -->
-    <style name="Theme.EmulairMaterialDark" parent="Theme.Material3.Dark.NoActionBar">
+    <!--<style name="Theme.EmulairMaterialDark" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/dark_theme_primary</item>
         <item name="colorOnPrimary">@color/dark_theme_onPrimary</item>
         <item name="colorSecondary">@color/dark_theme_secondary</item>
@@ -196,7 +241,7 @@
         <item name="colorSurface">@color/dark_theme_surface</item>
         <item name="colorOnSurface">@color/dark_theme_onSurface</item>
         <item name="colorOutline">@color/dark_theme_outline</item>
-        <!-- -->
+        &lt;!&ndash; &ndash;&gt;
         <item name="materialCardViewStyle">?attr/materialCardViewElevatedStyle</item>
         <item name="android:statusBarColor">?attr/colorSurface</item>
         <item name="android:navigationBarColor">?attr/colorSurface</item>
@@ -204,6 +249,6 @@
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
         <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges
         </item>
-    </style>
+    </style>-->
 
 </resources>

@@ -18,23 +18,6 @@ class CustomMultiListPreference : MultiSelectListPreference {
 
     constructor(context: Context?) : super(context)
 
-    /*
-    val checkedItems = BooleanArray(entryValues.size)
-
-    override fun onClick() {
-        // val builder = MaterialAlertDialogBuilder(context, R.style.AlertDialog).setMultiChoiceItems(
-        val builder =
-            MaterialAlertDialogBuilder(context).setMultiChoiceItems(entries, checkedItems) { dialog, which, isChecked ->
-                checkedItems[which] = isChecked;
-            }
-                .setPositiveButton(R.string.button_ok) { dialog, _ -> dialog.dismiss() }
-                .setNegativeButton(R.string.button_cancel) { dialog, _ -> dialog.dismiss() }
-
-        val dialog = builder.create()
-        dialog.show()
-    }
-    */
-
     override fun onClick() {
         val entryValues = entryValues ?: return
         val selectedItems = selectedItems

@@ -30,10 +30,10 @@
     <string name="pref_key_shader_filter" translatable="false">shader_filter</string>
 
     <string-array name="pref_key_theme_names" translatable="false">
-        <item>Light Theme</item>
-        <item>Dark Theme</item>
-        <item>AMOLED Theme</item>
-        <item>Material You Theme</item>
+        <item>Light theme</item>
+        <item>Dark theme</item>
+        <item>AMOLED theme</item>
+        <item>Material You theme</item>
     </string-array>
 
     <string-array name="pref_key_theme_values" translatable="false">

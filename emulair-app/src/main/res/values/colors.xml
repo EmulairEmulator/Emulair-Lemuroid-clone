@@ -10,7 +10,7 @@
     <color name="grey">#09ffffff</color>
 
     <!-- Light Theme -->
-    <color name="light_theme_primary">#2196F3</color>
+    <!--<color name="light_theme_primary">#2196F3</color>
     <color name="light_theme_onPrimary">#FFFFFF</color>
     <color name="light_theme_secondary">#4CAF50</color>
     <color name="light_theme_onSecondary">#FFFFFF</color>
@@ -22,10 +22,10 @@
     <color name="light_theme_onBackground">#000000</color>
     <color name="light_theme_surface">#FFFFFF</color>
     <color name="light_theme_onSurface">#000000</color>
-    <color name="light_theme_outline">#9E9E9E</color>
+    <color name="light_theme_outline">#9E9E9E</color>-->
 
     <!-- Dark Theme -->
-    <color name="dark_theme_primary">#1565C0</color>
+    <!--<color name="dark_theme_primary">#1565C0</color>
     <color name="dark_theme_onPrimary">#FFFFFF</color>
     <color name="dark_theme_secondary">#2E7D32</color>
     <color name="dark_theme_onSecondary">#FFFFFF</color>
@@ -37,10 +37,10 @@
     <color name="dark_theme_onBackground">#FFFFFF</color>
     <color name="dark_theme_surface">#424242</color>
     <color name="dark_theme_onSurface">#FFFFFF</color>
-    <color name="dark_theme_outline">#BDBDBD</color>
+    <color name="dark_theme_outline">#BDBDBD</color>-->
 
     <!-- AMOLED Theme -->
-    <color name="amoled_theme_primary">#000000</color>
+    <!--<color name="amoled_theme_primary">#000000</color>
     <color name="amoled_theme_onPrimary">#FFFFFF</color>
     <color name="amoled_theme_secondary">#212121</color>
     <color name="amoled_theme_onSecondary">#FFFFFF</color>
@@ -52,6 +52,6 @@
     <color name="amoled_theme_onBackground">#FFFFFF</color>
     <color name="amoled_theme_surface">#212121</color>
     <color name="amoled_theme_onSurface">#FFFFFF</color>
-    <color name="amoled_theme_outline">#BDBDBD</color>
+    <color name="amoled_theme_outline">#BDBDBD</color>-->
 
 </resources>
