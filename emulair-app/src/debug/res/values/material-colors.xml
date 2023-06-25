@@ -43,6 +43,7 @@
     <!-- ################## Dark theme ################## -->
     <!-- ################################################ -->
     <color name="md_theme_dark_primary">#FFB4A8</color>
+    <color name="md_theme_dark_primaryTransparent">#80FFB4A8</color>
     <color name="md_theme_dark_onPrimary">#680001</color>
     <color name="md_theme_dark_primaryContainer">#940002</color>
     <color name="md_theme_dark_onPrimaryContainer">#FFDAD3</color>

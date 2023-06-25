@@ -14,6 +14,7 @@
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
         android:layout_marginEnd="@dimen/grid_spacing"
         android:layout_weight="1">
 
