@@ -36,6 +36,11 @@ class SettingsManager(private val context: Context, sharedPreferences: Lazy<Shar
         context.resources.getStringArray(R.array.pref_key_theme_values).first()
     )
 
+    /*suspend fun saveTheme(theme: String) = stringPreference(
+        R.string.pref_key_theme,
+        theme
+    )*/
+
     suspend fun screenAutorotate() = booleanPreference(R.string.pref_key_autorotate,false)
 
     suspend fun tiltSensitivity() = floatPreference(R.string.pref_key_tilt_sensitivity_index, 10, 0.6f)
