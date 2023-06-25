@@ -7,6 +7,7 @@
     <dimen name="grid_third_spacing">8dp</dimen>
     <dimen name="corner_radius">16dp</dimen>
     <dimen name="corner_radius_alt">8dp</dimen>
+    <dimen name="padding_extra_minus">-8dp</dimen>
 
     <string name="system_card_image_ratio">4:3</string>
     <string name="game_card_image_ratio">1:1</string>

@@ -1,6 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Theme.EmulairMaterialYou" parent="Theme.Material3.Dark.NoActionBar">
+    <!-- ################################################ -->
+    <!-- ################## Dark theme ################## -->
+    <!-- ################################################ -->
+    <style name="Theme.EmulairMaterialDark" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/md_theme_dark_primary</item>
         <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
         <item name="colorPrimaryContainer">@color/md_theme_dark_primaryContainer</item>
@@ -30,16 +33,17 @@
         <!-- -->
         <item name="android:windowBackground">@color/md_theme_dark_background</item>
         <item name="android:colorBackground">@color/md_theme_dark_background</item>
-        <item name="appBarLayoutStyle">@style/Theme.EmulairMaterialYou.AppBar</item>
-        <item name="toolbarStyle">@style/Theme.EmulairMaterialYou.Toolbar</item>
-        <item name="bottomNavigationStyle">@style/Theme.EmulairMaterialYou.BottomNav</item>
-        <item name="materialCardViewStyle">@style/Theme.EmulairMaterialYou.CardView</item>
-        <item name="materialSwitchStyle">@style/Theme.EmulairMaterialYou.Switch</item>
-        <item name="linearProgressIndicatorStyle">@style/Theme.EmulairMaterialYou.LinearProgressIndicator</item>
-        <item name="materialButtonStyle">@style/Theme.EmulairMaterialYou.Button</item>
-        <item name="imageButtonStyle">@style/Theme.EmulairMaterialYou.ImageButton</item>
-        <item name="checkboxStyle">@style/Theme.EmulairMaterialYou.CheckBox</item>
-        <item name="materialAlertDialogTheme">@style/ThemeOverlay.EmulairMaterialYou.Dialog</item>
+        <item name="preferenceTheme">@style/ThemeOverlay.PreferenceScreen</item>
+        <item name="appBarLayoutStyle">@style/Theme.EmulairMaterialDark.AppBar</item>
+        <item name="toolbarStyle">@style/Theme.EmulairMaterialDark.Toolbar</item>
+        <item name="bottomNavigationStyle">@style/Theme.EmulairMaterialDark.BottomNav</item>
+        <item name="materialCardViewStyle">@style/Theme.EmulairMaterialDark.CardView</item>
+        <item name="materialSwitchStyle">@style/Theme.EmulairMaterialDark.Switch</item>
+        <item name="linearProgressIndicatorStyle">@style/Theme.EmulairMaterialDark.LinearProgressIndicator</item>
+        <item name="materialButtonStyle">@style/Theme.EmulairMaterialDark.Button</item>
+        <item name="imageButtonStyle">@style/Theme.EmulairMaterialDark.ImageButton</item>
+        <item name="checkboxStyle">@style/Theme.EmulairMaterialDark.CheckBox</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.EmulairMaterialDark.Dialog</item>
         <item name="android:statusBarColor">@color/md_theme_dark_background</item>
         <item name="android:navigationBarColor">@color/md_theme_dark_background</item>
         <item name="elevationOverlayEnabled">false</item>
@@ -48,38 +52,36 @@
         <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
     </style>
 
-    <!-- -->
-
     <!-- app bar -->
-    <style name="Theme.EmulairMaterialYou.AppBar" parent="Widget.Material3.AppBarLayout">
+    <style name="Theme.EmulairMaterialDark.AppBar" parent="Widget.Material3.AppBarLayout">
         <item name="android:background">@color/md_theme_dark_background</item>
     </style>
 
     <!-- toolbar -->
-    <style name="Theme.EmulairMaterialYou.Toolbar" parent="Widget.Material3.Toolbar">
-        <item name="titleTextAppearance">@style/TextAppearance.EmulairMaterialYou.Toolbar.TitleLarge</item>
-        <item name="materialThemeOverlay">@style/ThemeOverlay.EmulairMaterialYou.Toolbar</item>
+    <style name="Theme.EmulairMaterialDark.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="titleTextAppearance">@style/TextAppearance.EmulairMaterialDark.Toolbar.TitleLarge</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.EmulairMaterialDark.Toolbar</item>
     </style>
 
-    <style name="TextAppearance.EmulairMaterialYou.Toolbar.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+    <style name="TextAppearance.EmulairMaterialDark.Toolbar.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
         <item name="android:textColor">@color/md_theme_dark_onSurface</item>
         <item name="android:textSize">16sp</item>
     </style>
 
-    <style name="ThemeOverlay.EmulairMaterialYou.Toolbar" parent="">
+    <style name="ThemeOverlay.EmulairMaterialDark.Toolbar" parent="">
         <!-- icons and other things: -->
         <item name="colorControlNormal">@color/md_theme_dark_onSurface</item>
     </style>
 
     <!-- bottom nav view -->
-    <style name="Theme.EmulairMaterialYou.BottomNav" parent="Widget.Material3.BottomNavigationView">
+    <style name="Theme.EmulairMaterialDark.BottomNav" parent="Widget.Material3.BottomNavigationView">
         <item name="android:background">@color/md_theme_dark_background</item>
-        <item name="materialThemeOverlay">@style/ThemeOverlay.EmulairMaterialYou.BottomNav</item>
-        <item name="itemActiveIndicatorStyle">@style/Theme.EmulairMaterialYou.BottomNav.ActiveIndicator</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.EmulairMaterialDark.BottomNav</item>
+        <item name="itemActiveIndicatorStyle">@style/Theme.EmulairMaterialDark.BottomNav.ActiveIndicator</item>
     </style>
 
-    <style name="ThemeOverlay.EmulairMaterialYou.BottomNav" parent="">
-        <!-- icon & text inactive: -->
+    <style name="ThemeOverlay.EmulairMaterialDark.BottomNav" parent="">
+        <!-- icon and text inactive: -->
         <item name="colorOnSurfaceVariant">@color/md_theme_dark_onSurfaceVariant</item>
         <!-- icon active: -->
         <item name="colorOnSecondaryContainer">@color/md_theme_dark_onSecondaryContainer</item>
@@ -87,21 +89,21 @@
         <item name="colorSurface">@color/md_theme_dark_surface</item>
     </style>
 
-    <style name="Theme.EmulairMaterialYou.BottomNav.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+    <style name="Theme.EmulairMaterialDark.BottomNav.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
         <item name="android:color">@color/md_theme_dark_surfaceVariant</item>
     </style>
 
     <!-- card -->
-    <style name="Theme.EmulairMaterialYou.CardView" parent="Widget.Material3.CardView.Filled">
+    <style name="Theme.EmulairMaterialDark.CardView" parent="Widget.Material3.CardView.Filled">
         <item name="cardBackgroundColor">@color/md_theme_dark_surface</item>
     </style>
 
     <!-- switch -->
-    <style name="Theme.EmulairMaterialYou.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
-        <item name="materialThemeOverlay">@style/ThemeOverlay.EmulairMaterialYou.Switch</item>
+    <style name="Theme.EmulairMaterialDark.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.EmulairMaterialDark.Switch</item>
     </style>
 
-    <style name="ThemeOverlay.EmulairMaterialYou.Switch" parent="">
+    <style name="ThemeOverlay.EmulairMaterialDark.Switch" parent="">
         <!-- track inactive: -->
         <item name="colorOutline">@color/md_theme_dark_outline</item>
         <!-- track active: -->
@@ -113,16 +115,16 @@
     </style>
 
     <!-- linear progress indicator -->
-    <style name="Theme.EmulairMaterialYou.LinearProgressIndicator" parent="Widget.Material3.LinearProgressIndicator">
-        <item name="materialThemeOverlay">@style/ThemeOverlay.EmulairMaterialYou.LinearProgressIndicator</item>
+    <style name="Theme.EmulairMaterialDark.LinearProgressIndicator" parent="Widget.Material3.LinearProgressIndicator">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.EmulairMaterialDark.LinearProgressIndicator</item>
     </style>
 
-    <style name="ThemeOverlay.EmulairMaterialYou.LinearProgressIndicator" parent="">
+    <style name="ThemeOverlay.EmulairMaterialDark.LinearProgressIndicator" parent="">
         <item name="colorPrimary">@color/md_theme_dark_primary</item>
     </style>
 
     <!-- button -->
-    <style name="Theme.EmulairMaterialYou.Button" parent="Widget.Material3.Button.TonalButton">
+    <style name="Theme.EmulairMaterialDark.Button" parent="Widget.Material3.Button.TonalButton">
         <!-- background: -->
         <item name="backgroundTint">@color/md_theme_dark_secondaryContainer</item>
         <!-- text: -->
@@ -132,17 +134,17 @@
     </style>
 
     <!-- image button -->
-    <style name="Theme.EmulairMaterialYou.ImageButton" parent="Widget.AppCompat.ImageButton">
+    <style name="Theme.EmulairMaterialDark.ImageButton" parent="Widget.AppCompat.ImageButton">
         <item name="android:tint">@color/md_theme_dark_onSurface</item>
     </style>
 
     <!-- checkbox -->
-    <style name="Theme.EmulairMaterialYou.CheckBox" parent="Widget.Material3.CompoundButton.CheckBox">
+    <style name="Theme.EmulairMaterialDark.CheckBox" parent="Widget.Material3.CompoundButton.CheckBox">
         <item name="buttonTint">@color/md_theme_dark_onSurface</item>
     </style>
 
     <!-- dialog -->
-    <style name="ThemeOverlay.EmulairMaterialYou.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+    <style name="ThemeOverlay.EmulairMaterialDark.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
         <!-- buttons: -->
         <item name="colorPrimary">@color/md_theme_dark_primary</item>
         <!-- list buttons: -->
@@ -157,9 +159,7 @@
         <item name="colorOnSurfaceVariant">@color/md_theme_dark_onSurfaceVariant</item>
     </style>
 
-    <!-- -->
-
-    <style name="Theme.EmulairMaterialYou.Menu" parent="Theme.EmulairMaterialYou">
+    <style name="Theme.EmulairMaterialDark.Menu" parent="Theme.EmulairMaterialDark">
         <item name="android:statusBarColor">@android:color/black</item>
         <item name="android:navigationBarColor">@android:color/black</item>
         <item name="android:windowBackground">@color/pause_menu_background_color</item>
@@ -168,13 +168,13 @@
         <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
-    <style name="Theme.EmulairMaterialYou.Game" parent="Theme.EmulairMaterialYou">
+    <style name="Theme.EmulairMaterialDark.Game" parent="Theme.EmulairMaterialDark">
         <item name="android:navigationBarColor">@android:color/black</item>
         <item name="android:statusBarColor">@android:color/black</item>
         <item name="android:windowBackground">@android:color/black</item>
     </style>
 
-    <style name="Theme.EmulairMaterialYou.Invisible" parent="Theme.EmulairMaterialYou">
+    <style name="Theme.EmulairMaterialDark.Invisible" parent="Theme.EmulairMaterialDark">
         <item name="android:background">#00000000</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
@@ -185,7 +185,9 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
-    <!-- Light Theme -->
+    <!-- ############################################### -->
+    <!-- ################# Light theme ################# -->
+    <!-- ############################################### -->
     <!--<style name="Theme.EmulairMaterialLight" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/light_theme_primary</item>
         <item name="colorOnPrimary">@color/light_theme_onPrimary</item>
@@ -210,7 +212,9 @@
         </item>
     </style>-->
 
-    <!-- AMOLED Theme -->
+    <!-- ################################################ -->
+    <!-- ################# AMOLED theme ################# -->
+    <!-- ################################################ -->
     <!--<style name="Theme.EmulairMaterialAMOLED" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/amoled_theme_primary</item>
         <item name="colorOnPrimary">@color/amoled_theme_onPrimary</item>
@@ -235,29 +239,56 @@
         </item>
     </style>-->
 
-    <!-- Dark Theme -->
-    <!--<style name="Theme.EmulairMaterialDark" parent="Theme.Material3.Dark.NoActionBar">
-        <item name="colorPrimary">@color/dark_theme_primary</item>
-        <item name="colorOnPrimary">@color/dark_theme_onPrimary</item>
-        <item name="colorSecondary">@color/dark_theme_secondary</item>
-        <item name="colorOnSecondary">@color/dark_theme_onSecondary</item>
-        <item name="colorTertiary">@color/dark_theme_tertiary</item>
-        <item name="colorOnTertiary">@color/dark_theme_onTertiary</item>
-        <item name="colorError">@color/dark_theme_error</item>
-        <item name="colorOnError">@color/dark_theme_onError</item>
-        <item name="android:colorBackground">@color/dark_theme_background</item>
-        <item name="colorOnBackground">@color/dark_theme_onBackground</item>
-        <item name="colorSurface">@color/dark_theme_surface</item>
-        <item name="colorOnSurface">@color/dark_theme_onSurface</item>
-        <item name="colorOutline">@color/dark_theme_outline</item>
-        &lt;!&ndash; &ndash;&gt;
-        <item name="materialCardViewStyle">?attr/materialCardViewElevatedStyle</item>
-        <item name="android:statusBarColor">?attr/colorSurface</item>
-        <item name="android:navigationBarColor">?attr/colorSurface</item>
-        <item name="elevationOverlayColor">?attr/colorOnSurface</item>
-        <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
-        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges
-        </item>
-    </style>-->
+    <!-- ############################################### -->
+    <!-- ################## Universal ################## -->
+    <!-- ############################################### -->
+    <!-- preference screen scrollbar -->
+    <style name="ThemeOverlay.PreferenceScreen" parent="">
+        <item name="preferenceFragmentCompatStyle">@style/Style.PreferenceScreen</item>
+    </style>
+
+    <style name="Style.PreferenceScreen" parent="">
+        <item name="android:scrollbarStyle">@style/Shape.Scrollbar</item>
+    </style>
+
+    <style name="Shape.Scrollbar" parent="">
+        <item name="android:scrollbarThumbVertical">@drawable/shape_scrollbar</item>
+        <item name="android:scrollbarTrackVertical">@drawable/shape_scrollbar</item>
+    </style>
+
+    <!-- preference cards -->
+    <style name="ShapeOverlay.CardView.Group.Top" parent="">
+        <item name="cornerSizeTopLeft">@dimen/corner_radius</item>
+        <item name="cornerSizeTopRight">@dimen/corner_radius</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ShapeOverlay.CardView.Group.Middle" parent="">
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ShapeOverlay.CardView.Group.Bottom" parent="">
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomLeft">@dimen/corner_radius</item>
+        <item name="cornerSizeBottomRight">@dimen/corner_radius</item>
+    </style>
+
+    <style name="ShapeOverlay.CardView.Block" parent="">
+        <item name="cornerSizeTopLeft">@dimen/corner_radius</item>
+        <item name="cornerSizeTopRight">@dimen/corner_radius</item>
+        <item name="cornerSizeBottomRight">@dimen/corner_radius</item>
+        <item name="cornerSizeBottomLeft">@dimen/corner_radius</item>
+    </style>
+
+    <!-- images -->
+    <style name="ShapeOverlay.ImageView" parent="">
+        <item name="cornerSize">@dimen/corner_radius</item>
+    </style>
+
 
 </resources>

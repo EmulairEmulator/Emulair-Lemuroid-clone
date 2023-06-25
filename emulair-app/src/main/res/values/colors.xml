@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="grey">#09ffffff</color>
-
     <!-- Light Theme -->
     <!--<color name="light_theme_primary">#2196F3</color>
     <color name="light_theme_onPrimary">#FFFFFF</color>
@@ -19,21 +15,6 @@
     <color name="light_theme_onSurface">#000000</color>
     <color name="light_theme_outline">#9E9E9E</color>-->
 
-    <!-- Dark Theme -->
-    <!--<color name="dark_theme_primary">#1565C0</color>
-    <color name="dark_theme_onPrimary">#FFFFFF</color>
-    <color name="dark_theme_secondary">#2E7D32</color>
-    <color name="dark_theme_onSecondary">#FFFFFF</color>
-    <color name="dark_theme_tertiary">#F9A825</color>
-    <color name="dark_theme_onTertiary">#000000</color>
-    <color name="dark_theme_error">#F44336</color>
-    <color name="dark_theme_onError">#FFFFFF</color>
-    <color name="dark_theme_background">#424242</color>
-    <color name="dark_theme_onBackground">#FFFFFF</color>
-    <color name="dark_theme_surface">#424242</color>
-    <color name="dark_theme_onSurface">#FFFFFF</color>
-    <color name="dark_theme_outline">#BDBDBD</color>-->
-
     <!-- AMOLED Theme -->
     <!--<color name="amoled_theme_primary">#000000</color>
     <color name="amoled_theme_onPrimary">#FFFFFF</color>
@@ -48,5 +29,4 @@
     <color name="amoled_theme_surface">#212121</color>
     <color name="amoled_theme_onSurface">#FFFFFF</color>
     <color name="amoled_theme_outline">#BDBDBD</color>-->
-
 </resources>

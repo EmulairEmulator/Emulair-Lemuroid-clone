@@ -32,7 +32,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="4dp"
                 android:background="?attr/actionBarItemBackground"
-                app:srcCompat="@drawable/ic_close" />
+                app:srcCompat="@drawable/ic_top_close" />
 
         </RelativeLayout>
 

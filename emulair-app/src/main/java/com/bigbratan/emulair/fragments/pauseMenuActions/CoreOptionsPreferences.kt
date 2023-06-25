@@ -97,7 +97,7 @@ object CoreOptionsPreferences {
     ): CustomListPreference {
         val preference = CustomListPreference(context)
         preference.key = CoreVariablesManager.computeSharedPreferenceKey(it.getKey(), systemID)
-        preference.layoutResource = R.layout.layout_preference_pausemenu_list_alt
+        preference.layoutResource = R.layout.layout_preference_pausemenu_list_noresource
         preference.title = it.getDisplayName(context)
         preference.entries = it.getEntries(context).toTypedArray()
         preference.entryValues = it.getEntriesValues().toTypedArray()
@@ -115,7 +115,7 @@ object CoreOptionsPreferences {
     ): SwitchPreferenceCompat {
         val preference = SwitchPreferenceCompat(context)
         preference.key = CoreVariablesManager.computeSharedPreferenceKey(it.getKey(), systemID)
-        preference.layoutResource = R.layout.layout_preference_pausemenu_switch_alt
+        preference.layoutResource = R.layout.layout_preference_pausemenu_switch_noresource
         preference.title = it.getDisplayName(context)
         preference.setDefaultValue(it.getCurrentValue() == "enabled")
         preference.isChecked = it.getCurrentValue() == "enabled"
@@ -133,7 +133,7 @@ object CoreOptionsPreferences {
     ): Preference {
         val preference = CustomListPreference(context)
         preference.key = ControllerConfigsManager.getSharedPreferencesId(systemID, coreID, port)
-        preference.layoutResource = R.layout.layout_preference_pausemenu_list_alt
+        preference.layoutResource = R.layout.layout_preference_pausemenu_list_noresource
         if (connectedGamePads > 1)
             preference.title =
                 context.getString(R.string.core_options_controllers_controller_alt, (port + 1).toString())

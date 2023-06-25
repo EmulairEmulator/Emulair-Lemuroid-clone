@@ -4,62 +4,62 @@
 
     <Preference
         android:key="pref_game_section_save"
-        android:layout="@layout/layout_preference_pausemenu_simple"
+        android:layout="@layout/layout_preference_pausemenu_simple_icon"
         android:title="@string/pause_menu_save"
         app:icon="@drawable/ic_menu_save" />
 
     <Preference
         android:key="pref_game_section_load"
-        android:layout="@layout/layout_preference_pausemenu_simple"
+        android:layout="@layout/layout_preference_pausemenu_simple_icon"
         android:title="@string/pause_menu_load"
         app:icon="@drawable/ic_menu_load" />
 
     <Preference
         android:key="pref_game_quit"
-        android:layout="@layout/layout_preference_pausemenu_simple"
+        android:layout="@layout/layout_preference_pausemenu_simple_icon"
         android:title="@string/pause_menu_quit"
         app:icon="@drawable/ic_menu_quit" />
 
     <Preference
         android:key="pref_game_reset"
-        android:layout="@layout/layout_preference_pausemenu_simple"
+        android:layout="@layout/layout_preference_pausemenu_simple_icon"
         android:title="@string/pause_menu_restart"
         app:icon="@drawable/ic_menu_restart" />
 
     <SwitchPreferenceCompat
         android:key="pref_game_mute"
-        android:layout="@layout/layout_preference_pausemenu_switch"
+        android:layout="@layout/layout_preference_pausemenu_switch_icon"
         android:title="@string/pause_menu_mute_audio"
         app:icon="@drawable/ic_menu_mute" />
 
     <SwitchPreferenceCompat
         android:key="pref_game_fast_forward"
-        android:layout="@layout/layout_preference_pausemenu_switch"
+        android:layout="@layout/layout_preference_pausemenu_switch_icon"
         android:title="@string/pause_menu_fast_forward"
         app:icon="@drawable/ic_menu_fast_forward" />
 
     <com.bigbratan.emulair.ui.CustomListPreference
         android:key="pref_game_section_change_disk"
-        android:layout="@layout/layout_preference_pausemenu_list"
+        android:layout="@layout/layout_preference_pausemenu_list_icon"
         android:title="@string/pause_menu_change_disk_button"
         app:icon="@drawable/ic_menu_disk"
         app:isPreferenceVisible="false" />
 
     <Preference
         android:key="pref_game_edit_touch_controls"
-        android:layout="@layout/layout_preference_pausemenu_simple"
+        android:layout="@layout/layout_preference_pausemenu_simple_icon"
         android:title="@string/pause_menu_edit_touch_controls"
         app:icon="@drawable/ic_menu_swipe" />
 
     <Preference
         android:key="pref_game_section_core_options"
-        android:layout="@layout/layout_preference_pausemenu_simple"
+        android:layout="@layout/layout_preference_pausemenu_simple_icon"
         android:title="@string/pause_menu_core_options"
         app:icon="@drawable/ic_menu_settings" />
 
     <com.bigbratan.emulair.ui.CustomListPreference
         android:key="pref_game_controller_1"
-        android:layout="@layout/layout_preference_pausemenu_list"
+        android:layout="@layout/layout_preference_pausemenu_list_icon"
         android:title="Game Controller 1"
         app:icon="@drawable/ic_menu_favorite"
         app:isPreferenceVisible="false" />

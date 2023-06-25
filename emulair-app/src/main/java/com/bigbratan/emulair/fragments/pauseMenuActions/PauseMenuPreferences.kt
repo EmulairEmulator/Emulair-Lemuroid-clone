@@ -103,6 +103,7 @@ object PauseMenuPreferences {
                 this.summary = getDateString(saveStateInfo)
                 this.title = context.getString(R.string.pause_menu_state, (index + 1).toString())
                 this.icon = BitmapDrawable(screen.context.resources, bitmap)
+                this.layoutResource = (R.layout.layout_preference_pausemenu_simple_image)
             }
         )
     }
@@ -120,6 +121,7 @@ object PauseMenuPreferences {
                 this.isEnabled = saveStateInfo.exists
                 this.title = context.getString(R.string.pause_menu_state, (index + 1).toString())
                 this.icon = BitmapDrawable(screen.context.resources, bitmap)
+                this.layoutResource = (R.layout.layout_preference_pausemenu_simple_image)
             }
         )
     }
@@ -147,6 +149,7 @@ object PauseMenuPreferences {
             "pref_game_load_7" -> handleLoadAction(activity, 7)
             "pref_game_load_8" -> handleLoadAction(activity, 8)
             "pref_game_load_9" -> handleLoadAction(activity, 9)
+            // -- //
             "pref_game_mute" -> {
                 val currentValue = (preference as SwitchPreferenceCompat).isChecked
                 val resultIntent = Intent().apply {

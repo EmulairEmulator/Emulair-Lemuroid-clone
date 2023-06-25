@@ -9,24 +9,16 @@
     android:focusable="true"
     android:foreground="@drawable/ripple_card_block">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/imagecard"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:cardCornerRadius="@dimen/corner_radius"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/image"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            tools:ignore="ContentDescription" />
-
-    </com.google.android.material.card.MaterialCardView>
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/ShapeOverlay.ImageView" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/text"
@@ -41,7 +33,7 @@
         android:textAppearance="?attr/textAppearanceSubtitle1"
         app:layout_constraintBottom_toTopOf="@+id/subtext"
         app:layout_constraintEnd_toStartOf="@+id/favorite_toggle"
-        app:layout_constraintStart_toEndOf="@+id/imagecard"
+        app:layout_constraintStart_toEndOf="@+id/image"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Game Name" />
 
@@ -58,7 +50,7 @@
         android:textAppearance="?attr/textAppearanceCaption"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/favorite_toggle"
-        app:layout_constraintStart_toEndOf="@+id/imagecard"
+        app:layout_constraintStart_toEndOf="@+id/image"
         app:layout_constraintTop_toBottomOf="@+id/text"
         tools:text="System Name" />
 
