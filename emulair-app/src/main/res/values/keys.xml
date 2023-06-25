@@ -30,32 +30,36 @@
     <string name="pref_key_shader_filter" translatable="false">shader_filter</string>
 
     <string-array name="pref_key_theme_names" translatable="false">
-        <item>Light theme</item>
-        <item>Dark theme</item>
-        <item>AMOLED theme</item>
-        <item>Material You theme</item>
+        <item>Light</item>
+        <item>Dark</item>
+        <item>AMOLED</item>
+        <item>Monet Light</item>
+        <item>Monet Dark</item>
+        <item>Monet AMOLED</item>
     </string-array>
 
     <string-array name="pref_key_theme_values" translatable="false">
         <item>light_theme</item>
         <item>dark_theme</item>
         <item>amoled_theme</item>
-        <item>material_you_theme</item>
+        <item>monet_light_theme</item>
+        <item>monet_dark_theme</item>
+        <item>monet_amoled_theme</item>
     </string-array>
 
-    <string-array translatable="false" name="pref_key_haptic_feedback_mode_values">
+    <string-array name="pref_key_haptic_feedback_mode_values" translatable="false">
         <item>none</item>
         <item>press</item>
         <item>press_release</item>
     </string-array>
 
-    <string-array translatable="false" name="pref_key_haptic_feedback_mode_display_names">
+    <string-array name="pref_key_haptic_feedback_mode_display_names" translatable="false">
         <item>@string/settings_input_vibration_none_option</item>
         <item>@string/settings_input_vibration_press_option</item>
         <item>@string/settings_input_vibration_press_release_option</item>
     </string-array>
 
-    <string-array translatable="false" name="pref_key_shader_filter_values">
+    <string-array name="pref_key_shader_filter_values" translatable="false">
         <item>auto</item>
         <item>sharp</item>
         <item>smooth</item>
@@ -64,7 +68,7 @@
         <item>hd</item>
     </string-array>
 
-    <string-array translatable="false" name="pref_key_shader_filter_display_names">
+    <string-array name="pref_key_shader_filter_display_names" translatable="false">
         <item>@string/settings_general_display_filter_auto_option</item>
         <item>@string/settings_general_display_filter_sharp_option</item>
         <item>@string/settings_general_display_filter_smooth_option</item>

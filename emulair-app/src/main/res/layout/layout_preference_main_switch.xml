@@ -20,7 +20,6 @@
             android:id="@android:id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
             android:singleLine="true"
             android:textAppearance="?android:attr/textAppearanceListItem"
             android:textSize="16sp" />
@@ -31,7 +30,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@android:id/title"
             android:layout_alignStart="@android:id/title"
-            android:layout_gravity="center_vertical"
             android:maxLines="4"
             android:singleLine="false"
             android:textAppearance="?android:attr/textAppearanceSmall"

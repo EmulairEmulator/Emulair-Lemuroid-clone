@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="72dp"
-    android:background="@drawable/shape_card_block"
+    android:background="@drawable/shape_card"
     android:clickable="true"
     android:focusable="true"
-    android:foreground="@drawable/ripple_card_block">
+    android:foreground="@drawable/ripple_card">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/image"

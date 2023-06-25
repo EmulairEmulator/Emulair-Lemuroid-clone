@@ -100,10 +100,12 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
             reviewManager.initialize(applicationContext)
             val themeFlow = settingsManager.appTheme()
             when (themeFlow.first().toString()) {
-                "light_theme" -> setTheme(R.style.Theme_EmulairMaterialDark)
+                "light_theme" -> setTheme(R.style.Theme_EmulairMaterialLight)
                 "dark_theme" -> setTheme(R.style.Theme_EmulairMaterialDark)
-                "amoled_theme" -> setTheme(R.style.Theme_EmulairMaterialDark)
-                "material_you_theme" -> setTheme(R.style.Theme_EmulairMaterialDark)
+                "amoled_theme" -> setTheme(R.style.Theme_EmulairMaterialAMOLED)
+                "monet_dark_theme" -> setTheme(R.style.Theme_EmulairMaterialYouDark)
+                "monet_light_theme" -> setTheme(R.style.Theme_EmulairMaterialYouLight)
+                "monet_amoled_theme" -> setTheme(R.style.Theme_EmulairMaterialYouAMOLED)
             }
         }
 

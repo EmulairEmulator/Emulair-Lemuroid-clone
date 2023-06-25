@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- ################################################ -->
+    <!-- ################## Dark theme ################## -->
+    <!-- ################################################ -->
     <style name="Theme.EmulairMaterialDark.Invisible" parent="Theme.Material3.Dark.NoActionBar">
-        <item name="android:background">#00000000</item>
+        <item name="android:background">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
@@ -30,6 +33,125 @@
         <item name="android:textColor">@color/md_theme_dark_onPrimary</item>
         <!-- icon: -->
         <item name="iconTint">@color/md_theme_dark_onPrimary</item>
+    </style>
+
+    <!-- ################################################# -->
+    <!-- ################## Light theme ################## -->
+    <!-- ################################################# -->
+    <style name="Theme.EmulairMaterialLight.Invisible" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="materialCardViewStyle">@style/Theme.EmulairMaterialLight.CardView</item>
+        <item name="materialButtonStyle">@style/Theme.EmulairMaterialLight.Button</item>
+        <item name="android:textColor">@color/md_theme_light_onSurface</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+    </style>
+
+    <!-- card -->
+    <style name="Theme.EmulairMaterialLight.CardView" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">@color/md_theme_light_surface</item>
+    </style>
+
+    <!-- button -->
+    <style name="Theme.EmulairMaterialLight.Button" parent="Widget.Material3.Button">
+        <!-- background: -->
+        <item name="backgroundTint">@color/md_theme_light_primary</item>
+        <!-- text: -->
+        <item name="android:textColor">@color/md_theme_light_onPrimary</item>
+        <!-- icon: -->
+        <item name="iconTint">@color/md_theme_light_onPrimary</item>
+    </style>
+
+    <!-- ################################################ -->
+    <!-- ################# AMOLED theme ################# -->
+    <!-- ################################################ -->
+    <style name="Theme.EmulairMaterialAMOLED.Invisible" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="materialCardViewStyle">@style/Theme.EmulairMaterialAMOLED.CardView</item>
+        <item name="materialButtonStyle">@style/Theme.EmulairMaterialAMOLED.Button</item>
+        <item name="android:textColor">@color/md_theme_amoled_onSurface</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+    </style>
+
+    <!-- card -->
+    <style name="Theme.EmulairMaterialAMOLED.CardView" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">@color/md_theme_amoled_surface</item>
+    </style>
+
+    <!-- button -->
+    <style name="Theme.EmulairMaterialAMOLED.Button" parent="Widget.Material3.Button">
+        <!-- background: -->
+        <item name="backgroundTint">@color/md_theme_amoled_primary</item>
+        <!-- text: -->
+        <item name="android:textColor">@color/md_theme_amoled_onPrimary</item>
+        <!-- icon: -->
+        <item name="iconTint">@color/md_theme_amoled_onPrimary</item>
+    </style>
+
+    <!-- ################################################ -->
+    <!-- ############### Dark Monet theme ############### -->
+    <!-- ################################################ -->
+    <style name="Theme.EmulairMaterialYouDark.Invisible" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:textColor">@color/md_theme_dark_onSurface</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+    </style>
+
+    <!-- ################################################# -->
+    <!-- ############### Light Monet theme ############### -->
+    <!-- ################################################# -->
+    <style name="Theme.EmulairMaterialYouLight.Invisible" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:textColor">@color/md_theme_light_onSurface</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+    </style>
+
+    <!-- ################################################ -->
+    <!-- ############## AMOLED Monet theme ############## -->
+    <!-- ################################################ -->
+    <style name="Theme.EmulairMaterialYouAMOLED.Invisible" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:textColor">@color/md_theme_amoled_onSurface</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
     </style>
 
 </resources>

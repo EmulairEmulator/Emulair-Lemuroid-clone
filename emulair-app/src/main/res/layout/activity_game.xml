@@ -46,7 +46,7 @@
         android:id="@+id/editcontrolsdarkening"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/overlay_edit_controls_color"
+        android:background="@color/black_60"
         android:visibility="gone" />
 
     <FrameLayout

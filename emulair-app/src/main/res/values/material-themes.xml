@@ -4,33 +4,7 @@
     <!-- ################## Dark theme ################## -->
     <!-- ################################################ -->
     <style name="Theme.EmulairMaterialDark" parent="Theme.Material3.Dark.NoActionBar">
-        <item name="colorPrimary">@color/md_theme_dark_primary</item>
-        <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
-        <item name="colorPrimaryContainer">@color/md_theme_dark_primaryContainer</item>
-        <item name="colorOnPrimaryContainer">@color/md_theme_dark_onPrimaryContainer</item>
-        <item name="colorSecondary">@color/md_theme_dark_secondary</item>
-        <item name="colorOnSecondary">@color/md_theme_dark_onSecondary</item>
-        <item name="colorSecondaryContainer">@color/md_theme_dark_secondaryContainer</item>
-        <item name="colorOnSecondaryContainer">@color/md_theme_dark_onSecondaryContainer</item>
-        <item name="colorTertiary">@color/md_theme_dark_tertiary</item>
-        <item name="colorOnTertiary">@color/md_theme_dark_onTertiary</item>
-        <item name="colorTertiaryContainer">@color/md_theme_dark_tertiaryContainer</item>
-        <item name="colorOnTertiaryContainer">@color/md_theme_dark_onTertiaryContainer</item>
         <item name="colorAccent">@color/md_theme_dark_secondary</item>
-        <item name="colorError">@color/md_theme_dark_error</item>
-        <item name="colorErrorContainer">@color/md_theme_dark_errorContainer</item>
-        <item name="colorOnError">@color/md_theme_dark_onError</item>
-        <item name="colorOnErrorContainer">@color/md_theme_dark_onErrorContainer</item>
-        <item name="colorOnBackground">@color/md_theme_dark_onBackground</item>
-        <item name="colorSurface">@color/md_theme_dark_surface</item>
-        <item name="colorOnSurface">@color/md_theme_dark_onSurface</item>
-        <item name="colorSurfaceVariant">@color/md_theme_dark_surfaceVariant</item>
-        <item name="colorOnSurfaceVariant">@color/md_theme_dark_onSurfaceVariant</item>
-        <item name="colorOutline">@color/md_theme_dark_outline</item>
-        <item name="colorOnSurfaceInverse">@color/md_theme_dark_inverseOnSurface</item>
-        <item name="colorSurfaceInverse">@color/md_theme_dark_inverseSurface</item>
-        <item name="colorPrimaryInverse">@color/md_theme_dark_primaryInverse</item>
-        <!-- -->
         <item name="android:windowBackground">@color/md_theme_dark_background</item>
         <item name="android:colorBackground">@color/md_theme_dark_background</item>
         <item name="preferenceTheme">@style/ThemeOverlay.PreferenceScreen</item>
@@ -86,7 +60,7 @@
         <!-- icon active: -->
         <item name="colorOnSecondaryContainer">@color/md_theme_dark_onSecondaryContainer</item>
         <!-- text active: -->
-        <item name="colorSurface">@color/md_theme_dark_surface</item>
+        <item name="colorOnSurface">@color/md_theme_dark_onSurface</item>
     </style>
 
     <style name="Theme.EmulairMaterialDark.BottomNav.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
@@ -104,13 +78,13 @@
     </style>
 
     <style name="ThemeOverlay.EmulairMaterialDark.Switch" parent="">
-        <!-- track inactive: -->
-        <item name="colorOutline">@color/md_theme_dark_outline</item>
-        <!-- track active: -->
-        <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
         <!-- thumb inactive: -->
-        <item name="colorSurfaceVariant">@color/md_theme_dark_surfaceVariant</item>
+        <item name="colorOutline">@color/md_theme_dark_outline</item>
         <!-- thumb active: -->
+        <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
+        <!-- track inactive: -->
+        <item name="colorSurfaceVariant">@color/md_theme_dark_surfaceVariant</item>
+        <!-- track active: -->
         <item name="colorPrimary">@color/md_theme_dark_secondary</item>
     </style>
 
@@ -157,22 +131,22 @@
     </style>
 
     <style name="Theme.EmulairMaterialDark.Menu" parent="Theme.EmulairMaterialDark">
-        <item name="android:statusBarColor">@android:color/black</item>
-        <item name="android:navigationBarColor">@android:color/black</item>
-        <item name="android:windowBackground">@color/pause_menu_background_color</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:windowBackground">@color/black_75</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
     <style name="Theme.EmulairMaterialDark.Game" parent="Theme.EmulairMaterialDark">
-        <item name="android:navigationBarColor">@android:color/black</item>
-        <item name="android:statusBarColor">@android:color/black</item>
-        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:windowBackground">@color/black</item>
     </style>
 
     <style name="Theme.EmulairMaterialDark.Invisible" parent="Theme.EmulairMaterialDark">
-        <item name="android:background">#00000000</item>
+        <item name="android:background">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
@@ -185,56 +159,362 @@
     <!-- ############################################### -->
     <!-- ################# Light theme ################# -->
     <!-- ############################################### -->
-    <!--<style name="Theme.EmulairMaterialLight" parent="Theme.Material3.Light.NoActionBar">
-        <item name="colorPrimary">@color/light_theme_primary</item>
-        <item name="colorOnPrimary">@color/light_theme_onPrimary</item>
-        <item name="colorSecondary">@color/light_theme_secondary</item>
-        <item name="colorOnSecondary">@color/light_theme_onSecondary</item>
-        <item name="colorTertiary">@color/light_theme_tertiary</item>
-        <item name="colorOnTertiary">@color/light_theme_onTertiary</item>
-        <item name="colorError">@color/light_theme_error</item>
-        <item name="colorOnError">@color/light_theme_onError</item>
-        <item name="android:colorBackground">@color/light_theme_background</item>
-        <item name="colorOnBackground">@color/light_theme_onBackground</item>
-        <item name="colorSurface">@color/light_theme_surface</item>
-        <item name="colorOnSurface">@color/light_theme_onSurface</item>
-        <item name="colorOutline">@color/light_theme_outline</item>
-        &lt;!&ndash; &ndash;&gt;
-        <item name="materialCardViewStyle">?attr/materialCardViewElevatedStyle</item>
-        <item name="android:statusBarColor">?attr/colorSurface</item>
-        <item name="android:navigationBarColor">?attr/colorSurface</item>
-        <item name="elevationOverlayColor">?attr/colorOnSurface</item>
+    <style name="Theme.EmulairMaterialLight" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorAccent">@color/md_theme_light_secondary</item>
+        <item name="android:windowBackground">@color/md_theme_light_background</item>
+        <item name="android:colorBackground">@color/md_theme_light_background</item>
+        <item name="preferenceTheme">@style/ThemeOverlay.PreferenceScreen</item>
+        <item name="appBarLayoutStyle">@style/Theme.EmulairMaterialLight.AppBar</item>
+        <item name="toolbarStyle">@style/Theme.EmulairMaterialLight.Toolbar</item>
+        <item name="bottomNavigationStyle">@style/Theme.EmulairMaterialLight.BottomNav</item>
+        <item name="materialCardViewStyle">@style/Theme.EmulairMaterialLight.CardView</item>
+        <item name="materialSwitchStyle">@style/Theme.EmulairMaterialLight.Switch</item>
+        <item name="linearProgressIndicatorStyle">@style/Theme.EmulairMaterialLight.LinearProgressIndicator</item>
+        <item name="materialButtonStyle">@style/Theme.EmulairMaterialLight.Button</item>
+        <item name="imageButtonStyle">@style/Theme.EmulairMaterialLight.ImageButton</item>
+        <item name="checkboxStyle">@style/Theme.EmulairMaterialLight.CheckBox</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.EmulairMaterialLight.Dialog</item>
+        <item name="android:statusBarColor">@color/md_theme_light_background</item>
+        <item name="android:navigationBarColor">@color/md_theme_light_background</item>
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="android:textColor">@color/md_theme_light_onSurface</item>
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
-        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges
-        </item>
-    </style>-->
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+    </style>
+
+    <!-- app bar -->
+    <style name="Theme.EmulairMaterialLight.AppBar" parent="Widget.Material3.AppBarLayout">
+        <item name="android:background">@color/md_theme_light_background</item>
+    </style>
+
+    <!-- toolbar -->
+    <style name="Theme.EmulairMaterialLight.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="titleTextAppearance">@style/TextAppearance.EmulairMaterialLight.Toolbar.TitleLarge</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.EmulairMaterialLight.Toolbar</item>
+    </style>
+
+    <style name="TextAppearance.EmulairMaterialLight.Toolbar.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">@color/md_theme_light_onSurface</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ThemeOverlay.EmulairMaterialLight.Toolbar" parent="">
+        <!-- icons and other things: -->
+        <item name="colorControlNormal">@color/md_theme_light_onSurface</item>
+    </style>
+
+    <!-- bottom nav view -->
+    <style name="Theme.EmulairMaterialLight.BottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@color/md_theme_light_background</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.EmulairMaterialLight.BottomNav</item>
+        <item name="itemActiveIndicatorStyle">@style/Theme.EmulairMaterialLight.BottomNav.ActiveIndicator</item>
+    </style>
+
+    <style name="ThemeOverlay.EmulairMaterialLight.BottomNav" parent="">
+        <!-- icon and text inactive: -->
+        <item name="colorOnSurfaceVariant">@color/md_theme_light_onSurfaceVariant</item>
+        <!-- icon active: -->
+        <item name="colorOnSecondaryContainer">@color/md_theme_light_onSecondaryContainer</item>
+        <!-- text active: -->
+        <item name="colorOnSurface">@color/md_theme_light_onSurface</item>
+    </style>
+
+    <style name="Theme.EmulairMaterialLight.BottomNav.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/md_theme_light_surfaceVariant</item>
+    </style>
+
+    <!-- card -->
+    <style name="Theme.EmulairMaterialLight.CardView" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">@color/md_theme_light_surface</item>
+    </style>
+
+    <!-- switch -->
+    <style name="Theme.EmulairMaterialLight.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.EmulairMaterialLight.Switch</item>
+    </style>
+
+    <style name="ThemeOverlay.EmulairMaterialLight.Switch" parent="">
+        <!-- thumb inactive: -->
+        <item name="colorOutline">@color/md_theme_light_outline</item>
+        <!-- thumb active: -->
+        <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
+        <!-- track inactive: -->
+        <item name="colorSurfaceVariant">@color/md_theme_light_surfaceVariant</item>
+        <!-- track active: -->
+        <item name="colorPrimary">@color/md_theme_light_secondary</item>
+    </style>
+
+    <!-- linear progress indicator -->
+    <style name="Theme.EmulairMaterialLight.LinearProgressIndicator" parent="Widget.Material3.LinearProgressIndicator">
+        <item name="indicatorColor">@color/md_theme_light_primary</item>
+        <item name="trackColor">@color/md_theme_light_primaryTransparent</item>
+    </style>
+
+    <!-- button -->
+    <style name="Theme.EmulairMaterialLight.Button" parent="Widget.Material3.Button.TonalButton">
+        <!-- background: -->
+        <item name="backgroundTint">@color/md_theme_light_secondaryContainer</item>
+        <!-- text: -->
+        <item name="android:textColor">@color/md_theme_light_onSecondaryContainer</item>
+        <!-- icon: -->
+        <item name="iconTint">@color/md_theme_light_onSecondaryContainer</item>
+    </style>
+
+    <!-- image button -->
+    <style name="Theme.EmulairMaterialLight.ImageButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:tint">@color/md_theme_light_onSurface</item>
+    </style>
+
+    <!-- checkbox -->
+    <style name="Theme.EmulairMaterialLight.CheckBox" parent="Widget.Material3.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/md_theme_light_onSurface</item>
+    </style>
+
+    <!-- dialog -->
+    <style name="ThemeOverlay.EmulairMaterialLight.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <!-- buttons: -->
+        <item name="colorPrimary">@color/md_theme_light_primary</item>
+        <!-- list buttons: -->
+        <item name="colorControlNormal">@color/md_theme_light_onSurface</item>
+        <!-- icon: -->
+        <item name="colorSecondary">@color/md_theme_light_secondary</item>
+        <!-- container: -->
+        <item name="colorSurface">@color/md_theme_light_surface</item>
+        <!-- title text: -->
+        <item name="colorOnSurface">@color/md_theme_light_onSurface</item>
+        <!-- body text and items: -->
+        <item name="colorOnSurfaceVariant">@color/md_theme_light_onSurfaceVariant</item>
+    </style>
+
+    <style name="Theme.EmulairMaterialLight.Menu" parent="Theme.EmulairMaterialLight">
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:windowBackground">@color/black_75</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="Theme.EmulairMaterialLight.Game" parent="Theme.EmulairMaterialLight">
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+
+    <style name="Theme.EmulairMaterialLight.Invisible" parent="Theme.EmulairMaterialLight">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
 
     <!-- ################################################ -->
     <!-- ################# AMOLED theme ################# -->
     <!-- ################################################ -->
-    <!--<style name="Theme.EmulairMaterialAMOLED" parent="Theme.Material3.Dark.NoActionBar">
-        <item name="colorPrimary">@color/amoled_theme_primary</item>
-        <item name="colorOnPrimary">@color/amoled_theme_onPrimary</item>
-        <item name="colorSecondary">@color/amoled_theme_secondary</item>
-        <item name="colorOnSecondary">@color/amoled_theme_onSecondary</item>
-        <item name="colorTertiary">@color/amoled_theme_tertiary</item>
-        <item name="colorOnTertiary">@color/amoled_theme_onTertiary</item>
-        <item name="colorError">@color/amoled_theme_error</item>
-        <item name="colorOnError">@color/amoled_theme_onError</item>
-        <item name="android:colorBackground">@color/amoled_theme_background</item>
-        <item name="colorOnBackground">@color/amoled_theme_onBackground</item>
-        <item name="colorSurface">@color/amoled_theme_surface</item>
-        <item name="colorOnSurface">@color/amoled_theme_onSurface</item>
-        <item name="colorOutline">@color/amoled_theme_outline</item>
-        &lt;!&ndash; &ndash;&gt;
-        <item name="materialCardViewStyle">?attr/materialCardViewElevatedStyle</item>
-        <item name="android:statusBarColor">?attr/colorSurface</item>
-        <item name="android:navigationBarColor">?attr/colorSurface</item>
-        <item name="elevationOverlayColor">?attr/colorOnSurface</item>
+    <style name="Theme.EmulairMaterialAMOLED" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorAccent">@color/md_theme_amoled_secondary</item>
+        <item name="android:windowBackground">@color/md_theme_amoled_background</item>
+        <item name="android:colorBackground">@color/md_theme_amoled_background</item>
+        <item name="preferenceTheme">@style/ThemeOverlay.PreferenceScreen</item>
+        <item name="appBarLayoutStyle">@style/Theme.EmulairMaterialAMOLED.AppBar</item>
+        <item name="toolbarStyle">@style/Theme.EmulairMaterialAMOLED.Toolbar</item>
+        <item name="bottomNavigationStyle">@style/Theme.EmulairMaterialAMOLED.BottomNav</item>
+        <item name="materialCardViewStyle">@style/Theme.EmulairMaterialAMOLED.CardView</item>
+        <item name="materialSwitchStyle">@style/Theme.EmulairMaterialAMOLED.Switch</item>
+        <item name="linearProgressIndicatorStyle">@style/Theme.EmulairMaterialAMOLED.LinearProgressIndicator</item>
+        <item name="materialButtonStyle">@style/Theme.EmulairMaterialAMOLED.Button</item>
+        <item name="imageButtonStyle">@style/Theme.EmulairMaterialAMOLED.ImageButton</item>
+        <item name="checkboxStyle">@style/Theme.EmulairMaterialAMOLED.CheckBox</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.EmulairMaterialAMOLED.Dialog</item>
+        <item name="android:statusBarColor">@color/md_theme_amoled_background</item>
+        <item name="android:navigationBarColor">@color/md_theme_amoled_background</item>
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="android:textColor">@color/md_theme_amoled_onSurface</item>
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
-        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges
-        </item>
-    </style>-->
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+    </style>
+
+    <!-- app bar -->
+    <style name="Theme.EmulairMaterialAMOLED.AppBar" parent="Widget.Material3.AppBarLayout">
+        <item name="android:background">@color/md_theme_amoled_background</item>
+    </style>
+
+    <!-- toolbar -->
+    <style name="Theme.EmulairMaterialAMOLED.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="titleTextAppearance">@style/TextAppearance.EmulairMaterialAMOLED.Toolbar.TitleLarge</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.EmulairMaterialAMOLED.Toolbar</item>
+    </style>
+
+    <style name="TextAppearance.EmulairMaterialAMOLED.Toolbar.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">@color/md_theme_amoled_onSurface</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ThemeOverlay.EmulairMaterialAMOLED.Toolbar" parent="">
+        <!-- icons and other things: -->
+        <item name="colorControlNormal">@color/md_theme_amoled_onSurface</item>
+    </style>
+
+    <!-- bottom nav view -->
+    <style name="Theme.EmulairMaterialAMOLED.BottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@color/md_theme_amoled_background</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.EmulairMaterialAMOLED.BottomNav</item>
+        <item name="itemActiveIndicatorStyle">@style/Theme.EmulairMaterialAMOLED.BottomNav.ActiveIndicator</item>
+    </style>
+
+    <style name="ThemeOverlay.EmulairMaterialAMOLED.BottomNav" parent="">
+        <!-- icon and text inactive: -->
+        <item name="colorOnSurfaceVariant">@color/md_theme_amoled_onSurfaceVariant</item>
+        <!-- icon active: -->
+        <item name="colorOnSecondaryContainer">@color/md_theme_amoled_onSecondaryContainer</item>
+        <!-- text active: -->
+        <item name="colorOnSurface">@color/md_theme_amoled_onSurface</item>
+    </style>
+
+    <style name="Theme.EmulairMaterialAMOLED.BottomNav.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/md_theme_amoled_surfaceVariant</item>
+    </style>
+
+    <!-- card -->
+    <style name="Theme.EmulairMaterialAMOLED.CardView" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">@color/md_theme_amoled_surface</item>
+    </style>
+
+    <!-- switch -->
+    <style name="Theme.EmulairMaterialAMOLED.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.EmulairMaterialAMOLED.Switch</item>
+    </style>
+
+    <style name="ThemeOverlay.EmulairMaterialAMOLED.Switch" parent="">
+        <!-- thumb inactive: -->
+        <item name="colorOutline">@color/md_theme_amoled_outline</item>
+        <!-- thumb active: -->
+        <item name="colorOnPrimary">@color/md_theme_amoled_onPrimary</item>
+        <!-- track inactive: -->
+        <item name="colorSurfaceVariant">@color/md_theme_amoled_surfaceVariant</item>
+        <!-- track active: -->
+        <item name="colorPrimary">@color/md_theme_amoled_secondary</item>
+    </style>
+
+    <!-- linear progress indicator -->
+    <style name="Theme.EmulairMaterialAMOLED.LinearProgressIndicator" parent="Widget.Material3.LinearProgressIndicator">
+        <item name="indicatorColor">@color/md_theme_amoled_primary</item>
+        <item name="trackColor">@color/md_theme_amoled_primaryTransparent</item>
+    </style>
+
+    <!-- button -->
+    <style name="Theme.EmulairMaterialAMOLED.Button" parent="Widget.Material3.Button.TonalButton">
+        <!-- background: -->
+        <item name="backgroundTint">@color/md_theme_amoled_secondaryContainer</item>
+        <!-- text: -->
+        <item name="android:textColor">@color/md_theme_amoled_onSecondaryContainer</item>
+        <!-- icon: -->
+        <item name="iconTint">@color/md_theme_amoled_onSecondaryContainer</item>
+    </style>
+
+    <!-- image button -->
+    <style name="Theme.EmulairMaterialAMOLED.ImageButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:tint">@color/md_theme_amoled_onSurface</item>
+    </style>
+
+    <!-- checkbox -->
+    <style name="Theme.EmulairMaterialAMOLED.CheckBox" parent="Widget.Material3.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/md_theme_amoled_onSurface</item>
+    </style>
+
+    <!-- dialog -->
+    <style name="ThemeOverlay.EmulairMaterialAMOLED.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <!-- buttons: -->
+        <item name="colorPrimary">@color/md_theme_amoled_primary</item>
+        <!-- list buttons: -->
+        <item name="colorControlNormal">@color/md_theme_amoled_onSurface</item>
+        <!-- icon: -->
+        <item name="colorSecondary">@color/md_theme_amoled_secondary</item>
+        <!-- container: -->
+        <item name="colorSurface">@color/md_theme_amoled_surface</item>
+        <!-- title text: -->
+        <item name="colorOnSurface">@color/md_theme_amoled_onSurface</item>
+        <!-- body text and items: -->
+        <item name="colorOnSurfaceVariant">@color/md_theme_amoled_onSurfaceVariant</item>
+    </style>
+
+    <style name="Theme.EmulairMaterialAMOLED.Menu" parent="Theme.EmulairMaterialAMOLED">
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:windowBackground">@color/black_75</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="Theme.EmulairMaterialAMOLED.Game" parent="Theme.EmulairMaterialAMOLED">
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+
+    <style name="Theme.EmulairMaterialAMOLED.Invisible" parent="Theme.EmulairMaterialAMOLED">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <!-- ################################################ -->
+    <!-- ############### Dark Monet theme ############### -->
+    <!-- ################################################ -->
+    <style name="Theme.EmulairMaterialYouDark" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorAccent">@color/md_theme_dark_secondary</item>
+        <item name="android:windowBackground">@color/md_theme_dark_background</item>
+        <item name="android:colorBackground">@color/md_theme_dark_background</item>
+        <item name="preferenceTheme">@style/ThemeOverlay.PreferenceScreen</item>
+        <item name="android:statusBarColor">@color/md_theme_dark_background</item>
+        <item name="android:navigationBarColor">@color/md_theme_dark_background</item>
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="android:textColor">@color/md_theme_dark_onSurface</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+    </style>
+
+    <!-- ################################################# -->
+    <!-- ############### Light Monet theme ############### -->
+    <!-- ################################################# -->
+    <style name="Theme.EmulairMaterialYouLight" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorAccent">@color/md_theme_light_secondary</item>
+        <item name="android:windowBackground">@color/md_theme_light_background</item>
+        <item name="android:colorBackground">@color/md_theme_light_background</item>
+        <item name="preferenceTheme">@style/ThemeOverlay.PreferenceScreen</item>
+        <item name="android:statusBarColor">@color/md_theme_light_background</item>
+        <item name="android:navigationBarColor">@color/md_theme_light_background</item>
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="android:textColor">@color/md_theme_light_onSurface</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+    </style>
+
+    <!-- ################################################ -->
+    <!-- ############## AMOLED Monet theme ############## -->
+    <!-- ################################################ -->
+    <style name="Theme.EmulairMaterialYouAMOLED" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorAccent">@color/md_theme_amoled_secondary</item>
+        <item name="android:windowBackground">@color/md_theme_amoled_background</item>
+        <item name="android:colorBackground">@color/md_theme_amoled_background</item>
+        <item name="preferenceTheme">@style/ThemeOverlay.PreferenceScreen</item>
+        <item name="android:statusBarColor">@color/md_theme_amoled_background</item>
+        <item name="android:navigationBarColor">@color/md_theme_amoled_background</item>
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="android:textColor">@color/md_theme_amoled_onSurface</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+    </style>
 
     <!-- ############################################### -->
     <!-- ################## Universal ################## -->
@@ -288,3 +568,32 @@
     </style>
 
 </resources>
+
+<!--
+<item name="colorPrimary">@color/md_theme_dark_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_dark_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_dark_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/md_theme_dark_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_dark_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/md_theme_dark_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_dark_onSecondaryContainer</item>
+        <item name="colorTertiary">@color/md_theme_dark_tertiary</item>
+        <item name="colorOnTertiary">@color/md_theme_dark_onTertiary</item>
+        <item name="colorTertiaryContainer">@color/md_theme_dark_tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/md_theme_dark_onTertiaryContainer</item>
+        <item name="colorAccent">@color/md_theme_dark_secondary</item>
+        <item name="colorError">@color/md_theme_dark_error</item>
+        <item name="colorErrorContainer">@color/md_theme_dark_errorContainer</item>
+        <item name="colorOnError">@color/md_theme_dark_onError</item>
+        <item name="colorOnErrorContainer">@color/md_theme_dark_onErrorContainer</item>
+        <item name="colorOnBackground">@color/md_theme_dark_onBackground</item>
+        <item name="colorSurface">@color/md_theme_dark_surface</item>
+        <item name="colorOnSurface">@color/md_theme_dark_onSurface</item>
+        <item name="colorSurfaceVariant">@color/md_theme_dark_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/md_theme_dark_onSurfaceVariant</item>
+        <item name="colorOutline">@color/md_theme_dark_outline</item>
+        <item name="colorOnSurfaceInverse">@color/md_theme_dark_inverseOnSurface</item>
+        <item name="colorSurfaceInverse">@color/md_theme_dark_inverseSurface</item>
+        <item name="colorPrimaryInverse">@color/md_theme_dark_inversePrimary</item>
+-->

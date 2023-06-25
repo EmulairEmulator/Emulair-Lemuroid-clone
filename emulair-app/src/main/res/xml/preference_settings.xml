@@ -46,7 +46,7 @@
             app:iconSpaceReserved="false" />
 
         <com.bigbratan.emulair.ui.CustomListPreference
-            android:defaultValue="material_you_theme"
+            android:defaultValue="dark_theme"
             android:entries="@array/pref_key_theme_names"
             android:entryValues="@array/pref_key_theme_values"
             android:key="@string/pref_key_theme"
