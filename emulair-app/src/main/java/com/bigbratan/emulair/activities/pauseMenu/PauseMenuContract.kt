@@ -15,6 +15,7 @@ object PauseMenuContract {
     const val RESULT_SAVE = "RESULT_SAVE"
     const val RESULT_LOAD = "RESULT_LOAD"
     const val RESULT_QUIT = "RESULT_QUIT"
+    const val RESULT_CLOSE = "RESULT_CLOSE"
     const val RESULT_CHANGE_DISK = "RESULT_CHANGE_DISK"
     const val RESULT_EDIT_TOUCH_CONTROLS = "RESULT_EDIT_TOUCH_CONTROLS"
     const val RESULT_ENABLE_AUDIO = "RESULT_ENABLE_AUDIO"

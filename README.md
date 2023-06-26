@@ -67,6 +67,7 @@ This feature hasn't been implemented yet.
 - [x] An easier to navigate app structure
 - [x] An info screen containing frequently asked questions and other useful stuff
 - [x] A profile screen used for easily connecting to RetroAchievements
+- [x] A "Close menu" button accessible from the pause menu, so users don't have to click their device's back button every time they want to unpause a game
 - [x] A themed app icon for Android 13+ devices
 - [x] A "Jump back in" section on the "Games" page, along with "Recents", "Favorites" and "All Games"
 - [x] Separate screens with vertical lists for "All Games" and "Favorites" (i.e. they're not just horizontal carousels anymore)
@@ -105,7 +106,6 @@ This feature hasn't been implemented yet.
 - [ ] A "Starred Systems" list
 - [ ] A details screen accessible by long-pressing a game or a system
 - [ ] A splash screen for Android 12+ devices
-- [ ] A "Close menu" button accessible from the pause menu, so users don't have to click their device's back button every time they want to unpause a game
 - [ ] Set core on a per game basis
 - [ ] Choose if you want to automatically fall back on other emulators or not, in case a game doesn't work (this implies unlocking the option to switch between FinalBurn Neo and MAME 2003-Plus)
 - [ ] Change filter on a per game or per system basis (not just global)

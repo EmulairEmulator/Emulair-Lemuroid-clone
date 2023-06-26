@@ -68,23 +68,23 @@ class PauseMenuFragment : PreferenceFragmentCompat() {
             return true
 
         when (preference?.key) {
-            "pref_game_section_save" -> {
+            getString(R.string.pref_game_section_save) -> {
                 findNavController().navigate(R.id.pausemenu_save)
             }
-            "pref_game_section_load" -> {
+            getString(R.string.pref_game_section_load) -> {
                 findNavController().navigate(R.id.pausemenu_load)
             }
-            "pref_game_reset" -> handleRestartAction(activity, requireContext())
-            "pref_game_quit" -> handleQuitAction(activity, requireContext())
-            "pref_game_section_core_options" -> {
+            getString(R.string.pref_game_reset) -> handleRestartAction(activity, requireContext())
+            getString(R.string.pref_game_quit) -> handleQuitAction(activity, requireContext())
+            getString(R.string.pref_game_section_core_options) -> {
                 findNavController().navigate(R.id.pausemenu_core_options)
             }
+            getString(R.string.pref_game_close) -> handleCloseAction(activity, requireContext())
         }
         return super.onPreferenceTreeClick(preference)
     }
 
     private fun handleRestartAction(activity: Activity?, context: Context) {
-        // MaterialAlertDialogBuilder(context, R.style.AlertDialog)
         MaterialAlertDialogBuilder(context)
             .setTitle(R.string.popup_title)
             .setMessage(R.string.pause_menu_restart_prompt)
@@ -99,7 +99,6 @@ class PauseMenuFragment : PreferenceFragmentCompat() {
     }
 
     private fun handleQuitAction(activity: Activity?, context: Context) {
-        // MaterialAlertDialogBuilder(context, R.style.AlertDialog)
         MaterialAlertDialogBuilder(context)
             .setTitle(R.string.popup_title)
             .setMessage(R.string.pause_menu_quit_prompt)
@@ -111,6 +110,13 @@ class PauseMenuFragment : PreferenceFragmentCompat() {
             }
             .setNegativeButton(R.string.button_cancel) { _, _ -> }
             .show()
+    }
+
+    private fun handleCloseAction(activity: Activity?, context: Context) {
+        val resultIntent = Intent().apply {
+            putExtra(PauseMenuContract.RESULT_CLOSE, true)
+        }
+        setResultAndFinish(activity, resultIntent)
     }
 
     private fun setResultAndFinish(activity: Activity?, resultIntent: Intent) {

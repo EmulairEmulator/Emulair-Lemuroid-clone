@@ -71,7 +71,7 @@ object PauseMenuPreferences {
         changeDiskPreference?.entries = (0 until numDisks)
             .map {
                 screen.context.resources.getString(
-                    R.string.pause_menu_change_disk_disk,
+                    R.string.pause_menu_change_disk_option,
                     (it + 1).toString()
                 )
             }

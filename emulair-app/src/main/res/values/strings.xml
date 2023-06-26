@@ -107,9 +107,10 @@
     <string name="pause_menu_mute_audio">Mute</string>
     <string name="pause_menu_fast_forward">Fast-Forward</string>
     <string name="pause_menu_change_disk_button">Change Disk</string>
-    <string name="pause_menu_change_disk_disk">Disk %1$s</string>
+    <string name="pause_menu_change_disk_option">Disk %1$s</string>
     <string name="pause_menu_edit_touch_controls">Edit Controls</string>
     <string name="pause_menu_core_options">Core Options</string>
+    <string name="pause_menu_exit">Exit Menu</string>
 
     <!-- CORE OPTIONS FRAGMENT -->
     <!-- <string name="core_options_category_preferences">Preferences</string> -->

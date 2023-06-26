@@ -76,4 +76,26 @@
         <item>@string/settings_general_display_filter_lcd_option</item>
         <item>@string/settings_general_display_filter_hd_option</item>
     </string-array>
+
+    <string name="pref_game_section_save" translatable="false">section_save</string>
+    <string name="pref_game_section_load" translatable="false">section_load</string>
+    <string name="pref_game_quit" translatable="false">quit</string>
+    <string name="pref_game_reset" translatable="false">reset</string>
+    <string name="pref_game_mute" translatable="false">mute</string>
+    <string name="pref_game_fast_forward" translatable="false">forward</string>
+    <string name="pref_game_section_change_disk" translatable="false">change_disk</string>
+    <string name="pref_game_edit_touch_controls" translatable="false">touch_controls</string>
+    <string name="pref_game_section_core_options" translatable="false">core_options</string>
+    <string name="pref_game_controller_1" translatable="false">controller_1</string>
+    <string name="pref_game_close" translatable="false">close</string>
+    <string name="pref_game_save_0" translatable="false">save_0</string>
+    <string name="pref_game_save_1" translatable="false">save_1</string>
+    <string name="pref_game_save_2" translatable="false">save_2</string>
+    <string name="pref_game_save_3" translatable="false">save_3</string>
+    <string name="pref_game_save_4" translatable="false">save_4</string>
+    <string name="pref_game_load_0" translatable="false">load_0</string>
+    <string name="pref_game_load_1" translatable="false">load_1</string>
+    <string name="pref_game_load_2" translatable="false">load_2</string>
+    <string name="pref_game_load_3" translatable="false">load_3</string>
+    <string name="pref_game_load_4" translatable="false">load_4</string>
 </resources>
