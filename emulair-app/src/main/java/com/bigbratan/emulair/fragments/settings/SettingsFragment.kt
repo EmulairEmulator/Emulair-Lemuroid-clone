@@ -148,7 +148,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
     }
 
     private fun handleResetSettings() {
-        // MaterialAlertDialogBuilder(requireContext(), R.style.AlertDialog)
         MaterialAlertDialogBuilder(requireContext())
             .setTitle(R.string.popup_title)
             .setMessage(R.string.advanced_general_reset_popup_description)
