@@ -189,7 +189,7 @@ abstract class EmulairApplicationModule {
         @PerApp
         @JvmStatic
         fun retrofit(): Retrofit = Retrofit.Builder()
-            .baseUrl("https://example.com")
+            .baseUrl("https://github.com")
             .addConverterFactory(
                 object : Converter.Factory() {
                     override fun responseBodyConverter(

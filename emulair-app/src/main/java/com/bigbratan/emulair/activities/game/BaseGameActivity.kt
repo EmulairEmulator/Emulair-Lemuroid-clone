@@ -239,7 +239,7 @@ abstract class BaseGameActivity : ImmersiveActivity() {
 
     private suspend fun initializeRetroGameViewErrorsFlow() {
         retroGameViewFlow().getGLRetroErrors()
-            .catch { Timber.e(it, "Exception in GLRetroErrors. Ironic. (Emulair dev here. I didn't write this joke. Perhaps it was Lemuroid dev who wrote it?)") }
+            .catch { Timber.e(it, "Exception in GLRetroErrors. Ironic.") }
             .collect { handleRetroViewError(it) }
     }
 
@@ -305,10 +305,12 @@ abstract class BaseGameActivity : ImmersiveActivity() {
         return controllerConfigsState
     }
 
-    /* On some cores unserialize fails with no reason. So we need to try multiple times. */
+    // On some cores, unserialize fails with no reason. That's why we need to try multiple times.
     private suspend fun restoreAutoSaveAsync(saveState: SaveState) {
-        // PPSSPP and Mupen64 initialize some state while rendering the first frame, so we have to wait before restoring
-        // the autosave. Do not change thread here. Stick to the GL one to avoid issues with PPSSPP.
+        /*
+        PPSSPP and Mupen64 initialize some state while rendering the first frame, so we have to wait before restoring
+        the autosave. Do not change thread here. Stick to the GL one to avoid issues with PPSSPP.
+        */
         if (!isAutoSaveEnabled()) return
 
         try {
@@ -559,7 +561,7 @@ abstract class BaseGameActivity : ImmersiveActivity() {
         retroGameView?.updateVariables(*updatedVariables)
     }
 
-    // Now that we wait for the first rendered frame this is probably no longer needed, but we'll keep it just to be sure
+    // Now that we wait for the first rendered frame, this is probably no longer needed, but we'll keep it just to be sure
     private suspend fun restoreQuickSave(saveState: SaveState) {
         var times = 10
 
@@ -877,7 +879,7 @@ abstract class BaseGameActivity : ImmersiveActivity() {
 
         if (state != null) {
             statesManager.setAutoSave(game, systemCoreConfig.coreID, state)
-            Timber.i("Stored autosave file with size: ${state?.state?.size}")
+            Timber.i("Stored autosave file with size: ${state.state.size}")
         }
     }
 
@@ -885,7 +887,7 @@ abstract class BaseGameActivity : ImmersiveActivity() {
         val retroGameView = retroGameView ?: return
         val sramState = retroGameView.serializeSRAM()
         legacySavesManager.setSaveRAM(game, sramState)
-        Timber.i("Stored sram file with size: ${sramState.size}")
+        Timber.i("Stored SRAM file with size: ${sramState.size}")
     }
 
     private suspend fun saveSlot(index: Int) {
