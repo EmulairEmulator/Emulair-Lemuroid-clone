@@ -50,7 +50,6 @@ This feature hasn't been implemented yet.
 - Easily search for any installed video game
 - Manually save/load states
 - Automatically save/load states when correctly closing a game (by clicking "Quit" in the pause menu)
-- Save files to Google Drive (only if downloaded from Google Play; inaccessible directly from Drive)
 - Add games to a "Favourites" list
 - Simulate various screens, such as LCD or CRT
 - Remap some touch screen controls (such as joysticks or D-pads) to gyroscopic input, by double/triple tapping the buttons
@@ -117,7 +116,7 @@ This feature hasn't been implemented yet.
 ## Removed Features (from Lemuroid)
 - Android TV support
 - Turn games into shortcuts for your launcher
-- Sync saves on Google Drive
+- Save files to Google Drive (only if downloaded from Google Play; Drive folder inaccessible)
 
 **Note: Some features will be brought back later.**
 
