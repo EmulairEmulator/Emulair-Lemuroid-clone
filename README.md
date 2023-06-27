@@ -50,7 +50,6 @@ This feature hasn't been implemented yet.
 - Easily search for any installed video game
 - Manually save/load states
 - Automatically save/load states when correctly closing a game (by clicking "Quit" in the pause menu)
-- Save files to Google Drive (only if downloaded from Google Play; inaccessible directly from Drive)
 - Add games to a "Favourites" list
 - Simulate various screens, such as LCD or CRT
 - Remap some touch screen controls (such as joysticks or D-pads) to gyroscopic input, by double/triple tapping the buttons
@@ -72,7 +71,7 @@ This feature hasn't been implemented yet.
 - [x] A "Jump back in" section on the "Games" page, along with "Recents", "Favorites" and "All Games"
 - [x] Separate screens with vertical lists for "All Games" and "Favorites" (i.e. they're not just horizontal carousels anymore)
 - [x] Button prompts before (almost) every important action
-- [x] Light Theme, AMOLED Theme, Material You Theme (previously there was only a Dark Theme)
+- [x] New Dark Theme, Light Theme, AMOLED Theme and Material You (Monet Engine) counterparts for all of them (the latter exclusive to A12+ devices)
 - [x] New in-app icons
 - [x] New sprites for systems
 - [x] Bypass screen lock to rotate the screen whenever you want
@@ -87,6 +86,7 @@ This feature hasn't been implemented yet.
 - [ ] More state slots
 - [ ] More save file formats support
 - [ ] More animations and effects
+- [ ] More controls customization (e.g. hide any button, move buttons anywhere on the screen, etc.)
 - [ ] Better ROM scraping and name detection
 - [ ] Better NDS/3DS touchscreen controls (they can now overlap the screens)
 - [ ] Cheat codes support
@@ -116,7 +116,7 @@ This feature hasn't been implemented yet.
 ## Removed Features (from Lemuroid)
 - Android TV support
 - Turn games into shortcuts for your launcher
-- Sync saves on Google Drive
+- Save files to Google Drive (only if downloaded from Google Play; Drive folder inaccessible)
 
 **Note: Some features will be brought back later.**
 
