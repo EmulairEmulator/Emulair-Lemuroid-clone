@@ -123,7 +123,7 @@
     <!-- ################################################# -->
     <!-- ############### Light Monet theme ############### -->
     <!-- ################################################# -->
-    <style name="Theme.EmulairMaterialYouLight.Invisible" parent="Theme.Material3.Dark.NoActionBar">
+    <style name="Theme.EmulairMaterialYouLight.Invisible" parent="Theme.Material3.Light.NoActionBar">
         <item name="android:background">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>

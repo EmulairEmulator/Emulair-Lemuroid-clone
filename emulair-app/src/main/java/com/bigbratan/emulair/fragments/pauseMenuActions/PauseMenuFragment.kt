@@ -30,7 +30,7 @@ class PauseMenuFragment : PreferenceFragmentCompat() {
             false
         ) ?: false
 
-        PauseMenuPreferences.setupAudioOption(preferenceScreen, audioEnabled)
+        PauseMenuPreferences.setupAudioOption(preferenceScreen, audioEnabled, requireContext())
 
         val fastForwardSupported = activity?.intent?.getBooleanExtra(
             PauseMenuContract.EXTRA_FAST_FORWARD_SUPPORTED,
@@ -45,26 +45,27 @@ class PauseMenuFragment : PreferenceFragmentCompat() {
         PauseMenuPreferences.setupFastForwardOption(
             preferenceScreen,
             fastForwardEnabled,
-            fastForwardSupported
+            fastForwardSupported,
+            requireContext()
         )
 
         val systemCoreConfig = activity?.intent?.getSerializableExtra(
             PauseMenuContract.EXTRA_SYSTEM_CORE_CONFIG
         ) as SystemCoreConfig
 
-        PauseMenuPreferences.setupSaveLoadOptions(preferenceScreen, systemCoreConfig)
+        PauseMenuPreferences.setupSaveLoadOptions(preferenceScreen, systemCoreConfig, requireContext())
 
         val numDisks = activity?.intent?.getIntExtra(PauseMenuContract.EXTRA_DISKS, 0) ?: 0
         val currentDisk = activity?.intent?.getIntExtra(PauseMenuContract.EXTRA_CURRENT_DISK, 0) ?: 0
         if (numDisks > 1) {
-            PauseMenuPreferences.setupChangeDiskOption(activity, preferenceScreen, currentDisk, numDisks)
+            PauseMenuPreferences.setupChangeDiskOption(activity, preferenceScreen, currentDisk, numDisks, requireContext())
         }
 
-        PauseMenuPreferences.setupCoreOptions(preferenceScreen, systemCoreConfig)
+        PauseMenuPreferences.setupCoreOptions(preferenceScreen, systemCoreConfig, requireContext())
     }
 
     override fun onPreferenceTreeClick(preference: Preference?): Boolean {
-        if (PauseMenuPreferences.onPreferenceTreeClicked(activity, preference))
+        if (PauseMenuPreferences.onPreferenceTreeClicked(activity, preference, requireContext()))
             return true
 
         when (preference?.key) {

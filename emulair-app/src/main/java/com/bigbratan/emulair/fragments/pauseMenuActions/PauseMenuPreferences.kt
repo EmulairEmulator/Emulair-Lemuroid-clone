@@ -22,8 +22,8 @@ import kotlin.math.roundToInt
 
 object PauseMenuPreferences {
 
-    fun setupAudioOption(screen: PreferenceScreen, audioEnabled: Boolean) {
-        val preference = screen.findPreference<SwitchPreferenceCompat>(MUTE)
+    fun setupAudioOption(screen: PreferenceScreen, audioEnabled: Boolean, context: Context) {
+        val preference = screen.findPreference<SwitchPreferenceCompat>(context.getString(R.string.pref_game_mute))
         preference?.isChecked = !audioEnabled
     }
 
@@ -31,8 +31,9 @@ object PauseMenuPreferences {
         screen: PreferenceScreen,
         fastForwardEnabled: Boolean,
         fastForwardSupported: Boolean,
+        context: Context
     ) {
-        val preference = screen.findPreference<SwitchPreferenceCompat>(FAST_FORWARD)
+        val preference = screen.findPreference<SwitchPreferenceCompat>(context.getString(R.string.pref_game_fast_forward))
         preference?.isChecked = fastForwardEnabled
         preference?.isVisible = fastForwardSupported
     }
@@ -40,19 +41,21 @@ object PauseMenuPreferences {
     fun setupSaveLoadOptions(
         screen: PreferenceScreen,
         systemCoreConfig: SystemCoreConfig,
+        context: Context
     ) {
-        val savesOption = screen.findPreference<Preference>(SECTION_SAVE_GAME)
+        val savesOption = screen.findPreference<Preference>(context.getString(R.string.pref_game_section_save))
         savesOption?.isVisible = systemCoreConfig.statesSupported
 
-        val loadOption = screen.findPreference<Preference>(SECTION_LOAD_GAME)
+        val loadOption = screen.findPreference<Preference>(context.getString(R.string.pref_game_section_load))
         loadOption?.isVisible = systemCoreConfig.statesSupported
     }
 
     fun setupCoreOptions(
         screen: PreferenceScreen,
         systemCoreConfig: SystemCoreConfig,
+        context: Context
     ) {
-        screen.findPreference<Preference>(SECTION_CORE_OPTIONS)?.isVisible = sequenceOf(
+        screen.findPreference<Preference>(context.getString(R.string.pref_game_section_core_options))?.isVisible = sequenceOf(
             systemCoreConfig.exposedSettings.isNotEmpty(),
             systemCoreConfig.exposedAdvancedSettings.isNotEmpty(),
             systemCoreConfig.controllerConfigs.values.any { it.size > 1 }
@@ -64,8 +67,9 @@ object PauseMenuPreferences {
         screen: PreferenceScreen,
         currentDisk: Int,
         numDisks: Int,
+        context: Context
     ) {
-        val changeDiskPreference = screen.findPreference<ListPreference>(SECTION_CHANGE_DISK)
+        val changeDiskPreference = screen.findPreference<ListPreference>(context.getString(R.string.pref_game_section_change_disk))
         changeDiskPreference?.isVisible = numDisks > 1
 
         changeDiskPreference?.entries = (0 until numDisks)
@@ -99,7 +103,8 @@ object PauseMenuPreferences {
     ) {
         screen.addPreference(
             Preference(screen.context).apply {
-                this.key = "pref_game_save_$index"
+                val keyConcat = "pref_game_save_$index"
+                this.key = context.getString(context.resources.getIdentifier(keyConcat, "string", context.packageName))
                 this.summary = getDateString(saveStateInfo)
                 this.title = context.getString(R.string.pause_menu_state, (index + 1).toString())
                 this.icon = BitmapDrawable(screen.context.resources, bitmap)
@@ -116,7 +121,8 @@ object PauseMenuPreferences {
     ) {
         screen.addPreference(
             Preference(screen.context, null).apply {
-                this.key = "pref_game_load_$index"
+                val keyConcat = "pref_game_load_$index"
+                this.key = context.getString(context.resources.getIdentifier(keyConcat, "string", context.packageName))
                 this.summary = getDateString(saveStateInfo)
                 this.isEnabled = saveStateInfo.exists
                 this.title = context.getString(R.string.pause_menu_state, (index + 1).toString())
@@ -126,31 +132,21 @@ object PauseMenuPreferences {
         )
     }
 
-    fun onPreferenceTreeClicked(activity: Activity?, preference: Preference?): Boolean {
+    fun onPreferenceTreeClicked(activity: Activity?, preference: Preference?, context: Context?): Boolean {
         return when (preference?.key) {
-            "pref_game_save_0" -> handleSaveAction(activity, 0)
-            "pref_game_save_1" -> handleSaveAction(activity, 1)
-            "pref_game_save_2" -> handleSaveAction(activity, 2)
-            "pref_game_save_3" -> handleSaveAction(activity, 3)
-            "pref_game_save_4" -> handleSaveAction(activity, 4)
-            "pref_game_save_5" -> handleSaveAction(activity, 5)
-            "pref_game_save_6" -> handleSaveAction(activity, 6)
-            "pref_game_save_7" -> handleSaveAction(activity, 7)
-            "pref_game_save_8" -> handleSaveAction(activity, 8)
-            "pref_game_save_9" -> handleSaveAction(activity, 9)
+            context?.getString(R.string.pref_game_save_0) -> handleSaveAction(activity, 0)
+            context?.getString(R.string.pref_game_save_1) -> handleSaveAction(activity, 1)
+            context?.getString(R.string.pref_game_save_2) -> handleSaveAction(activity, 2)
+            context?.getString(R.string.pref_game_save_3) -> handleSaveAction(activity, 3)
+            context?.getString(R.string.pref_game_save_4) -> handleSaveAction(activity, 4)
             // -- //
-            "pref_game_load_0" -> handleLoadAction(activity, 0)
-            "pref_game_load_1" -> handleLoadAction(activity, 1)
-            "pref_game_load_2" -> handleLoadAction(activity, 2)
-            "pref_game_load_3" -> handleLoadAction(activity, 3)
-            "pref_game_load_4" -> handleLoadAction(activity, 4)
-            "pref_game_load_5" -> handleLoadAction(activity, 5)
-            "pref_game_load_6" -> handleLoadAction(activity, 6)
-            "pref_game_load_7" -> handleLoadAction(activity, 7)
-            "pref_game_load_8" -> handleLoadAction(activity, 8)
-            "pref_game_load_9" -> handleLoadAction(activity, 9)
+            context?.getString(R.string.pref_game_load_0) -> handleLoadAction(activity, 0)
+            context?.getString(R.string.pref_game_load_1) -> handleLoadAction(activity, 1)
+            context?.getString(R.string.pref_game_load_2) -> handleLoadAction(activity, 2)
+            context?.getString(R.string.pref_game_load_3) -> handleLoadAction(activity, 3)
+            context?.getString(R.string.pref_game_load_4) -> handleLoadAction(activity, 4)
             // -- //
-            "pref_game_mute" -> {
+            context?.getString(R.string.pref_game_mute) -> {
                 val currentValue = (preference as SwitchPreferenceCompat).isChecked
                 val resultIntent = Intent().apply {
                     putExtra(PauseMenuContract.RESULT_ENABLE_AUDIO, !currentValue)
@@ -158,7 +154,7 @@ object PauseMenuPreferences {
                 setResultAndFinish(activity, resultIntent)
                 true
             }
-            "pref_game_fast_forward" -> {
+            context?.getString(R.string.pref_game_fast_forward) -> {
                 val currentValue = (preference as SwitchPreferenceCompat).isChecked
                 val resultIntent = Intent().apply {
                     putExtra(PauseMenuContract.RESULT_ENABLE_FAST_FORWARD, currentValue)
@@ -166,7 +162,7 @@ object PauseMenuPreferences {
                 setResultAndFinish(activity, resultIntent)
                 true
             }
-            "pref_game_edit_touch_controls" -> {
+            context?.getString(R.string.pref_game_edit_touch_controls) -> {
                 val resultIntent = Intent().apply {
                     putExtra(PauseMenuContract.RESULT_EDIT_TOUCH_CONTROLS, true)
                 }
@@ -219,11 +215,4 @@ object PauseMenuPreferences {
         val imageSize = GraphicsUtils.convertDpToPixel(96f, context).roundToInt()
         return statesPreviewManager.getPreviewForSlot(game, coreID, index, imageSize)
     }
-
-    const val FAST_FORWARD = "pref_game_fast_forward"
-    const val MUTE = "pref_game_mute"
-    const val SECTION_CORE_OPTIONS = "pref_game_section_core_options"
-    const val SECTION_CHANGE_DISK = "pref_game_section_change_disk"
-    const val SECTION_SAVE_GAME = "pref_game_section_save"
-    const val SECTION_LOAD_GAME = "pref_game_section_load"
 }

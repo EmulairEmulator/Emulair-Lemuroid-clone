@@ -74,7 +74,7 @@ class StateSaveFragment : PreferenceFragmentCompat() {
     }
 
     override fun onPreferenceTreeClick(preference: Preference?): Boolean {
-        return PauseMenuPreferences.onPreferenceTreeClicked(activity, preference)
+        return PauseMenuPreferences.onPreferenceTreeClicked(activity, preference, requireContext())
     }
 
     @dagger.Module
