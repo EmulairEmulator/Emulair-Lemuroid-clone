@@ -1,9 +1,10 @@
 package com.bigbratan.emulair.activities.main
 
 import android.app.Activity
-// import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -42,25 +43,15 @@ import com.bigbratan.emulair.managers.interaction.GameInteractor
 import com.bigbratan.emulair.managers.input.InputDeviceManager
 import com.bigbratan.emulair.managers.saveSync.SaveSyncWork
 import com.bigbratan.emulair.managers.settings.SettingsInteractor
+import com.bigbratan.emulair.managers.settings.SettingsManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.Provides
 import dagger.android.ContributesAndroidInjector
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.runBlocking
 import java.util.*
 import javax.inject.Inject
-
-/*import android.content.SharedPreferences
-import android.os.Handler
-import android.os.Looper
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.lifecycleScope
-import androidx.preference.PreferenceManager
-import com.bigbratan.emulair.common.utils.coroutines.launchOnState
-import com.bigbratan.emulair.managers.settings.SettingsManager
-import kotlinx.coroutines.launch
-import dagger.Lazy
-import kotlinx.coroutines.runBlocking*/
 
 @OptIn(DelicateCoroutinesApi::class)
 class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
@@ -71,58 +62,42 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
     @Inject
     lateinit var saveSyncManager: SaveSyncManager
 
+    @Inject
+    lateinit var settingsManager: SettingsManager
+
     private val reviewManager = ReviewManager()
 
     private var mainViewModel: MainViewModel? = null
 
-    // private lateinit var themeHandler: Handler
-
-    /*private val sharedPreferences: SharedPreferences by lazy {
-        PreferenceManager.getDefaultSharedPreferences(this)
-    }*/
-
-    /*private val settingsManager by lazy {
-        SettingsManager(this) { sharedPreferences }
-    }*/
+    private lateinit var themeHandler: Handler
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // themeHandler = Handler(Looper.getMainLooper())
-        // applyTheme(runBlocking { settingsManager.appTheme() })
+        applyTheme()
         setContentView(R.layout.activity_main)
         initializeActivity()
     }
 
-    override fun activity(): Activity = this
-    override fun isBusy(): Boolean = mainViewModel?.displayProgress?.value ?: false
-
-    /*private fun applyTheme(theme: String) {
-        val currentTheme = runBlocking { settingsManager.appTheme() }
-        if (theme != currentTheme) {
-            runBlocking { settingsManager.saveTheme(theme) }
-            val themeResId = when (theme) {
-                "light_theme" -> R.style.Theme_EmulairMaterialLight
-                "dark_theme" -> R.style.Theme_EmulairMaterialDark
-                "amoled_theme" -> R.style.Theme_EmulairMaterialAMOLED
-                "monet_dark_theme" -> R.style.Theme_EmulairMaterialYouDark
-                "monet_light_theme" -> R.style.Theme_EmulairMaterialYouLight
-                "monet_amoled_theme" -> R.style.Theme_EmulairMaterialYouAMOLED
-                else -> R.style.Theme_EmulairMaterialDark
-            }
-            themeHandler.postDelayed({
-                updateLayout()
-                setTheme(themeResId)
-                val intent = Intent(this, MainActivity::class.java)
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                startActivity(intent)
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-            }, 0)
+    private fun applyTheme() {
+        val chosenTheme = when (runBlocking { settingsManager.appTheme() }) {
+            "dark_theme" -> R.style.Theme_EmulairMaterialDark
+            "light_theme" -> R.style.Theme_EmulairMaterialLight
+            "amoled_theme" -> R.style.Theme_EmulairMaterialAMOLED
+            "monet_dark_theme" -> R.style.Theme_EmulairMaterialYouDark
+            "monet_light_theme" -> R.style.Theme_EmulairMaterialYouLight
+            "monet_amoled_theme" -> R.style.Theme_EmulairMaterialYouAMOLED
+            else -> R.style.Theme_EmulairMaterialDark
         }
+        setTheme(chosenTheme)
+        recreate()
+        /*val intent = Intent(this, MainActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        startActivity(intent)
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)*/
     }
 
-    private fun updateLayout() {
-        recreate()
-    }*/
+    override fun activity(): Activity = this
+    override fun isBusy(): Boolean = mainViewModel?.displayProgress?.value ?: false
 
     private fun initializeActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))

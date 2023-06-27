@@ -472,16 +472,23 @@
     <!-- ############### Dark Monet theme ############### -->
     <!-- ################################################ -->
     <style name="Theme.EmulairMaterialYouDark" parent="Theme.Material3.Dark.NoActionBar">
-        <item name="colorAccent">@color/md_theme_dark_secondary</item>
-        <item name="android:windowBackground">@color/md_theme_dark_background</item>
-        <item name="android:colorBackground">@color/md_theme_dark_background</item>
         <item name="preferenceTheme">@style/ThemeOverlay.PreferenceScreen</item>
-        <item name="android:statusBarColor">@color/md_theme_dark_background</item>
-        <item name="android:navigationBarColor">@color/md_theme_dark_background</item>
-        <item name="elevationOverlayEnabled">false</item>
-        <item name="android:textColor">@color/md_theme_dark_onSurface</item>
+        <item name="toolbarStyle">@style/Theme.EmulairMaterialYouDark.Toolbar</item>
+        <item name="materialCardViewStyle">?attr/materialCardViewFilledStyle</item>
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+        <item name="elevationOverlayColor">?attr/colorOnSurface</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
         <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+    </style>
+
+    <style name="Theme.EmulairMaterialYouDark.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="titleTextAppearance">@style/TextAppearance.EmulairMaterialYouDark.Toolbar.TitleLarge</item>
+    </style>
+
+    <style name="TextAppearance.EmulairMaterialYouDark.Toolbar.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">16sp</item>
     </style>
 
     <style name="Theme.EmulairMaterialYouDark.Menu" parent="Theme.EmulairMaterialYouDark">
@@ -514,16 +521,23 @@
     <!-- ############### Light Monet theme ############### -->
     <!-- ################################################# -->
     <style name="Theme.EmulairMaterialYouLight" parent="Theme.Material3.Light.NoActionBar">
-        <item name="colorAccent">@color/md_theme_light_secondary</item>
-        <item name="android:windowBackground">@color/md_theme_light_background</item>
-        <item name="android:colorBackground">@color/md_theme_light_background</item>
         <item name="preferenceTheme">@style/ThemeOverlay.PreferenceScreen</item>
-        <item name="android:statusBarColor">@color/md_theme_light_background</item>
-        <item name="android:navigationBarColor">@color/md_theme_light_background</item>
-        <item name="elevationOverlayEnabled">false</item>
-        <item name="android:textColor">@color/md_theme_light_onSurface</item>
+        <item name="toolbarStyle">@style/Theme.EmulairMaterialYouLight.Toolbar</item>
+        <item name="materialCardViewStyle">?attr/materialCardViewFilledStyle</item>
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+        <item name="elevationOverlayColor">?attr/colorOnSurface</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
         <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+    </style>
+
+    <style name="Theme.EmulairMaterialYouLight.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="titleTextAppearance">@style/TextAppearance.EmulairMaterialYouLight.Toolbar.TitleLarge</item>
+    </style>
+
+    <style name="TextAppearance.EmulairMaterialYouLight.Toolbar.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">16sp</item>
     </style>
 
     <style name="Theme.EmulairMaterialYouLight.Menu" parent="Theme.EmulairMaterialYouLight">
@@ -556,16 +570,24 @@
     <!-- ############## AMOLED Monet theme ############## -->
     <!-- ################################################ -->
     <style name="Theme.EmulairMaterialYouAMOLED" parent="Theme.Material3.Dark.NoActionBar">
-        <item name="colorAccent">@color/md_theme_amoled_secondary</item>
-        <item name="android:windowBackground">@color/md_theme_amoled_background</item>
-        <item name="android:colorBackground">@color/md_theme_amoled_background</item>
         <item name="preferenceTheme">@style/ThemeOverlay.PreferenceScreen</item>
-        <item name="android:statusBarColor">@color/md_theme_amoled_background</item>
-        <item name="android:navigationBarColor">@color/md_theme_amoled_background</item>
-        <item name="elevationOverlayEnabled">false</item>
-        <item name="android:textColor">@color/md_theme_amoled_onSurface</item>
+        <item name="toolbarStyle">@style/Theme.EmulairMaterialYouDark.Toolbar</item>
+        <item name="materialCardViewStyle">?attr/materialCardViewFilledStyle</item>
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+        <!-- <item name="android:colorBackground">@color/md_theme_amoled_background</item> -->
+        <item name="elevationOverlayColor">?attr/colorOnSurface</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
         <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+    </style>
+
+    <style name="Theme.EmulairMaterialYouAMOLED.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="titleTextAppearance">@style/TextAppearance.EmulairMaterialYouAMOLED.Toolbar.TitleLarge</item>
+    </style>
+
+    <style name="TextAppearance.EmulairMaterialYouAMOLED.Toolbar.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">16sp</item>
     </style>
 
     <style name="Theme.EmulairMaterialYouAMOLED.Menu" parent="Theme.EmulairMaterialYouAMOLED">
@@ -646,32 +668,3 @@
     </style>
 
 </resources>
-
-<!--
-<item name="colorPrimary">@color/md_theme_dark_primary</item>
-        <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
-        <item name="colorPrimaryContainer">@color/md_theme_dark_primaryContainer</item>
-        <item name="colorOnPrimaryContainer">@color/md_theme_dark_onPrimaryContainer</item>
-        <item name="colorSecondary">@color/md_theme_dark_secondary</item>
-        <item name="colorOnSecondary">@color/md_theme_dark_onSecondary</item>
-        <item name="colorSecondaryContainer">@color/md_theme_dark_secondaryContainer</item>
-        <item name="colorOnSecondaryContainer">@color/md_theme_dark_onSecondaryContainer</item>
-        <item name="colorTertiary">@color/md_theme_dark_tertiary</item>
-        <item name="colorOnTertiary">@color/md_theme_dark_onTertiary</item>
-        <item name="colorTertiaryContainer">@color/md_theme_dark_tertiaryContainer</item>
-        <item name="colorOnTertiaryContainer">@color/md_theme_dark_onTertiaryContainer</item>
-        <item name="colorAccent">@color/md_theme_dark_secondary</item>
-        <item name="colorError">@color/md_theme_dark_error</item>
-        <item name="colorErrorContainer">@color/md_theme_dark_errorContainer</item>
-        <item name="colorOnError">@color/md_theme_dark_onError</item>
-        <item name="colorOnErrorContainer">@color/md_theme_dark_onErrorContainer</item>
-        <item name="colorOnBackground">@color/md_theme_dark_onBackground</item>
-        <item name="colorSurface">@color/md_theme_dark_surface</item>
-        <item name="colorOnSurface">@color/md_theme_dark_onSurface</item>
-        <item name="colorSurfaceVariant">@color/md_theme_dark_surfaceVariant</item>
-        <item name="colorOnSurfaceVariant">@color/md_theme_dark_onSurfaceVariant</item>
-        <item name="colorOutline">@color/md_theme_dark_outline</item>
-        <item name="colorOnSurfaceInverse">@color/md_theme_dark_inverseOnSurface</item>
-        <item name="colorSurfaceInverse">@color/md_theme_dark_inverseSurface</item>
-        <item name="colorPrimaryInverse">@color/md_theme_dark_inversePrimary</item>
--->

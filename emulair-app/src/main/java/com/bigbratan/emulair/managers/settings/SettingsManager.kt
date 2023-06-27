@@ -11,9 +11,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
-import androidx.appcompat.app.AppCompatDelegate
-import androidx.preference.PreferenceManager
-import com.bigbratan.emulair.common.utils.preferences.DummyDataStore.putString
 
 class SettingsManager(private val context: Context, sharedPreferences: Lazy<SharedPreferences>) {
 
@@ -35,11 +32,6 @@ class SettingsManager(private val context: Context, sharedPreferences: Lazy<Shar
         R.string.pref_key_theme,
         context.resources.getStringArray(R.array.pref_key_theme_values).first()
     )
-
-    /*suspend fun saveTheme(theme: String) = stringPreference(
-        R.string.pref_key_theme,
-        theme
-    )*/
 
     suspend fun screenAutorotate() = booleanPreference(R.string.pref_key_autorotate,false)
 

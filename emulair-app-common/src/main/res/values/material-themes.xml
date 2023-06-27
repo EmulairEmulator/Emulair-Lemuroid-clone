@@ -115,7 +115,9 @@
         <item name="android:windowAnimationStyle">@android:style/Animation</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:textColor">@color/md_theme_dark_onSurface</item>
+        <item name="materialCardViewStyle">?attr/materialCardViewElevatedStyle</item>
+        <item name="elevationOverlayColor">?attr/colorOnSurface</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
         <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
     </style>
@@ -132,7 +134,9 @@
         <item name="android:windowAnimationStyle">@android:style/Animation</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:textColor">@color/md_theme_light_onSurface</item>
+        <item name="materialCardViewStyle">?attr/materialCardViewElevatedStyle</item>
+        <item name="elevationOverlayColor">?attr/colorOnSurface</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
         <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
     </style>
@@ -149,7 +153,9 @@
         <item name="android:windowAnimationStyle">@android:style/Animation</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:textColor">@color/md_theme_amoled_onSurface</item>
+        <item name="materialCardViewStyle">?attr/materialCardViewElevatedStyle</item>
+        <item name="elevationOverlayColor">?attr/colorOnSurface</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
         <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
     </style>
