@@ -9,11 +9,12 @@ import com.bigbratan.emulair.R
 import com.bigbratan.emulair.managers.coresLibrary.LibraryIndexScheduler
 import com.bigbratan.emulair.utils.android.displayErrorDialog
 import com.bigbratan.emulair.activities.retrograde.RetrogradeActivity
+import com.bigbratan.emulair.activities.retrograde.RetrogradeAppCompatActivity
 import com.bigbratan.emulair.common.managers.preferences.SharedPreferencesHelper
 import com.bigbratan.emulair.common.managers.storage.DirectoriesManager
 import javax.inject.Inject
 
-class StorageFrameworkPickerLauncher : RetrogradeActivity() {
+class StorageFrameworkPickerLauncher : RetrogradeAppCompatActivity() {
 
     @Inject
     lateinit var directoriesManager: DirectoriesManager

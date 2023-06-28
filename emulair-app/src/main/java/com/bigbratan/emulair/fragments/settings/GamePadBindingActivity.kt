@@ -3,12 +3,13 @@ package com.bigbratan.emulair.fragments.settings
 import android.os.Bundle
 import android.view.KeyEvent
 import com.bigbratan.emulair.activities.retrograde.RetrogradeActivity
+import com.bigbratan.emulair.activities.retrograde.RetrogradeAppCompatActivity
 import com.bigbratan.emulair.managers.input.InputBindingUpdater
 import com.bigbratan.emulair.managers.input.InputDeviceManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import javax.inject.Inject
 
-class GamePadBindingActivity : RetrogradeActivity() {
+class GamePadBindingActivity : RetrogradeAppCompatActivity() {
 
     @Inject
     lateinit var inputDeviceManager: InputDeviceManager
@@ -21,7 +22,6 @@ class GamePadBindingActivity : RetrogradeActivity() {
         inputBindingUpdater = InputBindingUpdater(inputDeviceManager, intent)
 
         if (savedInstanceState == null) {
-            // MaterialAlertDialogBuilder(this, R.style.AlertDialog)
             MaterialAlertDialogBuilder(this)
                 .setTitle(inputBindingUpdater.getTitle(applicationContext))
                 .setMessage(inputBindingUpdater.getMessage(applicationContext))

@@ -9,7 +9,7 @@ import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceScreen
-import androidx.preference.SwitchPreference
+import androidx.preference.SwitchPreferenceCompat
 import com.bigbratan.emulair.R
 import com.bigbratan.emulair.managers.input.InputBindingUpdater
 import com.bigbratan.emulair.managers.input.InputDeviceManager
@@ -148,7 +148,7 @@ class GamePadPreferences(
         context: Context,
         inputDevice: InputDevice,
     ): Preference {
-        val preference = SwitchPreference(context)
+        val preference = SwitchPreferenceCompat(context)
         preference.layoutResource = R.layout.layout_preference_main_switch_block_middle
         preference.key = InputDeviceManager.computeEnabledGamePadPreference(inputDevice)
         preference.title = inputDevice.name
