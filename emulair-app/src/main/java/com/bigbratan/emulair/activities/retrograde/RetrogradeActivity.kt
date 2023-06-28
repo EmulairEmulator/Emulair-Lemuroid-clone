@@ -17,7 +17,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.bigbratan.emulair.common.activities.retrograde
+package com.bigbratan.emulair.activities.retrograde
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -33,6 +33,7 @@ abstract class RetrogradeActivity : FragmentActivity(), HasFragmentInjector, Has
 
     @Inject
     lateinit var supportFragmentInjector: DispatchingAndroidInjector<Fragment>
+
     @Inject
     lateinit var frameworkFragmentInjector: DispatchingAndroidInjector<android.app.Fragment>
 

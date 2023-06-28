@@ -21,7 +21,7 @@ import com.bigbratan.emulair.activities.account.AccountActivity
 import com.bigbratan.emulair.activities.game.BaseGameActivity
 import com.bigbratan.emulair.activities.game.GameLauncher
 import com.bigbratan.emulair.activities.info.InfoActivity
-import com.bigbratan.emulair.common.activities.retrograde.RetrogradeAppCompatActivity
+import com.bigbratan.emulair.activities.retrograde.RetrogradeAppCompatActivity
 import com.bigbratan.emulair.common.managers.injection.PerActivity
 import com.bigbratan.emulair.common.managers.injection.PerFragment
 import com.bigbratan.emulair.common.managers.saveSync.SaveSyncManager
@@ -53,15 +53,11 @@ import javax.inject.Inject
 
 @OptIn(DelicateCoroutinesApi::class)
 class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
-
     @Inject
     lateinit var gameLaunchTaskHandler: GameLaunchTaskHandler
 
     @Inject
     lateinit var saveSyncManager: SaveSyncManager
-
-    @Inject
-    lateinit var settingsManager: SettingsManager
 
     private val reviewManager = ReviewManager()
 
@@ -69,27 +65,8 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        applyTheme()
         setContentView(R.layout.activity_main)
         initializeActivity()
-    }
-
-    private fun applyTheme() {
-        val chosenTheme = when (runBlocking { settingsManager.appTheme() }) {
-            "dark_theme" -> R.style.Theme_EmulairMaterialDark
-            "light_theme" -> R.style.Theme_EmulairMaterialLight
-            "amoled_theme" -> R.style.Theme_EmulairMaterialAMOLED
-            "monet_dark_theme" -> R.style.Theme_EmulairMaterialYouDark
-            "monet_light_theme" -> R.style.Theme_EmulairMaterialYouLight
-            "monet_amoled_theme" -> R.style.Theme_EmulairMaterialYouAMOLED
-            else -> R.style.Theme_EmulairMaterialDark
-        }
-        setTheme(chosenTheme)
-        recreate()
-        /*val intent = Intent(this, MainActivity::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-        startActivity(intent)
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)*/
     }
 
     override fun activity(): Activity = this
@@ -213,6 +190,7 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
                 SaveSyncWork.enqueueManualWork(this)
                 true
             }
+
             else -> super.onOptionsItemSelected(item)
         }
     }

@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.bigbratan.emulair.R
-import com.bigbratan.emulair.common.activities.retrograde.RetrogradeAppCompatActivity
+import com.bigbratan.emulair.activities.retrograde.RetrogradeAppCompatActivity
 import com.bigbratan.emulair.common.managers.injection.PerFragment
 import com.bigbratan.emulair.fragments.pauseMenuActions.CoreOptionsFragment
 import com.bigbratan.emulair.fragments.pauseMenuActions.PauseMenuFragment

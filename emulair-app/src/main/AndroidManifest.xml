@@ -65,6 +65,7 @@
 
         <activity
             android:name=".fragments.settings.GamePadBindingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
             android:theme="@style/Theme.EmulairMaterialDark.Invisible" />
 
         <activity
@@ -73,6 +74,7 @@
 
         <activity
             android:name=".activities.crash.GameCrashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
             android:theme="@style/Theme.EmulairMaterialDark.Game" />
 
         <receiver android:name=".managers.coresLibrary.LibraryIndexBroadcastReceiver" />

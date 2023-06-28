@@ -2,7 +2,7 @@ package com.bigbratan.emulair.fragments.settings
 
 import android.os.Bundle
 import android.view.KeyEvent
-import com.bigbratan.emulair.common.activities.retrograde.RetrogradeActivity
+import com.bigbratan.emulair.activities.retrograde.RetrogradeActivity
 import com.bigbratan.emulair.managers.input.InputBindingUpdater
 import com.bigbratan.emulair.managers.input.InputDeviceManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder

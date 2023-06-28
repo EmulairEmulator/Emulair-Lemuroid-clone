@@ -6,8 +6,9 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.core.view.isVisible
 import com.bigbratan.emulair.R
+import com.bigbratan.emulair.activities.BaseThemedActivity
 
-class GameCrashActivity : Activity() {
+class GameCrashActivity : BaseThemedActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_crash)

@@ -1,8 +1,9 @@
-package com.bigbratan.emulair.common.activities.retrograde
+package com.bigbratan.emulair.activities.retrograde
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.bigbratan.emulair.activities.BaseThemedActivity
 import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -10,10 +11,11 @@ import dagger.android.HasFragmentInjector
 import dagger.android.support.HasSupportFragmentInjector
 import javax.inject.Inject
 
-abstract class RetrogradeAppCompatActivity : AppCompatActivity(), HasFragmentInjector, HasSupportFragmentInjector {
+abstract class RetrogradeAppCompatActivity : BaseThemedActivity(), HasFragmentInjector, HasSupportFragmentInjector {
 
     @Inject
     lateinit var supportFragmentInjector: DispatchingAndroidInjector<Fragment>
+
     @Inject
     lateinit var frameworkFragmentInjector: DispatchingAndroidInjector<android.app.Fragment>
 

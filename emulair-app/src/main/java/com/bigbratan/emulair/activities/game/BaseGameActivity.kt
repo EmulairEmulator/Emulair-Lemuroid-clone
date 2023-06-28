@@ -98,7 +98,6 @@ import android.content.pm.ActivityInfo
 
 @OptIn(FlowPreview::class, DelicateCoroutinesApi::class)
 abstract class BaseGameActivity : ImmersiveActivity() {
-
     protected lateinit var game: Game
     private lateinit var system: GameSystem
     protected lateinit var systemCoreConfig: SystemCoreConfig
@@ -109,8 +108,8 @@ abstract class BaseGameActivity : ImmersiveActivity() {
     private lateinit var loadingView: ProgressBar
     private lateinit var loadingMessageView: TextView
 
-    @Inject
-    lateinit var settingsManager: SettingsManager
+    /*@Inject
+    lateinit var settingsManager: SettingsManager*/
 
     @Inject
     lateinit var statesManager: StatesManager
@@ -169,7 +168,7 @@ abstract class BaseGameActivity : ImmersiveActivity() {
 
         lifecycleScope.launch {
             loadGame()
-            if(settingsManager.screenAutorotate()) {
+            if (settingsManager.screenAutorotate()) {
                 requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR
             }
         }
@@ -343,6 +342,7 @@ abstract class BaseGameActivity : ImmersiveActivity() {
                 is RomFiles.Standard -> {
                     gameFilePath = gameFiles.files.first().absolutePath
                 }
+
                 is RomFiles.Virtual -> {
                     gameVirtualFiles = gameFiles.files
                         .map { VirtualFile(it.filePath, it.fd) }
@@ -768,7 +768,7 @@ abstract class BaseGameActivity : ImmersiveActivity() {
         retroGameView?.sendMotionEvent(source, event.getAxisValue(xAxis), event.getAxisValue(yAxis), port)
     }
 
-    @Deprecated("This sadly creates some issues with certain controllers and input lag on very slow devices.")
+    @Deprecated("Sadly, this creates some issues with certain controllers and input lag on very slow devices.")
     private fun retrieveNormalizedCoordinates(event: MotionEvent, xAxis: Int, yAxis: Int): PointF {
         val rawX = event.getAxisValue(xAxis)
         val rawY = -event.getAxisValue(yAxis)
