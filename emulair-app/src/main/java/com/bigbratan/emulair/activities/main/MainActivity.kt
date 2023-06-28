@@ -3,8 +3,6 @@ package com.bigbratan.emulair.activities.main
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -69,8 +67,6 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
 
     private var mainViewModel: MainViewModel? = null
 
-    private lateinit var themeHandler: Handler
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         applyTheme()
@@ -101,6 +97,12 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
 
     private fun initializeActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
+        // findViewById<Toolbar>(R.id.toolbar).setNavigationIcon(R.drawable.ic_top_info)
+        // supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        GlobalScope.safeLaunch {
+            reviewManager.initialize(applicationContext)
+        }
 
         val bottomNavView: BottomNavigationView = findViewById(R.id.bottom_nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
@@ -211,7 +213,6 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
                 SaveSyncWork.enqueueManualWork(this)
                 true
             }
-
             else -> super.onOptionsItemSelected(item)
         }
     }
