@@ -1,8 +1,6 @@
 package com.bigbratan.emulair.activities.main
 
-// import android.widget.Toolbar
 import android.app.Activity
-import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -48,15 +46,8 @@ import dagger.Provides
 import dagger.android.ContributesAndroidInjector
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
-
 import java.util.*
 import javax.inject.Inject
-import android.content.SharedPreferences
-import androidx.lifecycle.lifecycleScope
-import androidx.preference.PreferenceManager
-import com.bigbratan.emulair.managers.settings.SettingsManager
-import kotlinx.coroutines.launch
-import dagger.Lazy
 
 
 @OptIn(DelicateCoroutinesApi::class)
@@ -71,13 +62,6 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
     private val reviewManager = ReviewManager()
 
     private var mainViewModel: MainViewModel? = null
-
-    private val sharedPreferences: SharedPreferences by lazy {
-        PreferenceManager.getDefaultSharedPreferences(this)
-    }
-    private val settingsManager by lazy {
-        SettingsManager(this) { sharedPreferences }
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -98,13 +82,6 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
 
         GlobalScope.safeLaunch {
             reviewManager.initialize(applicationContext)
-            val themeFlow = settingsManager.appTheme()
-            when (themeFlow.first().toString()) {
-                "light_theme" -> setTheme(R.style.Theme_EmulairMaterialLight)
-                "dark_theme" -> setTheme(R.style.Theme_EmulairMaterialDark)
-                "amoled_theme" -> setTheme(R.style.Theme_EmulairMaterialAMOLED)
-                "material_you_theme" -> setTheme(R.style.Theme_EmulairMaterialYou)
-            }
         }
 
         val bottomNavView: BottomNavigationView = findViewById(R.id.bottom_nav_view)
@@ -203,14 +180,6 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
         val isSyncSupported = saveSyncManager.isSupported()
         val isSyncConfigured = saveSyncManager.isConfigured()
         menu.findItem(R.id.menu_options_sync)?.isVisible = isSyncSupported && isSyncConfigured
-
-        /*
-        val navController = findNavController(R.id.nav_host_fragment)
-        navController.addOnDestinationChangedListener { _, destination, _ ->
-            menu.findItem(R.id.main_search)?.isVisible = destination.id == R.id.main_home
-        }
-        */
-
         return super.onPrepareOptionsMenu(menu)
     }
 
@@ -220,18 +189,11 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // val navController = findNavController(R.id.nav_host_fragment)
         return when (item.itemId) {
             R.id.menu_options_sync -> {
                 SaveSyncWork.enqueueManualWork(this)
                 true
             }
-            /*
-            R.id.main_search -> {
-                item.onNavDestinationSelected(navController)
-                true
-            }
-            */
             else -> super.onOptionsItemSelected(item)
         }
     }
