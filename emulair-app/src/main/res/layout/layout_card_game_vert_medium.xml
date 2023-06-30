@@ -8,7 +8,7 @@
 
     <include layout="@layout/layout_card_game_vert_content" />
 
-    <com.google.android.material.card.MaterialCardView
+    <com.bigbratan.emulair.ui.CustomMaterialCardView
         android:layout_width="@dimen/favorite_toggle_size"
         android:layout_height="@dimen/favorite_toggle_size"
         android:layout_alignParentEnd="true"
@@ -16,7 +16,6 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:backgroundTint="@color/md_theme_dark_onSecondaryTransparent"
         app:cardCornerRadius="24dp"
         app:cardElevation="0dp">
 
@@ -30,6 +29,6 @@
             android:foregroundGravity="center"
             android:gravity="center" />
 
-    </com.google.android.material.card.MaterialCardView>
+    </com.bigbratan.emulair.ui.CustomMaterialCardView>
 
 </RelativeLayout>

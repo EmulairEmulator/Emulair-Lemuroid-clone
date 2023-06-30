@@ -22,13 +22,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:title="@string/top_account"
-                app:titleCentered="true" />
+                app:titleCentered="true"
+                app:titleTextAppearance="@style/TextAppearance.Toolbar.TitleLarge" />
 
             <ImageButton
                 android:id="@+id/back"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_alignStart="@id/toolbar"
+                android:layout_alignEnd="@id/toolbar"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="4dp"
                 android:background="?attr/actionBarItemBackground"

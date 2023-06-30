@@ -34,18 +34,12 @@
         <item>Dark</item>
         <item>Light</item>
         <item>AMOLED</item>
-        <item>Monet Dark</item>
-        <item>Monet Light</item>
-        <item>Monet AMOLED</item>
     </string-array>
 
     <string-array name="pref_key_theme_values" translatable="false">
         <item>dark_theme</item>
         <item>light_theme</item>
         <item>amoled_theme</item>
-        <item>monet_dark_theme</item>
-        <item>monet_light_theme</item>
-        <item>monet_amoled_theme</item>
     </string-array>
 
     <string-array name="pref_key_haptic_feedback_mode_values" translatable="false">

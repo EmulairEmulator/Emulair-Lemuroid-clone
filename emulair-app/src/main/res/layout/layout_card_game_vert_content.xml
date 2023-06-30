@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.google.android.material.card.MaterialCardView
+        <com.bigbratan.emulair.ui.CustomMaterialCardView
             android:id="@+id/imagecard"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -25,7 +25,7 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 tools:ignore="ContentDescription" />
-        </com.google.android.material.card.MaterialCardView>
+        </com.bigbratan.emulair.ui.CustomMaterialCardView>
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/text"
