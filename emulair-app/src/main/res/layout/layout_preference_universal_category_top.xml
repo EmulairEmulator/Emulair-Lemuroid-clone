@@ -8,6 +8,5 @@
     android:paddingEnd="40dp"
     android:paddingBottom="12dp"
     android:textAppearance="?android:attr/textAppearanceListItem"
-    android:textColor="?attr/colorError"
     android:textSize="16sp"
     android:textStyle="bold" />

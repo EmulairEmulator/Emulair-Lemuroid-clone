@@ -20,6 +20,8 @@ class SettingsManager(private val context: Context, sharedPreferences: Lazy<Shar
 
     suspend fun autoSave() = booleanPreference(R.string.pref_key_autosave, true)
 
+    suspend fun monetTheme() = booleanPreference(R.string.pref_key_enable_monet, false)
+
     suspend fun hapticFeedbackMode() = stringPreference(R.string.pref_key_haptic_feedback_mode, "press")
 
     suspend fun lowLatencyAudio() = booleanPreference(R.string.pref_key_low_latency_audio, false)

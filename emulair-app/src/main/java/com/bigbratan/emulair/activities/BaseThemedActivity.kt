@@ -13,9 +13,9 @@ open class BaseThemedActivity : AppCompatActivity() {
     lateinit var settingsManager: SettingsManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        applyTheme()
         super.onCreate(savedInstanceState)
         CustomMaterialCardView.baseThemedActivity = this
-        applyTheme()
     }
 
     private fun applyTheme() {

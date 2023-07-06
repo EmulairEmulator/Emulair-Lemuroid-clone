@@ -2,6 +2,7 @@ package com.bigbratan.emulair.activities.main
 
 import android.app.Activity
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -41,13 +42,11 @@ import com.bigbratan.emulair.managers.interaction.GameInteractor
 import com.bigbratan.emulair.managers.input.InputDeviceManager
 import com.bigbratan.emulair.managers.saveSync.SaveSyncWork
 import com.bigbratan.emulair.managers.settings.SettingsInteractor
-import com.bigbratan.emulair.managers.settings.SettingsManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.Provides
 import dagger.android.ContributesAndroidInjector
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.runBlocking
 import java.util.*
 import javax.inject.Inject
 

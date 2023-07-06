@@ -55,6 +55,14 @@
             app:iconSpaceReserved="false"
             app:useSimpleSummaryProvider="true" />
 
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="@string/pref_key_enable_monet"
+            android:layout="@layout/layout_preference_main_switch_group_middle"
+            android:summary="@string/settings_general_monet_description"
+            android:title="@string/settings_general_monet_title"
+            app:iconSpaceReserved="false" />
+
         <com.bigbratan.emulair.ui.CustomListPreference
             android:defaultValue="auto"
             android:entries="@array/pref_key_shader_filter_display_names"

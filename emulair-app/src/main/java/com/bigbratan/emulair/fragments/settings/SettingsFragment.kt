@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import androidx.documentfile.provider.DocumentFile
 import androidx.lifecycle.Lifecycle
@@ -13,6 +14,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.bigbratan.emulair.R
+import com.bigbratan.emulair.activities.main.MainActivity
 import com.bigbratan.emulair.managers.coresLibrary.LibraryIndexScheduler
 import com.bigbratan.emulair.common.managers.preferences.SharedPreferencesHelper
 import com.bigbratan.emulair.common.managers.saveSync.SaveSyncManager
@@ -60,6 +62,10 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
         findPreference<Preference>(getString(R.string.pref_key_open_save_sync_settings))?.apply {
             isVisible = saveSyncManager.isSupported()
+        }
+
+        findPreference<Preference>(getString(R.string.pref_key_enable_monet))?.apply {
+            isVisible = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
         }
     }
 
