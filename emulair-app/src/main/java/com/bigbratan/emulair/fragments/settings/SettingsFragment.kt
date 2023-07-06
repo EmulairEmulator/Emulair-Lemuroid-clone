@@ -1,6 +1,7 @@
 package com.bigbratan.emulair.fragments.settings
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
@@ -13,12 +14,15 @@ import androidx.navigation.fragment.findNavController
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.bigbratan.emulair.R
+import com.bigbratan.emulair.activities.BaseThemedActivity
+import com.bigbratan.emulair.activities.main.MainActivity
 import com.bigbratan.emulair.managers.coresLibrary.LibraryIndexScheduler
 import com.bigbratan.emulair.common.managers.preferences.SharedPreferencesHelper
 import com.bigbratan.emulair.common.managers.saveSync.SaveSyncManager
 import com.bigbratan.emulair.common.managers.storage.DirectoriesManager
 import com.bigbratan.emulair.common.utils.coroutines.launchOnState
 import com.bigbratan.emulair.managers.settings.SettingsInteractor
+import com.bigbratan.emulair.ui.CustomListPreference
 import com.fredporciuncula.flow.preferences.FlowSharedPreferences
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.android.support.AndroidSupportInjection
@@ -34,6 +38,8 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
     @Inject
     lateinit var saveSyncManager: SaveSyncManager
+
+    // private var currentTheme: String = ""
 
     override fun setDivider(divider: Drawable?) {
         super.setDivider(ColorDrawable(Color.TRANSPARENT))
@@ -61,6 +67,22 @@ class SettingsFragment : PreferenceFragmentCompat() {
         findPreference<Preference>(getString(R.string.pref_key_open_save_sync_settings))?.apply {
             isVisible = saveSyncManager.isSupported()
         }
+
+        /*currentTheme = "dark_theme"
+        val themePreference: CustomListPreference? = findPreference("pref_key_theme")
+        themePreference?.onPreferenceChangeListener = Preference.OnPreferenceChangeListener { _, newValue ->
+            val newTheme = newValue as String
+            if (newTheme != currentTheme) {
+                currentTheme = newTheme
+                (activity as? BaseThemedActivity)?.applyTheme()
+                val intent = Intent(activity, this::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
+                activity?.finish()
+                activity?.finishAffinity()
+            }
+            true
+        }*/
     }
 
     override fun onResume() {

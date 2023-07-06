@@ -1,9 +1,13 @@
 package com.bigbratan.emulair.activities
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.preference.Preference
 import com.bigbratan.emulair.R
 import com.bigbratan.emulair.managers.settings.SettingsManager
+import com.bigbratan.emulair.ui.CustomListPreference
 import com.bigbratan.emulair.ui.CustomMaterialCardView
 import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
@@ -14,8 +18,8 @@ open class BaseThemedActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        CustomMaterialCardView.baseThemedActivity = this
         applyTheme()
+        CustomMaterialCardView.baseThemedActivity = this
     }
 
     private fun applyTheme() {
@@ -26,11 +30,6 @@ open class BaseThemedActivity : AppCompatActivity() {
             else -> R.style.Theme_EmulairMaterialYouDark
         }
         setTheme(chosenTheme)
-        recreate()
-        /*val intent = Intent(this, MainActivity::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-        startActivity(intent)
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)*/
     }
 
     fun adjustLuminance(luminance: Float): Float {
