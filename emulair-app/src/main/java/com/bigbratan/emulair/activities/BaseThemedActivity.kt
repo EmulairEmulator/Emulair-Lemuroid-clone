@@ -26,11 +26,6 @@ open class BaseThemedActivity : AppCompatActivity() {
             else -> R.style.Theme_EmulairMaterialYouDark
         }
         setTheme(chosenTheme)
-        recreate()
-        /*val intent = Intent(this, MainActivity::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-        startActivity(intent)
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)*/
     }
 
     fun adjustLuminance(luminance: Float): Float {

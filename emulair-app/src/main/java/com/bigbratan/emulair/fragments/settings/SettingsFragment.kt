@@ -1,6 +1,7 @@
 package com.bigbratan.emulair.fragments.settings
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
@@ -21,6 +22,7 @@ import com.bigbratan.emulair.common.managers.saveSync.SaveSyncManager
 import com.bigbratan.emulair.common.managers.storage.DirectoriesManager
 import com.bigbratan.emulair.common.utils.coroutines.launchOnState
 import com.bigbratan.emulair.managers.settings.SettingsInteractor
+import com.bigbratan.emulair.ui.CustomListPreference
 import com.fredporciuncula.flow.preferences.FlowSharedPreferences
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.android.support.AndroidSupportInjection
@@ -66,6 +68,19 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
         findPreference<Preference>(getString(R.string.pref_key_enable_monet))?.apply {
             isVisible = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
+        }
+
+        // TODO: edit this so it's similar to how other preferences are defined,
+        //  or at least make sure that this implementation follows the rules
+        val listPreference = findPreference<Preference>(getString(R.string.pref_key_theme)) as CustomListPreference?
+        listPreference?.setOnPreferenceChangeListener { preference, _ ->
+            if (preference is CustomListPreference) {
+                val intent = Intent(requireContext(), MainActivity::class.java)
+                requireActivity().startActivity(intent)
+                requireActivity().overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+                requireActivity().finish()
+            }
+            true
         }
     }
 
