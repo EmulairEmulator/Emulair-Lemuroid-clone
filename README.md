@@ -71,7 +71,7 @@ This feature hasn't been implemented yet.
 - [x] A "Jump back in" section on the "Games" page, along with "Recents", "Favorites" and "All Games"
 - [x] Separate screens with vertical lists for "All Games" and "Favorites" (i.e. they're not just horizontal carousels anymore)
 - [x] Button prompts before (almost) every important action
-- [x] New Dark Theme, Light Theme, AMOLED Theme and Material You (Monet Engine) counterparts for all of them (the latter exclusive to A12+ devices)
+- [x] New Dark Theme, Light Theme and AMOLED Theme
 - [x] New in-app icons
 - [x] New sprites for systems
 - [x] Bypass screen lock to rotate the screen whenever you want
@@ -110,14 +110,16 @@ This feature hasn't been implemented yet.
 - [ ] Choose if you want to automatically fall back on other emulators or not, in case a game doesn't work (this implies unlocking the option to switch between FinalBurn Neo and MAME 2003-Plus)
 - [ ] Change filter on a per game or per system basis (not just global)
 - [ ] Rebind controls on a per game or per system basis (not just global)
-
 **Note: The above features won't be released in this exact order. Some features may be changed or even removed from this list.**
 
 ## Removed Features (from Lemuroid)
 - Android TV support
 - Turn games into shortcuts for your launcher
 - Save files to Google Drive (only if downloaded from Google Play; Drive folder inaccessible)
+**Note: Some features will be brought back later.**
 
+## Dropped Features (from Emulair)
+- Material You (Monet Engine) counterparts for all the themes (exclusive to A12+ devices)
 **Note: Some features will be brought back later.**
 
 ## Name Meaning
