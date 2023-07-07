@@ -1,9 +1,13 @@
 package com.bigbratan.emulair.activities
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.preference.Preference
 import com.bigbratan.emulair.R
 import com.bigbratan.emulair.managers.settings.SettingsManager
+import com.bigbratan.emulair.ui.CustomListPreference
 import com.bigbratan.emulair.ui.CustomMaterialCardView
 import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
