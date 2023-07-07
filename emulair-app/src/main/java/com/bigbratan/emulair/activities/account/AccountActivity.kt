@@ -6,6 +6,7 @@ import com.bigbratan.emulair.R
 import com.bigbratan.emulair.activities.retrograde.RetrogradeAppCompatActivity
 
 class AccountActivity : RetrogradeAppCompatActivity() {
+
     override fun getActivityName(): String {
         return "AccountActivity"
     }
