@@ -32,7 +32,7 @@ class EmulairApplication : DaggerApplication(), HasWorkerInjector {
 
         AppInitializer.getInstance(this).initializeComponent(initializeComponent)
 
-        DynamicColors.applyToActivitiesIfAvailable(this)
+        // DynamicColors.applyToActivitiesIfAvailable(this)
     }
 
     override fun attachBaseContext(base: Context) {

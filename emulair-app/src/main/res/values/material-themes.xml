@@ -3,7 +3,7 @@
     <!-- ################################################ -->
     <!-- ################## Dark theme ################## -->
     <!-- ################################################ -->
-    <style name="Theme.EmulairMaterialYouDark" parent="Theme.Material3.Dark.NoActionBar">
+    <style name="Theme.Dark" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/md_theme_dark_primary</item>
         <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
         <item name="colorPrimaryContainer">@color/md_theme_dark_primaryContainer</item>
@@ -33,9 +33,9 @@
 
         <item name="colorAccent">?attr/colorSecondary</item>
         <item name="preferenceTheme">@style/ThemeOverlay.PreferenceScreen</item>
-        <item name="appBarLayoutStyle">@style/Theme.EmulairMaterialYouDark.AppBar</item>
-        <item name="bottomNavigationStyle">@style/Theme.EmulairMaterialYouDark.BottomNav</item>
-        <item name="materialCardViewStyle">@style/Theme.EmulairMaterialYouDark.CardView</item>
+        <item name="appBarLayoutStyle">@style/Theme.Dark.AppBar</item>
+        <item name="bottomNavigationStyle">@style/Theme.Dark.BottomNav</item>
+        <item name="materialCardViewStyle">@style/Theme.Dark.CardView</item>
         <item name="materialButtonStyle">@style/Widget.Material3.Button.TonalButton</item>
         <item name="android:statusBarColor">?android:attr/colorBackground</item>
         <item name="android:navigationBarColor">?android:attr/colorBackground</item>
@@ -45,21 +45,21 @@
     </style>
 
     <!-- app bar -->
-    <style name="Theme.EmulairMaterialYouDark.AppBar" parent="Widget.Material3.AppBarLayout">
+    <style name="Theme.Dark.AppBar" parent="Widget.Material3.AppBarLayout">
         <item name="android:background">?android:attr/colorBackground</item>
     </style>
 
     <!-- bottom nav view -->
-    <style name="Theme.EmulairMaterialYouDark.BottomNav" parent="Widget.Material3.BottomNavigationView">
+    <style name="Theme.Dark.BottomNav" parent="Widget.Material3.BottomNavigationView">
         <item name="android:background">?android:attr/colorBackground</item>
     </style>
 
     <!-- card -->
-    <style name="Theme.EmulairMaterialYouDark.CardView" parent="Widget.Material3.CardView.Filled">
+    <style name="Theme.Dark.CardView" parent="Widget.Material3.CardView.Filled">
         <item name="cardBackgroundColor">?attr/colorSurfaceVariant</item>
     </style>
 
-    <style name="Theme.EmulairMaterialYouDark.Menu" parent="Theme.EmulairMaterialYouDark">
+    <style name="Theme.Dark.Menu" parent="Theme.Dark">
         <item name="android:statusBarColor">@color/black</item>
         <item name="android:navigationBarColor">@color/black</item>
         <item name="android:windowBackground">@color/black_75</item>
@@ -68,13 +68,13 @@
         <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
-    <style name="Theme.EmulairMaterialYouDark.Game" parent="Theme.EmulairMaterialYouDark">
+    <style name="Theme.Dark.Game" parent="Theme.Dark">
         <item name="android:navigationBarColor">@color/black</item>
         <item name="android:statusBarColor">@color/black</item>
         <item name="android:windowBackground">@color/black</item>
     </style>
 
-    <style name="Theme.EmulairMaterialYouDark.Invisible" parent="Theme.EmulairMaterialYouDark">
+    <style name="Theme.Dark.Invisible" parent="Theme.Dark">
         <item name="android:background">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
@@ -88,7 +88,7 @@
     <!-- ################################################# -->
     <!-- ################## Light theme ################## -->
     <!-- ################################################# -->
-    <style name="Theme.EmulairMaterialYouLight" parent="Theme.Material3.Light.NoActionBar">
+    <style name="Theme.Light" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/md_theme_light_primary</item>
         <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
         <item name="colorPrimaryContainer">@color/md_theme_light_primaryContainer</item>
@@ -118,9 +118,9 @@
 
         <item name="colorAccent">?attr/colorSecondary</item>
         <item name="preferenceTheme">@style/ThemeOverlay.PreferenceScreen</item>
-        <item name="appBarLayoutStyle">@style/Theme.EmulairMaterialYouLight.AppBar</item>
-        <item name="bottomNavigationStyle">@style/Theme.EmulairMaterialYouLight.BottomNav</item>
-        <item name="materialCardViewStyle">@style/Theme.EmulairMaterialYouLight.CardView</item>
+        <item name="appBarLayoutStyle">@style/Theme.Light.AppBar</item>
+        <item name="bottomNavigationStyle">@style/Theme.Light.BottomNav</item>
+        <item name="materialCardViewStyle">@style/Theme.Light.CardView</item>
         <item name="materialButtonStyle">@style/Widget.Material3.Button.TonalButton</item>
         <item name="android:statusBarColor">?android:attr/colorBackground</item>
         <item name="android:navigationBarColor">?android:attr/colorBackground</item>
@@ -130,21 +130,21 @@
     </style>
 
     <!-- app bar -->
-    <style name="Theme.EmulairMaterialYouLight.AppBar" parent="Widget.Material3.AppBarLayout">
+    <style name="Theme.Light.AppBar" parent="Widget.Material3.AppBarLayout">
         <item name="android:background">?android:attr/colorBackground</item>
     </style>
 
     <!-- bottom nav view -->
-    <style name="Theme.EmulairMaterialYouLight.BottomNav" parent="Widget.Material3.BottomNavigationView">
+    <style name="Theme.Light.BottomNav" parent="Widget.Material3.BottomNavigationView">
         <item name="android:background">?android:attr/colorBackground</item>
     </style>
 
     <!-- card -->
-    <style name="Theme.EmulairMaterialYouLight.CardView" parent="Widget.Material3.CardView.Filled">
+    <style name="Theme.Light.CardView" parent="Widget.Material3.CardView.Filled">
         <item name="cardBackgroundColor">?attr/colorSurfaceVariant</item>
     </style>
 
-    <style name="Theme.EmulairMaterialYouLight.Menu" parent="Theme.EmulairMaterialYouLight">
+    <style name="Theme.Light.Menu" parent="Theme.Light">
         <item name="android:statusBarColor">@color/white</item>
         <item name="android:navigationBarColor">@color/white</item>
         <item name="android:windowBackground">@color/white_75</item>
@@ -153,13 +153,13 @@
         <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
-    <style name="Theme.EmulairMaterialYouLight.Game" parent="Theme.EmulairMaterialYouLight">
+    <style name="Theme.Light.Game" parent="Theme.Light">
         <item name="android:navigationBarColor">@color/white</item>
         <item name="android:statusBarColor">@color/white</item>
         <item name="android:windowBackground">@color/white</item>
     </style>
 
-    <style name="Theme.EmulairMaterialYouLight.Invisible" parent="Theme.EmulairMaterialYouLight">
+    <style name="Theme.Light.Invisible" parent="Theme.Light">
         <item name="android:background">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
@@ -173,7 +173,7 @@
     <!-- ################################################ -->
     <!-- ################# AMOLED theme ################# -->
     <!-- ################################################ -->
-    <style name="Theme.EmulairMaterialYouAMOLED" parent="Theme.Material3.Dark.NoActionBar">
+    <style name="Theme.AMOLED" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/md_theme_amoled_primary</item>
         <item name="colorOnPrimary">@color/md_theme_amoled_onPrimary</item>
         <item name="colorPrimaryContainer">@color/md_theme_amoled_primaryContainer</item>
@@ -203,9 +203,9 @@
 
         <item name="colorAccent">?attr/colorSecondary</item>
         <item name="preferenceTheme">@style/ThemeOverlay.PreferenceScreen</item>
-        <item name="appBarLayoutStyle">@style/Theme.EmulairMaterialYouAMOLED.AppBar</item>
-        <item name="bottomNavigationStyle">@style/Theme.EmulairMaterialYouAMOLED.BottomNav</item>
-        <item name="materialCardViewStyle">@style/Theme.EmulairMaterialYouAMOLED.CardView</item>
+        <item name="appBarLayoutStyle">@style/Theme.AMOLED.AppBar</item>
+        <item name="bottomNavigationStyle">@style/Theme.AMOLED.BottomNav</item>
+        <item name="materialCardViewStyle">@style/Theme.AMOLED.CardView</item>
         <item name="materialButtonStyle">@style/Widget.Material3.Button.TonalButton</item>
         <item name="android:statusBarColor">?android:attr/colorBackground</item>
         <item name="android:navigationBarColor">?android:attr/colorBackground</item>
@@ -215,21 +215,21 @@
     </style>
 
     <!-- app bar -->
-    <style name="Theme.EmulairMaterialYouAMOLED.AppBar" parent="Widget.Material3.AppBarLayout">
+    <style name="Theme.AMOLED.AppBar" parent="Widget.Material3.AppBarLayout">
         <item name="android:background">?android:attr/colorBackground</item>
     </style>
 
     <!-- bottom nav view -->
-    <style name="Theme.EmulairMaterialYouAMOLED.BottomNav" parent="Widget.Material3.BottomNavigationView">
+    <style name="Theme.AMOLED.BottomNav" parent="Widget.Material3.BottomNavigationView">
         <item name="android:background">?android:attr/colorBackground</item>
     </style>
 
     <!-- card -->
-    <style name="Theme.EmulairMaterialYouAMOLED.CardView" parent="Widget.Material3.CardView.Filled">
+    <style name="Theme.AMOLED.CardView" parent="Widget.Material3.CardView.Filled">
         <item name="cardBackgroundColor">?attr/colorSurfaceVariant</item>
     </style>
 
-    <style name="Theme.EmulairMaterialYouAMOLED.Menu" parent="Theme.EmulairMaterialYouDark">
+    <style name="Theme.AMOLED.Menu" parent="Theme.AMOLED">
         <item name="android:statusBarColor">@color/black</item>
         <item name="android:navigationBarColor">@color/black</item>
         <item name="android:windowBackground">@color/black_75</item>
@@ -238,13 +238,13 @@
         <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
-    <style name="Theme.EmulairMaterialYouAMOLED.Game" parent="Theme.EmulairMaterialYouDark">
+    <style name="Theme.AMOLED.Game" parent="Theme.AMOLED">
         <item name="android:navigationBarColor">@color/black</item>
         <item name="android:statusBarColor">@color/black</item>
         <item name="android:windowBackground">@color/black</item>
     </style>
 
-    <style name="Theme.EmulairMaterialYouAMOLED.Invisible" parent="Theme.EmulairMaterialYouDark">
+    <style name="Theme.AMOLED.Invisible" parent="Theme.AMOLED">
         <item name="android:background">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>

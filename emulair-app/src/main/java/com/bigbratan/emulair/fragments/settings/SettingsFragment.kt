@@ -66,9 +66,9 @@ class SettingsFragment : PreferenceFragmentCompat() {
             isVisible = saveSyncManager.isSupported()
         }
 
-        findPreference<Preference>(getString(R.string.pref_key_enable_monet))?.apply {
+        /*findPreference<Preference>(getString(R.string.pref_key_enable_monet))?.apply {
             isVisible = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
-        }
+        }*/
 
         // TODO: edit this so it's similar to how other preferences are defined,
         //  or at least make sure that this implementation follows the rules

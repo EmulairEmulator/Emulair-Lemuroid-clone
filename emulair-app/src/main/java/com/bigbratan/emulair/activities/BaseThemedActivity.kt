@@ -1,13 +1,9 @@
 package com.bigbratan.emulair.activities
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.preference.Preference
 import com.bigbratan.emulair.R
 import com.bigbratan.emulair.managers.settings.SettingsManager
-import com.bigbratan.emulair.ui.CustomListPreference
 import com.bigbratan.emulair.ui.CustomMaterialCardView
 import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
@@ -36,37 +32,37 @@ open abstract class BaseThemedActivity : AppCompatActivity() {
 
     private fun setDarkTheme(): Int {
         return if (getActivityName() == "PauseMenuActivity") {
-            R.style.Theme_EmulairMaterialYouDark_Menu
+            R.style.Theme_Dark_Menu
         } else if (getActivityName() == "GameActivity" || getActivityName() == "GameCrashActivity") {
-            R.style.Theme_EmulairMaterialYouDark_Game
+            R.style.Theme_Dark_Game
         } else if (getActivityName() == "GamePadBindingActivity" || getActivityName() == "StorageFrameworkPickerLauncher") {
-            R.style.Theme_EmulairMaterialYouDark_Invisible
+            R.style.Theme_Dark_Invisible
         } else {
-            R.style.Theme_EmulairMaterialYouDark
+            R.style.Theme_Dark
         }
     }
 
     private fun setLightTheme(): Int {
         return if (getActivityName() == "PauseMenuActivity") {
-            R.style.Theme_EmulairMaterialYouLight_Menu
+            R.style.Theme_Light_Menu
         } else if (getActivityName() == "GameActivity" || getActivityName() == "GameCrashActivity") {
-            R.style.Theme_EmulairMaterialYouLight_Game
+            R.style.Theme_Light_Game
         } else if (getActivityName() == "GamePadBindingActivity" || getActivityName() == "StorageFrameworkPickerLauncher") {
-            R.style.Theme_EmulairMaterialYouLight_Invisible
+            R.style.Theme_Light_Invisible
         } else {
-            R.style.Theme_EmulairMaterialYouLight
+            R.style.Theme_Light
         }
     }
 
     private fun setAMOLEDTheme(): Int {
         return if (getActivityName() == "PauseMenuActivity") {
-            R.style.Theme_EmulairMaterialYouAMOLED_Menu
+            R.style.Theme_AMOLED_Menu
         } else if (getActivityName() == "GameActivity" || getActivityName() == "GameCrashActivity") {
-            R.style.Theme_EmulairMaterialYouAMOLED_Game
+            R.style.Theme_AMOLED_Game
         } else if (getActivityName() == "GamePadBindingActivity" || getActivityName() == "StorageFrameworkPickerLauncher") {
-            R.style.Theme_EmulairMaterialYouAMOLED_Invisible
+            R.style.Theme_AMOLED_Invisible
         } else {
-            R.style.Theme_EmulairMaterialYouAMOLED
+            R.style.Theme_AMOLED
         }
     }
 
