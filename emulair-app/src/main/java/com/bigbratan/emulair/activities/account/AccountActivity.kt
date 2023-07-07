@@ -6,6 +6,10 @@ import com.bigbratan.emulair.R
 import com.bigbratan.emulair.activities.retrograde.RetrogradeAppCompatActivity
 
 class AccountActivity : RetrogradeAppCompatActivity() {
+    override fun getActivityName(): String {
+        return "AccountActivity"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_account)

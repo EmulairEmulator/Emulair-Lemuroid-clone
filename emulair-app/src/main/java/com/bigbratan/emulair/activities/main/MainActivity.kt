@@ -2,7 +2,6 @@ package com.bigbratan.emulair.activities.main
 
 import android.app.Activity
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -61,6 +60,10 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
     private val reviewManager = ReviewManager()
 
     private var mainViewModel: MainViewModel? = null
+
+    override fun getActivityName(): String {
+        return "MainActivity"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

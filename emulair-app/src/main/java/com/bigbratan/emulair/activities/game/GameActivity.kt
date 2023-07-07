@@ -87,6 +87,10 @@ class GameActivity : BaseGameActivity() {
     private val insetsState = MutableStateFlow<Rect?>(null)
     private val orientationState = MutableStateFlow(Configuration.ORIENTATION_PORTRAIT)
 
+    override fun getActivityName(): String {
+        return "GameActivity"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

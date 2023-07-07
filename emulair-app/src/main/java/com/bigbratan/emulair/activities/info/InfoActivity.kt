@@ -17,6 +17,10 @@ class InfoActivity : RetrogradeAppCompatActivity() {
     private lateinit var adapter: InfoAdapter
     private lateinit var infoList: ArrayList<InfoItem>
 
+    override fun getActivityName(): String {
+        return "InfoActivity"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info)

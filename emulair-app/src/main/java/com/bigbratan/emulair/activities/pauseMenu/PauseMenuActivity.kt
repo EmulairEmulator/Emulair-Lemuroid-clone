@@ -14,6 +14,10 @@ import dagger.android.ContributesAndroidInjector
 
 class PauseMenuActivity : RetrogradeAppCompatActivity() {
 
+    override fun getActivityName(): String {
+        return "PauseMenuActivity"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pausemenu)

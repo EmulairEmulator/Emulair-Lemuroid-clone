@@ -19,6 +19,10 @@ class StorageFrameworkPickerLauncher : RetrogradeAppCompatActivity() {
     @Inject
     lateinit var directoriesManager: DirectoriesManager
 
+    override fun getActivityName(): String {
+        return "StorageFrameworkPickerLauncher"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

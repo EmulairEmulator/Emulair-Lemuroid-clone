@@ -9,6 +9,11 @@ import com.bigbratan.emulair.R
 import com.bigbratan.emulair.activities.BaseThemedActivity
 
 class GameCrashActivity : BaseThemedActivity() {
+
+    override fun getActivityName(): String {
+        return "GameCrashActivity"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_crash)

@@ -16,6 +16,10 @@ class GamePadBindingActivity : RetrogradeAppCompatActivity() {
 
     private lateinit var inputBindingUpdater: InputBindingUpdater
 
+    override fun getActivityName(): String {
+        return "GamePadBindingActivity"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
