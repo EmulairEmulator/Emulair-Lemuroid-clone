@@ -81,34 +81,34 @@
   <!-- ################################################ -->
   <!-- ################# AMOLED theme ################# -->
   <!-- ################################################ -->
-  <color name="md_theme_amoled_primary">#FFB4AC</color>
-  <color name="md_theme_amoled_onPrimary">#690006</color>
-  <color name="md_theme_amoled_primaryContainer">#93000D</color>
+  <!--<color name="md_theme_amoled_primary">#000000</color>
+  <color name="md_theme_amoled_onPrimary">#FFB4AC</color>
+  <color name="md_theme_amoled_primaryContainer">#000000</color>
   <color name="md_theme_amoled_onPrimaryContainer">#FFDAD6</color>
-  <color name="md_theme_amoled_secondary">#E7BDB8</color>
-  <color name="md_theme_amoled_onSecondary">#442927</color>
-  <color name="md_theme_amoled_secondaryContainer">#5D3F3C</color>
+  <color name="md_theme_amoled_secondary">#000000</color>
+  <color name="md_theme_amoled_onSecondary">#E7BDB8</color>
+  <color name="md_theme_amoled_secondaryContainer">#000000</color>
   <color name="md_theme_amoled_onSecondaryContainer">#FFDAD6</color>
-  <color name="md_theme_amoled_tertiary">#E0C38C</color>
-  <color name="md_theme_amoled_onTertiary">#3F2E04</color>
-  <color name="md_theme_amoled_tertiaryContainer">#584419</color>
+  <color name="md_theme_amoled_tertiary">#000000</color>
+  <color name="md_theme_amoled_onTertiary">#E0C38C</color>
+  <color name="md_theme_amoled_tertiaryContainer">#000000</color>
   <color name="md_theme_amoled_onTertiaryContainer">#FEDFA6</color>
-  <color name="md_theme_amoled_error">#FFB4AB</color>
+  <color name="md_theme_amoled_error">#000000</color>
   <color name="md_theme_amoled_errorContainer">#93000A</color>
   <color name="md_theme_amoled_onError">#690005</color>
   <color name="md_theme_amoled_onErrorContainer">#FFDAD6</color>
-  <color name="md_theme_amoled_background">#201A19</color>
+  <color name="md_theme_amoled_background">#000000</color>
   <color name="md_theme_amoled_onBackground">#EDE0DE</color>
-  <color name="md_theme_amoled_surface">#201A19</color> <!-- was: #2B2221 -->
+  <color name="md_theme_amoled_surface">#000000</color>
   <color name="md_theme_amoled_onSurface">#EDE0DE</color>
-  <color name="md_theme_amoled_surfaceVariant">#534341</color>
+  <color name="md_theme_amoled_surfaceVariant">#000000</color>
   <color name="md_theme_amoled_onSurfaceVariant">#D8C2BF</color>
   <color name="md_theme_amoled_outline">#A08C8A</color>
   <color name="md_theme_amoled_inverseOnSurface">#201A19</color>
   <color name="md_theme_amoled_inverseSurface">#EDE0DE</color>
   <color name="md_theme_amoled_inversePrimary">#C00015</color>
   <color name="md_theme_amoled_shadow">#000000</color>
-  <color name="md_theme_amoled_surfaceTint">#FFB4AC</color>
+  <color name="md_theme_amoled_surfaceTint">#000000</color>
   <color name="md_theme_amoled_outlineVariant">#534341</color>
-  <color name="md_theme_amoled_scrim">#000000</color>
+  <color name="md_theme_amoled_scrim">#000000</color>-->
 </resources>

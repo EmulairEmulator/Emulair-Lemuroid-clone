@@ -1,5 +1,6 @@
 package com.bigbratan.emulair.activities
 
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.bigbratan.emulair.R
@@ -8,7 +9,7 @@ import com.bigbratan.emulair.ui.CustomMaterialCardView
 import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
 
-open abstract class BaseThemedActivity : AppCompatActivity() {
+abstract class BaseThemedActivity : AppCompatActivity() {
     @Inject
     lateinit var settingsManager: SettingsManager
 
@@ -24,7 +25,10 @@ open abstract class BaseThemedActivity : AppCompatActivity() {
         val chosenTheme = when (runBlocking { settingsManager.appTheme() }) {
             "dark_theme" -> setDarkTheme()
             "light_theme" -> setLightTheme()
-            "amoled_theme" -> setAMOLEDTheme()
+            "system_theme" -> {
+                if (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES) setDarkTheme()
+                else setLightTheme()
+            }
             else -> setDarkTheme()
         }
         setTheme(chosenTheme)
@@ -54,23 +58,14 @@ open abstract class BaseThemedActivity : AppCompatActivity() {
         }
     }
 
-    private fun setAMOLEDTheme(): Int {
-        return if (getActivityName() == "PauseMenuActivity") {
-            R.style.Theme_AMOLED_Menu
-        } else if (getActivityName() == "GameActivity" || getActivityName() == "GameCrashActivity") {
-            R.style.Theme_AMOLED_Game
-        } else if (getActivityName() == "GamePadBindingActivity" || getActivityName() == "StorageFrameworkPickerLauncher") {
-            R.style.Theme_AMOLED_Invisible
-        } else {
-            R.style.Theme_AMOLED
-        }
-    }
-
     fun adjustLuminance(luminance: Float): Float {
         return when (runBlocking { settingsManager.appTheme() }) {
             "dark_theme" -> luminance * 0.5f
             "light_theme" -> luminance * 1.05f
-            "amoled_theme" -> luminance * 0.5f
+            "system_theme" -> {
+                if (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES) luminance * 0.5f
+                else luminance * 1.05f
+            }
             else -> luminance * 0.5f
         }
     }

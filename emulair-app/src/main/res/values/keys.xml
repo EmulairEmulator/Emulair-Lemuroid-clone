@@ -33,13 +33,13 @@
     <string-array name="pref_key_theme_names" translatable="false">
         <item>Dark</item>
         <item>Light</item>
-        <item>AMOLED</item>
+        <item>System default</item>
     </string-array>
 
     <string-array name="pref_key_theme_values" translatable="false">
         <item>dark_theme</item>
         <item>light_theme</item>
-        <item>amoled_theme</item>
+        <item>system_theme</item>
     </string-array>
 
     <string-array name="pref_key_haptic_feedback_mode_values" translatable="false">
