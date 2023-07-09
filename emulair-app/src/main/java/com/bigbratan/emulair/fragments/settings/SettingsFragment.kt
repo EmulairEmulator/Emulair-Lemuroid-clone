@@ -70,10 +70,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
             isVisible = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
         }*/
 
-        // TODO: edit this so it's similar to how other preferences are defined,
-        //  or at least make sure that this implementation follows the rules
-        val listPreference = findPreference<Preference>(getString(R.string.pref_key_theme)) as CustomListPreference?
-        listPreference?.setOnPreferenceChangeListener { preference, _ ->
+        findPreference<Preference>(getString(R.string.pref_key_theme))?.setOnPreferenceChangeListener { preference, _ ->
             if (preference is CustomListPreference) {
                 val intent = Intent(requireContext(), MainActivity::class.java)
                 requireActivity().startActivity(intent)

@@ -22,12 +22,12 @@
             android:title="@string/settings_roms_rescan_title"
             app:iconSpaceReserved="false" />
 
-        <!--<Preference
+        <Preference
             android:key="@string/pref_key_stop_rescan"
             android:layout="@layout/layout_preference_main_simple_group_bottom"
             android:persistent="false"
             android:title="@string/settings_roms_stop_title"
-            app:iconSpaceReserved="false" />-->
+            app:iconSpaceReserved="false" />
 
     </PreferenceCategory>
 
