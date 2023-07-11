@@ -55,13 +55,17 @@
         <activity
             android:name=".activities.pauseMenu.PauseMenuActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
-            android:process=":game" />
+            android:process=":game"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
 
         <activity
             android:name=".fragments.settings.GamePadBindingActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout" />
+            android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
 
-        <activity android:name=".managers.settings.StorageFrameworkPickerLauncher" />
+        <activity
+            android:name=".managers.settings.StorageFrameworkPickerLauncher"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
 
         <activity
             android:name=".activities.crash.GameCrashActivity"

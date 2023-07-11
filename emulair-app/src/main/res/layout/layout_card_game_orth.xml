@@ -46,6 +46,7 @@
                 android:ellipsize="end"
                 android:lines="1"
                 android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textColor="@color/white_75"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 tools:text="Game Name" />
@@ -62,11 +63,8 @@
                 android:ellipsize="end"
                 android:lines="1"
                 android:textAppearance="?attr/textAppearanceCaption"
+                android:textColor="@color/white_75"
                 tools:text="System Name" />
-
-            <!--
-            <include layout="@layout/layout_button_favorites" />
-            -->
 
         </RelativeLayout>
 

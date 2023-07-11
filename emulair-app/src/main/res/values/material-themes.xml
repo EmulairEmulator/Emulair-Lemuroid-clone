@@ -41,7 +41,8 @@
         <item name="android:navigationBarColor">?android:attr/colorBackground</item>
         <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
-        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges
+        </item>
     </style>
 
     <!-- app bar -->
@@ -60,8 +61,8 @@
     </style>
 
     <style name="Theme.Dark.Menu" parent="Theme.Dark">
-        <item name="android:statusBarColor">@color/black</item>
-        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:statusBarColor">@color/black_75</item>
+        <item name="android:navigationBarColor">@color/black_75</item>
         <item name="android:windowBackground">@color/black_75</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowTranslucentStatus">true</item>
@@ -75,12 +76,14 @@
     </style>
 
     <style name="Theme.Dark.Invisible" parent="Theme.Dark">
-        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
         <item name="android:windowNoTitle">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
@@ -126,7 +129,9 @@
         <item name="android:navigationBarColor">?android:attr/colorBackground</item>
         <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
-        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges
+        </item>
     </style>
 
     <!-- app bar -->
@@ -145,8 +150,8 @@
     </style>
 
     <style name="Theme.Light.Menu" parent="Theme.Light">
-        <item name="android:statusBarColor">@color/white</item>
-        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:statusBarColor">@color/white_75</item>
+        <item name="android:navigationBarColor">@color/white_75</item>
         <item name="android:windowBackground">@color/white_75</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowTranslucentStatus">true</item>
@@ -160,12 +165,14 @@
     </style>
 
     <style name="Theme.Light.Invisible" parent="Theme.Light">
-        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
         <item name="android:windowNoTitle">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
