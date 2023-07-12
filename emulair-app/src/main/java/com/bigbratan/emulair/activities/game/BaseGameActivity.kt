@@ -100,7 +100,7 @@ import android.content.pm.ActivityInfo
 abstract class BaseGameActivity : ImmersiveActivity() {
     protected lateinit var game: Game
     private lateinit var system: GameSystem
-    protected lateinit var systemCoreConfig: SystemCoreConfig
+    private lateinit var systemCoreConfig: SystemCoreConfig
     protected lateinit var mainContainerLayout: ConstraintLayout
     private lateinit var gameContainerLayout: FrameLayout
     protected lateinit var leftGamePadContainer: FrameLayout

@@ -50,7 +50,7 @@ abstract class BaseThemedActivity : AppCompatActivity() {
         return if (getActivityName() == "PauseMenuActivity") {
             R.style.Theme_Light_Menu
         } else if (getActivityName() == "GameActivity" || getActivityName() == "GameCrashActivity") {
-            R.style.Theme_Light_Game
+            R.style.Theme_Dark_Game
         } else if (getActivityName() == "GamePadBindingActivity" || getActivityName() == "StorageFrameworkPickerLauncher") {
             R.style.Theme_Light_Invisible
         } else {
