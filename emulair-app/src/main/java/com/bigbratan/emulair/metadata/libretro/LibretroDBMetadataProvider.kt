@@ -15,6 +15,10 @@ import timber.log.Timber
 class LibretroDBMetadataProvider(private val ovgdbManager: LibretroDBManager) :
     GameMetadataProvider {
 
+    companion object {
+        private val THUMB_REPLACE = Regex("[&*/:`<>?\\\\|]")
+    }
+
     private val sortedSystemIds: List<String> by lazy {
         SystemID.values()
             .map { it.dbname }
@@ -144,7 +148,7 @@ class LibretroDBMetadataProvider(private val ovgdbManager: LibretroDBManager) :
     private fun computeCoverUrl(system: GameSystem, name: String?): String? {
         var systemName = system.libretroFullName
 
-        // Specific mame versions don't have any thumbnails in Libretro database
+        // Specific MAME versions don't have any thumbnails in Libretro database
         if (system.id == SystemID.MAME2003PLUS) {
             systemName = "MAME"
         }
@@ -155,7 +159,7 @@ class LibretroDBMetadataProvider(private val ovgdbManager: LibretroDBManager) :
 
         val imageType = "Named_Boxarts"
 
-        val thumbGameName = name.replace("&", "_")
+        val thumbGameName = name.replace(THUMB_REPLACE, "_")
 
         return "https://thumbnails.libretro.com/$systemName/$imageType/$thumbGameName.png"
     }

@@ -97,20 +97,20 @@
     <string name="title_load">Load State</string>
 
     <!-- PAUSE MENU FRAGMENT -->
-    <string name="pause_menu_save">Save State</string>
-    <string name="pause_menu_load">Load State</string>
+    <string name="pause_menu_save">Save state</string>
+    <string name="pause_menu_load">Load state</string>
     <string name="pause_menu_state">State %1$s</string>
-    <string name="pause_menu_quit">Quit</string>
+    <string name="pause_menu_quit">Quit game</string>
     <string name="pause_menu_quit_prompt">You will lose any unsaved progress (unless you turned on \"Save state on correct quit\").</string>
-    <string name="pause_menu_restart">Restart</string>
-    <string name="pause_menu_restart_prompt">Your game will restart from the main menu. Only save states and in-game saved progress will be kept. Useful when a game doesn\'t natively allow you to return to the main menu.</string>
+    <string name="pause_menu_restart">Restart emulator</string>
+    <string name="pause_menu_restart_prompt">Save states and in-game saved progress will be kept. Useful when a game doesn\'t natively allow you to return to the main menu.</string>
     <string name="pause_menu_mute_audio">Mute</string>
-    <string name="pause_menu_fast_forward">Fast-Forward</string>
-    <string name="pause_menu_change_disk_button">Change Disk</string>
+    <string name="pause_menu_fast_forward">Fast-forward</string>
+    <string name="pause_menu_change_disk_button">Change disk</string>
     <string name="pause_menu_change_disk_option">Disk %1$s</string>
-    <string name="pause_menu_edit_touch_controls">Edit Controls</string>
-    <string name="pause_menu_core_options">Core Options</string>
-    <string name="pause_menu_exit">Exit Menu</string>
+    <string name="pause_menu_edit_touch_controls">Edit controls</string>
+    <string name="pause_menu_core_options">Core options</string>
+    <string name="pause_menu_exit">Exit menu</string>
 
     <!-- CORE OPTIONS FRAGMENT -->
     <!-- <string name="core_options_category_preferences">Preferences</string> -->
@@ -135,7 +135,7 @@
     <string name="settings_general_app_theme_title">App theme</string>
     <string name="settings_general_monet_title">Monet engine theming</string>
     <string name="settings_general_monet_description">Use colors from your wallpaper</string>
-    <string name="settings_general_autorotate_title">Screen autorotation</string>
+    <string name="settings_general_autorotate_title">In-game screen autorotation</string>
     <string name="settings_general_autorotate_description">Follow device orientation regardless of orientation lock</string>
     <string name="settings_general_display_filter_title">Display filter</string>
     <string name="settings_general_display_filter_auto_option">Auto</string>
@@ -145,7 +145,7 @@
     <string name="settings_general_display_filter_lcd_option">LCD</string>
     <string name="settings_general_display_filter_hd_option">HD</string>
     <string name="settings_general_enable_autosave_onquit_title">Save state on correct quit</string>
-    <string name="settings_general_enable_autosave_onquit_description">By pressing \"Quit\" in the pause menu on consoles where state saving is available</string>
+    <string name="settings_general_enable_autosave_onquit_description">By pressing \"Quit game\" in the pause menu on consoles where state saving is available</string>
 
     <!-- SETTINGS FRAGMENT - INPUT -->
     <string name="settings_category_input">Input</string>
