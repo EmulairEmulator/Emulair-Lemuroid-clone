@@ -71,7 +71,7 @@ This feature hasn't been implemented yet.
 - [x] A "Jump back in" section on the "Games" page, along with "Recents", "Favorites" and "All Games"
 - [x] Separate screens with vertical lists for "All Games" and "Favorites" (i.e. they're not just horizontal carousels anymore)
 - [x] Button prompts before (almost) every important action
-- [x] New Dark Theme, Light Theme and AMOLED Theme
+- [x] New dark theme, light theme and system default theme
 - [x] New in-app icons
 - [x] New sprites for systems
 - [x] Bypass screen lock to rotate the screen whenever you want
