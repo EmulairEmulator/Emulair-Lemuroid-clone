@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.bigbratan.emulair" >
+    package="com.bigbratan.emulair">
 
     <uses-feature
         android:name="android.hardware.gamepad"
@@ -23,12 +23,11 @@
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_security_config"
         android:requestLegacyExternalStorage="true"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.EmulairMaterialYou" >
+        android:supportsRtl="true">
 
         <activity
             android:name=".activities.main.MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -37,20 +36,17 @@
 
         <activity
             android:name=".activities.info.InfoActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
-            android:theme="@style/Theme.EmulairMaterialYou" />
+            android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout" />
 
         <activity
             android:name=".activities.account.AccountActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
-            android:theme="@style/Theme.EmulairMaterialYou" />
+            android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout" />
 
         <activity
             android:name=".activities.game.GameActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
             android:launchMode="singleInstance"
-            android:process=":game"
-            android:theme="@style/Theme.EmulairMaterialYou.Game" />
+            android:process=":game" />
 
         <service
             android:name=".activities.game.GameService"
@@ -60,19 +56,20 @@
             android:name=".activities.pauseMenu.PauseMenuActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
             android:process=":game"
-            android:theme="@style/Theme.EmulairMaterialYou.Menu" />
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
 
         <activity
             android:name=".fragments.settings.GamePadBindingActivity"
-            android:theme="@style/Theme.EmulairMaterialYou.Invisible" />
+            android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
 
         <activity
             android:name=".managers.settings.StorageFrameworkPickerLauncher"
-            android:theme="@style/Theme.EmulairMaterialYou.Invisible" />
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
 
         <activity
             android:name=".activities.crash.GameCrashActivity"
-            android:theme="@style/Theme.EmulairMaterialYou.Game" />
+            android:configChanges="orientation|keyboardHidden|screenSize|fontScale|screenLayout" />
 
         <receiver android:name=".managers.coresLibrary.LibraryIndexBroadcastReceiver" />
         <receiver android:name=".managers.coresLibrary.CoreUpdateBroadcastReceiver" />

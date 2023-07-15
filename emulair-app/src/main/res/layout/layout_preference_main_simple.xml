@@ -34,7 +34,6 @@
             android:maxLines="4"
             android:singleLine="false"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="?android:attr/textColorSecondary"
             android:textSize="12sp" />
 
     </RelativeLayout>

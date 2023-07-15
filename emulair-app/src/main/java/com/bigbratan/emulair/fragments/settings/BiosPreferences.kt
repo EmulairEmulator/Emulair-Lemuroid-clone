@@ -23,9 +23,9 @@ class BiosPreferences(private val biosManager: BiosManager) {
 
         notInstalledBios.forEachIndexed { index, item ->
             val preference = createBiosPreference(preferenceScreen.context, item)
-            if (index == 0) preference.layoutResource = R.layout.layout_preference_main_simple_top
-            else if (index == notInstalledBios.size - 1) preference.layoutResource = R.layout.layout_preference_main_simple_bottom
-            else preference.layoutResource = R.layout.layout_preference_main_simple_middle
+            if (index == 0) preference.layoutResource = R.layout.layout_preference_main_simple_group_top
+            else if (index == notInstalledBios.size - 1) preference.layoutResource = R.layout.layout_preference_main_simple_group_bottom
+            else preference.layoutResource = R.layout.layout_preference_main_simple_group_middle
             preference.isEnabled = false
             notDetectedBios.addPreference(preference)
         }
@@ -42,13 +42,13 @@ class BiosPreferences(private val biosManager: BiosManager) {
                 if (installedBios.size == 1) {
                     preference.layoutResource = R.layout.layout_preference_main_simple_block_middle
                 } else if (installedBios.size == 2) {
-                    if (index == 0) preference.layoutResource = R.layout.layout_preference_main_simple_top
-                    else preference.layoutResource = R.layout.layout_preference_main_simple_bottom
+                    if (index == 0) preference.layoutResource = R.layout.layout_preference_main_simple_group_top
+                    else preference.layoutResource = R.layout.layout_preference_main_simple_group_bottom
                 } else if (installedBios.size > 2) {
-                    if (index == 0) preference.layoutResource = R.layout.layout_preference_main_simple_top
+                    if (index == 0) preference.layoutResource = R.layout.layout_preference_main_simple_group_top
                     else if (index == installedBios.size - 1) preference.layoutResource =
-                        R.layout.layout_preference_main_simple_bottom
-                    else preference.layoutResource = R.layout.layout_preference_main_simple_middle
+                        R.layout.layout_preference_main_simple_group_bottom
+                    else preference.layoutResource = R.layout.layout_preference_main_simple_group_middle
                 }
             }
         } else {

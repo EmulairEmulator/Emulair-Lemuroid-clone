@@ -87,6 +87,10 @@ class GameActivity : BaseGameActivity() {
     private val insetsState = MutableStateFlow<Rect?>(null)
     private val orientationState = MutableStateFlow(Configuration.ORIENTATION_PORTRAIT)
 
+    override fun getActivityName(): String {
+        return "GameActivity"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -261,6 +265,7 @@ class GameActivity : BaseGameActivity() {
                         is Event.Button -> {
                             handleGamePadButton(it)
                         }
+
                         is Event.Direction -> {
                             handleGamePadDirection(it)
                         }
@@ -336,18 +341,23 @@ class GameActivity : BaseGameActivity() {
             setOf(EmulairTouchConfigs.MOTION_SOURCE_LEFT_STICK) -> StickTiltTracker(
                 EmulairTouchConfigs.MOTION_SOURCE_LEFT_STICK
             )
+
             setOf(EmulairTouchConfigs.MOTION_SOURCE_RIGHT_STICK) -> StickTiltTracker(
                 EmulairTouchConfigs.MOTION_SOURCE_RIGHT_STICK
             )
+
             setOf(EmulairTouchConfigs.MOTION_SOURCE_DPAD) -> CrossTiltTracker(
                 EmulairTouchConfigs.MOTION_SOURCE_DPAD
             )
+
             setOf(EmulairTouchConfigs.MOTION_SOURCE_DPAD_AND_LEFT_STICK) -> CrossTiltTracker(
                 EmulairTouchConfigs.MOTION_SOURCE_DPAD_AND_LEFT_STICK
             )
+
             setOf(EmulairTouchConfigs.MOTION_SOURCE_RIGHT_DPAD) -> CrossTiltTracker(
                 EmulairTouchConfigs.MOTION_SOURCE_RIGHT_DPAD
             )
+
             setOf(
                 KeyEvent.KEYCODE_BUTTON_L1,
                 KeyEvent.KEYCODE_BUTTON_R1
@@ -356,6 +366,7 @@ class GameActivity : BaseGameActivity() {
                 KeyEvent.KEYCODE_BUTTON_L1,
                 KeyEvent.KEYCODE_BUTTON_R1
             )
+
             setOf(
                 KeyEvent.KEYCODE_BUTTON_L2,
                 KeyEvent.KEYCODE_BUTTON_R2
@@ -364,6 +375,7 @@ class GameActivity : BaseGameActivity() {
                 KeyEvent.KEYCODE_BUTTON_L2,
                 KeyEvent.KEYCODE_BUTTON_R2
             )
+
             else -> null
         }
 
@@ -398,6 +410,7 @@ class GameActivity : BaseGameActivity() {
             EmulairTouchConfigs.MOTION_SOURCE_DPAD -> {
                 retroGameView?.sendMotionEvent(GLRetroView.MOTION_SOURCE_DPAD, it.xAxis, it.yAxis)
             }
+
             EmulairTouchConfigs.MOTION_SOURCE_LEFT_STICK -> {
                 retroGameView?.sendMotionEvent(
                     GLRetroView.MOTION_SOURCE_ANALOG_LEFT,
@@ -405,6 +418,7 @@ class GameActivity : BaseGameActivity() {
                     it.yAxis
                 )
             }
+
             EmulairTouchConfigs.MOTION_SOURCE_RIGHT_STICK -> {
                 retroGameView?.sendMotionEvent(
                     GLRetroView.MOTION_SOURCE_ANALOG_RIGHT,
@@ -412,6 +426,7 @@ class GameActivity : BaseGameActivity() {
                     it.yAxis
                 )
             }
+
             EmulairTouchConfigs.MOTION_SOURCE_DPAD_AND_LEFT_STICK -> {
                 retroGameView?.sendMotionEvent(
                     GLRetroView.MOTION_SOURCE_ANALOG_LEFT,
@@ -420,6 +435,7 @@ class GameActivity : BaseGameActivity() {
                 )
                 retroGameView?.sendMotionEvent(GLRetroView.MOTION_SOURCE_DPAD, it.xAxis, it.yAxis)
             }
+
             EmulairTouchConfigs.MOTION_SOURCE_RIGHT_DPAD -> {
                 retroGameView?.sendMotionEvent(
                     GLRetroView.MOTION_SOURCE_ANALOG_RIGHT,
@@ -549,12 +565,15 @@ class GameActivity : BaseGameActivity() {
                     is TouchControllerCustomizer.Event.Scale -> {
                         current.copy(scale = it.value)
                     }
+
                     is TouchControllerCustomizer.Event.Rotation -> {
                         current.copy(rotation = it.value)
                     }
+
                     is TouchControllerCustomizer.Event.Margins -> {
                         current.copy(marginX = it.x, marginY = it.y)
                     }
+
                     else -> current
                 }
             }

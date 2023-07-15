@@ -66,7 +66,7 @@
     <string name="section_all_games">All games</string>
     <string name="section_action_see_all">see all</string>
 
-    <!-- HOME FRAGMENT - GAME LONGPRESS -->
+    <!-- HOME FRAGMENT - GAME LONG PRESS -->
     <string name="game_context_menu_option_resume">Resume</string>
     <string name="game_context_menu_option_restart">Restart</string>
     <string name="game_context_menu_option_add_to_favorites">Add to favorites</string>
@@ -133,6 +133,8 @@
     <!-- SETTINGS FRAGMENT - GENERAL -->
     <string name="settings_category_general">General</string>
     <string name="settings_general_app_theme_title">App theme</string>
+    <string name="settings_general_monet_title">Monet engine theming</string>
+    <string name="settings_general_monet_description">Use colors from your wallpaper</string>
     <string name="settings_general_autorotate_title">Screen autorotation</string>
     <string name="settings_general_autorotate_description">Follow device orientation regardless of orientation lock</string>
     <string name="settings_general_display_filter_title">Display filter</string>

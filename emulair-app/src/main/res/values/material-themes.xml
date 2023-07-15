@@ -1,6 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Theme.EmulairMaterialYou" parent="Theme.Material3.Dark.NoActionBar">
+    <!-- ################################################ -->
+    <!-- ################## Dark theme ################## -->
+    <!-- ################################################ -->
+    <style name="Theme.Dark" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/md_theme_dark_primary</item>
         <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
         <item name="colorPrimaryContainer">@color/md_theme_dark_primaryContainer</item>
@@ -26,40 +29,208 @@
         <item name="colorOutline">@color/md_theme_dark_outline</item>
         <item name="colorOnSurfaceInverse">@color/md_theme_dark_inverseOnSurface</item>
         <item name="colorSurfaceInverse">@color/md_theme_dark_inverseSurface</item>
-        <item name="colorPrimaryInverse">@color/md_theme_dark_primaryInverse</item>
-        <!-- -->
-        <item name="materialCardViewStyle">?attr/materialCardViewElevatedStyle</item>
-        <item name="android:statusBarColor">?attr/colorSurface</item>
-        <item name="android:navigationBarColor">?attr/colorSurface</item>
-        <item name="elevationOverlayColor">?attr/colorOnSurface</item>
+        <item name="colorPrimaryInverse">@color/md_theme_dark_inversePrimary</item>
+
+        <item name="colorAccent">?attr/colorSecondary</item>
+        <item name="preferenceTheme">@style/ThemeOverlay.PreferenceScreen</item>
+        <item name="appBarLayoutStyle">@style/Theme.Dark.AppBar</item>
+        <item name="bottomNavigationStyle">@style/Theme.Dark.BottomNav</item>
+        <item name="materialCardViewStyle">@style/Theme.Dark.CardView</item>
+        <item name="materialButtonStyle">@style/Widget.Material3.Button.TonalButton</item>
+        <item name="android:statusBarColor">?android:attr/colorBackground</item>
+        <item name="android:navigationBarColor">?android:attr/colorBackground</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
-        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges
+        </item>
     </style>
 
-    <style name="Theme.EmulairMaterialYou.Menu" parent="Theme.EmulairMaterialYou">
-        <item name="android:statusBarColor">@android:color/black</item>
-        <item name="android:navigationBarColor">@android:color/black</item>
-        <item name="android:windowBackground">@color/pause_menu_background_color</item>
+    <!-- app bar -->
+    <style name="Theme.Dark.AppBar" parent="Widget.Material3.AppBarLayout">
+        <item name="android:background">?android:attr/colorBackground</item>
+    </style>
+
+    <!-- bottom nav view -->
+    <style name="Theme.Dark.BottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">?android:attr/colorBackground</item>
+    </style>
+
+    <!-- card -->
+    <style name="Theme.Dark.CardView" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">?attr/colorSurfaceVariant</item>
+    </style>
+
+    <style name="Theme.Dark.Menu" parent="Theme.Dark">
+        <item name="android:statusBarColor">@color/black_75</item>
+        <item name="android:navigationBarColor">@color/black_75</item>
+        <item name="android:windowBackground">@color/black_75</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
-    <style name="Theme.EmulairMaterialYou.Game" parent="Theme.EmulairMaterialYou">
-        <item name="android:navigationBarColor">@android:color/black</item>
-        <item name="android:statusBarColor">@android:color/black</item>
-        <item name="android:windowBackground">@android:color/black</item>
+    <style name="Theme.Dark.Game" parent="Theme.Dark">
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:windowBackground">@color/black</item>
     </style>
 
-    <style name="Theme.EmulairMaterialYou.Invisible" parent="Theme.EmulairMaterialYou">
-        <item name="android:background">#00000000</item>
+    <style name="Theme.Dark.Invisible" parent="Theme.Dark">
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
         <item name="android:windowNoTitle">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <!-- ################################################# -->
+    <!-- ################## Light theme ################## -->
+    <!-- ################################################# -->
+    <style name="Theme.Light" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/md_theme_light_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_light_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_light_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/md_theme_light_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_light_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/md_theme_light_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_light_onSecondaryContainer</item>
+        <item name="colorTertiary">@color/md_theme_light_tertiary</item>
+        <item name="colorOnTertiary">@color/md_theme_light_onTertiary</item>
+        <item name="colorTertiaryContainer">@color/md_theme_light_tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/md_theme_light_onTertiaryContainer</item>
+        <item name="colorError">@color/md_theme_light_error</item>
+        <item name="colorErrorContainer">@color/md_theme_light_errorContainer</item>
+        <item name="colorOnError">@color/md_theme_light_onError</item>
+        <item name="colorOnErrorContainer">@color/md_theme_light_onErrorContainer</item>
+        <item name="android:colorBackground">@color/md_theme_light_background</item>
+        <item name="colorOnBackground">@color/md_theme_light_onBackground</item>
+        <item name="colorSurface">@color/md_theme_light_surface</item>
+        <item name="colorOnSurface">@color/md_theme_light_onSurface</item>
+        <item name="colorSurfaceVariant">@color/md_theme_light_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/md_theme_light_onSurfaceVariant</item>
+        <item name="colorOutline">@color/md_theme_light_outline</item>
+        <item name="colorOnSurfaceInverse">@color/md_theme_light_inverseOnSurface</item>
+        <item name="colorSurfaceInverse">@color/md_theme_light_inverseSurface</item>
+        <item name="colorPrimaryInverse">@color/md_theme_light_inversePrimary</item>
+
+        <item name="colorAccent">?attr/colorSecondary</item>
+        <item name="preferenceTheme">@style/ThemeOverlay.PreferenceScreen</item>
+        <item name="appBarLayoutStyle">@style/Theme.Light.AppBar</item>
+        <item name="bottomNavigationStyle">@style/Theme.Light.BottomNav</item>
+        <item name="materialCardViewStyle">@style/Theme.Light.CardView</item>
+        <item name="materialButtonStyle">@style/Widget.Material3.Button.TonalButton</item>
+        <item name="android:statusBarColor">?android:attr/colorBackground</item>
+        <item name="android:navigationBarColor">?android:attr/colorBackground</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:fontFamily">@font/plus_jakarta_sans_medium</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges
+        </item>
+    </style>
+
+    <!-- app bar -->
+    <style name="Theme.Light.AppBar" parent="Widget.Material3.AppBarLayout">
+        <item name="android:background">?android:attr/colorBackground</item>
+    </style>
+
+    <!-- bottom nav view -->
+    <style name="Theme.Light.BottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">?android:attr/colorBackground</item>
+    </style>
+
+    <!-- card -->
+    <style name="Theme.Light.CardView" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">?attr/colorSurfaceVariant</item>
+    </style>
+
+    <style name="Theme.Light.Menu" parent="Theme.Light">
+        <item name="android:statusBarColor">@color/white_75</item>
+        <item name="android:navigationBarColor">@color/white_75</item>
+        <item name="android:windowBackground">@color/white_75</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="Theme.Light.Game" parent="Theme.Light">
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="Theme.Light.Invisible" parent="Theme.Light">
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <!-- ############################################### -->
+    <!-- ################## Universal ################## -->
+    <!-- ############################################### -->
+    <!-- toolbar text -->
+    <style name="TextAppearance.Toolbar.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- preference screen scrollbar -->
+    <style name="ThemeOverlay.PreferenceScreen" parent="">
+        <item name="preferenceFragmentCompatStyle">@style/Style.PreferenceScreen</item>
+    </style>
+
+    <style name="Style.PreferenceScreen" parent="">
+        <item name="android:scrollbarStyle">@style/Shape.Scrollbar</item>
+    </style>
+
+    <style name="Shape.Scrollbar" parent="">
+        <item name="android:scrollbarThumbVertical">@drawable/shape_scrollbar</item>
+        <item name="android:scrollbarTrackVertical">@drawable/shape_scrollbar</item>
+    </style>
+
+    <!-- preference cards -->
+    <style name="ShapeOverlay.CardView.Group.Top" parent="">
+        <item name="cornerSizeTopLeft">@dimen/corner_radius</item>
+        <item name="cornerSizeTopRight">@dimen/corner_radius</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ShapeOverlay.CardView.Group.Middle" parent="">
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ShapeOverlay.CardView.Group.Bottom" parent="">
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomLeft">@dimen/corner_radius</item>
+        <item name="cornerSizeBottomRight">@dimen/corner_radius</item>
+    </style>
+
+    <style name="ShapeOverlay.CardView.Block" parent="">
+        <item name="cornerSizeTopLeft">@dimen/corner_radius</item>
+        <item name="cornerSizeTopRight">@dimen/corner_radius</item>
+        <item name="cornerSizeBottomRight">@dimen/corner_radius</item>
+        <item name="cornerSizeBottomLeft">@dimen/corner_radius</item>
+    </style>
+
+    <!-- images -->
+    <style name="ShapeOverlay.ImageView" parent="">
+        <item name="cornerSize">@dimen/corner_radius</item>
     </style>
 
 </resources>

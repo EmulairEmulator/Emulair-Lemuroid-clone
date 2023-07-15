@@ -11,9 +11,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
-import androidx.appcompat.app.AppCompatDelegate
-import androidx.preference.PreferenceManager
-import com.bigbratan.emulair.common.utils.preferences.DummyDataStore.putString
 
 class SettingsManager(private val context: Context, sharedPreferences: Lazy<SharedPreferences>) {
 
@@ -22,6 +19,8 @@ class SettingsManager(private val context: Context, sharedPreferences: Lazy<Shar
     private fun getString(resId: Int) = context.getString(resId)
 
     suspend fun autoSave() = booleanPreference(R.string.pref_key_autosave, true)
+
+    suspend fun monetTheme() = booleanPreference(R.string.pref_key_enable_monet, false)
 
     suspend fun hapticFeedbackMode() = stringPreference(R.string.pref_key_haptic_feedback_mode, "press")
 

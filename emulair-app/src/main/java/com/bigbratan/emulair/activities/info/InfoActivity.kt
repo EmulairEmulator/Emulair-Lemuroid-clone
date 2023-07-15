@@ -6,17 +6,20 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.card.MaterialCardView
 import com.bigbratan.emulair.R
+import com.bigbratan.emulair.activities.retrograde.RetrogradeAppCompatActivity
 
-class InfoActivity : AppCompatActivity() {
-
+class InfoActivity : RetrogradeAppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: InfoAdapter
     private lateinit var infoList: ArrayList<InfoItem>
+
+    override fun getActivityName(): String {
+        return "InfoActivity"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +44,7 @@ class InfoActivity : AppCompatActivity() {
                         "- the CRC32 doesn't match a database entry\n" +
                         "- the file name doesn't match a database entry\n" +
                         "- the file extension is unsupported\n" +
-                        "- your ROMsets are merged\n" +
+                        "- your ROM sets are merged\n" +
                         "- your games are compressed - try decompressing them\n" +
                         "Note that Emulair currently doesn't support .7z archives. Also, your .zip archives should contain one file only."
             )
@@ -49,7 +52,7 @@ class InfoActivity : AppCompatActivity() {
         infoList.add(
             InfoItem(
                 "How to make FinalBurn Neo ROMs be detected?",
-                "Emulair supports only non-merged romsets which have the same CRC32 code as the one that appears in the Libretro DB. If you still want to use the merged versions, copy them into the internal ROMs directory located at \"/sdcard/Android/data/com.bigbratan.emulair/files/roms/fbneo\"."
+                "Emulair supports only non-merged ROM sets which have the same CRC32 code as the one that appears in the Libretro DB. If you still want to use the merged versions, copy them into the internal ROMs directory located at \"/sdcard/Android/data/com.bigbratan.emulair/files/roms/fbneo\"."
             )
         )
         infoList.add(
@@ -60,14 +63,14 @@ class InfoActivity : AppCompatActivity() {
         )
         infoList.add(
             InfoItem(
-                "Can I import my save files from Retroarch?",
-                "Yes, you can. To do this, simply temporarily disable \"Auto save state on correct quit\" and copy the content of your Retroarch saves folder into Emulair saves folder."
+                "Can I import my save files from RetroArch?",
+                "Yes, you can. To do this, simply temporarily disable \"Auto save state on correct quit\" and copy the content of your RetroArch saves folder into Emulair saves folder."
             )
         )
         infoList.add(
             InfoItem(
                 "Are Sony PS1 multi-disk games supported?",
-                "Yes. If you have a multidisk game, you should also provide an .m3u playlist file. It's a simple text file where each line contains the disk file name (stored in the same directory with the game). Here's an example of what a .m3u file should contain for a multi-disk game such as Metal Gear Solid (the file name should follow the name of the game, complete with the region, languages, and anything else that appears in other parantheses):\n" +
+                "Yes. If you have a multi-disk game, you should also provide an .m3u playlist file. It's a simple text file where each line contains the disk file name (stored in the same directory with the game). Here's an example of what a .m3u file should contain for a multi-disk game such as Metal Gear Solid (the file name should follow the name of the game, complete with the region, languages, and anything else that appears in other brackets):\n" +
                         "\n" +
                         "Metal Gear Solid (USA) (Disc 1).cue\n" +
                         "Metal Gear Solid (USA) (Disc 2).cue"
@@ -79,7 +82,6 @@ class InfoActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        overridePendingTransition(0, R.anim.slide_out_left)
     }
 
     data class InfoItem(val title: String, val description: String)

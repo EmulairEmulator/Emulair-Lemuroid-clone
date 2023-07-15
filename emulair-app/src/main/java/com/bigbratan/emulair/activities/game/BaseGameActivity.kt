@@ -98,10 +98,9 @@ import android.content.pm.ActivityInfo
 
 @OptIn(FlowPreview::class, DelicateCoroutinesApi::class)
 abstract class BaseGameActivity : ImmersiveActivity() {
-
     protected lateinit var game: Game
     private lateinit var system: GameSystem
-    protected lateinit var systemCoreConfig: SystemCoreConfig
+    private lateinit var systemCoreConfig: SystemCoreConfig
     protected lateinit var mainContainerLayout: ConstraintLayout
     private lateinit var gameContainerLayout: FrameLayout
     protected lateinit var leftGamePadContainer: FrameLayout
@@ -109,8 +108,8 @@ abstract class BaseGameActivity : ImmersiveActivity() {
     private lateinit var loadingView: ProgressBar
     private lateinit var loadingMessageView: TextView
 
-    @Inject
-    lateinit var settingsManager: SettingsManager
+    /*@Inject
+    lateinit var settingsManager: SettingsManager*/
 
     @Inject
     lateinit var statesManager: StatesManager
@@ -169,7 +168,7 @@ abstract class BaseGameActivity : ImmersiveActivity() {
 
         lifecycleScope.launch {
             loadGame()
-            if(settingsManager.screenAutorotate()) {
+            if (settingsManager.screenAutorotate()) {
                 requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR
             }
         }
@@ -239,7 +238,7 @@ abstract class BaseGameActivity : ImmersiveActivity() {
 
     private suspend fun initializeRetroGameViewErrorsFlow() {
         retroGameViewFlow().getGLRetroErrors()
-            .catch { Timber.e(it, "Exception in GLRetroErrors. Ironic. (Emulair dev here. I didn't write this joke. Perhaps it was Lemuroid dev who wrote it?)") }
+            .catch { Timber.e(it, "Exception in GLRetroErrors. Ironic.") }
             .collect { handleRetroViewError(it) }
     }
 
@@ -305,10 +304,12 @@ abstract class BaseGameActivity : ImmersiveActivity() {
         return controllerConfigsState
     }
 
-    /* On some cores unserialize fails with no reason. So we need to try multiple times. */
+    // On some cores, unserialize fails with no reason. That's why we need to try multiple times.
     private suspend fun restoreAutoSaveAsync(saveState: SaveState) {
-        // PPSSPP and Mupen64 initialize some state while rendering the first frame, so we have to wait before restoring
-        // the autosave. Do not change thread here. Stick to the GL one to avoid issues with PPSSPP.
+        /*
+        PPSSPP and Mupen64 initialize some state while rendering the first frame, so we have to wait before restoring
+        the autosave. Do not change thread here. Stick to the GL one to avoid issues with PPSSPP.
+        */
         if (!isAutoSaveEnabled()) return
 
         try {
@@ -341,6 +342,7 @@ abstract class BaseGameActivity : ImmersiveActivity() {
                 is RomFiles.Standard -> {
                     gameFilePath = gameFiles.files.first().absolutePath
                 }
+
                 is RomFiles.Virtual -> {
                     gameVirtualFiles = gameFiles.files
                         .map { VirtualFile(it.filePath, it.fd) }
@@ -559,7 +561,7 @@ abstract class BaseGameActivity : ImmersiveActivity() {
         retroGameView?.updateVariables(*updatedVariables)
     }
 
-    // Now that we wait for the first rendered frame this is probably no longer needed, but we'll keep it just to be sure
+    // Now that we wait for the first rendered frame, this is probably no longer needed, but we'll keep it just to be sure
     private suspend fun restoreQuickSave(saveState: SaveState) {
         var times = 10
 
@@ -766,7 +768,7 @@ abstract class BaseGameActivity : ImmersiveActivity() {
         retroGameView?.sendMotionEvent(source, event.getAxisValue(xAxis), event.getAxisValue(yAxis), port)
     }
 
-    @Deprecated("This sadly creates some issues with certain controllers and input lag on very slow devices.")
+    @Deprecated("Sadly, this creates some issues with certain controllers and input lag on very slow devices.")
     private fun retrieveNormalizedCoordinates(event: MotionEvent, xAxis: Int, yAxis: Int): PointF {
         val rawX = event.getAxisValue(xAxis)
         val rawY = -event.getAxisValue(yAxis)
@@ -877,7 +879,7 @@ abstract class BaseGameActivity : ImmersiveActivity() {
 
         if (state != null) {
             statesManager.setAutoSave(game, systemCoreConfig.coreID, state)
-            Timber.i("Stored autosave file with size: ${state?.state?.size}")
+            Timber.i("Stored autosave file with size: ${state.state.size}")
         }
     }
 
@@ -885,7 +887,7 @@ abstract class BaseGameActivity : ImmersiveActivity() {
         val retroGameView = retroGameView ?: return
         val sramState = retroGameView.serializeSRAM()
         legacySavesManager.setSaveRAM(game, sramState)
-        Timber.i("Stored sram file with size: ${sramState.size}")
+        Timber.i("Stored SRAM file with size: ${sramState.size}")
     }
 
     private suspend fun saveSlot(index: Int) {

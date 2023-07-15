@@ -1,10 +1,12 @@
 package com.bigbratan.emulair.fragments.settings
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import androidx.documentfile.provider.DocumentFile
 import androidx.lifecycle.Lifecycle
@@ -13,12 +15,14 @@ import androidx.navigation.fragment.findNavController
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.bigbratan.emulair.R
+import com.bigbratan.emulair.activities.main.MainActivity
 import com.bigbratan.emulair.managers.coresLibrary.LibraryIndexScheduler
 import com.bigbratan.emulair.common.managers.preferences.SharedPreferencesHelper
 import com.bigbratan.emulair.common.managers.saveSync.SaveSyncManager
 import com.bigbratan.emulair.common.managers.storage.DirectoriesManager
 import com.bigbratan.emulair.common.utils.coroutines.launchOnState
 import com.bigbratan.emulair.managers.settings.SettingsInteractor
+import com.bigbratan.emulair.ui.CustomListPreference
 import com.fredporciuncula.flow.preferences.FlowSharedPreferences
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.android.support.AndroidSupportInjection
@@ -60,6 +64,20 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
         findPreference<Preference>(getString(R.string.pref_key_open_save_sync_settings))?.apply {
             isVisible = saveSyncManager.isSupported()
+        }
+
+        /*findPreference<Preference>(getString(R.string.pref_key_enable_monet))?.apply {
+            isVisible = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
+        }*/
+
+        findPreference<Preference>(getString(R.string.pref_key_theme))?.setOnPreferenceChangeListener { preference, _ ->
+            if (preference is CustomListPreference) {
+                val intent = Intent(requireContext(), MainActivity::class.java)
+                requireActivity().startActivity(intent)
+                requireActivity().overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+                requireActivity().finish()
+            }
+            true
         }
     }
 

@@ -42,7 +42,6 @@ import dagger.android.support.AndroidSupportInjectionModule
 )
 @PerApp
 interface EmulairApplicationComponent : AndroidInjector<EmulairApplication> {
-
     @Component.Builder
     abstract class Builder : AndroidInjector.Builder<EmulairApplication>()
 }

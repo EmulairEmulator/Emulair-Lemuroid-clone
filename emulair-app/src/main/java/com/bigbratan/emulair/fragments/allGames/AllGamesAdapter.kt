@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.ToggleButton
+import android.widget.CheckBox
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bigbratan.emulair.R
@@ -19,7 +19,7 @@ class AllGameViewHolder(parent: View) : RecyclerView.ViewHolder(parent) {
     private var titleView: TextView? = null
     private var subtitleView: TextView? = null
     private var coverView: ImageView? = null
-    private var favoriteToggle: ToggleButton? = null
+    private var favoriteToggle: CheckBox? = null
 
     init {
         titleView = itemView.findViewById(R.id.text)

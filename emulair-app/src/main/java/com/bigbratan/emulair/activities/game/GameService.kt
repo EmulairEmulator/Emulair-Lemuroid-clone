@@ -58,7 +58,7 @@ class GameService : Service() {
     }
 
     companion object {
-        private val EXTRA_GAME = "EXTRA_GAME"
+        private const val EXTRA_GAME = "EXTRA_GAME"
 
         fun startService(context: Context, game: Game): GameServiceController {
             val intent = Intent(context, GameService::class.java).apply {

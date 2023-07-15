@@ -32,26 +32,25 @@ class SaveSyncPreferences(private val saveSyncManager: SaveSyncManager) {
 
         SwitchPreference(context).apply {
             key = keySyncEnabled(context)
-            layoutResource = R.layout.layout_preference_main_switch_top
+            layoutResource = R.layout.layout_preference_main_switch_group_top
             preferenceScreen.addPreference(this)
         }
 
         CustomMultiListPreference(context).apply {
-        // MultiSelectListPreference(context).apply {
             key = keySyncCores(context)
-            layoutResource = R.layout.layout_preference_main_multilist_middle
+            layoutResource = R.layout.layout_preference_main_multilist_group_middle
             preferenceScreen.addPreference(this)
         }
 
         SwitchPreference(context).apply {
             key = keyAutoSync(context)
-            layoutResource = R.layout.layout_preference_main_switch_middle
+            layoutResource = R.layout.layout_preference_main_switch_group_middle
             preferenceScreen.addPreference(this)
         }
 
         Preference(context).apply {
             key = keyForceSync(context)
-            layoutResource = R.layout.layout_preference_main_simple_bottom
+            layoutResource = R.layout.layout_preference_main_simple_group_bottom
             preferenceScreen.addPreference(this)
         }
 
@@ -101,7 +100,6 @@ class SaveSyncPreferences(private val saveSyncManager: SaveSyncManager) {
         }
 
         preferenceScreen.findPreference<CustomMultiListPreference>(keySyncCores(context))?.apply {
-        // preferenceScreen.findPreference<MultiSelectListPreference>(keySyncCores(context))?.apply {
             title = context.getString(R.string.save_sync_synchronization_states_title)
             summary = context.getString(R.string.save_sync_synchronization_states_description)
             dependency = keySyncEnabled(context)

@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             app:titleCentered="true"
-            app:titleTextAppearance="@style/TextAppearance.Material3.TitleMedium" />
+            app:titleTextAppearance="@style/TextAppearance.Toolbar.TitleLarge" />
 
     </com.google.android.material.appbar.AppBarLayout>
 

@@ -21,7 +21,7 @@ import com.bigbratan.emulair.activities.account.AccountActivity
 import com.bigbratan.emulair.activities.game.BaseGameActivity
 import com.bigbratan.emulair.activities.game.GameLauncher
 import com.bigbratan.emulair.activities.info.InfoActivity
-import com.bigbratan.emulair.common.activities.retrograde.RetrogradeAppCompatActivity
+import com.bigbratan.emulair.activities.retrograde.RetrogradeAppCompatActivity
 import com.bigbratan.emulair.common.managers.injection.PerActivity
 import com.bigbratan.emulair.common.managers.injection.PerFragment
 import com.bigbratan.emulair.common.managers.saveSync.SaveSyncManager
@@ -49,10 +49,8 @@ import kotlinx.coroutines.GlobalScope
 import java.util.*
 import javax.inject.Inject
 
-
 @OptIn(DelicateCoroutinesApi::class)
 class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
-
     @Inject
     lateinit var gameLaunchTaskHandler: GameLaunchTaskHandler
 
@@ -63,11 +61,12 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
 
     private var mainViewModel: MainViewModel? = null
 
+    override fun getActivityName(): String {
+        return "MainActivity"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
-        // window.navigationBarColor = SurfaceColors.SURFACE_0.getColor(this)
-        // window.statusBarColor = SurfaceColors.SURFACE_0.getColor(this)
         setContentView(R.layout.activity_main)
         initializeActivity()
     }
@@ -77,8 +76,6 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
 
     private fun initializeActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
-        // findViewById<Toolbar>(R.id.toolbar).setNavigationIcon(R.drawable.ic_top_info)
-        // supportActionBar?.setDisplayShowTitleEnabled(false)
 
         GlobalScope.safeLaunch {
             reviewManager.initialize(applicationContext)
@@ -102,19 +99,11 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
 
         buttonInfo.setOnClickListener {
             val intent = Intent(this@MainActivity, InfoActivity::class.java)
-            /*intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            val options = ActivityOptions.makeCustomAnimation(this, R.anim.slide_in_left, 0)
-            intent.putExtra("noTransition", true)
-            startActivity(intent, options.toBundle())*/
             val options = ActivityOptionsCompat.makeSceneTransitionAnimation(this)
             ActivityCompat.startActivity(this, intent, options.toBundle())
         }
         buttonAccount.setOnClickListener {
             val intent = Intent(this@MainActivity, AccountActivity::class.java)
-            /*intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            val options = ActivityOptions.makeCustomAnimation(this, R.anim.slide_in_right, 0)
-            intent.putExtra("noTransition", true)
-            startActivity(intent, options.toBundle())*/
             val options = ActivityOptionsCompat.makeSceneTransitionAnimation(this)
             ActivityCompat.startActivity(this, intent, options.toBundle())
         }
@@ -156,7 +145,6 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
         )
     }
 
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -169,7 +157,7 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
         }
     }
 
-    override fun onResume(){    
+    override fun onResume() {
         super.onResume()
         LibraryIndexScheduler.scheduleLibrarySync(
             applicationContext
@@ -194,6 +182,7 @@ class MainActivity : RetrogradeAppCompatActivity(), BusyActivity {
                 SaveSyncWork.enqueueManualWork(this)
                 true
             }
+
             else -> super.onOptionsItemSelected(item)
         }
     }

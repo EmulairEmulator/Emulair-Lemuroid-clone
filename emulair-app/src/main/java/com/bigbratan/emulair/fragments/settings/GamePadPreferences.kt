@@ -9,7 +9,7 @@ import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceScreen
-import androidx.preference.SwitchPreference
+import androidx.preference.SwitchPreferenceCompat
 import com.bigbratan.emulair.R
 import com.bigbratan.emulair.managers.input.InputBindingUpdater
 import com.bigbratan.emulair.managers.input.InputDeviceManager
@@ -115,8 +115,8 @@ class GamePadPreferences(
         inputDevice.getEmulairInputDevice().getCustomizableKeys()
             .map { buildKeyBindingPreference(context, inputDevice, it) }
             .forEachIndexed { index, item ->
-                if (index == 0) item.layoutResource = R.layout.layout_preference_main_simple_top
-                else item.layoutResource = R.layout.layout_preference_main_simple_middle
+                if (index == 0) item.layoutResource = R.layout.layout_preference_main_simple_group_top
+                else item.layoutResource = R.layout.layout_preference_main_simple_group_middle
                 category.addPreference(item)
             }
 
@@ -148,7 +148,7 @@ class GamePadPreferences(
         context: Context,
         inputDevice: InputDevice,
     ): Preference {
-        val preference = SwitchPreference(context)
+        val preference = SwitchPreferenceCompat(context)
         preference.layoutResource = R.layout.layout_preference_main_switch_block_middle
         preference.key = InputDeviceManager.computeEnabledGamePadPreference(inputDevice)
         preference.title = inputDevice.name
@@ -193,7 +193,7 @@ class GamePadPreferences(
 
         val preference = CustomListPreference(context)
         preference.key = InputDeviceManager.computeGameMenuShortcutPreference(inputDevice)
-        preference.layoutResource = R.layout.layout_preference_main_list_bottom
+        preference.layoutResource = R.layout.layout_preference_main_list_group_bottom
         preference.title = context.getString(R.string.gamepad_retropad_game_menu_title)
         preference.entries = supportedShortcuts.map { it.name }.toTypedArray()
         preference.entryValues = supportedShortcuts.map { it.name }.toTypedArray()

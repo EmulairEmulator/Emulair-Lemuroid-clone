@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.bigbratan.emulair.ui.CustomMaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -46,6 +46,7 @@
                 android:ellipsize="end"
                 android:lines="1"
                 android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textColor="@color/white_75"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 tools:text="Game Name" />
@@ -62,14 +63,11 @@
                 android:ellipsize="end"
                 android:lines="1"
                 android:textAppearance="?attr/textAppearanceCaption"
+                android:textColor="@color/white_75"
                 tools:text="System Name" />
-
-            <!--
-            <include layout="@layout/layout_button_favorites" />
-            -->
 
         </RelativeLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</com.google.android.material.card.MaterialCardView>
+</com.bigbratan.emulair.ui.CustomMaterialCardView>
