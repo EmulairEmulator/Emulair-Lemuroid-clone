@@ -31,7 +31,7 @@
                 android:layout_height="48dp"
                 android:layout_alignEnd="@id/toolbar"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
                 android:background="?attr/actionBarItemBackground"
                 app:srcCompat="@drawable/ic_top_close" />
 
