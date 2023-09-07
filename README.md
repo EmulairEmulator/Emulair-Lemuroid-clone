@@ -43,8 +43,10 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - Sony PS1 by [PCSX ReARMed](https://docs.libretro.com/library/pcsx_rearmed/)
 - Sony PSP by [PPSSPP](https://docs.libretro.com/library/ppsspp/)
 
+**Note: Emulator1 _and_ Emulator2 means you can't choose between them because they are combined, Emulator1 _or_ Emulator2 means you can switch the cores.**
+
 ## Systems - Standalone Apps
-This feature hasn't been implemented yet.
+**Note: This feature hasn't been implemented yet.**
 
 ## Existing Features (from Lemuroid)
 - Easily search for any installed video game
@@ -81,6 +83,7 @@ This feature hasn't been implemented yet.
 - [x] Plenty QOL features, updates and fixes
 
 ## Upcoming Features
+- [ ] **_Complete rewrite in Jetpack Compose_** (my only priority this year)
 - [ ] More emulation cores (almost all cores found on RetroArch)
 - [ ] More exposed settings for all the cores
 - [ ] More state slots
