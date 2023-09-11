@@ -11,23 +11,31 @@ android {
 }
 
 dependencies {
-
     implementation(project(":emulair-app-common"))
+
+    // Google
+    implementation(deps.libs.review)
+    implementation(deps.libs.reviewKtx)
+    implementation(deps.libs.featureDelivery)
+    implementation(deps.libs.featureDeliveryKtx)
     implementation(deps.libs.material)
-    implementation(deps.libs.retrofit)
-    implementation(deps.libs.play.featureDelivery)
-    implementation(deps.libs.play.featureDeliveryKtx)
-    implementation(deps.libs.play.review)
-    implementation(deps.libs.play.reviewKtx)
-    implementation(deps.libs.gdrive.apiClient)
-    implementation(deps.libs.gdrive.apiClientAndroid)
-    implementation(deps.libs.gdrive.apiServicesDrive)
-    implementation(deps.libs.play.playServices)
-    implementation(deps.libs.play.coroutine)
-    implementation(deps.libs.androidx.lifecycle.commonJava8)
-    kapt(deps.libs.androidx.lifecycle.processor)
-    // implementation(deps.libs.androidx.leanback.leanback)
-    implementation(deps.libs.androidx.appcompat.constraintLayout)
-    implementation(deps.libs.dagger.core)
+    implementation(deps.libs.playServicesAuth)
+    implementation(deps.libs.kotlinxCoroutinesPlayServices)
     implementation(deps.libs.kotlinxCoroutinesAndroid)
+
+    // Android
+    implementation(deps.libs.constraintLayout)
+
+    // API
+    implementation(deps.libs.retrofit)
+    implementation(deps.libs.googleApiClient)
+    implementation(deps.libs.googleApiClientAndroid)
+    implementation(deps.libs.googleApiServicesDrive)
+
+    // Lifecycle
+    implementation(deps.libs.lifecycleCommonJava8)
+    kapt(deps.libs.lifecycleCompiler)
+
+    // Dependency Injection
+    implementation(deps.libs.dagger)
 }

@@ -17,5 +17,5 @@ android {
 
 dependencies {
     implementation(project(":emulair-app"))
-    implementation(kotlin(deps.libs.kotlin.stdlib))
+    implementation(kotlin(deps.libs.stdlib))
 }

@@ -11,8 +11,11 @@ android {
 }
 
 dependencies {
-
     implementation(project(":emulair-app-common"))
-    implementation(deps.libs.retrofit)
+
+    // Google
     implementation(deps.libs.kotlinxCoroutinesAndroid)
+
+    // API
+    implementation(deps.libs.retrofit)
 }

@@ -4,11 +4,12 @@ import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
+
     dependencies {
         classpath(deps.plugins.android)
-        classpath(deps.plugins.navigationSafeArgs)
+        classpath(deps.libs.navigationSafeArgs)
     }
 }
 
@@ -19,13 +20,13 @@ plugins {
     id("org.jetbrains.kotlin.plugin.serialization") version "1.4.0"
     id("name.remal.check-dependency-updates") version "1.5.0"
     id("org.jetbrains.kotlin.android") version "1.8.0" apply false
+    // id("androidx.navigation.safeargs") version "2.4.2" apply false
     checkstyle
 }
 
 allprojects {
     repositories {
         google()
-        jcenter()
         mavenLocal()
         mavenCentral()
         maven { setUrl("https://jitpack.io") }
@@ -34,7 +35,7 @@ allprojects {
     apply(plugin = "org.jmailen.kotlinter")
 
     kotlinter {
-        // We are currently disabling tests for import ordering.
+        // We are currently disabling tests for import ordering
         disabledRules = arrayOf("import-ordering")
     }
 
@@ -42,12 +43,14 @@ allprojects {
         resolutionStrategy.eachDependency {
             when (requested.group) {
                 "com.google.android.gms" -> useVersion(deps.versions.gms)
+
                 "org.jetbrains.kotlin" -> {
                     if (requested.name.startsWith("kotlin-stdlib-jre")) {
                         with(requested) {
                             useTarget("$group:${name.replace("jre", "jdk")}:$version")
                         }
                     }
+
                     useVersion(deps.versions.kotlin)
                 }
             }
@@ -67,6 +70,7 @@ subprojects {
                 classpath = files()
                 source("src")
             }
+
             findByName("check")?.dependsOn(checkstyle)
         }
 
@@ -85,6 +89,7 @@ subprojects {
                     targetSdkVersion(deps.android.targetSdkVersion)
                     multiDexEnabled = true
                 }
+
                 lintOptions {
                     isAbortOnError = true
                     disable("UnusedResources") // https://issuetracker.google.com/issues/63150366
@@ -92,9 +97,11 @@ subprojects {
                     disable("VectorPath")
                     disable("TrustAllX509TrustManager")
                 }
+
                 dexOptions {
                     dexInProcess = true
                 }
+
                 compileOptions {
                     sourceCompatibility = JavaVersion.VERSION_1_8
                     targetCompatibility = JavaVersion.VERSION_1_8
@@ -122,6 +129,7 @@ tasks {
                     val rejected = listOf("alpha", "beta", "rc", "cr", "m")
                         .map { qualifier -> Regex("(?i).*[.-]$qualifier[.\\d-]*") }
                         .any { it.matches(candidate.version) }
+
                     if (rejected) {
                         reject("Release candidate")
                     }
