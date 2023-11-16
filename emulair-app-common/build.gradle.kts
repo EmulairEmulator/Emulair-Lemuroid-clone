@@ -74,7 +74,7 @@ android {
     }
 
     kotlinOptions {
-        this
+        this as KotlinJvmOptions
         jvmTarget = "1.8"
     }
 }
