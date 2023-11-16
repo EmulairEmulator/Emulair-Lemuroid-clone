@@ -2,16 +2,10 @@ include(
     ":emulair-app-common",
     ":emulair-app",
     ":emulair-app-build-nogplay",
-    ":emulair-app-build-gplay",
     ":bundled-cores"
 )
 
 project(":bundled-cores").projectDir = File("libretro-cores/bundled-cores")
-
-fun usePlayDynamicFeatures(): Boolean {
-    val task = gradle.startParameter.taskRequests.toString()
-    return task.contains("Gplay") && task.contains("DownloadedCores")
-}
 
 // To test out the error screens, wrap the below `include(...)`, as well as all the `project(...)`s under `if (usePlayDynamicFeatures()) {..}`
 // This way, the cores in the debug version of the app will not be installed, and an error screen will appear

@@ -7,7 +7,7 @@ plugins {
 
 android {
     defaultConfig {
-        missingDimensionStrategy("buildType", "gplay")
+        missingDimensionStrategy("buildType", "nogplay")
         missingDimensionStrategy("coresType", "downloadedCores")
     }
     packagingOptions {

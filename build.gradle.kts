@@ -4,6 +4,7 @@ import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 buildscript {
     repositories {
         google()
+        jcenter()
         mavenCentral()
     }
 
@@ -27,6 +28,7 @@ plugins {
 allprojects {
     repositories {
         google()
+        jcenter()
         mavenLocal()
         mavenCentral()
         maven { setUrl("https://jitpack.io") }

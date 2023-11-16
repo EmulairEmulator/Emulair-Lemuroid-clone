@@ -1061,7 +1061,7 @@ abstract class BaseGameActivity : ImmersiveActivity() {
 
     private fun displayLoadingState(loadingState: GameLoader.LoadingState) {
         loadingMessageStateFlow.value = when (loadingState) {
-            is GameLoader.LoadingState.LoadingCore -> getString(R.string.game_loading_download_core)
+            is GameLoader.LoadingState.LoadingCore -> getString(com.bigbratan.emulair.ext.R.string.game_loading_download_core)
             is GameLoader.LoadingState.LoadingGame -> getString(R.string.game_loading_preparing_game)
             else -> ""
         }
@@ -1072,7 +1072,7 @@ abstract class BaseGameActivity : ImmersiveActivity() {
         val messageId = when (gameError) {
             is GameLoaderError.GLIncompatible -> getString(R.string.game_loader_error_gl_incompatible)
             is GameLoaderError.Generic -> getString(R.string.game_loader_error_generic)
-            is GameLoaderError.LoadCore -> getString(R.string.game_loader_error_load_core)
+            is GameLoaderError.LoadCore -> getString(com.bigbratan.emulair.ext.R.string.game_loader_error_load_core)
             is GameLoaderError.LoadGame -> getString(R.string.game_loader_error_load_game)
             is GameLoaderError.Saves -> getString(R.string.game_loader_error_save)
             is GameLoaderError.UnsupportedArchitecture -> getString(R.string.game_loader_error_unsupported_architecture)

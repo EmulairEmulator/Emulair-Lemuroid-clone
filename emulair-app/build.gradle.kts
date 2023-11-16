@@ -50,16 +50,12 @@ android {
             dimension = "buildType"
         }
 
-        create("gplay") {
-            dimension = "buildType"
-        }
-
         // Include cores in the final apk
         create("bundledCores") {
             dimension = "coresType"
         }
 
-        // Download cores on demand (from Google Play or GitHub)
+        // Download cores on demand from GitHub
         create("downloadedCores") {
             dimension = "coresType"
         }
@@ -110,7 +106,6 @@ dependencies {
     implementation(project(":emulair-app-common"))
     "bundledCoresImplementation"(project(":bundled-cores"))
     "nogplayImplementation"(project(":emulair-app-build-nogplay"))
-    "gplayImplementation"(project(":emulair-app-build-gplay"))
 
     // Google
     implementation(deps.libs.kotlinxCoroutinesAndroid)
@@ -184,9 +179,4 @@ dependencies {
 
     // Uncomment this when using a local .aar file
     // implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar", "*.aar"))))
-}
-
-fun usePlayDynamicFeatures(): Boolean {
-    val task = gradle.startParameter.taskRequests.toString()
-    return task.contains("Gplay") && task.contains("DownloadedCores")
 }
