@@ -1,4 +1,9 @@
 <manifest package="com.bigbratan.emulair.ext"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:ignore="MissingLeanbackLauncher">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="MissingLeanbackLauncher,ImpliedTouchscreenHardware,MissingLeanbackSupport">
+
+    <application>
+        <activity android:name="com.bigbratan.emulair.ext.managers.saveSync.ActivateSAFActivity"/>
+    </application>
 </manifest>
