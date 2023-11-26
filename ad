@@ -1,0 +1,542 @@
+[33mcommit 84b6b836410916c940b15e1d0f291bf4aed9ee8c[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Radu Bratan <bratanradu7@gmail.com>
+Date:   Tue Nov 21 15:48:13 2023 +0200
+
+    Update README.md
+
+[33mcommit 9068bbbffd13ba458eb3fd32dfd548eb37831d61[m[33m ([m[1;31morigin/develop[m[33m)[m
+Author: Radu Bratan <bratanradu7@gmail.com>
+Date:   Thu Sep 7 11:42:15 2023 +0300
+
+    Update README.md
+
+[33mcommit 135eb4baa2205ae9166b6208b3cc3a00ced85169[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Sat Jul 15 22:10:39 2023 +0300
+
+    Fix toolbar buttons' spacing
+
+[33mcommit 6536a49a7b137281ec5570a207d3fbd30c444719[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Sat Jul 15 19:10:59 2023 +0300
+
+    Fix some strings, allow more special chars to be used in names
+
+[33mcommit ae3b4bd11faf2553fb7e302eba563b95f1861d55[m
+Merge: 82b01c5 0b3c266
+Author: Radu Bratan <bratanradu7@gmail.com>
+Date:   Sat Jul 15 18:32:24 2023 +0300
+
+    Merge pull request #74 from Emulair/add-themes3
+
+[33mcommit 0b3c2667473c132edbeb10dead2bb17fb8d9cf3a[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Sat Jul 15 18:30:04 2023 +0300
+
+    Complete #75
+
+[33mcommit f10d74fed1fdf7b9427ade3ea30afe7966ff3745[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Wed Jul 12 22:36:12 2023 +0300
+
+    Fix almost all color issues
+
+[33mcommit 981d78fc2ec3200e8cb36d029eb700a5050777f0[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Tue Jul 11 23:29:37 2023 +0300
+
+    Fix some colors
+
+[33mcommit b1e8636e6cb49a26e8c7842e226a0a78039a707d[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Sun Jul 9 21:28:45 2023 +0300
+
+    Fix rescan preference
+
+[33mcommit a2f31a146faa27b7c3fb25584d370d6e53dcae5d[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Sun Jul 9 21:13:47 2023 +0300
+
+    Remove AMOLED theme and add system default theme
+
+[33mcommit c889ea32c514793d7b8ca77170560c66cc5a03e6[m
+Author: Radu Bratan <radu.bratan@mready.net>
+Date:   Fri Jul 7 14:27:18 2023 +0300
+
+    Fix typo
+
+[33mcommit 8556293799ac80846e672867ed3209dd5f4107c7[m
+Author: Radu Bratan <radu.bratan@mready.net>
+Date:   Fri Jul 7 14:25:31 2023 +0300
+
+    Update README to reflect changes
+
+[33mcommit 75cf83842a2f6beb0a0b0721ad16bdfc179e8926[m
+Author: Radu Bratan <radu.bratan@mready.net>
+Date:   Fri Jul 7 14:22:13 2023 +0300
+
+    Comment unplanned features and update themes' names
+
+[33mcommit 04d2bc591d169cc1f6958a10b16d20cced873472[m
+Author: Radu Bratan <radu.bratan@mready.net>
+Date:   Fri Jul 7 13:43:18 2023 +0300
+
+    Fix spacing
+
+[33mcommit 2f9c80398a0bec91a155f976da1c09c3e21a7210[m
+Author: Radu Bratan <radu.bratan@mready.net>
+Date:   Fri Jul 7 13:40:37 2023 +0300
+
+    Add theme switching for subthemes of the main themes
+
+[33mcommit 836108cfa3d055b823e92f5fed71e26f7b167ef0[m
+Merge: f1bd028 2e205c7
+Author: Radu Bratan <radu.bratan@mready.net>
+Date:   Fri Jul 7 12:52:50 2023 +0300
+
+    Merge branch 'add-themes3' of https://github.com/Emulair/Emulair into add-themes3
+
+[33mcommit f1bd028aaccfbdb23c86954b681f64ff9f13013f[m
+Author: Radu Bratan <radu.bratan@mready.net>
+Date:   Fri Jul 7 12:50:47 2023 +0300
+
+    Add automatic activity restart on theme change
+
+[33mcommit 48db4bf165744d1ed568753c908862a8c7d009c6[m
+Author: Radu Bratan <radu.bratan@mready.net>
+Date:   Thu Jul 6 17:29:56 2023 +0300
+
+    Add Monet theme switch button
+
+[33mcommit 2e205c7496d4776d0b3aba5a6fb33bf372aec158[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Thu Jul 6 17:27:16 2023 +0300
+
+    Attempt to make activity restart by itself
+
+[33mcommit a78388ac046d687706cab3ba4427160753881d89[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Fri Jun 30 17:42:37 2023 +0300
+
+    Implement new themes and components
+
+[33mcommit ccc4fff82dc75dc802f603fff6913fb894684057[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Thu Jun 29 00:18:15 2023 +0300
+
+    Update two activities
+
+[33mcommit 9bfbaf4ff3cc3457f73a33945018dc942c4c6912[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Thu Jun 29 00:11:22 2023 +0300
+
+    Make theming universal through a base activity
+
+[33mcommit b02c17ee24c3ba949b69dad461cff74914139e8c[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Wed Jun 28 14:14:10 2023 +0300
+
+    Fix search adapter
+
+[33mcommit 53ef39a14b8b8ee77e6f180ae885f39953a2c879[m
+Merge: 075355b 82b01c5
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Wed Jun 28 14:01:42 2023 +0300
+
+    Merge branch 'main' of https://github.com/Emulair/Emulair into add-themes3
+
+[33mcommit 82b01c5513f48be83eeef7c27c0f5f59865e3a94[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Wed Jun 28 13:58:16 2023 +0300
+
+    Remove themes
+
+[33mcommit 075355bd7329f583c347bc1b0e3174b63a4c3a38[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Wed Jun 28 13:45:07 2023 +0300
+
+    Update theme
+
+[33mcommit dbbcd1ce35ba69cfcbc7c26257c19c491f7dc0dd[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Wed Jun 28 13:42:20 2023 +0300
+
+    Update themes
+
+[33mcommit c335fec78f80e6f7e1bd04ce8a7c2ebd369f7a3c[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Tue Jun 27 18:30:40 2023 +0300
+
+    Implement rudimentary theme switching and fix some themes
+
+[33mcommit 4e9e8279554cd9cb907fe9a3f9e9f5f15aabba76[m
+Merge: dcb95d4 fa8d715
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Tue Jun 27 14:13:35 2023 +0300
+
+    Merge branch 'main' of https://github.com/Emulair/Emulair into add-themes3
+
+[33mcommit fa8d715e0e80145797c1901b05de11dc39fb946c[m
+Author: Radu Bratan <bratanradu7@gmail.com>
+Date:   Tue Jun 27 14:12:06 2023 +0300
+
+    Update features
+
+[33mcommit f89c7f6ddb330694a1259341835a84122e12b193[m
+Author: Radu Bratan <bratanradu7@gmail.com>
+Date:   Tue Jun 27 14:09:11 2023 +0300
+
+    Update features
+
+[33mcommit dcb95d4d87c3b1243d732b0f469fb46e0448d2be[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Tue Jun 27 03:18:13 2023 +0300
+
+    Fix #78
+
+[33mcommit bdcd9c84100829554f1886bbaec676c2549c2a6d[m
+Merge: e16a75c 54336a5
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Tue Jun 27 02:05:34 2023 +0300
+
+    Merge branch 'main' of https://github.com/Emulair/Emulair into add-themes3
+
+[33mcommit 54336a59440aeee40c6191cd323255a078ece561[m
+Merge: e904d73 3614ff2
+Author: Radu Bratan <bratanradu7@gmail.com>
+Date:   Tue Jun 27 01:59:18 2023 +0300
+
+    Merge pull request #77 from Emulair/add-close-menu
+
+[33mcommit 3614ff29703a34ca0a7d2c91fd671374b179c3dc[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Tue Jun 27 01:56:01 2023 +0300
+
+    Update README and complete #10
+
+[33mcommit 626382e136621b6d0dcf6642236bda868206d3fe[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Tue Jun 27 01:53:27 2023 +0300
+
+    Add close menu
+
+[33mcommit e16a75c3475a318c1d2d876d83002ae2504df6b5[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Tue Jun 27 00:52:01 2023 +0300
+
+    Add missing theme variations
+
+[33mcommit 107860011c6d71c05c161f9987219a66ee51ba26[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Mon Jun 26 00:23:21 2023 +0300
+
+    Attempt to update the theme changing code
+
+[33mcommit 2869ac8a971ed41d0155cd632113715a267740d1[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Sun Jun 25 22:35:50 2023 +0300
+
+    Add all themes + colors and fix some styles
+
+[33mcommit a9c24b5c22890b31698fa2377dc7f8a3fa180e00[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Sun Jun 25 16:27:07 2023 +0300
+
+    Add missing subtitle and style
+
+[33mcommit b8640623365c9d0e0dbc22dd97927a73c1a386c9[m
+Merge: 9ac4bf5 e904d73
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Sun Jun 25 15:24:18 2023 +0300
+
+    Merge branch 'main' of https://github.com/Emulair/Emulair into add-themes3
+
+[33mcommit 9ac4bf5f61386905f81b5a66bdc63e0246946d04[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Sun Jun 25 15:22:15 2023 +0300
+
+    Add final styles
+
+[33mcommit 0706f4b87d3e4b00cc91e7bca9d60c8006fb1686[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Sat Jun 24 17:51:02 2023 +0300
+
+    Change ToggleButtons to CheckBoxes
+
+[33mcommit 3652045e087e8620a2bb96dbd2ea5895548853ae[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Sat Jun 24 14:48:31 2023 +0300
+
+    Change more styles
+
+[33mcommit 832416ad9fecb82f82fdbc6335ee49272ed425b2[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Sat Jun 24 13:49:28 2023 +0300
+
+    Add button style
+
+[33mcommit 875244ee670f231dee09c8f9b872664e8c11115e[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Sat Jun 24 13:26:49 2023 +0300
+
+    Change another style
+
+[33mcommit 2abc5ef80843f872ba031b510a453946445877b6[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Sat Jun 24 13:11:35 2023 +0300
+
+    Added themes for almost all elements
+
+[33mcommit 71fe42ae0d1236e1ef0479d2a8d0e16e8036f3de[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Fri Jun 23 01:23:09 2023 +0300
+
+    Remove more redundant styles
+
+[33mcommit 4cd61377d19e4de8d21c3c902d2b9dc6ff65c3b3[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Fri Jun 23 01:22:11 2023 +0300
+
+    Remove redundant styles
+
+[33mcommit a40dfb0ad3e5cb2426906ff5a5f3a0fa3b422b17[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Fri Jun 23 01:19:43 2023 +0300
+
+    Add more styles
+
+[33mcommit eb9d5fec53e8ec60b7bfaca0ff399303ff4e3b0a[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Wed Jun 21 21:57:43 2023 +0300
+
+    Style BottomNavView and Switch
+
+[33mcommit 091f360d4fcb171faa03e6a2d666964d48552301[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Wed Jun 21 01:04:32 2023 +0300
+
+    Set up regular theme correctly part 1
+
+[33mcommit e904d73469103fc5f0e38885433bd1e3b4f93c42[m
+Author: Radu Bratan <bratanradu7@gmail.com>
+Date:   Mon Jun 19 18:11:35 2023 +0300
+
+    Update README.md
+
+[33mcommit 51d6bde451f844be1c1b5eaaf95de6719975e09f[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Sun Jun 18 19:02:47 2023 +0300
+
+    Renamed UML diagram file
+
+[33mcommit 26ec0ea5c5a4a551a327ee88a700961ca0e07c32[m
+Author: Radu Bratan <bratanradu7@gmail.com>
+Date:   Sun Jun 18 18:47:29 2023 +0300
+
+    Update README.md
+
+[33mcommit dcc34b69ed2c9ba78b93b3dfbf140643cf93f121[m
+Author: Radu Bratan <bratanradu7@gmail.com>
+Date:   Sun Jun 18 17:04:47 2023 +0300
+
+    Update README.md
+
+[33mcommit 345d55d3dc5d53bc97d0ce019379e93166e81a93[m
+Author: Radu Bratan <bratanradu7@gmail.com>
+Date:   Sun Jun 18 17:03:56 2023 +0300
+
+    Update README.md
+
+[33mcommit 80cc7b78d52065dd9bb9b3971cf753a98ea3fdb0[m
+Author: Radu Bratan <bratanradu7@gmail.com>
+Date:   Sun Jun 18 13:15:52 2023 +0300
+
+    Update README.md
+
+[33mcommit 1612af09c0efa29f28fcf74afd9352907d76cbbe[m
+Author: Radu Bratan <bratanradu7@gmail.com>
+Date:   Sun Jun 18 12:39:44 2023 +0300
+
+    Update README.md
+
+[33mcommit 0e8493ac6e46883782532472a9427c7e0bca2cbe[m
+Author: Radu Bratan <bratanradu7@gmail.com>
+Date:   Sun Jun 18 12:36:40 2023 +0300
+
+    Update features
+
+[33mcommit 7907be3abde2eecf2fe41a395d496d7984da8e14[m
+Merge: 06d75cb 3ce399a
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Fri Jun 16 20:40:05 2023 +0300
+
+    Merge branch 'main' of https://github.com/RaduBratan/Emulair
+
+[33mcommit 06d75cbd4d470b6214f548677361c5297415bd99[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Fri Jun 16 20:39:12 2023 +0300
+
+    Removed tests
+
+[33mcommit 0bce04b6b01a2a681f04e2995ff9c68ee48bf2c9[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Fri Jun 16 10:51:53 2023 +0300
+
+    Added tests
+
+[33mcommit 3ce399aa6c0be12731d03384c39e43de9553260b[m
+Merge: 9af2402 29c1bdd
+Author: Radu Bratan <bratanradu7@gmail.com>
+Date:   Fri Jun 16 07:46:14 2023 +0300
+
+    Merge pull request #68 from RaduBratan/add-themes2
+
+[33mcommit 29c1bdd9edf7634ec3627266aefa65794713d863[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Fri Jun 16 07:43:01 2023 +0300
+
+    Added final fixes
+
+[33mcommit 9af24029fd0912c493c64a19c8fbba11e4db1fa4[m
+Author: Radu Bratan <bratanradu7@gmail.com>
+Date:   Fri Jun 16 07:25:44 2023 +0300
+
+    Update README.md
+
+[33mcommit d87d54b48b1392c232903a41daf6abf6f2386d33[m
+Author: Radu Bratan <hyperbeast.mlgboss@gmail.com>
+Date:   Fri Jun 16 07:07:50 2023 +0300
+
+    Added UML diagram
+
+[33mcommit 2e92dc3eb99cea1795c17bfc091cef9b227377b8[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Fri Jun 16 06:45:24 2023 +0300
+
+    Made some fixes
+
+[33mcommit 1c336eae4d7ea5b993d12ae7706f6ca1e3a061d7[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Fri Jun 16 06:10:52 2023 +0300
+
+    Fixed some errors
+
+[33mcommit c35ac1d38002c5bef5bb43752c96a2a6170a16df[m
+Merge: 7392926 d2058d9
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Fri Jun 16 06:02:48 2023 +0300
+
+    Merge branch 'main' of https://github.com/RaduBratan/Emulair into add-themes2
+
+[33mcommit d2058d97d85541ed49e28d38ab14745717665a6d[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Fri Jun 16 06:00:30 2023 +0300
+
+    Fixed string
+
+[33mcommit ee02bb07165798d1ee576be4ad3031588628e026[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Fri Jun 16 05:58:26 2023 +0300
+
+    Fixed preference position
+
+[33mcommit 0f8d52ee43635478b2ac6ba8685fb174347f7ec0[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Fri Jun 16 05:55:10 2023 +0300
+
+    Added animations. Fixed code.
+
+[33mcommit 7bdbe032a0d297c02dd4bee85972f9067e0df6fe[m
+Merge: e732ea6 385be37
+Author: Radu Bratan <bratanradu7@gmail.com>
+Date:   Fri Jun 16 03:46:20 2023 +0300
+
+    Merge pull request #53 from RaduBratan/add-profile
+
+[33mcommit 385be37dec14270a2c732b925edb8a3e6ff6228a[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Fri Jun 16 03:44:11 2023 +0300
+
+    Renamed one more occurence
+
+[33mcommit be15c94a55db1bb66682233b910616d86abc1699[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Fri Jun 16 03:42:55 2023 +0300
+
+    Removed old text
+
+[33mcommit 170148297b962688982e40d612ba7cafac7a71f3[m
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Fri Jun 16 03:41:22 2023 +0300
+
+    Renamed "profile" to "account"
+
+[33mcommit a220a77920dc69162e282274e4048ed1a1fcfc39[m
+Merge: de09a28 e732ea6
+Author: Bratan Radu <hyperbeast.mlgboss@gmail.com>
+Date:   Fri Jun 16 03:25:17 2023 +0300
+
+    Merge branch 'main' of https://github.com/RaduBratan/Emulair into add-profile
+
+[33mcommit e732ea6aa280af7115b34c845b28ee9e92ac892d[m
+Author: Radu Bratan <bratanradu7@gmail.com>
+Date:   Fri Jun 16 01:07:08 2023 +0300
+
+    Update README.md
+
+[33mcommit 984a00fd6154d550390a3f973262b46fdb1b48a2[m
+Merge: 64cfe3d 12f2f49
+Author: Radu Bratan <bratanradu7@gmail.com>
+Date:   Fri Jun 16 01:05:37 2023 +0300
+
+    Merge pull request #66 from Meepo39-1/auto-rescan
+
+[33mcommit 64cfe3d8f51c0493841074b47692f10a28984a68[m
+Merge: 0be0a6e cc88cf3
+Author: Radu Bratan <bratanradu7@gmail.com>
+Date:   Fri Jun 16 00:45:21 2023 +0300
+
+    Merge pull request #65 from GiscaDianaElena/add-screen-orientation2
+
+[33mcommit cc88cf316c61374da41037a3b8b1432527f2eb3d[m
+Author: GiscaDianaElena <elenadiana793@gmail.com>
+Date:   Fri Jun 16 00:43:01 2023 +0300
+
+    I fiex errors
+
+[33mcommit 382ab53fc09604779e501f57afb9f887574e3c0f[m
+Author: GiscaDianaElena <elenadiana793@gmail.com>
+Date:   Fri Jun 16 00:32:30 2023 +0300
+
+    I added screen orientation
+
+[33mcommit 12f2f4931b66a8e266ef1057882ff220af1093c8[m
+Author: Meepo39-1 <emarin87@yahoo.com>
+Date:   Fri Jun 16 00:28:00 2023 +0300
+
+    Add rescan functionality when view is resumed
+
+[33mcommit 7392926e9ef6bbb864999d1e42b669c2ccfba1e2[m
+Author: GiscaDianaElena <elenadiana793@gmail.com>
+Date:   Fri Jun 16 00:24:08 2023 +0300
+
+    I added more themes
+
+[33mcommit 0be0a6e6db6f33c55f4c047c2c05c261fb7f44bb[m
+Author: Radu Bratan <bratanradu7@gmail.com>
+Date:   Thu Jun 15 20:12:59 2023 +0300
+
+    Update README.md
+
+[33mcommit f88d765fcd9ab550b57d39488ef89003c57ca23b[m
+Merge: 2dcc692 0511ec7
+Author: Radu Bratan <bratanradu7@gmail.com>
+Date:   Thu Jun 15 20:05:43 2023 +0300
+
+    Merge pull request #56 from Meepo39-1/auto-rescan
+
+[33mcommit 0511ec7eb1ca135e9238635786491b86bcbcbff9[m
+Author: Meepo39-1 <emarin87@yahoo.com>
+Date:   Thu Jun 15 20:01:30 2023 +0300
+
+    Add scan function in main activity on OnCreate state
