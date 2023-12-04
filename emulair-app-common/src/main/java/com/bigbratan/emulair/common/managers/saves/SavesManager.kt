@@ -11,7 +11,7 @@ class SavesManager(private val directoriesManager: DirectoriesManager) {
 
     suspend fun getSaveRAM(game: Game): ByteArray? = withContext(Dispatchers.IO) {
         val result = runCatchingWithRetry(FILE_ACCESS_RETRIES) {
-            val saveFile = getSaveFile(getSaveRAMFileName(game))
+            val saveFile = getSaveFile(game.systemId, getSaveRAMFileName(game))
             if (saveFile.exists() && saveFile.length() > 0) {
                 saveFile.readBytes()
             } else {
@@ -26,14 +26,22 @@ class SavesManager(private val directoriesManager: DirectoriesManager) {
             if (data.isEmpty())
                 return@runCatchingWithRetry
 
-            val saveFile = getSaveFile(getSaveRAMFileName(game))
+            val saveFile = getSystemSaveFile(game.systemId, getSaveRAMFileName(game))
             saveFile.writeBytes(data)
+
+            //clean up the legacy file. But only if the byteArrays match!
+            if(saveFile.readBytes().contentEquals(data)) {
+                val legacySaveFile = getLegacySaveFile(getSaveRAMFileName(game))
+                if(legacySaveFile.exists()) {
+                    legacySaveFile.delete()
+                }
+            }
         }
         result.getOrNull()
     }
 
     suspend fun getSaveRAMInfo(game: Game): SaveInfo = withContext(Dispatchers.IO) {
-        val saveFile = getSaveFile(getSaveRAMFileName(game))
+        val saveFile = getSaveFile(game.systemId, getSaveRAMFileName(game))
         val fileExists = saveFile.exists() && saveFile.length() > 0
         SaveInfo(fileExists, saveFile.lastModified())
     }
