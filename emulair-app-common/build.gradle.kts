@@ -14,54 +14,59 @@ android {
 }
 
 dependencies {
-    // Google
-    implementation(kotlin(deps.libs.stdlib))
-    implementation(deps.libs.collectionKtx)
-    implementation(deps.libs.coreKtx)
-    implementation(deps.libs.kotlinxCoroutinesAndroid)
-    implementation(deps.libs.material)
-
-    // Android
-    implementation(deps.libs.appcompat)
-    implementation(deps.libs.recyclerView)
-    implementation(deps.libs.constraintLayout)
-    implementation(deps.libs.preferenceKtx)
-    implementation(deps.libs.pagingCommon)
-    implementation(deps.libs.pagingRuntime)
-    implementation(deps.libs.fragment)
-    implementation(deps.libs.fragmentKtx)
-    implementation(deps.libs.documentFile)
-    implementation(deps.libs.activity)
-    implementation(deps.libs.activityKtx)
-    implementation(deps.libs.leanbackPreference)
-
-    // Lifecycle
-    api(deps.libs.lifecycleCommonJava8)
-    kapt(deps.libs.lifecycleCompiler)
-    implementation(deps.libs.lifecycleRuntimeKtx)
-    implementation(deps.libs.roomRuntime)
-    kapt(deps.libs.roomCompiler)
-    implementation(deps.libs.roomPaging)
-    implementation(deps.libs.roomKtx)
-
-    // Dependency Injection
-    implementation(deps.libs.daggerAndroid)
-    implementation(deps.libs.daggerAndroidSupport)
-    implementation(deps.libs.workRuntime)
-    implementation(deps.libs.workRuntimeKtx)
-
-    // API
+    api(deps.libs.androidx.lifecycle.commonJava8)
+    implementation(deps.libs.arch.work.runtime)
+    implementation(deps.libs.arch.work.runtimeKtx)
+    implementation(deps.libs.androidx.appcompat.appcompat)
+    implementation(deps.libs.androidx.leanback.leanbackPreference)
+    // implementation("androidx.preference:preference-ktx:1.1.0-rc01")
+    implementation(deps.libs.androidx.ktx.collection)
+    implementation(deps.libs.androidx.ktx.core)
+    implementation(deps.libs.androidx.ktx.coreKtx)
+    implementation(deps.libs.androidx.fragment.fragment)
+    implementation(deps.libs.androidx.fragment.ktx)
+    implementation(deps.libs.androidx.activity.activity)
+    implementation(deps.libs.androidx.activity.activityKtx)
+    implementation(deps.libs.androidx.ktx.coreKtx)
+    implementation(deps.libs.androidx.paging.common)
+    implementation(deps.libs.androidx.paging.runtime)
+    implementation(deps.libs.androidx.room.runtime)
+    implementation(deps.libs.androidx.room.ktx)
+    implementation(deps.libs.androidx.room.paging)
+    implementation(deps.libs.androidx.documentfile)
+    implementation(deps.libs.dagger.android.core)
+    implementation(deps.libs.dagger.android.support)
     implementation(deps.libs.okHttp3)
     implementation(deps.libs.okio)
     implementation(deps.libs.retrofit)
-    implementation(deps.libs.kotlinxSerializationCore)
-    implementation(deps.libs.kotlinxSerializationJson)
-
-    // Extras
-    api(deps.libs.radialGamePad)
-    api(deps.libs.timber)
-    implementation(deps.libs.multitouchGestures)
+    implementation(deps.libs.kotlin.serialization)
+    implementation(deps.libs.kotlin.serializationJson)
     implementation(deps.libs.harmony)
+    implementation(deps.libs.multitouchGestures)
+    implementation(deps.libs.material)
+    implementation(deps.libs.kotlinxCoroutinesAndroid)
+    kapt(deps.libs.androidx.room.compiler)
+
+    implementation(deps.libs.androidx.appcompat.constraintLayout)
+    implementation(deps.libs.androidx.appcompat.appcompat)
+    implementation(deps.libs.androidx.lifecycle.commonJava8)
+    implementation(deps.libs.material)
+    implementation(deps.libs.androidx.preferences.preferencesKtx)
+    api(deps.libs.radialgamepad)
+    implementation(kotlin(deps.libs.kotlin.stdlib))
+    kapt(deps.libs.androidx.lifecycle.processor)
+
+    api(deps.libs.timber)
+    implementation(deps.libs.androidx.appcompat.appcompat)
+    implementation(deps.libs.androidx.appcompat.recyclerView)
+    implementation(deps.libs.androidx.room.runtime)
+    implementation(deps.libs.androidx.documentfile)
+    implementation(deps.libs.androidx.preferences.preferencesKtx)
+    implementation(deps.libs.androidx.lifecycle.runtime)
+    implementation(deps.libs.kotlinxCoroutinesAndroid)
+    implementation(deps.libs.okHttp3)
+    implementation(deps.libs.androidx.paging.common)
+    implementation(deps.libs.androidx.paging.runtime)
 }
 
 android {
@@ -72,9 +77,8 @@ android {
             }
         }
     }
-
     kotlinOptions {
-        this
+        this as KotlinJvmOptions
         jvmTarget = "1.8"
     }
 }
