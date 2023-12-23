@@ -819,6 +819,13 @@ abstract class BaseGameActivity : ImmersiveActivity() {
         return super.onKeyDown(keyCode, event)
     }
 
+    override fun onPause() {
+        GlobalScope.launch {
+            saveSRAM(game)
+        }
+        super.onPause()
+    }
+
     override fun onKeyUp(keyCode: Int, event: KeyEvent?): Boolean {
         if (event != null && InputKey(keyCode) in event.device.getInputClass().getInputKeys()) {
             lifecycleScope.launch {
@@ -1041,6 +1048,8 @@ abstract class BaseGameActivity : ImmersiveActivity() {
         val lowLatencyAudio = settingsManager.lowLatencyAudio()
         val enableRumble = settingsManager.enableRumble()
         val directLoad = settingsManager.allowDirectGameLoad()
+
+        joinStickAndDPADifSupported = settingsManager.joinStickDpad()
 
         val loadingStatesFlow = gameLoader.load(
             applicationContext,
