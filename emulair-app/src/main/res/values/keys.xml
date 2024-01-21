@@ -26,6 +26,7 @@
     <string name="pref_key_save_sync_cores" translatable="false">save_sync_cores</string>
     <string name="pref_key_autorotate" translatable="false">autorotate</string>
     <string name="pref_key_shader_filter" translatable="false">shader_filter</string>
+    <string name="pref_key_join_stick_dpad" translatable="false">pref_key_join_stick_dpad</string>
 
     <string-array name="pref_key_theme_names" translatable="false">
         <item>Dark</item>
