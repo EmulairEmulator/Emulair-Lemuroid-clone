@@ -43,11 +43,12 @@ class CoreUpdaterImpl(
     retrofit: Retrofit
 ) : CoreUpdater {
 
+    // This is the last tagged versions of cores.
     companion object {
-        private const val CORES_VERSION = "1.0"
+        private const val CORES_VERSION = "1.14"
     }
 
-    private val baseUri = Uri.parse("https://github.com/Emulair/LibretroCores/")
+    private val baseUri = Uri.parse("https://github.com/Swordfish90/LemuroidCores/")
 
     private val api = retrofit.create(CoreUpdater.CoreManagerApi::class.java)
 
@@ -69,7 +70,7 @@ class CoreUpdaterImpl(
     }
 
     private suspend fun downloadCoreFromGithub(coreID: CoreID): File {
-        Timber.i("Downloading core $coreID from GitHub")
+        Timber.i("Downloading core $coreID from github")
 
         val mainCoresDirectory = directoriesManager.getCoresDirectory()
         val coresDirectory = File(mainCoresDirectory, CORES_VERSION).apply {

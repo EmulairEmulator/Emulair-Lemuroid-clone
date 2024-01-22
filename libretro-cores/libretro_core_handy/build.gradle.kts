@@ -7,7 +7,7 @@ plugins {
 
 android {
     defaultConfig {
-        missingDimensionStrategy("buildType", "nogplay")
+        missingDimensionStrategy("buildType", "gplay")
         missingDimensionStrategy("coresType", "downloadedCores")
     }
     packagingOptions {
@@ -17,5 +17,5 @@ android {
 
 dependencies {
     implementation(project(":emulair-app"))
-    implementation(kotlin(deps.libs.stdlib))
+    implementation(kotlin(deps.libs.kotlin.stdlib))
 }

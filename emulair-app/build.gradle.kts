@@ -3,22 +3,19 @@ plugins {
     id("kotlin-android")
     id("kotlin-kapt")
     id("androidx.navigation.safeargs.kotlin")
-    // id("safeargs.kotlin")
     id("kotlinx-serialization")
 }
 
 android {
     defaultConfig {
         applicationId = "com.bigbratan.emulair"
-        versionCode = 4
+        versionCode = 3
         versionName = "0.0.4"
     }
 
-    /*
-    To test out the error screens, wrap `dynamicFeatures.addAll(...)` under `if (usePlayDynamicFeatures()) {..}`
-    This way, the cores in the debug version of the app will not be installed, and an error screen will appear
-    Follow similar instructions in settings.gradle.kts for changes to actually take effect
-    */
+    // To test out the error screens, wrap `dynamicFeatures.addAll(...)` under `if (usePlayDynamicFeatures()) {..}`
+    // This way, the cores in the debug version of the app will not be installed, and an error screen will appear
+    // Follow similar instructions in settings.gradle.kts for changes to actually take effect
     dynamicFeatures.addAll(
         setOf(
             ":libretro_core_desmume",
@@ -51,12 +48,16 @@ android {
             dimension = "buildType"
         }
 
+        create("gplay") {
+            dimension = "buildType"
+        }
+
         // Include cores in the final apk
         create("bundledCores") {
             dimension = "coresType"
         }
 
-        // Download cores on demand from GitHub
+        // Download cores on demand (from GooglePlay or GitHub)
         create("downloadedCores") {
             dimension = "coresType"
         }
@@ -107,77 +108,62 @@ dependencies {
     implementation(project(":emulair-app-common"))
     "bundledCoresImplementation"(project(":bundled-cores"))
     "nogplayImplementation"(project(":emulair-app-build-nogplay"))
+    "gplayImplementation"(project(":emulair-app-build-gplay"))
 
-    // Google
-    implementation(deps.libs.kotlinxCoroutinesAndroid)
     implementation(deps.libs.material)
-
-    // Android
-    implementation(deps.libs.appcompat)
-    implementation(deps.libs.recyclerView)
-    implementation(deps.libs.constraintLayout)
-    implementation(deps.libs.preferenceKtx)
-    implementation(deps.libs.pagingCommon)
-    implementation(deps.libs.pagingRuntime)
-    implementation(deps.libs.navigationFragmentKtx)
-    implementation(deps.libs.navigationUiKtx)
-    implementation(deps.libs.documentFile)
-    implementation(deps.libs.activity)
-    implementation(deps.libs.activityKtx)
-    implementation(deps.libs.startupRuntime)
-    implementation(deps.libs.leanbackPreference)
-    kapt(deps.libs.databinding)
-
-    // Compose
-    implementation(platform(deps.libs.compose))
-    implementation(deps.libs.composeUi)
-    implementation(deps.libs.composeUiGraphics)
-    implementation(deps.libs.composeUiToolingPreview)
-    debugImplementation(deps.libs.composeUiTooling)
-    debugImplementation(deps.libs.composeUiTestManifest)
-    implementation(deps.libs.composeRuntimeLivedata)
-    implementation(deps.libs.composeUiGoogleFonts)
-    implementation(deps.libs.composeNavigation)
-    implementation(deps.libs.composeMaterial)
-    implementation(deps.libs.composeMaterial3)
-    implementation(deps.libs.composeMaterialIconsExtended)
-
-    // Lifecycle
-    implementation(deps.libs.lifecycleCommonJava8)
-    kapt(deps.libs.lifecycleRuntimeKtx)
-    implementation(deps.libs.lifecycleReactiveStreams)
-    implementation(deps.libs.roomCommon)
-    implementation(deps.libs.roomRuntime)
-    kapt(deps.libs.roomCompiler)
-    implementation(deps.libs.roomKtx)
-
-    // Dependency Injection
-    implementation(deps.libs.dagger)
-    kapt(deps.libs.daggerCompiler)
-    kapt(deps.libs.daggerAndroid)
-    implementation(deps.libs.daggerAndroidProcessor)
-    implementation(deps.libs.daggerAndroidSupport)
-    implementation(deps.libs.workRuntime)
-    implementation(deps.libs.workRuntimeKtx)
-
-    // API
+    implementation(deps.libs.androidx.navigation.navigationFragment)
+    implementation(deps.libs.androidx.navigation.navigationUi)
+    implementation(deps.libs.coil)
+    implementation(deps.libs.androidx.appcompat.constraintLayout)
+    implementation(deps.libs.androidx.activity.activity)
+    implementation(deps.libs.androidx.activity.activityKtx)
+    implementation(deps.libs.androidx.appcompat.appcompat)
+    implementation(deps.libs.androidx.preferences.preferencesKtx)
+    implementation(deps.libs.arch.work.runtime)
+    implementation(deps.libs.arch.work.runtimeKtx)
+    implementation(deps.libs.androidx.lifecycle.commonJava8)
+    implementation(deps.libs.androidx.lifecycle.reactiveStreams)
+    implementation(deps.libs.epoxy.expoxy)
+    implementation(deps.libs.epoxy.paging)
+    kapt(deps.libs.epoxy.processor)
+    kapt(deps.libs.androidx.lifecycle.processor)
+    // implementation(deps.libs.androidx.leanback.leanback)
+    implementation(deps.libs.androidx.leanback.leanbackPreference)
+    // implementation("androidx.preference:preference-ktx:1.1.0-rc01")
+    // implementation(deps.libs.androidx.leanback.leanbackPaging)
+    implementation(deps.libs.androidx.appcompat.recyclerView)
+    implementation(deps.libs.androidx.paging.common)
+    implementation(deps.libs.androidx.paging.runtime)
+    implementation(deps.libs.androidx.room.common)
+    implementation(deps.libs.androidx.room.runtime)
+    implementation(deps.libs.androidx.room.ktx)
+    implementation(deps.libs.dagger.android.core)
+    implementation(deps.libs.dagger.android.support)
+    implementation(deps.libs.dagger.core)
+    implementation(deps.libs.kotlinxCoroutinesAndroid)
     implementation(deps.libs.okHttp3)
     implementation(deps.libs.okio)
-    implementation(deps.libs.coil)
     implementation(deps.libs.retrofit)
-    implementation(deps.libs.kotlinxSerializationCore)
-    implementation(deps.libs.kotlinxSerializationJson)
-
-    // Extras
-    implementation(deps.libs.expoxy)
-    implementation(deps.libs.epoxyPaging)
-    kapt(deps.libs.epoxyProcessor)
-    implementation(deps.libs.libretroDroid)
     implementation(deps.libs.flowPreferences)
     implementation(deps.libs.guava)
+    implementation(deps.libs.androidx.documentfile)
+    // implementation(deps.libs.androidx.leanback.tvProvider)
     implementation(deps.libs.harmony)
-    implementation(deps.libs.circleImageView)
+    implementation(deps.libs.startup)
+    implementation(deps.libs.kotlin.serialization)
+    implementation(deps.libs.kotlin.serializationJson)
+    implementation(deps.libs.libretrodroid)
+    kapt(deps.libs.dagger.android.processor)
+    kapt(deps.libs.dagger.compiler)
+    kapt(deps.libs.androidx.room.compiler)
+    kapt("com.android.databinding:compiler:3.1.4")
+    implementation("de.hdodenhof:circleimageview:3.1.0")
 
-    // Uncomment this when using a local .aar file
+    // Uncomment this when using a local aar file.
     // implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar", "*.aar"))))
+}
+
+fun usePlayDynamicFeatures(): Boolean {
+    val task = gradle.startParameter.taskRequests.toString()
+    return task.contains("Gplay") && task.contains("DownloadedCores")
 }
