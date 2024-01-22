@@ -179,6 +179,9 @@
     <string name="settings_misc_bios_description">Display detected and supported BIOS files</string>
     <string name="settings_misc_advanced_title">Advanced settings</string>
     <string name="settings_misc_advanced_description">Display advanced settings</string>
+   
+    <string name="settings_title_join_stick_dpad">D-Pad Emulation</string>
+    <string name="settings_summary_join_stick_dpad">Use joystick as D-Pad for systems that do not use a joystick.</string>
 
     <!-- SAVE SYNC FRAGMENT - GOOGLE DRIVE -->
     <string name="save_sync_category_gdrive">Sign in to Google</string>
