@@ -98,6 +98,15 @@
             app:iconSpaceReserved="false"
             app:useSimpleSummaryProvider="true" />
 
+        
+        <SwitchPreferenceCompat
+            android:key="@string/pref_key_join_stick_dpad"
+            android:title="@string/settings_title_join_stick_dpad"
+            android:summary="@string/settings_summary_join_stick_dpad"
+            android:layout="@layout/layout_preference_main_switch_group_middle"
+            app:iconSpaceReserved="false"
+            android:defaultValue="false" />
+
         <Preference
             android:key="@string/pref_key_open_gamepad_settings"
             android:layout="@layout/layout_preference_main_simple_group_bottom"
