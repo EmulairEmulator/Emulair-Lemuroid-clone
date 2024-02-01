@@ -67,7 +67,7 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [x] Complete conversion to Material Design 3 Components
 - [x] An easier to navigate app structure
 - [x] An info screen containing frequently asked questions and other useful stuff
-- [x] A profile screen used for easily connecting to RetroAchievements
+- [x] A profile screen used for easily connecting to RetroAchievements (RetroAchievements support not yet implemented)
 - [x] A "Close menu" button accessible from the pause menu, so users don't have to click their device's back button every time they want to unpause a game
 - [x] A themed app icon for Android 13+ devices
 - [x] A "Jump back in" section on the "Games" page, along with "Recents", "Favorites" and "All Games"
@@ -78,12 +78,12 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [x] New sprites for systems
 - [x] Bypass screen lock to rotate the screen whenever you want
 - [x] Automatically rescan internal directories on app restart and resume
-- [x] Sync save files with Google Firebase (added in separate branch)
 - [x] Fixes for bugs that were carried over from Lemuroid
 - [x] Plenty QOL features, updates and fixes
 
 ## Upcoming Features
-- [ ] **_Complete rewrite in Jetpack Compose_** (my only priority this year)
+- [ ] **_Complete rewrite in Jetpack Compose_** (my priority until I finish it)
+- [ ] **_Dynamic light/dark theme_** (tried implementing with XML, should actually work with Compose)
 - [ ] More emulation cores (almost all cores found on RetroArch)
 - [ ] More exposed settings for all the cores
 - [ ] More state slots
@@ -91,13 +91,13 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] More animations and effects
 - [ ] More controls customization (e.g. hide any button, move buttons anywhere on the screen, etc.)
 - [ ] Better ROM scraping and name detection
-- [ ] Better NDS/3DS touchscreen controls (they can now overlap the screens)
+- [ ] Better NDS/3DS touchscreen controls (i.e. will be placed above the screens)
 - [ ] Cheat codes support
 - [ ] RetroAchievements support
 - [ ] .7z ROMs support
 - [ ] Save/load state undoing/redoing support
 - [ ] Search filters support
-- [ ] Full phone sensors support (i.e. emulators can now take advantage of tilt sensors, cameras, microphones, etc.)
+- [ ] Full phone sensors support (i.e. emulators will take advantage of tilt sensors, cameras, microphones, etc.)
 - [ ] File saving to storage/emulated/0
 - [ ] Automatic state saving every x seconds
 - [ ] Custom touchscreen gamepad transparency
@@ -110,21 +110,21 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] A details screen accessible by long-pressing a game or a system
 - [ ] A splash screen for Android 12+ devices
 - [ ] Set core on a per game basis
-- [ ] Choose if you want to automatically fall back on other emulators or not, in case a game doesn't work (this implies unlocking the option to switch between FinalBurn Neo and MAME 2003-Plus)
+- [ ] Choose if you want to automatically fall back on other emulators or not, in case a game doesn't work (must unlock the option to switch between FinalBurn Neo and MAME 2003-Plus first)
 - [ ] Change filter on a per game or per system basis (not just global)
 - [ ] Rebind controls on a per game or per system basis (not just global)
 
 **Note: The above features won't be released in this exact order. Some features may be changed or even removed from this list.**
 
 ## Removed Features (from Lemuroid)
-- Android TV support
-- Turn games into shortcuts for your launcher
-- Save files to Google Drive (only if downloaded from Google Play; Drive folder inaccessible)
+- Android TV support (was difficult to maintain) 
+- Turn games into shortcuts for your launcher (didn't understand its purpose initially, I'll bring it back) 
+- Save files to Google Drive (worked only if downloaded from Google Play; Drive folder was inaccessible; split the codebase in two versions; only acted as bandaid for the lack of keeping save files after uninstalling the app; better to remove it than keep it)
 
 **Note: Some features will be brought back later.**
 
 ## Dropped Features (from Emulair)
-- Material You (Monet Engine) counterparts for all the themes (exclusive to A12+ devices)
+- Sync save files with Google Firebase (added in separate branch for the purpose of a university course, will not be implemented)
 
 **Note: Some features will be brought back later.**
 
@@ -132,7 +132,7 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 "Emulair" is a triple entendre and the name is inspired by the Lawnchair launcher (not associated with Emulair). Firstly, "Emulair" kind of sounds like the word "Emulator" (if you try hard enough). Secondly, "Emulair" means "lair of the emu bird", an animal whose name is similar to the abbreviation of the word "emulator". Lastly, "Emulair" also means "lair for all your emulators", which is similar in name to "Vimm's Lair", a place for preserving video games.
 
 ## Legal
-Copyright (C) 2023 Radu-George Bratan
+Copyright (C) 2023-2024 Radu-George Bratan
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
