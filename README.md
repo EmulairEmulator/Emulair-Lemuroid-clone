@@ -43,7 +43,7 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - Sony PS1 by [PCSX ReARMed](https://docs.libretro.com/library/pcsx_rearmed/)
 - Sony PSP by [PPSSPP](https://docs.libretro.com/library/ppsspp/)
 
-**Note: Emulator1 _and_ Emulator2 means you can't choose between them because they are combined, Emulator1 _or_ Emulator2 means you can switch the cores.**
+**Note: "Emulator1 _and_ Emulator2" means you can't choose between them because they are combined, "Emulator1 _or_ Emulator2" means you can switch the cores.**
 
 ## Systems - Standalone Apps
 **Note: This feature hasn't been implemented yet.**
