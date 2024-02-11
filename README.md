@@ -78,8 +78,8 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [x] New sprites for systems
 - [x] Bypass screen lock to rotate the screen whenever you want
 - [x] Automatically rescan internal directories on app restart and resume
-- [x] Fixes for bugs that were carried over from Lemuroid
-- [x] Plenty QOL features, updates and fixes
+- [x] Fixes for bugs that were carried over from Lemuroid (e.g. multitasking splitscreen error, emulation resetting when screen auto rotates while system display scaling is non-default)
+- [x] Plenty QOL features, updates and fixes (e.g. show content under notch/punch hole, add more supported word dividers for file names)
 
 ## Upcoming Features
 - [ ] **_Complete rewrite in Jetpack Compose_** (my priority until I finish it)
@@ -87,21 +87,23 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] More emulation cores (almost all cores found on RetroArch)
 - [ ] More exposed settings for all the cores
 - [ ] More state slots
-- [ ] More save file formats support
+- [ ] More save file formats (possibly related to adding more cores)
 - [ ] More animations and effects
 - [ ] More controls customization (e.g. hide any button, move buttons anywhere on the screen, etc.)
-- [ ] Better ROM scraping and name detection
-- [ ] Better NDS/3DS touchscreen controls (i.e. will be placed above the screens)
+- [ ] Better ROM scraping and name detection (right now games that have even the slightest variation in their names are not detected, e.g. "God of War - Chains of Olympus (USA)" is detected, but "God of War - Chains of Olympus (Asia)" isn't)
+- [ ] Better NDS and 3DS touchscreen controls (i.e. will be placed above the screens)
 - [ ] Cheat codes support
 - [ ] RetroAchievements support
 - [ ] .7z ROMs support
-- [ ] Save/load state undoing/redoing support
-- [ ] Search filters support
+- [ ] Save/load state undoing/redoing support (using hidden copies)
+- [ ] Search filters support (i.e. sort by system, genre, year; order by ascending or descending)
 - [ ] Full phone sensors support (i.e. emulators will take advantage of tilt sensors, cameras, microphones, etc.)
+- [ ] Hacked ROMs, homebrews, ROMs with unusual file formats support (possibly related to adding more cores)
 - [ ] File saving to storage/emulated/0
 - [ ] Automatic state saving every x seconds
 - [ ] Custom touchscreen gamepad transparency
 - [ ] Custom volume, fast forward speed and vibration strength
+- [ ] Change volume and fast forward speed directly from the pause menu
 - [ ] Different app layout for tablets and foldables
 - [ ] Different app layout for phones in landscape orientation
 - [ ] An updated Libretro games database with more fields (e.g. release year, release month, etc.)
@@ -109,12 +111,34 @@ It originates from [Lemuroid](https://github.com/Swordfish90/Lemuroid), which, i
 - [ ] A "Starred Systems" list
 - [ ] A details screen accessible by long-pressing a game or a system
 - [ ] A splash screen for Android 12+ devices
-- [ ] Set core on a per game basis
 - [ ] Choose if you want to automatically fall back on other emulators or not, in case a game doesn't work (must unlock the option to switch between FinalBurn Neo and MAME 2003-Plus first)
+- [ ] Set core on a per game basis (not just global)
 - [ ] Change filter on a per game or per system basis (not just global)
 - [ ] Rebind controls on a per game or per system basis (not just global)
+- [ ] Save Libretro thumbnails in cache so they don't have to be reinstalled every time the user reopens the app
+- [ ] Toggle between showing the content under notch/punch hole or not
+- [ ] Allow BIOs scanner to also accept .bin files, not just .rom files
+- [ ] Pause/Resume emulation without having to open the pause menu
+- [ ] Configure overscanning amount for PS1 and N64 games (i.e. remove top and bottom borders)
+- [ ] Move game screen(s) freely
+- [ ] Create a debug log whenever an error occurs so developers can better understand what happened
+- [ ] Allow different buttons to trigger the same action
+- [ ] Make the title of the Systm Games page reflect the system the user is currently viewing
+- [ ] Slide down to rescan games folder instead of automatically rescanning every time
+- [ ] (If possible) Automatically convert saves when switching cores
+- [ ] (If possible) Tell wether or not a 3DS ROM is encrypted
+- [ ] (If possible) Run Ahead from RetroArch support
+- [ ] (If possible) ROM patching support
 
 **Note: The above features won't be released in this exact order. Some features may be changed or even removed from this list.**
+
+## Upcoming Bug Fixes
+- [ ] Some non PS1 (mostly PS2) games are incorrectly detected as PS1 games
+- [ ] Regular back icon doesn't align with the searchView back icon (should be automatically fixed when reworking the search screen using Compose)
+- [ ] MaterialSlider doesn't work in SeekBarPreference (should be automatically fixed when reworking the whole app using Compose)
+- [ ] Saves from disk 1 aren't kept when switching to disk 2 (more testing needed)
+- [ ] After disabling "Auto save state on correct quit", the last save state before the disabling doesn't load
+- [ ] (If possible) After closing a game (using the phone's home button) without saving the game to a state slot, reopening the app from the app tray resets it to the home screen; but when clicking the notification or opening the app from the recents tray, the game is corectly resumed and it no longer resets (in other words, closing the app then opening it in a certain way resets it)
 
 ## Removed Features (from Lemuroid)
 - Android TV support (was difficult to maintain) 
